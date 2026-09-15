@@ -56,6 +56,27 @@ It does not infer characteristic-zero nonexistence from a list
 of residue-field points.
 \end{enumerate}
 
+A Lean~4 formalization accompanies the paper at
+\url{https://github.com/migita/binomial-count-meromorphic-waves},
+directory \texttt{lean/}, with Lean and Mathlib pinned to
+version~4.33.1. It proves \((\mathrm R_d)\) for \(2d+1\) prime
+(\texttt{rigidity\_prime\_index}) and the count and simplicity
+statements of Theorem~\ref{thm:prime}, both for the matching system
+\eqref{eq:remainder} (\texttt{primeIndexCountAndSimplicity}) and for
+the normalized pairs \((P,v)\) as solutions of \eqref{eq:main} in the
+field of rational functions of \(e^{z}\)
+(\texttt{primeIndexRationalExponentialCountAndSimplicity}), together
+with the correspondence between the two formulations for every
+\(p\ge2\). The discrete convolution is defined there by the
+Bernoulli-polynomial power sums, and the remainder equations and their
+Jacobian are those of Section~\ref{sec:counting}. The proof route is
+described in Remark~\ref{rem:lean}. The files
+\texttt{EnumerationCheck.lean} and \texttt{Check.lean} verify that the
+proofs have exactly the stated propositions as their types and that the
+theorems depend only on the axioms \texttt{propext},
+\texttt{Classical.choice} and \texttt{Quot.sound}; the project
+contains no \texttt{sorry}, added axiom or \texttt{native\_decide}.
+
 The scripts use exact rational or finite-field arithmetic.
 The figure program evaluates the already verified formulas.
 Instructions, dependency versions and checksums are included with the

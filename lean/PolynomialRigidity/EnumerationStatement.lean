@@ -8,8 +8,10 @@ import Mathlib.FieldTheory.RatFunc.Basic
 /-!
 # Statements of rational-exponential enumeration and simplicity
 
-This file defines propositions to be proved later. It does not assume or prove
-any enumeration, simplicity, or correspondence theorem.
+This file only defines the propositions; it proves nothing about them. The
+prime-index propositions and every correspondence statement below are proved
+in the `Enumeration` directory, see `Enumeration/PrimeEnumeration.lean`. The
+unrestricted propositions remain conjectures.
 
 The counted objects are normalised one-pole equation-profile pairs, over `ℂ`,
 as the monic operator of order `p` varies. The exponential rate is one, the
@@ -44,7 +46,8 @@ def discreteConvolution {R : Type*} [CommRing R] [Algebra ℚ R]
   ∑ i ∈ F.support, ∑ j ∈ G.support,
     C (F.coeff i * G.coeff j) * (discreteMonomial i j).map (algebraMap ℚ R)
 
-/-- An unproved specification of the displayed discrete-convolution formula. -/
+/-- The specification of the displayed discrete-convolution formula, proved as
+`discreteConvolutionSpecification` in `Enumeration/Discrete.lean`. -/
 def DiscreteConvolutionSpecification : Prop :=
   ∀ (F G : ℂ[X]) (n : ℕ), 1 ≤ n →
     (discreteConvolution F G).eval (n : ℂ) =
@@ -103,7 +106,8 @@ def CountAndSimplicityAtOrder (p : ℕ) : Prop :=
 def UniversalCountAndSimplicity : Prop :=
   ∀ p : ℕ, 2 ≤ p → CountAndSimplicityAtOrder p
 
-/-- The prime-index theorem from the manuscript, stated without a Lean proof. -/
+/-- The prime-index theorem from the manuscript, proved as
+`primeIndexCountAndSimplicity` in `Enumeration/PrimeEnumeration.lean`. -/
 def PrimeIndexCountAndSimplicity : Prop :=
   ∀ p : ℕ, 2 ≤ p → (2 * p - 1).Prime → CountAndSimplicityAtOrder p
 
@@ -161,7 +165,8 @@ def UniversalRationalExponentialCountAndSimplicity : Prop :=
 def PrimeIndexRationalExponentialCountAndSimplicity : Prop :=
   ∀ p : ℕ, 2 ≤ p → (2 * p - 1).Prime → RationalExponentialCountAndSimplicityAtOrder p
 
-/-! ## Explicit correspondence obligations, also left unproved -/
+/-! ## Explicit correspondence statements, proved in `Enumeration/Basic.lean`,
+`Enumeration/Correspondence.lean` and `Enumeration/SimplicityCorrespondence.lean` -/
 
 def logistic : RationalFunction :=
   toRationalFunction X / toRationalFunction (1 + X)

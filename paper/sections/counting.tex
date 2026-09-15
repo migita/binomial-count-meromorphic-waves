@@ -377,6 +377,26 @@ geometric points and their local lengths are the same over
 This proves the assertion and the labelling.
 \end{proof}
 
+\begin{remark}[Formal verification]\label{rem:lean}
+The count and simplicity assertions of Theorem~\ref{thm:prime}, and
+\((\mathrm R_{p-1})\) for \(2p-1\) prime, have been verified in
+Lean~4 against the Mathlib library; Appendix~\ref{app:verification}
+describes the files. The formal proof of the count does not use
+Theorem~\ref{thm:length}. It shows directly that every complex
+matching point is integral at any valuation ring of \(\CC\) whose
+maximal ideal contains \(\ell\): the roots of \(A\) are scaled by a
+root of smallest valuation, and \(\ell S_A\) evaluated at that root
+has one unit term, all others lying in the maximal ideal. Reduction of
+integral points is injective, which gives finiteness and the upper
+bound \(\binom{\ell}{d}\), and the same normalization gives
+simplicity. For the lower bound, each reduced point is lifted over
+\(\ZZ_\ell\) by a multivariable Hensel lemma derived from formal
+smoothness, and the resulting family of distinct \(\QQ_\ell\)-points
+is transferred to \(\CC\) through the Nullstellensatz, without
+identifying \(\QQ_\ell\) with a subfield of \(\CC\). The labelling
+\eqref{eq:prime-labels} is the injective reduction map of that proof.
+\end{remark}
+
 The labels \eqref{eq:prime-labels} describe reductions of algebraic
 coefficients; they are not assertions that the complex roots of
 \(A\), or the characteristic roots of \(P_A\), are integers.
