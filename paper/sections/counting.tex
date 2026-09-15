@@ -1,0 +1,503 @@
+\section{Enumeration at fixed scale}\label{sec:counting}
+
+In this section \(P\) ranges over \emph{all} monic polynomials of
+degree \(p\), including mixed operators of even degree, and we count
+the pairs \((P,v)\) in which \(v\) is a one-pole solution of
+\eqref{eq:main} of a given kind: rational in an exponential at a fixed
+rate here, elliptic on a fixed lattice in
+Section~\ref{sec:elliptic-counting}.
+Nothing in the enumeration requires \(p\) to be odd or \(P\) to be an
+even polynomial. Those hypotheses were needed to show that the
+one-pole solutions are all the meromorphic solutions; the matching
+equations and their solution counts make sense without them.
+The counts are for the full monic family and change for a restricted
+family such as the even polynomials \(P\); Section~\ref{sec:kawahara}
+gives an example.
+
+For the rational-exponential kind, fix the rate to one, the pole
+to \(i\pi\) modulo \(2\pi i\ZZ\), and the value at \(e^z=0\) to
+zero. Reflection is not identified: distinct normalized pairs related by
+\(z\mapsto-z\) are counted separately.
+The functions \(Q,DQ,\ldots,D^{p-1}Q\) span the degree-\(p\)
+polynomials in \(Q\) with zero constant term, since
+\[
+ D^jQ=(-1)^j j!Q^{j+1}+\text{lower powers of }Q.
+\]
+The leading pole coefficient \eqref{eq:leadingpole} therefore gives
+the unique form
+\begin{equation}\label{eq:normalized-A}
+ v_A=s_pA(D)Q,\qquad
+ A(\rho)=\rho^d+\alpha_1\rho^{d-1}+\cdots+\alpha_d,\qquad d=p-1.
+\end{equation}
+The scale \(s_p\) was defined in \eqref{eq:elliptic-system}.
+This representation is the standard singular-part operator form:
+\(Q=1/2+D\log\cosh(z/2)\), so \eqref{eq:normalized-A} is a
+constant plus a linear differential operator applied to
+\(\log\cosh(z/2)\).
+Such forms, including the KS case, are discussed by
+\citet{ConteMusette2003}.
+We use the coefficients \(\alpha_1,\ldots,\alpha_d\) of that operator
+as the coordinates for the enumeration.
+
+The argument runs as follows. The profile \(v_A\) solves
+\eqref{eq:main} for some monic \(P\) exactly when \(A\) divides a
+polynomial built from \(A\) by a discrete convolution
+(Proposition~\ref{prop:divisibility}). The remainder of that division
+gives \(d\) polynomial equations in the \(d\) coordinates. We count
+their solutions with multiplicity by B\'ezout's theorem, using a
+weighted degree adapted to the equations
+(Theorem~\ref{thm:length}). When \(2p-1\) is prime, reduction modulo
+\(2p-1\) identifies the solutions one by one
+(Theorem~\ref{thm:prime}).
+
+\subsection{Discrete convolution and the matching equations}
+
+For polynomials \(F,G\), define \(F\star G\) by polynomial
+continuation of
+\[
+ (F\star G)(n)=\sum_{j=1}^{n-1}F(j)G(n-j),\qquad n\ge1.
+\]
+The continuation exists by the power-sum formulas: for fixed
+\(F,G\) the right side is a polynomial in \(n\).
+Write
+\[
+ S_A=A\star A.
+\]
+For monic \(A\) of degree \(d\),
+\begin{equation}\label{eq:Sleading}
+ \deg S_A=2d+1,\qquad
+ [\rho^{2d+1}]S_A=\beta_d:=\frac{(d!)^2}{(2d+1)!}.
+\end{equation}
+The leading coefficient is the beta integral
+\(\int_0^1t^d(1-t)^d\dd t\).
+
+\begin{proposition}[Polynomial divisibility]\label{prop:divisibility}
+The profile \eqref{eq:normalized-A} solves \eqref{eq:main} for some
+monic \(P\) if and only if
+\begin{equation}\label{eq:discrete-divisibility}
+ A\mid S_A.
+\end{equation}
+The operator is unique and is
+\begin{equation}\label{eq:operator-A}
+ P_A=\frac{s_pS_A}{2A}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+In the half-plane \(\operatorname{Re}z<0\), the logistic function
+is a geometric series in \(e^z\), and applying \(A(D)\) multiplies
+the \(n\)th term by \(A(n)\):
+\[
+ A(D)Q=\sum_{n\ge1}(-1)^{n-1}A(n)e^{nz}.
+\]
+Squaring gives the rational-function identity
+\begin{equation}\label{eq:discrete-square}
+ (A(D)Q)^2=-S_A(D)Q.
+\end{equation}
+The map \(B\mapsto B(D)Q\) is injective: its vanishing would give
+\(B(n)=0\) for every positive integer \(n\).
+Consequently \eqref{eq:main} is equivalent to
+\(2P_AA=s_pS_A\), which has a polynomial solution \(P_A\) exactly
+when \(A\) divides \(S_A\).
+Equation \eqref{eq:Sleading} and \(s_p=2/\beta_d\) show that \(P_A\)
+is monic of degree \(p\).
+\end{proof}
+
+The operator determines the profile. This holds for every \(p\),
+without the parity hypotheses of Theorem~\ref{thm:complete}, because
+it only uses the leading coefficient of a convolution.
+
+\begin{proposition}[One profile per operator]\label{prop:injective}
+Let \(A,B\) be monic polynomials of degree \(p-1\) satisfying
+\(A\mid S_A\) and \(B\mid S_B\). If \(P_A=P_B\), then \(A=B\).
+Consequently a monic operator of degree \(p\) admits at most one
+normalized rational-exponential one-pole profile.
+Any count of distinct pairs with this normalization is therefore
+also a count of distinct operators.
+\end{proposition}
+
+\begin{proof}
+Suppose \(P_A=P_B=P\), and put \(h=A-B\).
+If \(h\ne0\), its degree \(e\) is less than \(d=p-1\); write
+\(f\ne0\) for its leading coefficient.
+By \eqref{eq:operator-A} and the bilinearity and symmetry of the convolution,
+\[
+ S_A-S_B=h\star(A+B)=\frac{2}{s_p}Ph.
+\]
+The power-sum calculation in \eqref{eq:Sleading} gives the leading
+coefficient \(2f\int_0^1t^e(1-t)^d\dd t\) on the left.
+Since \(P\) is monic, the right side has leading coefficient
+\((2/s_p)f=\beta_df\). Cancelling \(f\) would therefore give
+\[
+ 2\int_0^1t^e(1-t)^d\dd t
+   =\int_0^1t^d(1-t)^d\dd t.
+\]
+This is impossible: \(e<d\) implies \(t^e>t^d\) for \(0<t<1\), so
+the left side exceeds twice the right side. Thus \(h=0\).
+\end{proof}
+
+For odd \(p\), Theorem~\ref{thm:complete} gives uniqueness among all
+nonconstant meromorphic solutions up to translation; for even \(P\),
+it does so on a fixed energy level.
+Proposition~\ref{prop:injective} fixes the rational-exponential
+normalization and holds for every monic operator.
+
+Divide \(S_A\) by the monic polynomial \(A\):
+\begin{equation}\label{eq:remainder}
+ S_A=AC_A+R_A,\qquad
+ R_A=\sum_{r=0}^{d-1}R_r(\alpha_1,\ldots,\alpha_d)\rho^r.
+\end{equation}
+The matching equations are \(R_0=\cdots=R_{d-1}=0\): \(d\) polynomial
+equations in the \(d\) unknowns \(\alpha_1,\ldots,\alpha_d\).
+Their solutions are in bijection with the normalized pairs
+\((P_A,v_A)\).
+We write \(\Xp\) for the solution set together with the equations
+that define it; in algebraic language, \(\Xp\) is the affine scheme
+defined by the \(R_r\).
+
+Three notions from algebra are used to count. A solution is
+\emph{simple} if the Jacobian matrix of \((R_0,\ldots,R_{d-1})\) with
+respect to \((\alpha_1,\ldots,\alpha_d)\) is invertible there;
+equivalently, the equations admit no nonzero infinitesimal
+deformation of the solution.
+Every isolated solution has a \emph{multiplicity}, the dimension over
+\(\CC\) of the local quotient
+algebra of the equations at that point. For a square system such as
+this one it may be pictured as the number of simple solutions into
+which the point splits under a generic small perturbation of the
+equations; it equals one exactly for simple solutions.
+When \(\Xp\) is finite, its \emph{length} is the sum of the
+multiplicities of its points, and \(\Xp\) is \emph{reduced} when every
+point is simple, so that the length is the number of points.
+An isolated solution of multiplicity greater than one is still the
+only solution near itself; local uniqueness is therefore weaker than
+simplicity.
+
+\subsection{Weighted degree and the role of continuous convolution}
+
+B\'ezout's theorem bounds the sum of the multiplicities of the
+isolated solutions of \(d\) polynomial equations in \(d\) unknowns
+by the product of their degrees. Equality holds when the system has
+no solutions at infinity, that is, when the highest-degree parts of
+the equations have no common zero other than the origin. The ordinary
+degrees of the matching equations give a poor bound. The right
+measure of their size is a weighted degree that reflects how the
+\(\alpha_j\) scale.
+Give \(\alpha_j\) weight \(j\), and \(\rho\) weight one.
+The remainder equations have highest weighted degrees
+\begin{equation}\label{eq:weights}
+ 2d+1-r\quad(0\le r<d),\qquad\text{namely }d+2,\ldots,2d+1.
+\end{equation}
+Their highest weighted parts are the coefficients of
+\(\remA H_A\), where
+\begin{equation}\label{eq:continuous}
+ H_A(\rho)=\int_0^\rho A(t)A(\rho-t)\dd t.
+\end{equation}
+Indeed, if \(A(\rho)=\sum a_i\rho^i\), then
+\[
+ H_A(\rho)=\sum_{i,j=0}^{d}
+     \frac{i!j!}{(i+j+1)!}a_ia_j\rho^{i+j+1}.
+\]
+These are precisely the highest weighted terms of the power sums
+defining \(S_A\), and monic division preserves the highest weighted
+part. Indeed, \(A\) is weighted-homogeneous of weight \(d\), and each
+step of long division subtracts a multiple of \(A\) of the same
+weight as the term being removed.
+In words, the discrete convolution \(S_A\) is a lower-order
+perturbation of the continuous convolution \(H_A\), and the behaviour
+of the matching equations at infinity is governed by the continuous
+problem \(A\mid H_A\).
+
+For this degree, denote by \((\mathrm{R}_d)\) the condition
+\begin{equation}\label{eq:rigidity}
+ A\text{ monic},\quad\deg A=d,\quad A\mid H_A
+ \quad\Longrightarrow\quad A(\rho)=\rho^d.
+\end{equation}
+It says that the continuous problem has only the trivial solution.
+By the preceding paragraph, it is exactly the condition that the
+matching equations have no solution at weighted infinity.
+
+\begin{theorem}[Count with algebraic multiplicities]\label{thm:length}
+For every \(p\ge2\), the sum of multiplicities of the isolated points
+of \(\Xp\) is at most
+\[
+ N_p=\binom{2p-1}{p-1}.
+\]
+If \((\mathrm R_{p-1})\) holds, then \(\Xp\) is finite and
+\begin{equation}\label{eq:length}
+ \len\Xp=N_p.
+\end{equation}
+This equality does not require simplicity.
+\end{theorem}
+
+\begin{proof}
+Weighted degree is turned into ordinary degree by the finite
+substitution
+\begin{equation}\label{eq:weighted-cover}
+ \alpha_j=y_j^j,\qquad 1\le j\le d.
+\end{equation}
+A monomial of weight \(w\) in the \(\alpha_j\) becomes a monomial of
+ordinary degree \(w\) in the \(y_j\), so the pulled-back equations
+have ordinary degrees at most \(d+2,\ldots,2d+1\), and their
+highest-degree parts are the pull-backs of the highest weighted parts.
+B\'ezout's inequality for isolated solutions bounds the sum of their
+multiplicities by
+\((d+2)\cdots(2d+1)\); see \citet[Chapter~VIII]{Mondal2021}.
+If \((\mathrm R_d)\) holds, the leading homogeneous forms have
+no nonzero common zero. The homogenized system has no point at
+infinity, and ordinary B\'ezout gives equality
+\citep{CoxLittleOShea2005}.
+
+It remains to return from the \(y_j\) to the \(\alpha_j\).
+A solution in the \(\alpha_j\) with all \(\alpha_j\ne0\) has
+\(1\cdot2\cdots d=d!\) preimages in the \(y_j\), one for each
+choice of the roots \(y_j=\alpha_j^{1/j}\), each with the original
+multiplicity. In general, for each solution the sum of the
+multiplicities of its preimages is \(d!\) times its original
+multiplicity, including at branch points where some \(\alpha_j\)
+vanish. Thus the substitution multiplies the total length by \(d!\).
+Algebraically, \(\CC[y_1,\ldots,y_d]\) is a free module over
+\(\CC[\alpha_1,\ldots,\alpha_d]\), with basis
+\[
+ y_1^{e_1}\cdots y_d^{e_d},\qquad 0\le e_j<j.
+\]
+This remains true after imposing the equations and restricting to
+an isolated component.
+Dividing the B\'ezout count by \(d!\) gives
+\[
+ \frac{(d+2)\cdots(2d+1)}{d!}=\binom{2d+1}{d}.
+\]
+The no-infinity condition also gives finiteness of the whole affine
+scheme, completing the proof.
+\end{proof}
+
+For \(p=3\), the variable weights are \(1,2\) and the equation
+weights are \(4,5\), so the calculation is
+\((4\cdot5)/(1\cdot2)=10\).
+
+\subsection{The prime-index theorem}
+
+\begin{theorem}[Prime-index enumeration]\label{thm:prime}
+If \(\ell=2p-1\) is prime, then
+\[
+ \#\Xp(\CC)=\len\Xp=\binom{\ell}{p-1},
+\]
+and every point is simple.
+After a choice of an \(\ell\)-adic embedding of the algebraic
+coefficients, reduction labels the points by the
+\((p-1)\)-element subsets \(S\subset\FF_\ell\):
+\begin{equation}\label{eq:prime-labels}
+ \overline A(\rho)=\prod_{s\in S}(\rho-s).
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Put \(d=p-1\), so \(\ell=2d+1\), and work over
+\(\ZZ_{(\ell)}\), the rationals integral at \(\ell\).
+The proof has four steps: a congruence for \(S_A\) modulo \(\ell\);
+the solution of the reduced equations over \(\FF_\ell\); the
+exclusion of solutions at infinity, which proves \((\mathrm R_d)\);
+and the lifting of the reduced solutions back to characteristic zero.
+
+\emph{Step 1: the congruence.}
+Induction using \((D-n)Q^n=-nQ^{n+1}\) gives
+\[
+ Q^n=\frac{(-1)^{n-1}}{(n-1)!}
+        \prod_{j=1}^{n-1}(D-j)Q.
+\]
+Write \((A(D)Q)^2=\sum_{n=2}^{2p}b_nQ^n\).
+Each \(b_n\) is an integer polynomial in the coefficients of \(A\),
+and \(b_{2p}=(d!)^2\).
+By \eqref{eq:discrete-square},
+\[
+ S_A(\rho)=
+ \sum_{n=2}^{2p}\frac{(-1)^nb_n}{(n-1)!}
+       \prod_{j=1}^{n-1}(\rho-j).
+\]
+Only the last denominator, \((2p-1)!=\ell!\), contains \(\ell\).
+Consequently \(\ell S_A\) is integral and
+\begin{equation}\label{eq:prime-collapse}
+ \ell S_A(\rho)\equiv
+ \frac{(d!)^2}{(\ell-1)!}\prod_{j=1}^{\ell}(\rho-j)
+ \equiv(-1)^d(\rho^\ell-\rho)\pmod\ell.
+\end{equation}
+The scalar follows by pairing \(j\) with \(\ell-j\) in
+\((\ell-1)!\), and the product is \(\rho^\ell-\rho\) because it runs
+over all residues modulo \(\ell\).
+
+\emph{Step 2: the reduced equations.}
+The scaled remainder equations \(\ell R_r=0\) therefore reduce
+exactly to
+\(\overline A\mid\rho^\ell-\rho\).
+There are \(\binom{\ell}{d}\) monic divisors of degree \(d\), all
+defined over \(\FF_\ell\), and these exhaust the solutions over its
+algebraic closure.
+Each of them is a simple solution of the reduced equations.
+Write \(\rho^\ell-\rho=\overline A C\).
+For a variation \(h\) with \(\deg h<d\), the derivative of the
+remainder map is, up to the nonzero scalar \((-1)^d\),
+\begin{equation}\label{eq:prime-jacobian}
+ h\longmapsto-\operatorname{rem}_{\overline A}(Ch).
+\end{equation}
+Since \(\rho^\ell-\rho\) is squarefree, \(\overline A\) and \(C\)
+are coprime, so multiplication by \(C\) is invertible modulo
+\(\overline A\), and the map \eqref{eq:prime-jacobian} is invertible.
+
+\emph{Step 3: no solutions at infinity.}
+We must also prove that characteristic-zero solutions cannot escape
+to infinity, that is, that \((\mathrm R_d)\) holds.
+Taking the highest weighted part of \eqref{eq:prime-collapse} gives
+\begin{equation}\label{eq:prime-continuous}
+ \ell H_A(\rho)\equiv(-1)^d\rho^\ell\pmod\ell.
+\end{equation}
+Thus the reduced leading remainder equations have only
+\(\overline A=\rho^d\).
+After \eqref{eq:weighted-cover}, they are homogeneous equations
+with no nonzero common zero over \(\overline{\FF}_\ell\).
+The same is true in characteristic zero. If the equations had a
+complex projective zero, they would also have one with algebraic
+coordinates, since their coefficients are rational.
+Normalization at an \(\ell\)-adic place would then produce a nonzero
+reduced point.
+The valuation argument is stated precisely in
+Appendix~\ref{app:verification}.
+We have proved \((\mathrm R_d)\), so
+Theorem~\ref{thm:length} gives total length \(\binom{\ell}{d}\).
+
+\emph{Step 4: lifting.}
+The multivariable simple-root Hensel lemma lifts each of
+the \(\binom{\ell}{d}\) reduced points to a unique point over
+\(\ZZ_\ell\); see \citet{ConradHensel}.
+The lifts are distinct and simple. Their number already equals the
+characteristic-zero total length, so they exhaust the scheme.
+The equations define a finite algebra over \(\QQ\), hence every
+coordinate of a solution is algebraic over \(\QQ\), and the number of
+geometric points and their local lengths are the same over
+\(\overline{\QQ}_\ell\) and over \(\CC\).
+This proves the assertion and the labelling.
+\end{proof}
+
+The labels \eqref{eq:prime-labels} describe reductions of algebraic
+coefficients; they are not assertions that the complex roots of
+\(A\), or the characteristic roots of \(P_A\), are integers.
+For example, \(A=\rho^2+1/11\) at \(p=3\) reduces to
+\((\rho-2)(\rho-3)\) modulo five.
+
+The endpoints of \(v_A\) are its limits as \(z\to\mp\infty\), namely
+\(0\) and \(s_pA(0)\). Pairs with \(A(0)=0\) have equal endpoints and
+are pulses; the others are fronts. The pulses are needed separately,
+because the elliptic count of Section~\ref{sec:elliptic-counting}
+degenerates onto them.
+
+\begin{proposition}[Equal endpoints]\label{cor:endpoints}
+Assume \((\mathrm R_{p-1})\), and let
+\(\mathcal Z_p=\Xp\cap\{A(0)=0\}\), with its induced scheme structure.
+Then
+\begin{equation}\label{eq:pulse-length}
+ \len\mathcal Z_p=S_p:=\binom{2p-2}{p-2}.
+\end{equation}
+If \(\Xp\) is reduced, these are \(S_p\) distinct pairs and
+\(P_A(0)\ne0\) at each of them.
+In particular, under the prime-index hypothesis, exactly
+\[
+ \binom{2p-2}{p-2}
+\]
+normalized pairs have equal zero endpoints. The remaining
+\(\binom{2p-2}{p-1}\) have unequal endpoints.
+These are counts over \(\CC\).
+\end{proposition}
+
+\begin{proof}
+Polynomial summation gives \(S_A(0)=-A(0)^2\), so the
+constant remainder satisfies the polynomial identity
+\begin{equation}\label{eq:constant-remainder}
+ R_0=-A(0)\bigl(A(0)+C_A(0)\bigr).
+\end{equation}
+Set \(\alpha_d=A(0)=0\).
+The equation \(R_0=0\) disappears, leaving \(d-1\) equations
+of weights \(d+2,\ldots,2d\) in variables of weights
+\(1,\ldots,d-1\).
+Their leading forms have no nonzero common zero by
+\((\mathrm R_d)\). The weighted calculation in
+Theorem~\ref{thm:length} gives
+\[
+ \len\mathcal Z_p
+ =\frac{(d+2)\cdots(2d)}{(d-1)!}
+ =\binom{2d}{d-1}.
+\]
+For \(d=1\) the system is empty and its length is one.
+
+If \(\Xp\) is finite and reduced, its coordinate algebra is a product
+of copies of \(\CC\); the same is true of any quotient, in particular
+that of \(\mathcal Z_p\), so \(\mathcal Z_p\) is reduced as well.
+At a point with \(A(0)=C_A(0)=0\), the differential of
+\eqref{eq:constant-remainder} vanishes.
+Such a point cannot be simple in the square matching system.
+Therefore \(C_A(0)\ne0\), and
+\(P_A(0)=s_pC_A(0)/2\ne0\), at every point of \(\mathcal Z_p\)
+when \(\Xp\) is reduced.
+The prime-index assertions now follow from Theorem~\ref{thm:prime}
+and \(N_p-S_p=\binom{2p-2}{p-1}\).
+\end{proof}
+
+Under the labelling \eqref{eq:prime-labels} of Theorem~\ref{thm:prime},
+a pair is a pulse exactly when its label set contains \(0\).
+Indeed \(A(0)=0\) forces \(0\) to be a root of the reduced polynomial
+\(\overline A\), and the two counts agree: the \((p-1)\)-element subsets
+of \(\FF_\ell\) containing \(0\) number \(\binom{2p-2}{p-2}=S_p\), and
+those avoiding \(0\) number \(\binom{2p-2}{p-1}=N_p-S_p\).
+
+\input{sections/elliptic_counting}
+
+\subsection{Further orders}
+
+The prime-index argument excluded solutions at infinity by reducing
+the continuous convolution modulo \(\ell\). The same argument proves
+\eqref{eq:length} whenever \(2p-1=\ell^e\) is an odd prime power.
+For \(\deg A=(\ell^e-1)/2\), the normalized continuous convolution
+satisfies
+\[
+ \ell^eH_A(\rho)\equiv u\rho^{\ell^e}\pmod\ell,\qquad u\ne0.
+\]
+Every bilinear coefficient other than the leading one has
+denominator valuation at most \(e-1\), whereas the leading
+coefficient has valuation \(-e\).
+This follows either from the factorial formula or from
+\[
+ \frac{i!j!}{(i+j+1)!}
+   =\sum_{r=0}^{j}\frac{(-1)^r\binom jr}{i+r+1}.
+\]
+This argument controls only the leading system. It gives the length,
+but no simple-root lifting statement for the discrete matching system.
+
+More generally, the exact arithmetic certificates supplied with the
+paper establish \((\mathrm R_d)\) for every \(d\le72\), hence
+\begin{equation}\label{eq:coverage}
+ \len\Xp=\binom{2p-1}{p-1},\qquad
+ \len\mathcal E_p(g_2,g_3)=2\binom{2p-2}{p-2}
+ \qquad(2\le p\le73).
+\end{equation}
+Together with the ancillary proof, they also cover infinite families
+of higher orders.
+The certificate covers all complex coefficient vectors in these
+degrees. The ancillary proof and the full certificate are described
+in Appendix~\ref{app:verification}.
+Equation \eqref{eq:coverage} is a statement about lengths only.
+At composite indices we establish simplicity here for \(p=5\) only,
+where \(2p-1=9\) is the first composite index: a separate exact
+calculation proves that all 126 rational-exponential points are
+simple; the input and its exact output are supplied in the ancillary
+material. Theorem~\ref{thm:elliptic-count} then gives 112 distinct
+elliptic pairs on a generic fixed lattice at that order.
+
+\begin{corollary}[An order-seven consequence]\label{cor:p7}
+Among all monic operators of order seven, there are exactly
+1716 normalized rational-exponential pairs at unit rate, all simple.
+On every fixed nonsingular lattice the elliptic matching scheme
+has length 1584, and on a generic such lattice its 1584 points
+are distinct and simple.
+\end{corollary}
+
+This follows from \(2p-1=13\). As throughout this section, the
+operators vary: the corollary counts pairs, not the waves of a single
+seventh-order equation.

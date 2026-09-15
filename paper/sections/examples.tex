@@ -1,0 +1,440 @@
+\section{Three classical equations}\label{sec:examples}
+
+The three examples make both counts concrete and connect them to the
+classical literature. The first two use the full operator families of
+orders two and three, so their counts are the values \(N_2,M_2\) and
+\(N_3,M_3\) of the general formulas. The Kawahara equation restricts
+the order-four operator to an even polynomial; its counts must be
+computed within that restriction and differ from \(N_4\) and \(M_4\).
+Table~\ref{tab:example-counts} summarizes the results.
+The normalizations are those of Section~\ref{sec:counting}: for
+rational-exponential profiles the rate is one and the left endpoint is
+zero, reflection is retained, and for elliptic pairs both choices of
+constant equilibrium are retained.
+
+\begin{table}[htbp]
+\centering
+\caption{Counts of complex operator--profile pairs in the stated
+families. The elliptic column counts distinct pairs on a generic
+fixed nonsingular lattice; its value is the total multiplicity on
+every such lattice.}
+\label{tab:example-counts}
+\begin{tabular}{@{}llcc@{}}
+\toprule
+Equation&Monic operator \(P(D)\)&Rational-exponential&Elliptic\\
+\midrule
+KdV--Burgers&\(D^2+a_1D+a_0\)&3&2\\
+Kuramoto--Sivashinsky&\(D^3+a_2D^2+a_1D+a_0\)&10&8\\
+Kawahara&\(D^4+bD^2+a_0\)&3&6\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{KdV--Burgers and its KdV limit}\label{sec:kdvb}
+
+The integrated travelling-wave equation for
+\[
+ u_t+uu_x+\nu u_{xx}+\delta u_{xxx}=0,\qquad \delta\ne0,
+\]
+has order \(p=2\).
+Its exact front solutions have been studied in several equivalent
+forms \citep{JeffreyXu1989,VliegHalford1991,Kudryashov2009Errors}.
+The long-wave reductions in
+\citet{KudryashovSinelshchikovChernyavsky2008}
+also contain this balance of dissipation and dispersion.
+
+Here \(A(\rho)=\rho+a\) has a single coefficient, and the matching
+system is one equation in one unknown. Direct polynomial division
+gives
+\begin{equation}\label{eq:kdvb-matching}
+ \operatorname{rem}_A S_A=-\frac{a(a-1)(a+1)}6,
+ \qquad
+ P_A=\rho^2+5a\rho+a^2-6a-1,
+ \qquad
+ v_A=12\bigl((a+1)Q-Q^2\bigr).
+\end{equation}
+Thus there are exactly three simple pairs:
+\begin{equation}\label{eq:kdvb-pairs}
+ \begin{array}{c|c|c}
+ a&P_A(\rho)&v_A\\ \hline
+ -1&(\rho-2)(\rho-3)&-12Q^2\\
+ 0&\rho^2-1&12Q(1-Q)=3\operatorname{sech}^2(z/2)\\
+ 1&(\rho-1)(\rho+6)&12Q(2-Q).
+ \end{array}
+\end{equation}
+The two fronts have nonzero Burgers coefficient, while the pulse
+belongs to the KdV limit \(\nu=0\).
+To return to the original equation with a general rate
+\(\kappa\ne0\), set
+\[
+ u(x,t)=u_\ast+\delta\kappa^2
+            v_A\bigl(\kappa(x-ct)\bigr),\qquad
+ \nu=\delta\kappa(5a),\qquad
+ u_\ast-c=\delta\kappa^2(a^2-6a-1).
+\]
+Differentiating the normalized equation verifies the original PDE.
+In particular, a nonzero \(\nu\) fixes the front rate to
+\(\kappa=\nu/(5a\delta)\), \(a=\pm1\), in agreement with the
+classical parameter restriction.
+
+For a fixed lattice the elliptic candidate is \(V=-12X+b\).
+Its residual is
+\[
+ -12a_1Y-12(a_0+b)X+6g_2+a_0b+\frac12b^2.
+\]
+Consequently the complete elliptic system is
+\begin{equation}\label{eq:kdvb-elliptic}
+ a_1=0,\qquad
+ v=-12\wp-a_0,\qquad a_0^2=12g_2.
+\end{equation}
+There is no one-pole elliptic member with nonzero Burgers coefficient.
+For \(g_2\ne0\) the fixed lattice gives two simple pairs.
+For \(g_2=0\), \(g_3\ne0\), it gives one pair of multiplicity two.
+This is \(M_2=2\), including its exceptional specialization.
+
+At the fixed operator \(P=D^2-1\), equation
+\eqref{eq:kdvb-elliptic} fixes \(g_2=1/12\) and leaves \(g_3\)
+free, subject to nonsingularity.
+These solutions lie on different energy levels, as
+Theorem~\ref{thm:complete} requires.
+At \(g_3=0\), a translate by the imaginary half-period is
+\begin{equation}\label{eq:kdv-cnoidal}
+ v(z)=1+\sqrt3\,\operatorname{cn}^2
+       \left(\frac{z}{\sqrt{2\sqrt3}}\,\middle|\,\frac12\right).
+\end{equation}
+The second argument is the Jacobi parameter
+\citep[Chapters~22--23]{DLMF}.
+In the nodal limit \(g_3=-1/216\), the bounded translate becomes
+\(3\operatorname{sech}^2(z/2)\), the middle row of
+\eqref{eq:kdvb-pairs}.
+The cusp \(g_2=g_3=0\) gives \(P=D^2\), \(v=-12z^{-2}\).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/kdvb_profiles.pdf}
+\caption{Two waves for the same normalized KdV operator \(P=D^2-1\):
+the soliton in \eqref{eq:kdvb-pairs} and the cnoidal profile
+\eqref{eq:kdv-cnoidal}. Here
+\(L=2\sqrt{2\sqrt3}\,K(1/2)\) is the latter's real period.}
+\label{fig:kdvb}
+\end{figure}
+
+Since \(2p-1=3\) is prime, the one-pole counts at order two are
+unconditional.
+Global meromorphic completeness from Theorem~\ref{thm:complete}
+applies to the KdV subfamily \(a_1=0\).
+For mixed \(P\), the Fisher example in Section~\ref{sec:open}
+explains why the same global conclusion cannot be imposed.
+
+\subsection{Kuramoto--Sivashinsky: ten pairs and lattice collisions}
+\label{sec:ks}
+
+Let \(p=3\), \(s_3=60\), and \(A(\rho)=\rho^2+a\rho+b\).
+The profile and monic operator are
+\begin{align}
+ \frac{v_A}{60}
+   &=2Q^3-(a+3)Q^2+(a+b+1)Q, \label{eq:ksprofile}\\
+ P_A(\rho)
+   &=\rho^3+4a\rho^2+(a^2+19b)\rho
+            -a^3+7ab-5a-30b. \label{eq:ksoperator}
+\end{align}
+The remainder of \(S_A\) is \((E_1\rho+E_0)/30\), where
+\begin{equation}\label{eq:ksmatching}
+ E_0=ab(a^2-7b+5),\qquad
+ E_1=a^4-8a^2b+11b^2+10b-1.
+\end{equation}
+The system \(E_0=E_1=0\) is solved by cases on the factors of
+\(E_0\).
+If \(b=0\), then \(a^4=1\).
+If \(a=0\), then \((b+1)(11b-1)=0\).
+In the remaining case \(a^2=7b-5\), and the second equation becomes
+\(4(b-2)(b-3)=0\).
+This exhausts the system and gives Table~\ref{tab:ks}.
+The Jacobian determinant is nonzero at every point, so all ten
+pairs are simple, as Theorem~\ref{thm:prime} predicts for
+\(2p-1=5\).
+
+\begin{table}[htbp]
+\centering
+\caption{All ten rational-exponential pairs at order three.
+The determinant is taken in the order \((E_0,E_1)\) against
+\((a,b)\). Reality refers to the unit-rate logistic representatives.}
+\label{tab:ks}
+\begin{tabular}{@{}ccrcl@{}}
+\toprule
+\(a\)&\(b\)&Number&
+\(\det\partial(E_0,E_1)/\partial(a,b)\)&Real profiles\\
+\midrule
+\(\pm1\)&\(0\)&2&\(-24\)&Pulses\\
+\(\pm i\)&\(0\)&2&\(-16\)&Not real\\
+\(0\)&\(-1\)&1&\(144\)&Front\\
+\(0\)&\(1/11\)&1&\(576/121\)&Front\\
+\(\pm3\)&\(2\)&2&\(-144\)&Fronts\\
+\(\pm4\)&\(3\)&2&\(384\)&Fronts\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+There are ten complex pairs, eight with real coefficients.
+All eight have smooth bounded representatives on the real axis:
+two pulses and six fronts.
+For example,
+\[
+ A=(\rho-1)(\rho-2),\qquad
+ v_A=120Q^3,\qquad
+ P_A=(\rho-3)(\rho-4)(\rho-5).
+\]
+The choice \(A=\rho(\rho+1)\) gives the positive pulse
+\(v_A=120Q(1-Q)^2\).
+These belong to the classical hyperbolic-function solution sector
+\citep{KuramotoTsuzuki1976,Kudryashov1988,Kudryashov1990}.
+The complete parameter list is tabulated by
+\citet[Table~1]{KudryashovZargaryan1996} and
+\citet[Table~1]{ConteMusette2009}.
+Their tables contain six parameter cases because they identify the
+two signs of the dispersion coefficient: two cases have zero
+dispersion and four have nonzero dispersion, and restoring the sign of
+the latter gives the ten pairs of Table~\ref{tab:ks}.
+Exhaustion of this classical list follows from
+\citet{Eremenko2006}.
+
+For comparison with the usual integrated KS equation, write
+\[
+ P=D^3+B D^2+\mu D+a_0,\qquad w=v+a_0.
+\]
+Then
+\begin{equation}\label{eq:classicalKS}
+ w'''+B w''+\mu w'+\frac12w^2+K=0,\qquad
+ K=-\frac{a_0^2}{2}.
+\end{equation}
+An elliptic solution must have zero residue at its pole.
+The Laurent residue is \(60\mu/19-15B^2/76\), and
+its vanishing gives \(B^2=16\mu\).
+The resulting elliptic formula is
+\begin{equation}\label{eq:kselliptic}
+ w=-60\wp'-15B\wp-\frac{B^3}{64},\qquad
+ g_2=\frac{B^4}{3072},\qquad
+ g_3=\frac{K+13B^6/4096}{1080}.
+\end{equation}
+This is the classical solution of \citet{Kudryashov1990};
+necessity of its elliptic parameter restriction is proved by
+\citet{Hone2005}, and the classification of all meromorphic KS
+solutions is completed by \citet{Eremenko2006}.
+With leading coefficient \(\nu\), the residue condition is
+\(B^2=16\nu\mu\).
+
+The classical formula gives the lattice in terms of the operator.
+For enumeration we read it the other way: fix \(g_2,g_3\) and solve
+for \(B,a_0\).
+The entire elliptic matching scheme is
+\begin{equation}\label{eq:ks-elliptic-scheme}
+ \begin{split}
+ P&=D^3+B D^2+\frac{B^2}{16}D+a_0,\\
+ v&=-60\wp'-15B\wp-\frac{B^3}{64}-a_0,\\
+ B^4&=3072g_2,\qquad
+ a_0^2=\frac{13B^6}{2048}-2160g_3.
+ \end{split}
+\end{equation}
+The coefficients eliminated along the way are determined linearly
+with nonzero rational pivots, so the last two equations carry the
+full matching system, multiplicities included.
+Their quotient algebra has basis \(B^i a_0^j\),
+\(0\le i<4\), \(0\le j<2\), and length eight, which is \(M_3\).
+
+Generically these are eight distinct pairs; the exceptional cases
+are found as follows. Let
+\[
+ j(\Lambda)=\frac{1728g_2^3}{g_2^3-27g_3^2}.
+\]
+The Jacobian of the last two equations in
+\eqref{eq:ks-elliptic-scheme} is a nonzero constant times \(B^3a_0\).
+If \(B=0\), then \(g_2=0\), hence \(j=0\).
+If \(a_0=0\) and the lattice is nonsingular, elimination gives
+\[
+ 675g_3^2=169g_2^3,\qquad j=-300.
+\]
+These conditions are sufficient as well. Thus:
+\begin{equation}\label{eq:ks-collisions}
+ \begin{array}{c|c|c}
+ j(\Lambda)&\text{distinct pairs}&\text{local multiplicities}\\ \hline
+ j\notin\{0,-300\}&8&1,1,1,1,1,1,1,1\\
+ -300&6&2,2,1,1,1,1\\
+ 0&2&4,4.
+ \end{array}
+\end{equation}
+For \(j=-300\), all four \(B\)-roots are simple, and precisely
+two give \(a_0=0\), producing the two double points.
+For \(j=0\), the equations reduce to
+\(B^4=0\), \(a_0^2=-2160g_3\), producing two points of length four.
+For instance, \(g_2=1/12\), \(g_3=13/1080\) gives the double
+points \((B,a_0)=(4,0),(-4,0)\).
+This calculation exhibits explicitly the exceptional set in
+Theorem~\ref{thm:elliptic-count}.
+
+The exponential and elliptic counts refer to varying operators.
+No operator in Table~\ref{tab:ks} also has a nonsingular elliptic
+solution: the six unequal-endpoint pairs violate the residue
+condition, while the four equal-endpoint pairs give singular
+invariants in \eqref{eq:kselliptic}.
+This agrees with uniqueness up to translation for fixed \(P\).
+For \(P=D^3\), the rational member is \(v=120z^{-3}\).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/ks_profiles.pdf}
+\caption{A KS front \(v=120Q^3\) and a bounded elliptic wave.
+For the latter, \(g_2=1/12\), \(g_3=0\),
+\(P=D^3+4D^2+D+\sqrt{26}\), and
+\(v=-60\wp'-60\wp-1-\sqrt{26}\), translated by the imaginary
+half-period; \(L=2\sqrt{2\sqrt3}\,K(1/2)\) is its real period.
+The operators in the two panels are different.}
+\label{fig:ks}
+\end{figure}
+
+There is also a direct connection with the vessel model of
+\citet[Eq.~(4.12)]{KudryashovSinelshchikovChernyavsky2008}.
+Its quadratic long-wave equation has coefficients
+\(-\lambda/(2\alpha)\), \((\gamma-\beta)/(2\alpha)\) and
+\(\delta/(2\alpha)\) at the second, third and fourth spatial
+derivatives. When its quadratic advection coefficient and
+\(\alpha\delta\) are nonzero, amplitude normalization puts it
+in the same travelling-wave class.
+The elliptic condition becomes
+\[
+ (\gamma-\beta)^2+16\delta\lambda=0.
+\]
+Real material coefficients with \(\delta\lambda>0\) therefore
+exclude the elliptic sector. The rational-exponential sector is
+tested by \eqref{eq:ksmatching}, with rate and coefficient scales
+restored.
+
+\subsection{Kawahara: an even coefficient restriction}\label{sec:kawahara}
+
+For the Kawahara equation
+\citep{Kawahara1972,DeminaKudryashovKawahara2010},
+the integrated, shifted and monic travelling-wave operator is
+\begin{equation}\label{eq:kawahara-P}
+ P=D^4+bD^2+a_0.
+\end{equation}
+Meromorphic completeness for this equation, using its first
+integral, is already established by
+\citet{DeminaKudryashovKawahara2010}; see also
+\citet{YeEtAl2022}.
+Their first integral is the order-four instance of \eqref{eq:energy}.
+Theorem~\ref{thm:complete} places that argument in the uniform
+operator setting, with the energy retained when fixing a Laurent
+expansion.
+
+The even restriction changes the rational-exponential count, and the
+reason is a symmetry. An even operator gives a profile even about its
+pole: reflection preserves both the equation and its energy, so
+Laurent uniqueness applies.
+In the logistic coordinate this is \(v(Q)=v(1-Q)\).
+Since \(v(0)=0\), both endpoints are zero; the normalized polynomial
+must have the form \(A=\rho^3+c\rho\).
+Its quotient and remainder are
+\begin{equation}\label{eq:kawahara-exponential}
+ \begin{split}
+ P_A&=\rho^4+13c\rho^2+\frac{31c^2-70c+7}{3},\\
+ v_A&=280(1+c)Q(1-Q)-1680Q^2(1-Q)^2,\\
+ \operatorname{rem}_A S_A
+   &=-\frac{\rho}{420}(c+1)(31c^2-31c+10).
+ \end{split}
+\end{equation}
+The three distinct roots are
+\[
+ c=-1,\qquad c=\frac12\pm\frac{3i}{2\sqrt{31}}.
+\]
+They give the three simple rational-exponential pairs in this
+coefficient family. These are the three simply periodic parameter
+choices of \citet[Section~3]{DeminaKudryashovKawahara2010},
+in the present normalization: the parameter in their Eq.~(31)
+equals \(1/c\) here. At \(c=-1\),
+\begin{equation}\label{eq:kawahara-soliton}
+ v=-105\operatorname{sech}^4(z/2),\qquad
+ P=(D^2-4)(D^2-9).
+\end{equation}
+This is the familiar solitary-wave branch of the Kawahara equation;
+the other two pairs are complex at unit real rate.
+The count three is for the even family \eqref{eq:kawahara-P}.
+The unrestricted order-four count in Theorem~\ref{thm:prime} is 35.
+
+All elliptic members of \eqref{eq:kawahara-P} have the form
+\begin{equation}\label{eq:kawahara-elliptic}
+ v=-1680\wp^2-\frac{280b}{13}\wp
+       +168g_2+\frac{31b^2}{507}-a_0.
+\end{equation}
+Substitution gives exactly two conditions:
+\begin{align}
+ F(b;g_2,g_3)&:=31b^3-42588b g_2-4745520g_3=0,
+       \label{eq:kawahara-cubic}\\
+ a_0^2&=23184g_2^2+\frac{7980}{169}b^2g_2
+                       +\frac{101520}{13}b g_3.
+       \label{eq:kawahara-background}
+\end{align}
+These are the Weierstrass profiles and parameter relations obtained
+from Laurent series by
+\citet[Section~3]{DeminaKudryashovKawahara2010},
+expressed in the normalization \eqref{eq:main}.
+In their notation, \(b=-\beta\), \(a_0^2=C_0^2+12C_1\);
+the profile change is \(v=-6(w-w_\ast)\), where \(w_\ast\)
+is a constant equilibrium and \(a_0=C_0-6w_\ast\).
+The same two equations give the fixed-lattice count directly:
+the first is cubic in \(b\), and the second is monic
+quadratic in \(a_0\).
+Their quotient algebra has dimension six for every fixed lattice.
+At \((g_2,g_3)=(1,0)\), the cubic has three distinct roots and
+the right side of \eqref{eq:kawahara-background} is nonzero at
+all of them. Thus the six points are simple on a nonempty open
+set of lattices.
+This is the count within the even family; the full order-four
+elliptic matching scheme has length 30.
+Elliptic formulas with nonzero odd derivative coefficients in the
+full fifth-order evolution equation are given by
+\citet{KudryashovSinelshchikov2012}.
+
+For a fixed-operator illustration, set \(b=0\).
+Equations \eqref{eq:kawahara-cubic}--\eqref{eq:kawahara-background}
+then give
+\begin{equation}\label{eq:p4invariants}
+ P=D^4+a_0,\qquad
+ g_3=0,\qquad g_2=\pm\frac{a_0}{12\sqrt{161}}.
+\end{equation}
+If \(a_0\ne0\), both lattices are nonsingular.
+The corresponding profiles
+\[
+ v=-1680\wp^2+168g_2-a_0
+\]
+have marked coefficients
+\(h=[z^8]v=-21g_2^3/130\), and hence different energies.
+There is no nonconstant rational or rational-exponential solution
+for this fixed operator: at a singular cubic
+\(g_2=q^2/12\), \(g_3=-q^3/216\), the first equation forces
+\(q=0\), and the second forces \(a_0=0\).
+When \(a_0=0\), only the rational profile \(v=-1680z^{-4}\)
+remains.
+These statements exhaust the nonconstant globally meromorphic
+solutions for \(P=D^4+a_0\), up to translation.
+
+At \(a_0=12\sqrt{161}\), \(g_2=1\), \(g_3=0\), a translate
+by the imaginary half-period is the real bounded wave
+\begin{equation}\label{eq:p4real}
+ v(z)=-1680
+ \left(-\frac12+\frac12\operatorname{sn}^2(z\mid1/2)\right)^2
+ +168-12\sqrt{161}.
+\end{equation}
+Its real period is \(2K(1/2)\).
+Figure~\ref{fig:kawahara} compares it with
+\eqref{eq:kawahara-soliton}.
+The energy parameter is what permits distinct lattices for a fixed
+even operator, while preserving uniqueness at fixed marked data.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/kawahara_profiles.pdf}
+\caption{A solitary wave and a bounded elliptic wave in the Kawahara
+family. The left panel is \eqref{eq:kawahara-soliton};
+the right panel is \eqref{eq:p4real} for \(P=D^4+12\sqrt{161}\).
+The latter's horizontal coordinate is divided by its real period.}
+\label{fig:kawahara}
+\end{figure}

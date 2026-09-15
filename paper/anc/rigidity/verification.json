@@ -1,0 +1,34 @@
+{
+  "consecutive_polynomial_degrees": [
+    0,
+    72
+  ],
+  "corresponding_ODE_orders": [
+    2,
+    73
+  ],
+  "universal_rigidity_proved": false,
+  "simplicity_inferred_from_rigidity": false,
+  "residual_certificates": [
+    {
+      "gap": 2,
+      "all_residual_degrees": 2,
+      "integer_multiplier_monomials": 3,
+      "certified_primes": 4
+    },
+    {
+      "gap": 4,
+      "all_residual_degrees": 4,
+      "integer_multiplier_monomials": 12,
+      "certified_primes": 12
+    },
+    {
+      "gap": 6,
+      "all_residual_degrees": 6,
+      "integer_multiplier_monomials": 44,
+      "certified_primes": 41
+    }
+  ],
+  "original_ordered_bilinear_coefficients_checked": 132348,
+  "all_72_degree_choices_verified": true
+}

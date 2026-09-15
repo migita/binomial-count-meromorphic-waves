@@ -1,0 +1,11 @@
+# Lean build artefacts and downloaded dependencies
+lean/.lake/
+# LaTeX intermediates
+*.aux
+*.log
+*.out
+*.blg
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+__pycache__/

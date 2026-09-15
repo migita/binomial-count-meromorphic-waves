@@ -1,0 +1,191 @@
+{
+  "universal_rigidity_claimed": false,
+  "universal_simplicity_claimed": false,
+  "generic_identities": [
+    {
+      "degree": 1,
+      "discrete_square_identity": true,
+      "continuous_integral_identity": true,
+      "injectivity_leading_difference_degrees_checked": [
+        0
+      ]
+    },
+    {
+      "degree": 2,
+      "discrete_square_identity": true,
+      "continuous_integral_identity": true,
+      "injectivity_leading_difference_degrees_checked": [
+        0,
+        1
+      ]
+    },
+    {
+      "degree": 3,
+      "discrete_square_identity": true,
+      "continuous_integral_identity": true,
+      "injectivity_leading_difference_degrees_checked": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "degree": 4,
+      "discrete_square_identity": true,
+      "continuous_integral_identity": true,
+      "injectivity_leading_difference_degrees_checked": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "energy_identities": [
+    {
+      "order": 2,
+      "energy_identity": true,
+      "energy_slope": "168"
+    },
+    {
+      "order": 4,
+      "energy_identity": true,
+      "energy_slope": "7163520"
+    },
+    {
+      "order": 6,
+      "energy_identity": true,
+      "energy_slope": "1734656394240"
+    },
+    {
+      "order": 8,
+      "energy_identity": true,
+      "energy_slope": "1427965465006080000"
+    },
+    {
+      "order": 10,
+      "energy_identity": true,
+      "energy_slope": "3006082271216621076480000"
+    }
+  ],
+  "elliptic_family": [
+    {
+      "order": 2,
+      "elimination_pivots": [
+        "-12",
+        "-12"
+      ],
+      "variable_weights": [
+        2
+      ],
+      "equation_weights": [
+        4
+      ],
+      "elliptic_length": 2,
+      "nodal_coefficient_change_determinant": "1",
+      "nodal_matching_identity": true
+    },
+    {
+      "order": 3,
+      "elimination_pivots": [
+        "-720",
+        "-360",
+        "-60"
+      ],
+      "variable_weights": [
+        1,
+        3
+      ],
+      "equation_weights": [
+        4,
+        6
+      ],
+      "elliptic_length": 8,
+      "nodal_coefficient_change_determinant": "-60",
+      "nodal_matching_identity": true
+    },
+    {
+      "order": 4,
+      "elimination_pivots": [
+        "-100800",
+        "-33600",
+        "-3360",
+        "-1680"
+      ],
+      "variable_weights": [
+        2,
+        1,
+        4
+      ],
+      "equation_weights": [
+        5,
+        6,
+        8
+      ],
+      "elliptic_length": 30,
+      "nodal_coefficient_change_determinant": "78400",
+      "nodal_matching_identity": true
+    }
+  ],
+  "order_two": {
+    "rational_exponential_pairs": 3,
+    "all_simple": true,
+    "elliptic_length": 2,
+    "elliptic_generic_points": 2,
+    "elliptic_g2_zero_multiplicities": [
+      2
+    ],
+    "physical_scaling_verified": true,
+    "Jacobi_and_nodal_profiles_verified": true
+  },
+  "order_three": {
+    "points": 10,
+    "real_points": 8,
+    "real_fronts": 6,
+    "real_pulses": 2,
+    "all_jacobians_nonzero": true,
+    "KS_elliptic_identity": true,
+    "Kudryashov_Zargaryan_1996_table_1_verified": true,
+    "Conte_Musette_2009_table_1_verified": true,
+    "classical_six_cases_with_signs_restored_give_ten_pairs": true,
+    "elliptic_scheme_exact_elimination": true,
+    "elliptic_length": 8,
+    "elliptic_exceptional_j": [
+      0,
+      -300
+    ],
+    "elliptic_j_minus_300_multiplicities": [
+      2,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "elliptic_j_zero_multiplicities": [
+      4,
+      4
+    ],
+    "exponential_operators_have_only_singular_elliptic_invariants": true,
+    "vessel_parameter_identity": true
+  },
+  "order_four": {
+    "even_family_rational_exponential_pairs": 3,
+    "all_three_simple": true,
+    "even_family_elliptic_length": 6,
+    "generic_six_simple": true,
+    "elliptic_scheme_exact_elimination": true,
+    "2010_normalization_verified": true,
+    "2010_three_period_parameters_verified": true,
+    "b_zero_Weierstrass_residual": "201600*X*g3 - a0**2/2 + 11592*g2**2",
+    "two_nonsingular_choices_at_b_zero": true,
+    "marked_coefficient_checked": true,
+    "Jacobi_representation_checked": true,
+    "mixed_test_resonance_obstruction": 0,
+    "mixed_test_Darboux_identity_verified": true,
+    "mixed_test_Darboux_constant_at_h_zero": "-74483523366508697/30859192310661"
+  },
+  "Fisher": {
+    "elliptic_exponential_identity_verified": true
+  }
+}

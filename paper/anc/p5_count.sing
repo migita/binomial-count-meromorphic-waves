@@ -1,0 +1,15 @@
+// Generated directly from the discrete convolution; all arithmetic is rational.
+ring r=0,(a1,a2,a3,a4),dp;
+short=0;
+option(redSB);
+ideal I=2*a1^5*a4 - 17*a1^3*a2*a4 + 39*a1^2*a3*a4 + 33*a1*a2^2*a4 - 121*a1*a4^2 - 21*a1*a4 - 106*a2*a3*a4 + 210*a3*a4,
+2*a1^5*a3 - 2*a1^4*a4 - 17*a1^3*a2*a3 + 15*a1^2*a2*a4 + 39*a1^2*a3^2 - 30*a1^2 + 33*a1*a2^2*a3 - 158*a1*a3*a4 + 63*a1*a3 - 20*a2^2*a4 - 42*a2^2 - 106*a2*a3^2 + 420*a2*a4 + 60*a2 + 758*a4^2 - 84*a4 - 42,
+2*a1^5*a2 - 2*a1^4*a3 - 17*a1^3*a2^2 + 2*a1^3*a4 + 54*a1^2*a2*a3 + 33*a1*a2^3 - 134*a1*a2*a4 - 63*a1*a2 - 37*a1*a3^2 + 630*a1*a4 - 30*a1 - 126*a2^2*a3 + 676*a3*a4 + 126*a3,
+2*a1^6 - 19*a1^4*a2 + 41*a1^3*a3 + 48*a1^2*a2^2 - 123*a1^2*a4 - 156*a1*a2*a3 - 20*a2^3 + 316*a2*a4 - 84*a2 + 128*a3^2 + 840*a4 + 40;
+ideal G=std(I);
+print("DIMENSION");print(dim(G));
+print("LENGTH");print(vdim(G));
+matrix J=jacob(I);
+ideal singularLocus=std(G+ideal(det(J)));
+print("ALL_SIMPLE");print(reduce(1,singularLocus)==0);
+quit;

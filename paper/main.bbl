@@ -1,0 +1,374 @@
+\begin{thebibliography}{46}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Ablowitz and Zeppetella(1979)]{AblowitzZeppetella1979}
+Mark~J. Ablowitz and Anthony Zeppetella.
+\newblock Explicit solutions of {Fisher}'s equation for a special wave speed.
+\newblock \emph{Bulletin of Mathematical Biology}, 41\penalty0 (6):\penalty0
+  835--840, 1979.
+\newblock \doi{10.1007/BF02462380}.
+
+\bibitem[Conrad(n.d.)]{ConradHensel}
+Keith Conrad.
+\newblock A multivariable {Hensel}'s lemma.
+\newblock University of Connecticut, expository notes, n.d.
+\newblock URL
+  \url{https://kconrad.math.uconn.edu/blurbs/gradnumthy/multivarhensel.pdf}.
+\newblock Theorem 3.3.
+
+\bibitem[Conte and Musette(2003)]{ConteMusette2003}
+Robert Conte and Micheline Musette.
+\newblock The {Painlev\'e} methods.
+\newblock In A.~Kundu, editor, \emph{Classical and Quantum Nonlinear Integrable
+  Systems: Theory and Application}, pages 39--63. IOP Publishing, Bristol,
+  2003.
+\newblock \doi{10.1201/9781420034615.ch2}.
+\newblock URL \url{https://arxiv.org/abs/nlin/0211048}.
+
+\bibitem[Conte and Musette(2009)]{ConteMusette2009}
+Robert Conte and Micheline Musette.
+\newblock Elliptic general analytic solutions.
+\newblock \emph{Studies in Applied Mathematics}, 123\penalty0 (1):\penalty0
+  63--81, 2009.
+\newblock \doi{10.1111/j.1467-9590.2009.00447.x}.
+
+\bibitem[Conte et~al.(2015)Conte, Ng, and Wu]{ConteNgWu2015}
+Robert Conte, Tuen-Wai Ng, and Cheng-Fa Wu.
+\newblock {Hayman}'s classical conjecture on some nonlinear second-order
+  algebraic {ODEs}.
+\newblock \emph{Complex Variables and Elliptic Equations}, 60\penalty0
+  (11):\penalty0 1539--1552, 2015.
+\newblock \doi{10.1080/17476933.2015.1033414}.
+\newblock URL \url{https://arxiv.org/abs/1503.07074}.
+
+\bibitem[Conte et~al.(2018)Conte, Ng, and Wu]{ConteNgWu2018}
+Robert Conte, Tuen~Wai Ng, and Chengfa Wu.
+\newblock Singularity methods for meromorphic solutions of differential
+  equations.
+\newblock In N.~Euler, editor, \emph{Nonlinear Systems and Their Remarkable
+  Mathematical Structures}, volume~1, pages 159--186. CRC Press, Boca Raton,
+  2018.
+\newblock URL \url{https://arxiv.org/abs/1806.03177}.
+
+\bibitem[Conte et~al.(2025)Conte, Musette, Ng, and Wu]{ConteMusetteNgWu2025}
+Robert Conte, Micheline Musette, Tuen~Wai Ng, and Chengfa Wu.
+\newblock Methods for exact solutions of nonlinear ordinary differential
+  equations.
+\newblock \emph{Advances in Mathematics (China)}, 54\penalty0 (2):\penalty0
+  379--389, 2025.
+\newblock \doi{10.11845/sxjz.2024010a}.
+\newblock URL \url{https://arxiv.org/abs/2503.00834}.
+
+\bibitem[Cox et~al.(2005)Cox, Little, and O'Shea]{CoxLittleOShea2005}
+David~A. Cox, John Little, and Donal O'Shea.
+\newblock \emph{Using Algebraic Geometry}, volume 185 of \emph{Graduate Texts
+  in Mathematics}.
+\newblock Springer, New York, second edition, 2005.
+\newblock \doi{10.1007/b138611}.
+
+\bibitem[Dang(2023{\natexlab{a}})]{Dang2023Even}
+Guoqiang Dang.
+\newblock Meromorphic solutions of the seventh-order {KdV} equation by using an
+  extended complex method and {Painlev\'e} analysis.
+\newblock \emph{ScienceAsia}, 49\penalty0 (1):\penalty0 108--115,
+  2023{\natexlab{a}}.
+\newblock \doi{10.2306/scienceasia1513-1874.2022.133}.
+
+\bibitem[Dang(2023{\natexlab{b}})]{Dang2023Odd}
+Guoqiang Dang.
+\newblock Elliptic and multiple-valued solutions of some higher order ordinary
+  differential equations.
+\newblock \emph{Electronic Research Archive}, 31\penalty0 (10):\penalty0
+  5946--5958, 2023{\natexlab{b}}.
+\newblock \doi{10.3934/era.2023302}.
+
+\bibitem[Demina and Kudryashov(2014)]{DeminaKudryashov2014}
+M.~V. Demina and N.~A. Kudryashov.
+\newblock Doubly periodic meromorphic solutions of autonomous nonlinear
+  differential equations.
+\newblock \emph{Automatic Control and Computer Sciences}, 48\penalty0
+  (7):\penalty0 633--641, 2014.
+\newblock \doi{10.3103/S0146411614070207}.
+\newblock Russian original: Modeling and Analysis of Information Systems 21(5)
+  (2014), 49--60.
+
+\bibitem[Demina(2019)]{Demina2019}
+Maria~V. Demina.
+\newblock Classification of meromorphic integrals for autonomous nonlinear
+  ordinary differential equations with two dominant monomials.
+\newblock \emph{Journal of Mathematical Analysis and Applications},
+  479\penalty0 (2):\penalty0 1851--1862, 2019.
+\newblock \doi{10.1016/j.jmaa.2019.07.026}.
+
+\bibitem[Demina(2022)]{Demina2022}
+Maria~V. Demina.
+\newblock Meromorphic solutions of autonomous ordinary differential equations
+  without the finiteness property.
+\newblock \emph{Journal of Mathematical Analysis and Applications},
+  516\penalty0 (2):\penalty0 126516, 2022.
+\newblock \doi{10.1016/j.jmaa.2022.126516}.
+
+\bibitem[Demina and Kudryashov(2010)]{DeminaKudryashovKawahara2010}
+Maria~V. Demina and Nikolay~A. Kudryashov.
+\newblock From {Laurent} series to exact meromorphic solutions: The {Kawahara}
+  equation.
+\newblock \emph{Physics Letters A}, 374\penalty0 (39):\penalty0 4023--4029,
+  2010.
+\newblock \doi{10.1016/j.physleta.2010.08.013}.
+
+\bibitem[Demina and Kudryashov(2011{\natexlab{a}})]{DeminaKudryashov2011}
+Maria~V. Demina and Nikolay~A. Kudryashov.
+\newblock Explicit expressions for meromorphic solutions of autonomous
+  nonlinear ordinary differential equations.
+\newblock \emph{Communications in Nonlinear Science and Numerical Simulation},
+  16\penalty0 (3):\penalty0 1127--1134, 2011{\natexlab{a}}.
+\newblock \doi{10.1016/j.cnsns.2010.06.035}.
+
+\bibitem[Demina and
+  Kudryashov(2011{\natexlab{b}})]{DeminaKudryashovElliptic2011}
+Maria~V. Demina and Nikolay~A. Kudryashov.
+\newblock On elliptic solutions of nonlinear ordinary differential equations.
+\newblock \emph{Applied Mathematics and Computation}, 217\penalty0
+  (23):\penalty0 9849--9853, 2011{\natexlab{b}}.
+\newblock \doi{10.1016/j.amc.2011.04.043}.
+
+\bibitem[Eremenko(1982)]{Eremenko1982}
+A.~E. Eremenko.
+\newblock Meromorphic solutions of algebraic differential equations.
+\newblock \emph{Russian Mathematical Surveys}, 37\penalty0 (4):\penalty0
+  61--95, 1982.
+\newblock \doi{10.1070/RM1982v037n04ABEH003967}.
+\newblock Erratum: Russian Mathematical Surveys 38(6) (1983).
+
+\bibitem[Eremenko(2006)]{Eremenko2006}
+Alexandre Eremenko.
+\newblock Meromorphic traveling wave solutions of the {Kuramoto--Sivashinsky}
+  equation.
+\newblock \emph{Journal of Mathematical Physics, Analysis, Geometry},
+  2\penalty0 (3):\penalty0 278--286, 2006.
+\newblock URL \url{https://arxiv.org/abs/nlin/0504053}.
+
+\bibitem[Eremenko et~al.(2009)Eremenko, Liao, and Ng]{EremenkoLiaoNg2009}
+Alexandre~E. Eremenko, Liangwen Liao, and Tuen~Wai Ng.
+\newblock Meromorphic solutions of higher order {Briot--Bouquet} differential
+  equations.
+\newblock \emph{Mathematical Proceedings of the Cambridge Philosophical
+  Society}, 146\penalty0 (1):\penalty0 197--206, 2009.
+\newblock \doi{10.1017/S030500410800176X}.
+\newblock URL \url{https://arxiv.org/abs/0707.2898}.
+
+\bibitem[Hone(2005)]{Hone2005}
+A.~N.~W. Hone.
+\newblock Non-existence of elliptic travelling wave solutions of the complex
+  {Ginzburg--Landau} equation.
+\newblock \emph{Physica D: Nonlinear Phenomena}, 205\penalty0 (1--4):\penalty0
+  292--306, 2005.
+\newblock \doi{10.1016/j.physd.2004.10.011}.
+
+\bibitem[Huang et~al.(2014)Huang, Zhang, Chen, and
+  Yuan]{HuangZhangChenYuan2014}
+Zifeng Huang, Liming Zhang, Qiuhui Chen, and Wenjun Yuan.
+\newblock The representation of meromorphic solutions for a class of odd order
+  algebraic differential equations and its applications.
+\newblock \emph{Mathematical Methods in the Applied Sciences}, 37\penalty0
+  (10):\penalty0 1553--1560, 2014.
+\newblock \doi{10.1002/mma.3053}.
+
+\bibitem[Jeffrey and Xu(1989)]{JeffreyXu1989}
+Alan Jeffrey and Siqing Xu.
+\newblock Exact solutions to the {Korteweg--de Vries--Burgers} equation.
+\newblock \emph{Wave Motion}, 11\penalty0 (6):\penalty0 559--564, 1989.
+\newblock \doi{10.1016/0165-2125(89)90026-7}.
+
+\bibitem[Kawahara(1972)]{Kawahara1972}
+Takuji Kawahara.
+\newblock Oscillatory solitary waves in dispersive media.
+\newblock \emph{Journal of the Physical Society of Japan}, 33\penalty0
+  (1):\penalty0 260--264, 1972.
+\newblock \doi{10.1143/JPSJ.33.260}.
+
+\bibitem[Kudryashov(1988)]{Kudryashov1988}
+N.~A. Kudryashov.
+\newblock Exact soliton solutions of the generalized evolution equation of wave
+  dynamics.
+\newblock \emph{Journal of Applied Mathematics and Mechanics}, 52\penalty0
+  (3):\penalty0 361--365, 1988.
+\newblock \doi{10.1016/0021-8928(88)90090-1}.
+
+\bibitem[Kudryashov(1990)]{Kudryashov1990}
+N.~A. Kudryashov.
+\newblock Exact solutions of the generalized {Kuramoto--Sivashinsky} equation.
+\newblock \emph{Physics Letters A}, 147\penalty0 (5--6):\penalty0 287--291,
+  1990.
+\newblock \doi{10.1016/0375-9601(90)90449-X}.
+
+\bibitem[Kudryashov(2005)]{KudryashovFisher2005}
+N.~A. Kudryashov.
+\newblock Exact solitary waves of the {Fisher} equation.
+\newblock \emph{Physics Letters A}, 342\penalty0 (1--2):\penalty0 99--106,
+  2005.
+\newblock \doi{10.1016/j.physleta.2005.05.025}.
+
+\bibitem[Kudryashov(2009)]{Kudryashov2009Errors}
+N.~A. Kudryashov.
+\newblock Seven common errors in finding exact solutions of nonlinear
+  differential equations.
+\newblock \emph{Communications in Nonlinear Science and Numerical Simulation},
+  14\penalty0 (9--10):\penalty0 3507--3529, 2009.
+\newblock \doi{10.1016/j.cnsns.2009.01.023}.
+
+\bibitem[Kudryashov(2010)]{Kudryashov2010}
+N.~A. Kudryashov.
+\newblock Meromorphic solutions of nonlinear ordinary differential equations.
+\newblock \emph{Communications in Nonlinear Science and Numerical Simulation},
+  15\penalty0 (10):\penalty0 2778--2790, 2010.
+\newblock \doi{10.1016/j.cnsns.2009.11.013}.
+\newblock URL \url{https://arxiv.org/abs/1201.0126}.
+
+\bibitem[Kudryashov(2015)]{Kudryashov2015}
+N.~A. Kudryashov.
+\newblock Method of the logistic function for finding analytical solutions of
+  nonlinear differential equations.
+\newblock \emph{Modeling and Analysis of Information Systems}, 22\penalty0
+  (1):\penalty0 23--37, 2015.
+\newblock \doi{10.18255/1818-1015-2015-1-23-37}.
+\newblock URL \url{https://www.mathnet.ru/eng/mais426}.
+
+\bibitem[Kudryashov and Migita(2007)]{KudryashovMigita2007}
+N.~A. Kudryashov and A.~V. Migita.
+\newblock Periodic structures developing with account for dispersion in a
+  turbulence model.
+\newblock \emph{Fluid Dynamics}, 42\penalty0 (3):\penalty0 463--471, 2007.
+\newblock \doi{10.1134/S0015462807030143}.
+
+\bibitem[Kudryashov and Zargaryan(1996)]{KudryashovZargaryan1996}
+N.~A. Kudryashov and E.~D. Zargaryan.
+\newblock Solitary waves in active-dissipative dispersive media.
+\newblock \emph{Journal of Physics A: Mathematical and General}, 29\penalty0
+  (24):\penalty0 8067--8077, 1996.
+\newblock \doi{10.1088/0305-4470/29/24/029}.
+
+\bibitem[Kudryashov et~al.(2008)Kudryashov, Sinelshchikov, and
+  Chernyavsky]{KudryashovSinelshchikovChernyavsky2008}
+N.~A. Kudryashov, D.~I. Sinelshchikov, and I.~L. Chernyavsky.
+\newblock Nonlinear evolution equations for description of perturbations in a
+  viscoelastic tube.
+\newblock \emph{Russian Journal of Nonlinear Dynamics}, 4\penalty0
+  (1):\penalty0 69--86, 2008.
+\newblock \doi{10.20537/nd0801004}.
+\newblock In Russian.
+
+\bibitem[Kudryashov(2012)]{Kudryashov2012}
+Nikolay~A. Kudryashov.
+\newblock One method for finding exact solutions of nonlinear differential
+  equations.
+\newblock \emph{Communications in Nonlinear Science and Numerical Simulation},
+  17\penalty0 (6):\penalty0 2248--2253, 2012.
+\newblock \doi{10.1016/j.cnsns.2011.10.016}.
+
+\bibitem[Kudryashov(2013)]{Kudryashov2013}
+Nikolay~A. Kudryashov.
+\newblock Polynomials in logistic function and solitary waves of nonlinear
+  differential equations.
+\newblock \emph{Applied Mathematics and Computation}, 219\penalty0
+  (17):\penalty0 9245--9253, 2013.
+\newblock \doi{10.1016/j.amc.2013.03.032}.
+
+\bibitem[Kudryashov and Sinelshchikov(2012)]{KudryashovSinelshchikov2012}
+Nikolay~A. Kudryashov and Dmitry~I. Sinelshchikov.
+\newblock Elliptic solutions for a family of fifth order nonlinear evolution
+  equations.
+\newblock \emph{Applied Mathematics and Computation}, 218\penalty0
+  (12):\penalty0 6991--6997, 2012.
+\newblock \doi{10.1016/j.amc.2011.12.058}.
+
+\bibitem[Kudryashov et~al.(2011)Kudryashov, Sinelshchikov, and
+  Demina]{KudryashovSinelshchikovDemina2011}
+Nikolay~A. Kudryashov, Dmitry~I. Sinelshchikov, and Maria~V. Demina.
+\newblock Exact solutions of the generalized {Bretherton} equation.
+\newblock \emph{Physics Letters A}, 375\penalty0 (7):\penalty0 1074--1079,
+  2011.
+\newblock \doi{10.1016/j.physleta.2011.01.010}.
+
+\bibitem[Kuramoto and Tsuzuki(1976)]{KuramotoTsuzuki1976}
+Y.~Kuramoto and T.~Tsuzuki.
+\newblock Persistent propagation of concentration waves in dissipative media
+  far from thermal equilibrium.
+\newblock \emph{Progress of Theoretical Physics}, 55\penalty0 (2):\penalty0
+  356--369, 1976.
+\newblock \doi{10.1143/PTP.55.356}.
+
+\bibitem[McCue et~al.(2021)McCue, El-Hachem, and
+  Simpson]{McCueElHachemSimpson2021}
+Scott~W. McCue, Maud El-Hachem, and Matthew~J. Simpson.
+\newblock Exact sharp-fronted travelling wave solutions of the {Fisher--KPP}
+  equation.
+\newblock \emph{Applied Mathematics Letters}, 114:\penalty0 106918, 2021.
+\newblock \doi{10.1016/j.aml.2020.106918}.
+
+\bibitem[Mondal(2021)]{Mondal2021}
+Pinaki Mondal.
+\newblock \emph{How Many Zeroes? Counting Solutions of Systems of Polynomials
+  via Toric Geometry at Infinity}, volume~2 of \emph{CMS/CAIMS Books in
+  Mathematics}.
+\newblock Springer, Cham, 2021.
+\newblock \doi{10.1007/978-3-030-75174-6}.
+
+\bibitem[Ng and Wu(2019)]{NgWu2019}
+Tuen-Wai Ng and Cheng-Fa Wu.
+\newblock Nonlinear {Loewy} factorizable algebraic {ODEs} and {Hayman}'s
+  conjecture.
+\newblock \emph{Israel Journal of Mathematics}, 229\penalty0 (1):\penalty0
+  1--38, 2019.
+\newblock \doi{10.1007/s11856-018-1791-0}.
+\newblock URL \url{https://arxiv.org/abs/1710.08593}.
+
+\bibitem[{NIST}(n.d.)]{DLMF}
+{NIST}.
+\newblock Digital library of mathematical functions, n.d.
+\newblock URL \url{https://dlmf.nist.gov/}.
+\newblock Chapters 22 and 23.
+
+\bibitem[Simbawa et~al.(2010)Simbawa, Matthews, and
+  Cox]{SimbawaMatthewsCox2010}
+Eman Simbawa, Paul~C. Matthews, and Stephen~M. Cox.
+\newblock {Nikolaevskiy} equation with dispersion.
+\newblock \emph{Physical Review E}, 81\penalty0 (3):\penalty0 036220, 2010.
+\newblock \doi{10.1103/PhysRevE.81.036220}.
+
+\bibitem[Vlieg-Hulstman and Halford(1991)]{VliegHalford1991}
+M.~Vlieg-Hulstman and W.~D. Halford.
+\newblock The {Korteweg--de Vries--Burgers}' equation: a reconstruction of
+  exact solutions.
+\newblock \emph{Wave Motion}, 14\penalty0 (3):\penalty0 267--271, 1991.
+\newblock \doi{10.1016/0165-2125(91)90041-L}.
+
+\bibitem[Ye et~al.(2022)Ye, Tian, Zhang, Jiang, Ouyang, and Gu]{YeEtAl2022}
+Feng Ye, Jian Tian, Xiaoting Zhang, Chunling Jiang, Tong Ouyang, and Yongyi Gu.
+\newblock All traveling wave exact solutions of the {Kawahara} equation using
+  the complex method.
+\newblock \emph{Axioms}, 11\penalty0 (7):\penalty0 330, 2022.
+\newblock \doi{10.3390/axioms11070330}.
+
+\bibitem[Yuan et~al.(2014{\natexlab{a}})Yuan, Li, and Qi]{YuanLiQi2014}
+Wenjun Yuan, Yezhou Li, and Jianming Qi.
+\newblock All meromorphic solutions of some algebraic differential equations
+  and their applications.
+\newblock \emph{Advances in Difference Equations}, 2014:\penalty0 105,
+  2014{\natexlab{a}}.
+\newblock \doi{10.1186/1687-1847-2014-105}.
+
+\bibitem[Yuan et~al.(2014{\natexlab{b}})Yuan, Wu, Chen, and
+  Huang]{YuanWuChenHuang2014}
+Wenjun Yuan, Yonghong Wu, Qiuhui Chen, and Yong Huang.
+\newblock All meromorphic solutions for two forms of odd order algebraic
+  differential equations and its applications.
+\newblock \emph{Applied Mathematics and Computation}, 240:\penalty0 240--251,
+  2014{\natexlab{b}}.
+\newblock \doi{10.1016/j.amc.2014.04.099}.
+
+\end{thebibliography}

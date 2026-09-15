@@ -1,0 +1,278 @@
+\documentclass[11pt]{article}
+\usepackage[margin=27mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage{booktabs,array,graphicx,microtype}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\usepackage{xurl}
+\usepackage{doi}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\FF}{\mathbb F}
+\newcommand{\remA}{\operatorname{rem}_{A}}
+\newcommand{\len}{\operatorname{length}}
+\newcommand{\ct}{\operatorname{ct}}
+\newcommand{\Xp}{\mathcal X_p}
+\newcommand{\Wclass}{\mathcal W}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\fall}[2]{#1^{\underline{#2}}}
+\DeclareMathOperator{\Res}{Res}
+\numberwithin{equation}{section}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.8}
+\title{A binomial count of meromorphic travelling waves}
+% Author metadata.
+\input{authors}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study meromorphic travelling waves of
+\(u_t+uu_x+\sum_{j=1}^{p}b_j\partial_x^{j+1}u=0\), a
+constant-coefficient family containing KdV--Burgers,
+Kuramoto--Sivashinsky and Kawahara. After integration and
+normalization, the profiles satisfy \(P(D)v+v^2/2=0\), where
+\(D=\mathrm d/\mathrm dz\) and \(P\) is monic of degree \(p\ge2\) with
+complex coefficients.
+
+If \(p\) is odd or \(P\) contains only even powers, we give a complete
+algebraic description of all nonconstant globally meromorphic
+solutions: they are rational, rational in an exponential, or elliptic,
+with one pole modulo their full period group.
+
+We then count normalized one-pole pairs \((P,v)\) across all monic \(P\),
+whether or not \(P\) is covered by the classification. When \(2p-1\) is
+prime, there are \(\binom{2p-1}{p-1}\) rational-exponential pairs at a
+fixed exponential rate and \(2\binom{2p-2}{p-2}\) elliptic pairs on a
+fixed generic lattice, all of multiplicity one. Exact computer
+certificates establish both formulas with multiplicities for
+\(2\le p\le73\). We conjecture the same counting and multiplicity
+statements in every order.
+\end{abstract}
+
+\noindent\textbf{Keywords.}
+Meromorphic travelling waves; Laurent series; elliptic functions;
+polynomial convolution; algebraic multiplicity.
+
+\section{Introduction}\label{sec:intro}
+
+The generalized Kuramoto--Sivashinsky equation has nonconstant travelling waves
+that are polynomials in a hyperbolic tangent at exactly four values of
+its squared dimensionless dispersion parameter. Kuramoto and Tsuzuki
+found the dispersionless one \citep{KuramotoTsuzuki1976}, Kudryashov the
+other three \citep{Kudryashov1988,Kudryashov1990}, and Eremenko proved
+that, together with Kudryashov's elliptic solution and a single rational
+one, they exhaust the nonconstant meromorphic travelling waves
+\citep{Eremenko2006}.
+Counted as we count below, the tanh list has ten members. This paper
+shows that ten is \(\binom52\): the classical list is the order-three
+case of a binomial enumeration, proved for infinitely many orders and
+conjectured for all.
+
+We consider the evolution equations
+\[
+ u_t+uu_x+\sum_{j=1}^{p}b_j\partial_x^{j+1}u=0,\qquad b_p\ne0,
+\]
+which contain KdV--Burgers (\(p=2\)), Kuramoto--Sivashinsky (\(p=3\))
+and Kawahara (\(p=4\)), the sixth-order turbulence models of
+\citet{KudryashovMigita2007,SimbawaMatthewsCox2010}, and the quadratic
+long-wave reductions of \citet{KudryashovSinelshchikovChernyavsky2008}.
+A travelling wave \(u=w(x-ct)\) satisfies, after one integration,
+\(\sum_jb_jw^{(j)}-cw+w^2/2+K=0\). Shifting \(w\) by a constant
+equilibrium and normalizing the leading coefficient gives
+\begin{equation}\label{eq:main}
+ E_P(v):=P(D)v+\frac12v^2=0,\qquad
+ P(\rho)=\rho^p+\sum_{j=0}^{p-1}a_j\rho^j,\qquad p\ge2,
+\end{equation}
+with \(D=\mathrm d/\mathrm dz\) and complex coefficients. The speed,
+the integration constant and the equilibrium are absorbed into
+\(a_0\). Throughout, \(p\) is the order of \eqref{eq:main}, one less
+than the order of the evolution equation.
+
+\paragraph{Completeness.}
+Eremenko's theorem states that an autonomous algebraic differential
+equation with a single monomial of top degree and finitely many Laurent
+expansions at a pole has only three kinds of nonconstant meromorphic
+solutions: rational, rational in an exponential, and elliptic
+\citep{Eremenko2006}. Theorem~\ref{thm:complete} verifies these
+hypotheses directly for \eqref{eq:main} when \(p\) is odd, and applies
+the theorem to a fixed-energy equation when \(P\) is an even polynomial.
+Every nonconstant meromorphic solution is then of one of the three
+kinds and has a single pole modulo its full period group, and for
+fixed \(P\) there is at most one nonconstant solution up to translation
+when \(p\) is odd and at most one on each energy level when \(P\) is
+even. Section~\ref{sec:systems} writes each kind as a finite
+polynomial system, following the principal-part construction of
+\citet{DeminaKudryashov2011,DeminaKudryashovElliptic2011}. These systems
+therefore give an exhaustive representation of the nonconstant
+meromorphic travelling waves in the covered cases. The matching
+systems are valid for every monic \(P\), and the counts below range
+over the full monic family; parity enters only through exhaustion.
+
+\paragraph{The count.}
+Fix the exponential rate to one and place the pole at \(i\pi\).
+Every solution of \eqref{eq:main} that is rational in \(e^z\), has
+one pole modulo \(2\pi i\ZZ\) and vanishes as \(e^z\to0\) is of the
+form \(v=s_pA(D)Q\), where \(Q=1/(1+e^{-z})\), \(s_p\) is a fixed
+scale and \(A\) is a monic polynomial of degree \(p-1\).
+Let \(P\) range over all monic polynomials of degree \(p\) and count
+the pairs \((P,v)\) for which \(v\) solves \eqref{eq:main}.
+Likewise fix a nonsingular Weierstrass lattice and count the pairs
+\((P,v)\) with \(v\) elliptic on that lattice and its sole pole at
+zero. We prove
+\[
+ \begin{aligned}
+ N_p&=\binom{2p-1}{p-1}
+     &&\text{rational-exponential pairs},\\
+ M_p&=2\binom{2p-2}{p-2}
+     &&\text{elliptic pairs on a generic lattice}.
+ \end{aligned}
+\]
+Whenever \(2p-1\) is prime, both formulas hold and every pair is
+simple, that is, nondegenerate; in the elliptic case this is for a
+generic lattice (Theorems~\ref{thm:prime} and~\ref{thm:elliptic-count}).
+For every \(2\le p\le73\), the formulas hold as counts with algebraic
+multiplicity (Section~\ref{sec:counting}).
+At \(p=5\), where \(2p-1=9\) is the first composite index, a separate
+exact computation shows that all \(126\) rational-exponential pairs
+are simple.
+We conjecture the same counting and simplicity statements in every
+order (Conjecture~\ref{conj:count}). The count is over operators,
+not over the waves of a single equation.
+
+For rational-exponential profiles, the pair \((P,v_A)\) solves
+\eqref{eq:main} if and only if \(A\) divides its own discrete
+self-convolution \(S_A(n)=\sum_{j=1}^{n-1}A(j)A(n-j)\), and then
+\(P=s_pS_A/(2A)\) (Proposition~\ref{prop:divisibility}). When
+\(\ell=2p-1\) is prime, \(\ell S_A\equiv\pm(\rho^\ell-\rho)\pmod\ell\),
+so the condition reduces to \(A\mid\rho^\ell-\rho\) over \(\FF_\ell\).
+The monic divisors of degree \(p-1\) are indexed by the
+\((p-1)\)-element subsets of \(\FF_\ell\).
+There are \(\binom{\ell}{p-1}\) of them, and each lifts by Hensel's
+lemma to a simple \(\ell\)-adic solution. A weighted B\'ezout bound
+shows that the lifts account for the whole solution scheme, and
+finiteness over \(\QQ\) transfers the count to \(\CC\). For the
+elliptic pairs, the same weighted B\'ezout argument gives the count
+with multiplicity on every nonsingular lattice, once a cusp
+degeneration excludes solutions at infinity; degenerating the lattice
+to a node instead, where the elliptic problem becomes the
+equal-endpoint case of the exponential one with two choices of
+background, proves that the pairs are simple on a generic lattice.
+Two ingredients resist a uniform proof. One is a rigidity statement
+for the continuous convolution \(\int_0^\rho A(t)A(\rho-t)\dd t\),
+needed to exclude solutions at infinity; it is proved for prime and
+prime-power indices, certified by exact arithmetic through degree
+\(72\), and would give both formulas with multiplicity in every order.
+The other is simplicity of every rational-exponential pair, proved
+for prime indices and, by exact computation, at \(p=5\), and open in
+general (Conjecture~\ref{conj:count}).
+
+\paragraph{Relation to earlier work.}
+The completeness theorem is a uniform version of results that exist in
+pieces. For odd \(p\) the indicial polynomial has no positive integer
+zero, the Laurent expansion at a pole is unique, and Eremenko's theorem
+applies directly; this case is contained in
+\citet[Theorem~1]{YuanLiQi2014}, with related odd-order results in
+\citet{HuangZhangChenYuan2014,YuanWuChenHuang2014} and a fifth-order
+instance in \citet{Dang2023Odd}. For even \(p\) the index \(3p\) is
+resonant, and the conclusion need not hold for mixed operators: the
+Fisher equation has an elliptic-exponential family of solutions
+\citep{AblowitzZeppetella1979,Kudryashov2010,ConteNgWu2015} whose
+generic members are meromorphic and of none of the three kinds.
+The familiar Ablowitz--Zeppetella front is a rational-exponential
+degeneration of this family.
+When \(P\) is an even polynomial the equation has a first integral,
+the energy, and fixing its value removes the resonant freedom.
+This is the device of
+\citet[Lemmas~3--4]{EremenkoLiaoNg2009} for \(P=D^p+a_0\), stated as a
+general step by \citet{ConteNgWu2018,ConteMusetteNgWu2025} and applied
+to the Kawahara equation \citep{DeminaKudryashovKawahara2010,YeEtAl2022},
+the generalized Bretherton equation
+\citep{DeminaKudryashov2011,KudryashovSinelshchikovDemina2011} and the
+seventh-order KdV equation \citep{Dang2023Even}.
+Theorem~\ref{thm:complete} extends it uniformly to every even \(P\),
+intermediate derivatives included. Equations with two dominant
+monomials, or without the finiteness property, are treated by other
+methods in \citet{Demina2019,Demina2022}.
+The general enumeration has no precedent that we know of; its special
+cases at \(p=3\) and in the even Kawahara family are classical, as
+the examples make explicit.
+
+\paragraph{Examples.}
+The rational-exponential and generic elliptic counts are, respectively,
+\(3\) and \(2\) for KdV--Burgers, \(10\) and \(8\) for
+Kuramoto--Sivashinsky, and \(3\) and \(6\) for the Kawahara family,
+which restricts \(P\) to even polynomials, against \(35\) and \(30\)
+for the unrestricted order-four family.
+The ten Kuramoto--Sivashinsky pairs are
+the classical list tabulated by \citet{KudryashovZargaryan1996} and
+\citet{ConteMusette2009}; the elliptic solution and its parameter
+condition are due to \citet{Kudryashov1990}, with necessity proved by
+\citet{Hone2005} and \citet{Eremenko2006}; the three Kawahara values
+are those of \citet{DeminaKudryashovKawahara2010}. The
+Kuramoto--Sivashinsky example also exhibits the two exceptional values
+\(j=0\) and \(j=-300\) of the lattice invariant at which elliptic pairs
+collide. All counts are over \(\CC\); the examples identify the real
+profiles, and stability is not discussed. Section~\ref{sec:open}
+collects the open questions, and Appendix~\ref{app:verification}
+describes the exact verification and the ancillary material.
+
+\input{sections/completeness}
+\input{sections/systems}
+\input{sections/counting}
+\input{sections/examples}
+\input{sections/open}
+\appendix
+\input{sections/verification}
+
+\section*{Tool and computational resource disclosure}
+
+This paper was written with substantial use of generative AI, which is
+disclosed here in the form recommended by the Leiden Declaration on
+Artificial Intelligence and
+Mathematics\footnote{\url{https://leidendeclaration.ai/}, 2 June 2026.}
+and required by arXiv.
+No automated system is an author; credit and responsibility for the
+results, and for the attribution of prior work, rest with the author.
+
+\begin{itemize}
+\item \texttt{gpt-6-astra} (OpenAI), August--September 2026. The main
+mathematical ideas of the paper, the proofs of
+Theorems~\ref{thm:complete}, \ref{thm:length}, \ref{thm:prime}
+and~\ref{thm:elliptic-count}, the rigidity condition
+\((\mathrm R_d)\) and its certificate, the exact verification scripts,
+the \textsc{Singular} input, and the first complete draft of the text
+were produced by this model in dialogue with the author.
+\item OpenAI Codex v0.153.4, September 2026. Independent mathematical
+audit of the final revision, integration of the edits, and rebuilding
+and validation of the source package.
+\item Claude Code (Anthropic, Claude Fable~5.1), September 2026. The
+literature search behind the attributions in Section~\ref{sec:intro},
+the readability revision of all sections, and the leading-coefficient
+argument of Proposition~\ref{prop:injective}, which Codex then checked
+independently.
+\end{itemize}
+
+{\small\raggedright
+\setlength{\bibsep}{3pt}
+\interlinepenalty=10000
+\bibliographystyle{plainnat}
+\bibliography{references}
+}
+\end{document}

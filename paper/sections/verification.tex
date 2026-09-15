@@ -1,0 +1,63 @@
+\section{Exact verification and ancillary material}\label{app:verification}
+
+This appendix records one lemma used in the proof of
+Theorem~\ref{thm:prime} and describes the computer checks that
+accompany the paper.
+
+The lemma transfers the absence of solutions at infinity from
+characteristic \(\ell\) to characteristic zero.
+Let homogeneous polynomials \(F_1,\ldots,F_m\), with coefficients
+in \(\ZZ_{(\ell)}\), have no nonzero common zero over
+\(\overline{\FF}_\ell\).
+Then they have no nonzero common zero over \(\CC\).
+Indeed a complex projective zero yields a zero over
+\(\overline{\QQ}\) after fixing one nonzero coordinate.
+Choose a place above \(\ell\), extend it if necessary, and scale
+all coordinates by the inverse of a coordinate of smallest valuation.
+The coordinates are integral and one is a unit.
+Their reductions give a nonzero common zero over
+\(\overline{\FF}_\ell\), contradicting the hypothesis.
+The argument needs the algebraic closure of the residue field;
+a search only over \(\FF_\ell\) would not suffice.
+
+The ancillary material contains three kinds of checks.
+
+\begin{enumerate}
+\item \texttt{verify\_manuscript.py} reconstructs the discrete and
+continuous convolutions, the low-order Laurent coefficients, and the
+Weierstrass differential algebra. It also checks the leading-term
+comparison used in Proposition~\ref{prop:injective}.
+It checks the displayed
+order-two, order-three and order-four formulas by exact
+substitution, including the correspondence with the KS tables
+of \citet{KudryashovZargaryan1996,ConteMusette2009},
+the KS collision multiplicities, the
+Kawahara coefficient restriction and its literature normalization,
+the nodal correspondence, and the Fisher identity.
+These finite substitutions check the displayed formulas; the uniform
+proofs are the arguments in the text.
+\item \texttt{p5\_count.sing} is a self-contained rational
+\textsc{Singular} calculation for the full order-five matching ideal.
+Its quotient dimension is 126.
+Adjoining the matching Jacobian determinant gives the unit ideal,
+so all 126 points are simple.
+The input is reconstructed from the original polynomial sum by the
+Python checker; the saved transcript states the two exact outputs.
+\item \texttt{rigidity/} supplies the proof and exact certificate
+for \((\mathrm R_d)\), \(d\le72\).
+For \(2d+1=\ell^e+g\), \(g\in\{0,2,4,6\}\), the proof reduces the
+normalized continuous convolution to a residual system of degree
+at most \(g\).
+The certificate retains every residual degree, with integer
+ideal-membership identities and certified prime factors.
+The replay reconstructs the inputs, multiplies out every identity,
+and checks all 72 arithmetic choices.
+It does not infer characteristic-zero nonexistence from a list
+of residue-field points.
+\end{enumerate}
+
+The scripts use exact rational or finite-field arithmetic.
+The figure program evaluates the already verified formulas.
+Instructions, dependency versions and checksums are included with the
+source package. The prime-index theorem does not depend on the
+computer calculations.

@@ -1,0 +1,204 @@
+\subsection{Elliptic pairs on a fixed lattice}\label{sec:elliptic-counting}
+
+We now count the elliptic pairs. Fix a lattice \(\Lambda\subset\CC\),
+including its scale, and put \(g_i=g_i(\Lambda)\).
+We place the pole at zero, allow \(P\) to vary over all monic
+polynomials of degree \(p\), and retain the constant term of the
+profile. Neither reflection nor a lattice automorphism is
+factored out. By Section~\ref{sec:systems}, every profile has the form
+\begin{equation}\label{eq:elliptic-enumeration-profile}
+ V=-s_p\mathscr D^{p-2}X
+       +\sum_{j=0}^{p-3}u_j\mathscr D^jX+b.
+\end{equation}
+Its only pole on \(\CC/\Lambda\) is zero, of order \(p\).
+In particular \(\Lambda\) is its full period lattice.
+Let \(\mathcal E_p(g_2,g_3)\) denote the matching equations obtained
+by substituting \eqref{eq:elliptic-enumeration-profile} in
+\eqref{eq:main}, in the unknowns \(a_0,\ldots,a_{p-1}\),
+\(u_0,\ldots,u_{p-3}\) and \(b\), together with their solution set.
+The operator coefficients may equivalently be eliminated first, as in
+the proof below. Length, simplicity and reducedness are understood as
+in Section~\ref{sec:counting}.
+
+\begin{theorem}[Fixed-lattice elliptic enumeration]\label{thm:elliptic-count}
+Assume \((\mathrm R_{p-1})\).
+For every fixed nonsingular lattice,
+\begin{equation}\label{eq:elliptic-length}
+ \len\mathcal E_p(g_2,g_3)
+   =M_p:=2\binom{2p-2}{p-2}.
+\end{equation}
+If, in addition, \(\Xp\) is reduced, then
+\(\mathcal E_p(g_2,g_3)\) is reduced for
+\((g_2,g_3)\) in a nonempty Zariski-open subset of
+\(\{g_2^3-27g_3^2\ne0\}\).
+In particular, if \(2p-1\) is prime, a generic fixed lattice
+admits exactly \(M_p\) normalized elliptic operator--profile
+pairs, all simple.
+\end{theorem}
+
+Thus the elliptic assertion on an arbitrary lattice is a count
+with multiplicities. Exceptional lattices, on which distinct pairs
+merge, do occur and cannot be discarded when counting distinct
+solutions; Section~\ref{sec:ks} gives explicit collisions at order
+three.
+
+The proof has five steps. We eliminate the operator, which leaves
+\(p-1\) equations in the \(p-1\) profile unknowns. We assign weights to the unknowns, under which the highest weighted
+parts of the equations are obtained by setting \(g_2=g_3=0\). We show
+that at this cusp the equations have only the trivial common zero;
+this is where \((\mathrm R_{p-1})\) enters, and it means that there
+are no solutions at weighted infinity for any \(g_2,g_3\). Weighted B\'ezout then gives the length \(M_p\) on every
+lattice. Finally, at a nodal cubic the elliptic problem becomes the
+equal-endpoint case of the rational-exponential problem, whose
+solutions are simple by Proposition~\ref{cor:endpoints} when \(\Xp\)
+is reduced, and simplicity spreads from the nodal parameter value to
+nearby nonsingular parameters.
+
+\begin{proof}
+\emph{Step 1: eliminating the operator.}
+The coefficient at pole order \(2p\) vanishes by the choice of
+\(s_p\).
+The coefficients at orders \(2p-1,\ldots,p\) determine
+\(a_{p-1},\ldots,a_0\) successively.
+At each step the coefficient of the new \(a_j\) is the nonzero
+rational leading coefficient of \(D^jV\).
+This is a polynomial elimination, valid over any
+\(\QQ\)-algebra.
+The residual has pole order at most \(p-1\) and zero residue.
+It lies in the span of
+\[
+ \{1\}\ \cup\ \{\mathscr D^jX:0\le j\le p-3\}.
+\]
+Hence \(p-1\) equations remain in the \(p-1\) profile
+coefficients \(u_j,b\).
+
+\emph{Step 2: weights.}
+Give \(D,X,g_2,g_3\) weights \(1,2,4,6\), respectively, and give
+the profile weight \(p\).
+Then \(u_j\) has weight \(p-j-2\), and \(b\) has weight \(p\).
+After the triangular elimination, the residual principal-part
+coefficients and the residual Laurent constant have weights
+\begin{equation}\label{eq:elliptic-weights}
+ \begin{array}{c|c}
+ \text{variables}&1,2,\ldots,p-2,p\\
+ \text{equations}&p+1,p+2,\ldots,2p-2,2p.
+ \end{array}
+\end{equation}
+The Laurent expansions and the eliminations are polynomial in
+\(g_2,g_3\), so these statements extend to the singular cubics.
+For fixed \(g_2,g_3\), the highest weighted parts of the equations in
+the profile variables are obtained by setting \(g_2=g_3=0\), since
+\(g_2\) and \(g_3\) carry positive weight.
+
+\emph{Step 3: the cusp.}
+At the cusp \(g_2=g_3=0\), \(X=z^{-2}\) and \(Y=-2z^{-3}\), so the
+profile is a rational function.
+Write \(V=b+f(z)\), where \(f\) has its sole pole at zero
+and vanishes at infinity.
+The constant and decaying parts of the equation give
+\[
+ a_0b+\frac12b^2=0,\qquad
+ (P+b)(D)f+\frac12f^2=0.
+\]
+The leading term of \(f\) at infinity forces \(a_0+b=0\).
+It follows that \(b=a_0=0\).
+Under the polynomial Laplace correspondence
+\[
+ \sum_k A_k\rho^k\ \longmapsto\
+       \sum_k k!A_k z^{-k-1},
+\]
+differentiation corresponds to multiplication by \(-\rho\),
+and multiplication of the rational functions corresponds to
+continuous convolution.
+After a nonzero scalar normalization, the equation for \(f\)
+therefore gives \(A\mid H_A\) for a monic \(A\) of degree \(p-1\).
+By \((\mathrm R_{p-1})\), \(A=\rho^{p-1}\).
+Thus \(f=c_\ast z^{-p}\), and all the variables in
+\eqref{eq:elliptic-enumeration-profile} vanish.
+The leading equations have no nonzero common zero.
+
+\emph{Step 4: the length.}
+The same finite-cover B\'ezout argument as in
+Theorem~\ref{thm:length}, now with the weights
+\eqref{eq:elliptic-weights}, gives
+\[
+ \len\mathcal E_p(g_2,g_3)
+ =\frac{(p+1)(p+2)\cdots(2p-2)(2p)}{(p-2)!\,p}
+ =2\binom{2p-2}{p-2}.
+\]
+For \(p=3\), this is \((4\cdot6)/(1\cdot3)=8\).
+Empty products are one, so the calculation includes \(p=2\).
+It proves this length at every \((g_2,g_3)\), including the
+singular parameters used below; at the cusp itself the whole length
+sits at the single solution where every unknown vanishes.
+It also makes the whole coefficient family finite over
+\(\CC[g_2,g_3]\): sufficiently large weighted monomials reduce
+to bounded weight using the leading equations, which are
+independent of \(g_2,g_3\). This finiteness is what allows
+simplicity to be transferred from the nodal parameter value to nearby
+nonsingular parameters in the last step.
+
+\emph{Step 5: the node.}
+To prove generic simplicity, consider the nodal parameters
+\begin{equation}\label{eq:nodal-parameters}
+ g_2=\frac1{12},\qquad g_3=-\frac1{216}.
+\end{equation}
+In the logistic coordinate they are realized by
+\[
+ X=Q^2-Q+\frac1{12},\qquad
+ Y=(2Q-1)Q(1-Q),\qquad DQ=Q(1-Q).
+\]
+The nodal coordinate ring is
+\[
+ \CC[X,Y]=\{f\in\CC[Q]:f(0)=f(1)\}.
+\]
+Indeed the right side is
+\(\CC+Q(1-Q)\CC[Q]\); it is generated by \(X,Y\), since,
+with \(S=Q(1-Q)\),
+\(S=1/12-X\), \(SQ=(Y+S)/2\), and \(Q^2=Q-S\).
+The pole filtration is the ordinary polynomial degree in \(Q\).
+Consequently the nodal specialization of
+\eqref{eq:elliptic-enumeration-profile} has the unique form
+\[
+ V=\beta+v_A,\qquad A\text{ monic of degree }p-1,\quad A(0)=0,
+\]
+where \(\beta\) is the common endpoint.
+The coefficient change is invertible and linear over \(\QQ\).
+
+The matching equations become, as equations of schemes,
+\begin{equation}\label{eq:nodal-matching}
+ A\in\mathcal Z_p,\qquad
+ P=P_A-\beta,\qquad
+ \beta\bigl(\beta-2P_A(0)\bigr)=0.
+\end{equation}
+To see this directly, the constant equation is
+\(P(0)\beta+\beta^2/2=0\).
+The remaining polynomial identity is
+\((P+\beta)(D)v_A+v_A^2/2=0\), equivalent by
+Proposition~\ref{prop:divisibility} to \(A\mid S_A\) and
+\(P+\beta=P_A\).
+The coefficient changes and monic division used here work over
+arbitrary \(\CC\)-algebras, so the correspondence preserves
+local multiplicities.
+
+If \(\Xp\) is reduced, Proposition~\ref{cor:endpoints} gives
+\(S_p\) simple points of \(\mathcal Z_p\), with
+\(P_A(0)\ne0\) at every point.
+Each quadratic in \eqref{eq:nodal-matching} then has two
+distinct roots. The nodal fiber has \(2S_p=M_p\) simple points.
+In the finite coefficient family, the image of the closed locus
+where the matching Jacobian vanishes is closed.
+Its complement contains \eqref{eq:nodal-parameters}, and hence
+meets the nonsingular-lattice locus in a nonempty open set.
+Every fiber in that open set is reduced, proving the theorem.
+\end{proof}
+
+The factor two in \(M_p\) retains the two choices of constant
+equilibrium. The transformation
+\[
+ (P,v)\longmapsto\bigl(P-2P(0),\,v+2P(0)\bigr)
+\]
+preserves the equation and the lattice.
+At the nodal fiber it exchanges the two roots in
+\eqref{eq:nodal-matching}.
+On special nonsingular lattices those choices may coalesce.

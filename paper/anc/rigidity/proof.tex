@@ -1,0 +1,210 @@
+\documentclass[11pt]{article}
+\usepackage[margin=27mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,booktabs,microtype}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\FF}{\mathbb F}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\ff}[2]{#1^{\underline{#2}}}
+\setlength{\emergencystretch}{2em}
+\title{Ancillary proof: continuous-convolution rigidity through degree 72}
+\author{Alexander Migita}
+\date{}
+\begin{document}
+\maketitle
+
+For \(A\in\CC[x]\), put
+\[
+ H_A(x)=\int_0^xA(t)A(x-t)\,dt
+ =\sum_{i,j}a_ia_j\frac{i!j!}{(i+j+1)!}x^{i+j+1},
+ \qquad A=\sum_i a_ix^i.
+\]
+The integral is a polynomial identity.
+We prove the finite degree range used in the manuscript.
+The accompanying JSON supplies integer polynomial identities; the
+standalone replay uses exact arithmetic and checks every degree and
+every residual stratum. No assertion of rigidity in all degrees, or of
+simplicity of the discrete matching system, follows from this note.
+
+\begin{theorem}
+Every nonzero complex polynomial of degree at most 72 satisfying
+\(A\mid H_A\) is a monomial.
+\end{theorem}
+
+\section{The uniform prime-power reduction}
+
+Let \(\ell\) be an odd prime, \(e\ge1\), \(P=\ell^e\), and
+\[
+ 2d+1=P+g,\qquad 0\le g<\ell,\qquad g\text{ even}.
+\]
+Write \(A=x^d+a_1x^{d-1}+\cdots+a_d\), with \(a_0=1\).
+For \(g>0\), put \(\delta=(g-1)/2\) and
+\[
+ S_{g,A}(x)=
+ \sum_{r+s\le g}
+ \frac{\ff g{r+s}}{\ff\delta r\,\ff\delta s}
+ a_ra_sx^{g-r-s}.
+\]
+For \(g=0\), set \(S_{0,A}=1\).
+
+\begin{lemma}
+The polynomial \(P H_A\) has coefficients integral at \(\ell\), and
+\[
+ P H_A(x)\equiv u x^P S_{g,A}(x)\pmod\ell,\qquad
+ u=\overline{\frac{P(d!)^2}{(P+g)!}}\ne0.
+\]
+The assertion is an identity in the coefficient indeterminates of \(A\).
+\end{lemma}
+
+\begin{proof}
+For \(\beta(i,j)=i!j!/(i+j+1)!\), Legendre's formula gives
+\[
+ v_\ell(\beta(i,j)^{-1})=
+ \sum_{h\ge1}
+ \left(\left\lfloor\frac{i+j+1}{\ell^h}\right\rfloor
+       -\left\lfloor\frac i{\ell^h}\right\rfloor
+       -\left\lfloor\frac j{\ell^h}\right\rfloor\right).
+\]
+Each summand is zero or one.
+Since \(i+j+1\le P+g<\ell P\), all summands with \(h>e\) vanish.
+This proves integrality after multiplication by \(P\).
+If \(i+j+1<P\), the summand at \(h=e\) also vanishes, so the
+normalized coefficient reduces to zero.
+
+For a remaining term, write \(i=d-r,\ j=d-s\), \(r+s\le g\).
+For \(1\le h\le e\),
+\[
+ d\bmod\ell^h=\frac{\ell^h+g-1}{2}.
+\]
+Subtracting \(r,s\le g<\ell\) creates no borrow, and the sum of the
+two residues plus one is \(\ell^h+g-r-s\ge\ell^h\).
+All \(e\) summands are therefore one.
+In particular the leading normalized coefficient is a unit.
+Dividing by that leading coefficient gives
+\[
+ \frac{\ff{(P+g)}{r+s}}{\ff d r\,\ff d s}
+ \equiv
+ \frac{\ff g{r+s}}{\ff\delta r\,\ff\delta s}\pmod\ell.
+\]
+The denominators are units because their odd numerators have absolute
+value less than \(\ell\). This proves the coefficient formula.
+\end{proof}
+
+\begin{lemma}
+Suppose that for each \(1\le k\le g\) no monic degree-\(k\)
+polynomial \(C\), with \(C(0)\ne0\), satisfies
+\[
+ C\mid S_{g,C}
+ \quad\text{over }\overline{\FF}_\ell.
+\]
+Then rigidity holds in degree \(d\).
+For \(g=0\), no residual hypothesis is needed.
+\end{lemma}
+
+\begin{proof}
+A hypothetical nonmonomial solution gives an algebraic solution:
+the remainder equations have rational coefficients, and adjoining
+the inverse of a nonzero coefficient produces an affine system with
+a point over \(\overline{\QQ}\).
+At a place above \(\ell\), give the descending coefficient \(a_j\)
+weight \(j\), and put
+\(\eta=\min_{a_j\ne0}v_\ell(a_j)/j\).
+After a finite extension choose \(t\) with \(v_\ell(t)=-\eta\).
+Then \(t^dA(x/t)\) is monic and integral, with a nonleading unit.
+This scaling preserves divisibility, since its convolution is
+\(t^{2d+1}H_A(x/t)\).
+
+Monic division of the integral normalized convolution has integral
+quotient. The preceding lemma therefore implies
+\(\overline A\mid x^P S_{g,\overline A}\).
+If \(g=0\), this forces \(\overline A=x^d\), contradicting the
+nonleading unit.
+Otherwise write
+\(\overline A=x^{d-k}C\), \(C(0)\ne0\).
+The degree-\(g\) residual forces \(1\le k\le g\).
+Its descending coefficient list is the one used for \(C\), so
+\(C\mid S_{g,C}\), contrary to the hypothesis.
+The argument permits arbitrary ramification.
+\end{proof}
+
+\section{The finite certificates}
+
+For \(g=2,4,6\) and every \(1\le k\le g\), normalize \(C(0)=1\):
+\[
+ C=x^k+c_1x^{k-1}+\cdots+c_{k-1}x+1.
+\]
+This loses no geometric point over the algebraic closure.
+Indeed \(C_t(x)=t^kC(x/t)\) preserves the residual divisibility,
+and a suitable \(k\)-th root makes its constant coefficient one.
+
+Take \emph{all} coefficients of
+\(\operatorname{rem}_C S_{g,C}\), and clear their rational
+denominators, without discarding integer content.
+Call the resulting integer polynomials \(F_{g,k,j}\).
+The file \texttt{certificate.json} contains integer polynomials
+\(U_{g,k,j}\) and positive integers \(D_{g,k}\) with
+\[
+ \sum_j U_{g,k,j}F_{g,k,j}=D_{g,k}.
+\]
+When \(\ell\) divides neither \(D_{g,k}\) nor the original
+denominator scales, this identity rules out common zeros over
+every extension of \(\FF_\ell\).
+The JSON also contains the complete prime factorizations of these
+integers and recursive Lucas primality certificates.
+
+For example,
+\[
+ S_{2,C}=x^2+8c_1x+8c_1^2-16c_2.
+\]
+In degree one the remainder is \(c_1^2\); in degree two it is
+\(7c_1x+8c_1^2-17c_2\).
+The only possible exceptional odd primes greater than two in this
+criterion are 7 and 17.
+The same certificate procedure at gaps four and six supplies finite
+exceptional-prime covers.
+An exceptional prime is not declared a counterexample to
+characteristic-zero rigidity.
+
+The stored coverage table gives, for every \(1\le d\le72\),
+a triple \((\ell,e,g)\), \(g\in\{0,2,4,6\}\), such that
+\[
+ 2d+1=\ell^e+g,\qquad \ell>g,
+\]
+and, for \(g>0\), \(\ell\) avoids every relevant certificate factor
+in every degree \(1\le k\le g\).
+For illustration, three choices filling gaps between the
+prime-index cases are
+\[
+ 95=89+6,\qquad119=113+6,\qquad123=11^2+2.
+\]
+The theorem follows from the full 72-row table and the preceding
+lemmas. Degree zero is immediate.
+
+\section{Independent replay}
+
+Run
+\begin{verbatim}
+python verify_coverage.py
+\end{verbatim}
+in this directory, with SymPy installed.
+The program reconstructs the residual equations from the displayed
+falling-factorial kernel, checks every integer identity and
+denominator scale, verifies the prime factorizations and Lucas
+certificates, and validates every row of the coverage table.
+As an additional direct check, it rebuilds all 132348 ordered
+bilinear coefficients of \(P H_A\) for the 72 chosen degrees and
+compares them with the lemma.
+No computer algebra system beyond SymPy is required.
+
+The final report explicitly records that the conclusion concerns
+\(0\le\deg A\le72\), corresponding to ODE orders \(2\le p\le73\)
+in the manuscript. It does not assert simplicity of those discrete
+matching schemes. The main paper's prime-index simplicity theorem
+and its separate order-five calculation supply their own arguments.
+\end{document}
