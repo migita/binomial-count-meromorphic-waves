@@ -11,11 +11,10 @@ There are no placeholder proofs or new axioms; the transitive audits report
 only `propext`, `Classical.choice`, and `Quot.sound`.
 Everything is in the namespace `PolynomialRigidity.Enumeration`.
 
-The source is the current manuscript's
-[`sections/counting.tex`](../arxiv_meromorphic_waves/sections/counting.tex),
-using its monic-operator normalisation. The direct infinitesimal formulation
-also follows the counting and simplicity
-[`formulation note`](../codex_one_pole_count_simplicity_formulation_20260909.md).
+The source is the manuscript's
+[`sections/counting.tex`](../paper/sections/counting.tex),
+using its monic-operator normalisation; the direct infinitesimal
+formulation follows the same section.
 
 ## Objects counted
 

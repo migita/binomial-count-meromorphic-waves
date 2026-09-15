@@ -75,10 +75,10 @@ All three checks pass. The proof contains no `sorry`, `admit`, added axioms, or
 ## Proof and correspondence with the manuscript
 
 The source statement is equation `(R_d)` in
-[`sections/counting.tex`](../arxiv_meromorphic_waves/sections/counting.tex).
+[`sections/counting.tex`](../paper/sections/counting.tex).
 The proof formalises the prime reduction used in Step 3 of the prime-index
 theorem and the zero-gap case of
-[`anc/rigidity/proof.tex`](../arxiv_meromorphic_waves/anc/rigidity/proof.tex).
+[`anc/rigidity/proof.tex`](../paper/anc/rigidity/proof.tex).
 
 1. Put `ℓ = 2*d + 1`. Construct a valuation of the coefficient field with
    `v(ℓ) < 1`, using a valuation subring dominating the integer subring at `ℓ`.
