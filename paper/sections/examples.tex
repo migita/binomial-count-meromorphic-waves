@@ -67,7 +67,10 @@ Thus there are exactly \(N_2=3\) simple pairs:
 \end{equation}
 The pulse \(a=0\) is the KdV soliton. It is the single pair of the
 purely dispersive subfamily, \(F_2=1\). The two fronts belong to mixed
-equations, and the reflection \(\iota\) exchanges them.
+equations, and the reflection \(\iota\) exchanges them: for a given
+equation with \(\nu\ne0\) they are one and the same front, read in the
+two directions (Proposition~\ref{prop:fixed}). At unit rate they are
+two different pairs, and the count \(N_2=3\) includes both.
 In the original variables, \eqref{eq:scaling} and
 \eqref{eq:coefficients} read
 \[
@@ -204,17 +207,18 @@ restriction \(B^2=16\mu\) is proved by \citet{Hone2005}, and the
 classification of all meromorphic KS solutions is completed by
 \citet{Eremenko2006}. For the count we read \eqref{eq:ks-elliptic-scheme}
 the other way: fix \(g_2,g_3\) and solve for \(B\) and \(a_0\).
-The coefficients eliminated along the way are determined linearly
-with nonzero rational pivots, so the last two equations carry the
-full matching system, multiplicities included.
-Their quotient algebra has basis \(B^i a_0^j\),
-\(0\le i<4\), \(0\le j<2\), and length eight, which is \(M_3\).
 
-On most lattices these are eight distinct pairs: four values of \(B\),
-and for each of them the two backgrounds \(\pm a_0\) of
-\eqref{eq:shift}. Pairs merge exactly where the Jacobian of the last
-two equations vanishes, and that Jacobian is a nonzero constant times
-\(B^3a_0\). Let
+For a typical lattice, the equation for \(B\) has four solutions, and
+the equation for \(a_0\) then gives two choices for each of them: the
+two backgrounds \(\pm a_0\) of \eqref{eq:shift}. These are the
+\(M_3=8\) pairs. When the lattice changes, some of the pairs can meet.
+The multiplicity of the resulting point records how many nearby pairs
+have come together, so the count with multiplicity can remain eight
+even when fewer than eight distinct pairs remain.
+
+Pairs meet exactly where the Jacobian of the last two equations of
+\eqref{eq:ks-elliptic-scheme} vanishes, and that Jacobian is a nonzero
+constant times \(B^3a_0\). Let
 \[
  j(\Lambda)=\frac{1728g_2^3}{g_2^3-27g_3^2}.
 \]
@@ -226,24 +230,36 @@ If \(a_0=0\) and the lattice is nonsingular, elimination gives
 These conditions are sufficient as well. Thus:
 \begin{equation}\label{eq:ks-collisions}
  \begin{array}{c|c|c}
- j(\Lambda)&\text{distinct pairs}&\text{multiplicities}\\ \hline
- j\notin\{0,-300\}&8&1,1,1,1,1,1,1,1\\
- -300&6&2,2,1,1,1,1\\
- 0&2&4,4.
+ j(\Lambda)&\text{distinct pairs}&\text{total with multiplicity}\\ \hline
+ j\notin\{0,-300\}&8&8\times1\\
+ -300&6&2\times2+4\times1\\
+ 0&2&2\times4.
  \end{array}
 \end{equation}
-The two exceptional cases show the two ways in which pairs can merge.
-For \(j=-300\), all four values of \(B\) are distinct, and exactly two
-of them give \(a_0=0\): there the two backgrounds of one wave coincide,
-and two double points result. For instance, \(g_2=1/12\),
-\(g_3=13/1080\) gives the double points \((B,a_0)=(\pm4,0)\).
-For \(j=0\), the four values of \(B\) collapse to \(B=0\), the operator
-becomes the purely dissipative \(D^3+a_0\) with
-\(a_0^2=-2160g_3\), and two points of multiplicity four result.
-On every nonsingular lattice the multiplicities add up to eight. This
-is the form in which Theorem~\ref{thm:elliptic-count} holds on an
-arbitrary lattice, and \eqref{eq:ks-collisions} is the exceptional set
-of that theorem at order three.
+The two exceptional cases show the two ways in which pairs can meet.
+
+At \(j=-300\), the four values of \(B\) remain distinct. For two of
+them, the two choices of \(a_0\) meet at zero: the two backgrounds of
+one wave coincide. Each produces one pair of multiplicity two, while
+the other four pairs remain distinct. There are six distinct pairs,
+with total multiplicity \(2+2+1+1+1+1=8\). For instance,
+\(g_2=1/12\), \(g_3=13/1080\) gives the double points
+\((B,a_0)=(\pm4,0)\).
+
+At \(j=0\), all four values of \(B\) meet at \(B=0\). The two choices
+\(a_0^2=-2160g_3\) remain distinct, so there are two pairs, each of
+multiplicity four. Both have the operator \(D^3+a_0\), which is purely
+dissipative, and the total is again \(4+4=8\).
+
+The count stays eight for an exact reason. The coefficients eliminated
+on the way to \eqref{eq:ks-elliptic-scheme} are determined linearly,
+with nonzero rational pivots, so its last two equations carry the full
+matching system, multiplicities included. Their quotient algebra has
+the basis \(B^i a_0^j\), \(0\le i<4\), \(0\le j<2\), and therefore
+dimension eight on every lattice. This is the form in which
+Theorem~\ref{thm:elliptic-count} holds on an arbitrary lattice, and
+\eqref{eq:ks-collisions} is the exceptional set of that theorem at
+order three.
 
 \subsection{Purely dispersive equations: Kawahara and seventh-order KdV}
 \label{sec:kawahara}

@@ -57,9 +57,9 @@ algebraic description of all nonconstant globally meromorphic
 travelling waves: they are rational, rational in an exponential, or
 elliptic, with one pole per period.
 
-For \(p\ge3\) such waves are exceptional: a generic equation of the
-family has none. We count the exceptions with the periods of the wave
-fixed. Across the whole family there are \(\binom{2p-1}{p-1}\)
+One-pole waves of these three kinds are exceptional: for \(p\ge3\) a
+generic equation of the family has none. We count the exceptions with the
+periods of the wave fixed. Across the whole family there are \(\binom{2p-1}{p-1}\)
 normalized one-pole pairs \((P,v)\) with \(v\) rational in an
 exponential of given rate, and \(2\binom{2p-2}{p-2}\) with \(v\)
 elliptic on a given generic lattice. We also count how many of these
@@ -128,9 +128,8 @@ polynomial. We call it \emph{purely dissipative} if its linear part
 contains only even-order derivatives, as for the
 Kuramoto--Sivashinsky equation without dispersion; then \(p\) is odd
 and \(P-P(0)\) is an odd polynomial. All other equations, such as
-KdV--Burgers, are \emph{mixed}. The two pure subfamilies are the
-equations that are invariant under a reflection of \(x\), and for their
-travelling waves this reflection is \(z\mapsto-z\).
+KdV--Burgers, are \emph{mixed}. Both pure subfamilies have a
+reflection symmetry, which is described in Section~\ref{sec:setting}.
 
 \paragraph{Classification.}
 Eremenko's theorem states that an autonomous algebraic differential
@@ -145,27 +144,36 @@ case: there one Laurent coefficient is free, but \eqref{eq:main} is
 invariant under \(z\mapsto-z\) and conserves an energy, and fixing the
 energy fixes that coefficient. In both cases every nonconstant
 meromorphic travelling wave is of one of the three kinds and has one
-pole per period. A fixed equation has at most one such wave up to
-translation when \(p\) is odd, and at most one on each energy level
-when it is purely dispersive. The mixed equations of odd order are not
-covered, and cannot be: Section~\ref{sec:open} recalls a second-order
-example with other meromorphic waves. Section~\ref{sec:systems} writes
+pole per period. For a fixed operator \(P\) there is at most one such
+profile up to translation when \(p\) is odd, and at most one on each
+energy level when the equation is purely dispersive. Mixed operators
+with \(p\) even are not covered, and cannot be:
+Section~\ref{sec:open} recalls an example with \(p=2\) that has other
+meromorphic waves. Section~\ref{sec:systems} writes
 each of the three kinds as a finite polynomial system, following the
 principal-part construction of
 \citet{DeminaKudryashov2011,DeminaKudryashovElliptic2011}.
 
 \paragraph{The count.}
-For \(p\ge3\) such waves are exceptional: a generic equation of the
-family has none (Section~\ref{sec:fixed}). We count the exceptions,
-with the periods of the wave fixed.
-For waves that are rational in an exponential, fix the rate to one,
-place the pole at \(i\pi\), and require \(v\to0\) as \(e^z\to0\).
-Let \(P\) range over all monic polynomials of degree \(p\) and count
-the pairs \((P,v)\) for which \(v\) is such a solution of
-\eqref{eq:main}.
-For elliptic waves, fix a nonsingular Weierstrass lattice and count the
-pairs \((P,v)\) with \(v\) elliptic on that lattice and its only pole
-at zero. The answers are
+One-pole waves of these three kinds are exceptional. In every order
+\(p\ge3\) for which the count below is established, a generic equation
+of the family has none of them (Section~\ref{sec:fixed}). We count the
+exceptions.
+
+Translations and changes of length scale produce continuous families of
+equivalent descriptions, so before asking for a finite count we fix
+these freedoms. For a rational-exponential wave we prescribe its
+primitive period, or equivalently its exponential rate. For an elliptic
+wave we prescribe its full period lattice, including its scale. We then
+place the pole at a fixed point. The coefficients of \(P\) still vary:
+we count which normalized equations admit such a wave, together with
+the wave itself.
+Precisely, a rational-exponential pair \((P,v)\) has \(v\) rational in
+\(e^z\), with one pole modulo \(2\pi i\ZZ\), placed at \(i\pi\), and
+\(v\to0\) as \(e^z\to0\). An elliptic pair has \(v\) elliptic on a
+fixed nonsingular lattice, with its only pole at zero. In both cases
+\(P\) ranges over all monic polynomials of degree \(p\).
+The answers are
 \[
  \begin{aligned}
  N_p&=\binom{2p-1}{p-1}
@@ -174,9 +182,8 @@ at zero. The answers are
      &&\text{elliptic pairs on a generic lattice}.
  \end{aligned}
 \]
-Whenever \(2p-1\) is prime, both formulas hold and every pair is
-simple, that is, nondegenerate, so that all pairs are distinct; in the
-elliptic case this is for a generic lattice
+Whenever \(2p-1\) is prime, both formulas hold and every pair has
+multiplicity one; in the elliptic case this is for a generic lattice
 (Theorems~\ref{thm:prime} and~\ref{thm:elliptic-count}).
 For every \(2\le p\le73\), the formulas hold as counts with
 multiplicity (Section~\ref{sec:further}). On special lattices elliptic
@@ -184,8 +191,8 @@ pairs do merge, and Section~\ref{sec:ks} determines where this happens
 at order three.
 At \(p=5\), where \(2p-1=9\) is the first composite index, a separate
 exact computation shows that all \(126\) rational-exponential pairs
-are simple.
-We conjecture the same counting and simplicity statements in every
+have multiplicity one.
+We conjecture the same counting and multiplicity statements in every
 order (Conjecture~\ref{conj:count}). The counts are over \(\CC\) and
 range over all monic \(P\), mixed operators included. The
 classification is used only to know that, where it applies, there are
@@ -215,78 +222,54 @@ dissipative family of order five contain the four kink solutions of
 \citet{KudryashovMigita2007} (Section~\ref{sec:examples}).
 
 \paragraph{A single equation.}
-The count is over operators, and Section~\ref{sec:fixed} translates it
-back to one evolution equation. Rescaling \(x\) moves the coefficient
-vector of an equation along a weighted curve, and this is why the rate
-is fixed in the count. An equation has a one-pole travelling wave that
-is rational in an exponential if and only if its coefficient vector
-lies on one of at most \((N_p+F_p)/2\) such curves. Unless all the
-coefficients \(b_j\) with \(j<p\) vanish, it then has finitely many such
-waves, up to translations and Galilean shifts
-(Corollary~\ref{cor:solvable}). For odd
-\(5\le p\le73\), the equations with any nonconstant meromorphic
-travelling wave form a set of dimension at most two in the
-\((p-1)\)-dimensional space of coefficients, so a generic equation has
-none (Corollary~\ref{cor:generic}). At \(p=3\) this set is the union of
-the four classical Kuramoto--Sivashinsky curves.
+A count across the family is not a count for each individual equation.
+To recover the waves of a given equation, we restore the length scale
+and retain only the normalized pairs whose coefficients match it.
+Changing the scale traces a curve in the space of coefficients. Thus,
+in the orders covered by the count, the equations with a one-pole
+rational-exponential wave lie on finitely many such scaling curves. If at least one lower-derivative coefficient
+is nonzero, only finitely many wave shapes remain after translations
+and Galilean shifts are identified. The scale-invariant case is
+different: the KdV equation, for example, retains its family of
+solitons of different widths. Section~\ref{sec:fixed} gives the precise
+criterion, recovers the four familiar Kuramoto--Sivashinsky coefficient
+curves, and shows that for odd \(p\ge3\) in the settled range a generic
+equation has no nonconstant meromorphic travelling wave at all.
 
 \paragraph{Method.}
 Every rational-exponential pair has a profile of the form
 \(v_A=s_pA(D)Q\), where \(Q=1/(1+e^{-z})\), \(s_p\) is a fixed scale
-and \(A\) is a monic polynomial of degree \(p-1\). The pair
-\((P,v_A)\) solves
+and \(A\) is a monic polynomial of degree \(p-1\). The pair solves
 \eqref{eq:main} if and only if \(A\) divides its own discrete
-self-convolution \(S_A(n)=\sum_{j=1}^{n-1}A(j)A(n-j)\), and then
-\(P=s_pS_A/(2A)\) (Proposition~\ref{prop:divisibility}). When
-\(\ell=2p-1\) is prime, \(\ell S_A\equiv\pm(\rho^\ell-\rho)\pmod\ell\),
-so modulo \(\ell\) the condition becomes \(A\mid\rho^\ell-\rho\), and
-its solutions are indexed by the \((p-1)\)-element subsets \(S\) of
-\(\FF_\ell\). Each of them lifts by Hensel's lemma to a simple
-solution, and a weighted B\'ezout bound shows that the lifts are all
-the solutions. The reflection acts on the subsets by \(S\mapsto-S\),
-which gives \(F_p\). For the elliptic pairs, the same B\'ezout argument
-gives the count with multiplicity on every nonsingular lattice, once a
-degeneration to the cusp excludes solutions at infinity. A degeneration
-to the node, where the elliptic problem becomes the pulse case of the
-exponential one with two choices of background, shows that the pairs
-are simple on a generic lattice.
+self-convolution \(S_A(n)=\sum_{j=1}^{n-1}A(j)A(n-j)\)
+(Proposition~\ref{prop:divisibility}). When \(\ell=2p-1\) is prime,
+this condition becomes \(A\mid\rho^\ell-\rho\) modulo \(\ell\), so its
+solutions are labelled by the \((p-1)\)-element subsets \(S\) of
+\(\FF_\ell\). This is where the binomial coefficient comes from. Each
+label lifts to exactly one solution, and the reflection acts on the
+labels by \(S\mapsto-S\), which gives \(F_p\). The elliptic count
+follows by letting the lattice degenerate: to a cusp, which gives the
+count with multiplicity, and to a node, where the elliptic problem
+becomes the pulse case of the exponential one.
 
 Two ingredients resist a uniform proof. One is a rigidity statement
-for the continuous convolution \(\int_0^\rho A(t)A(\rho-t)\dd t\),
-needed to exclude solutions at infinity; it is proved for prime and
-prime-power indices, certified by exact arithmetic through degree
-\(72\), and would give all counts with multiplicity in every order.
-The other is simplicity of every rational-exponential pair, proved
-for prime indices and, by exact computation, at \(p=5\), and open in
-general (Conjecture~\ref{conj:count}).
+for the continuous convolution \(\int_0^\rho A(t)A(\rho-t)\dd t\); it is
+proved for prime and prime-power indices, certified by exact arithmetic
+through degree \(72\), and would give all counts with multiplicity in
+every order. The other is that every rational-exponential pair has
+multiplicity one; this is proved for prime indices and, by exact
+computation, at \(p=5\) (Conjecture~\ref{conj:count}).
 
 \paragraph{Relation to earlier work.}
 The classification theorem is a uniform version of results that exist
-in pieces. For odd \(p\) the indicial polynomial has no positive integer
-zero, the Laurent expansion at a pole is unique, and Eremenko's theorem
-applies directly; this case is contained in
-\citet[Theorem~1]{YuanLiQi2014}, with related odd-order results in
-\citet{HuangZhangChenYuan2014,YuanWuChenHuang2014} and a fifth-order
-instance in \citet{Dang2023Odd}. For even \(p\) the index \(3p\) is
-resonant, and the conclusion need not hold for mixed operators: the
-Fisher equation has an elliptic-exponential family of solutions
-\citep{AblowitzZeppetella1979,Kudryashov2010,ConteNgWu2015} whose
-generic members are meromorphic and of none of the three kinds.
-The familiar Ablowitz--Zeppetella front is a rational-exponential
-degeneration of this family.
-When \(P\) is an even polynomial the equation has a first integral,
-the energy, and fixing its value removes the resonant freedom.
-This is the device of
-\citet[Lemmas~3--4]{EremenkoLiaoNg2009} for \(P=D^p+a_0\), stated as a
-general step by \citet{ConteNgWu2018,ConteMusetteNgWu2025} and applied
-to the Kawahara equation \citep{DeminaKudryashovKawahara2010,YeEtAl2022},
-the generalized Bretherton equation
-\citep{DeminaKudryashov2011,KudryashovSinelshchikovDemina2011} and the
-seventh-order KdV equation \citep{Dang2023Even}.
-Theorem~\ref{thm:complete} extends it uniformly to every even \(P\),
-intermediate derivatives included. Equations with two dominant
-monomials, or without the finiteness property, are treated by other
-methods in \citet{Demina2019,Demina2022}.
+in pieces. The case of odd \(p\) is contained in
+\citet[Theorem~1]{YuanLiQi2014}, and the energy device for even \(P\) is
+that of \citet[Lemmas~3--4]{EremenkoLiaoNg2009}, which has been applied
+to the Kawahara, generalized Bretherton and seventh-order KdV
+equations; Section~\ref{sec:completeness} gives the detailed
+attributions. The polynomial systems are instances of the
+principal-part construction of
+\citet{DeminaKudryashov2011,DeminaKudryashovElliptic2011}.
 The general enumeration has no precedent that we know of; its special
 cases at \(p=3\) and in the Kawahara family are classical, as
 the examples make explicit.
