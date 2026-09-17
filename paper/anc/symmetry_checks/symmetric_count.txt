@@ -1,0 +1,7 @@
+p=2 d=1: no unknowns, A=rho^1; count 1, predicted 1
+p=3 d=2 unknowns=1 equations=1 vdim=2 predicted=2 reduced=yes  [0.0s]
+p=4 d=3 unknowns=1 equations=1 vdim=3 predicted=3 reduced=yes  [0.0s]
+p=5 d=4 unknowns=2 equations=2 vdim=6 predicted=6 reduced=yes  [0.1s]
+p=6 d=5 unknowns=2 equations=2 vdim=10 predicted=10 reduced=yes  [0.1s]
+p=7 d=6 unknowns=3 equations=3 vdim=20 predicted=20 reduced=yes  [0.6s]
+p=8 d=7 unknowns=3 equations=3 vdim=35 predicted=35 reduced=yes  [3.2s]

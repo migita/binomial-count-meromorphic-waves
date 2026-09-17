@@ -8,10 +8,11 @@ formalisation of two of its theorems.
 ## Layout
 
 - `paper/`: the arXiv package. Sources are `main.tex`, `authors.tex`,
-  `references.bib`, `main.bbl` and `sections/`; figures are in `figures/`;
+  `references.bib`, `main.bbl` and `sections/`;
   the ancillary material in `anc/` contains the exact verification script,
-  the Singular calculation for order five, and the continuous-convolution
-  rigidity certificate through degree 72 with its replay script.
+  the Singular calculation for order five, the continuous-convolution
+  rigidity certificate through degree 72 with its replay script, and the
+  exact checks for the purely dispersive and purely dissipative subfamilies.
   `MANIFEST.sha256` lists the package files; `main.pdf` is the compiled paper.
 - `lean/`: a Lean 4 project pinned to Mathlib v4.33.1. It proves
 

@@ -158,14 +158,11 @@ principal-part construction of
 For \(p\ge3\) such waves are exceptional: a generic equation of the
 family has none (Section~\ref{sec:fixed}). We count the exceptions,
 with the periods of the wave fixed.
-For waves that are rational in an exponential, fix the rate to one and
-place the pole at \(i\pi\).
-Every solution of \eqref{eq:main} that is rational in \(e^z\), has
-one pole modulo \(2\pi i\ZZ\) and vanishes as \(e^z\to0\) is of the
-form \(v=s_pA(D)Q\), where \(Q=1/(1+e^{-z})\), \(s_p\) is a fixed
-scale and \(A\) is a monic polynomial of degree \(p-1\).
+For waves that are rational in an exponential, fix the rate to one,
+place the pole at \(i\pi\), and require \(v\to0\) as \(e^z\to0\).
 Let \(P\) range over all monic polynomials of degree \(p\) and count
-the pairs \((P,v)\) for which \(v\) solves \eqref{eq:main}.
+the pairs \((P,v)\) for which \(v\) is such a solution of
+\eqref{eq:main}.
 For elliptic waves, fix a nonsingular Weierstrass lattice and count the
 pairs \((P,v)\) with \(v\) elliptic on that lattice and its only pole
 at zero. The answers are
@@ -178,8 +175,9 @@ at zero. The answers are
  \end{aligned}
 \]
 Whenever \(2p-1\) is prime, both formulas hold and every pair is
-simple, that is, nondegenerate; in the elliptic case this is for a
-generic lattice (Theorems~\ref{thm:prime} and~\ref{thm:elliptic-count}).
+simple, that is, nondegenerate, so that all pairs are distinct; in the
+elliptic case this is for a generic lattice
+(Theorems~\ref{thm:prime} and~\ref{thm:elliptic-count}).
 For every \(2\le p\le73\), the formulas hold as counts with
 multiplicity (Section~\ref{sec:further}). On special lattices elliptic
 pairs do merge, and Section~\ref{sec:ks} determines where this happens
@@ -230,7 +228,10 @@ none (Corollary~\ref{cor:generic}). At \(p=3\) this set is the union of
 the four classical Kuramoto--Sivashinsky curves.
 
 \paragraph{Method.}
-For rational-exponential profiles, the pair \((P,v_A)\) solves
+Every rational-exponential pair has a profile of the form
+\(v_A=s_pA(D)Q\), where \(Q=1/(1+e^{-z})\), \(s_p\) is a fixed scale
+and \(A\) is a monic polynomial of degree \(p-1\). The pair
+\((P,v_A)\) solves
 \eqref{eq:main} if and only if \(A\) divides its own discrete
 self-convolution \(S_A(n)=\sum_{j=1}^{n-1}A(j)A(n-j)\), and then
 \(P=s_pS_A/(2A)\) (Proposition~\ref{prop:divisibility}). When
