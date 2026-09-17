@@ -24,10 +24,11 @@ Theorem~\ref{thm:complete} below collects the analytic input to the
 count. It is a uniform version of results that exist in pieces. For odd \(p\) the indicial polynomial has no positive integer
 zero, the Laurent expansion at a pole is unique, and Eremenko's theorem
 applies directly; this case is contained in
-\citet[Theorem~1]{YuanLiQi2014}, with related odd-order results in
+\citet[Theorem~1]{YuanLiQi2014}, with related results for odd \(p\) in
 \citet{HuangZhangChenYuan2014,YuanWuChenHuang2014} and a fifth-order
-instance in \citet{Dang2023Odd}. For even \(p\) the index \(3p\) is
-resonant, and the conclusion need not hold for mixed operators: the
+instance in \citet{Dang2023Odd}. For even \(p\) the Laurent recurrence has a resonance at \(n=3p\),
+where one coefficient is left free, and the conclusion need not hold
+for mixed operators: the
 Fisher equation has an elliptic-exponential family of solutions
 \citep{AblowitzZeppetella1979,Kudryashov2010,ConteNgWu2015} whose
 generic members are meromorphic and of none of the three kinds.
@@ -44,8 +45,8 @@ the generalized Bretherton equation
 seventh-order KdV equation \citep{Dang2023Even}.
 Theorem~\ref{thm:complete} extends it uniformly to every even \(P\),
 intermediate derivatives included. Equations with two dominant
-monomials, or without the finiteness property, are treated by other
-methods in \citet{Demina2019,Demina2022}.
+monomials, or without the finiteness property (finitely many Laurent
+expansions at a pole), are treated by other methods in \citet{Demina2019,Demina2022}.
 We give the proofs in full because
 Sections~\ref{sec:systems} and~\ref{sec:counting} use the Laurent
 recurrence and the energy dependence in explicit form.
@@ -70,7 +71,7 @@ fixing the conserved energy. The only entire solutions are
 
 An even polynomial is one in which every odd power of \(\rho\) has
 coefficient zero, so that \(P(D)\) contains only even derivatives.
-The hypothesis does not cover the mixed equations of odd order,
+The hypothesis does not cover the mixed operators with \(p\) even,
 and it cannot: Section~\ref{sec:open} gives a mixed second-order
 operator with a meromorphic solution outside \(\Wclass\).
 
@@ -133,6 +134,8 @@ Let \(p=2m\) and
 \begin{equation}\label{eq:evenP}
  P(D)=D^{2m}+\sum_{j=0}^{m-1}b_jD^{2j}.
 \end{equation}
+In this subsection \(b_j\) denotes the coefficients of the even
+operator, not those of \eqref{eq:pde}.
 Now \(c_\ast=-2R_p\), and there is exactly one positive integer
 resonance.
 Indeed the product in \eqref{eq:indicial} is at most \(R_p\)
@@ -293,9 +296,3 @@ equation, by Section~\ref{sec:setting}, and has a pole at
 which gives~(ii). The statements about the limits follow by letting
 \(\zeta\) tend to the two ends.
 \end{proof}
-
-The finite systems of the next section are derived from the one-pole
-structure alone. The analytic facts of this section are used only to
-show that, in the covered cases, those systems miss no nonconstant
-meromorphic solution. The systems themselves never require the convergence of a
-formal series.

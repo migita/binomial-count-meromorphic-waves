@@ -16,8 +16,10 @@ The normalizations are those of Section~\ref{sec:setting}.
 rational-exponential pairs at unit rate, in the full family and in the
 pure subfamily of that order. \(M_p\) and \(2F_p\) count elliptic pairs
 on a generic fixed lattice, and are the total multiplicities on every
-nonsingular lattice. The status of each number is given in
-Table~\ref{tab:status}.}
+nonsingular lattice. A dash means that the purely dissipative equations
+have no elliptic pairs on a generic lattice
+(Section~\ref{sec:elliptic-counting}). The status of each number is
+given in Table~\ref{tab:status}.}
 \label{tab:example-counts}
 \begin{tabular}{@{}crrlrr@{}}
 \toprule
@@ -137,7 +139,8 @@ The Jacobian determinant is nonzero at every point, so all
 \centering
 \caption{All ten rational-exponential pairs at order three.
 The determinant is taken in the order \((E_0,E_1)\) against
-\((a,b)\). Reality refers to the unit-rate logistic representatives.}
+\((a,b)\). The last column describes \(v_A\) on the real axis, at unit
+rate.}
 \label{tab:ks}
 \begin{tabular}{@{}ccrcl@{}}
 \toprule
@@ -155,7 +158,7 @@ The determinant is taken in the order \((E_0,E_1)\) against
 \end{table}
 
 There are ten complex pairs, eight with real coefficients.
-All eight have smooth bounded representatives on the real axis:
+All eight are smooth and bounded on the real axis:
 two pulses and six fronts.
 For example,
 \[
@@ -163,7 +166,7 @@ For example,
  v_A=120Q^3,\qquad
  P_A=(\rho-3)(\rho-4)(\rho-5).
 \]
-These belong to the classical hyperbolic-function solution sector
+These are the classical solutions in hyperbolic functions
 \citep{KuramotoTsuzuki1976,Kudryashov1988,Kudryashov1990}.
 The complete parameter list is tabulated by
 \citet[Table~1]{KudryashovZargaryan1996} and
@@ -246,17 +249,17 @@ with total multiplicity \(2+2+1+1+1+1=8\). For instance,
 \(g_2=1/12\), \(g_3=13/1080\) gives the double points
 \((B,a_0)=(\pm4,0)\).
 
-At \(j=0\), all four values of \(B\) meet at \(B=0\). The two choices
-\(a_0^2=-2160g_3\) remain distinct, so there are two pairs, each of
-multiplicity four. Both have the operator \(D^3+a_0\), which is purely
+At \(j=0\), all four values of \(B\) meet at \(B=0\). The two roots of
+\(a_0^2=-2160g_3\) remain distinct, since \(g_3\ne0\), so there are two
+pairs, each of multiplicity four. Both have the operator \(D^3+a_0\), which is purely
 dissipative, and the total is again \(4+4=8\).
 
 The count stays eight for an exact reason. The coefficients eliminated
 on the way to \eqref{eq:ks-elliptic-scheme} are determined linearly,
 with nonzero rational pivots, so its last two equations carry the full
-matching system, multiplicities included. Their quotient algebra has
-the basis \(B^i a_0^j\), \(0\le i<4\), \(0\le j<2\), and therefore
-dimension eight on every lattice. This is the form in which
+matching system, multiplicities included. The first has four roots
+\(B\) and, for each of them, the second has two roots \(a_0\), counted
+with multiplicity. This gives eight solutions on every lattice. This is the form in which
 Theorem~\ref{thm:elliptic-count} holds on an arbitrary lattice, and
 \eqref{eq:ks-collisions} is the exceptional set of that theorem at
 order three.
@@ -327,10 +330,10 @@ In their notation, \(b=-\beta\), \(a_0^2=C_0^2+12C_1\);
 the profile change is \(v=-6(w-w_\ast)\), where \(w_\ast\)
 is a constant equilibrium and \(a_0=C_0-6w_\ast\).
 The first equation is cubic in \(b\), and the second is monic
-quadratic in \(a_0\), so the quotient algebra has dimension six on
-every fixed lattice. This is the length \(2F_4\) of
-Corollary~\ref{cor:elliptic-symmetric}: three values of \(b\), each
-with its two backgrounds.
+quadratic in \(a_0\), so there are \(3\times2=6\) solutions, counted
+with multiplicity, on every fixed lattice: three values of \(b\), each
+with its two backgrounds. This is the number \(2F_4\) of
+Corollary~\ref{cor:elliptic-symmetric}.
 At \((g_2,g_3)=(1,0)\), the cubic has three distinct roots and
 the right side of \eqref{eq:kawahara-background} is nonzero at
 all of them, so the six pairs are simple on a nonempty open
@@ -344,22 +347,16 @@ fifth-order evolution equation are given by
 The seventh-order KdV equation has the operator
 \(P=D^6+a_4D^4+a_2D^2+a_0\); its meromorphic travelling waves are
 studied by \citet{Dang2023Even}.
-Here \(A=\rho^5+c_1\rho^3+c_2\rho\), \(s_6=5544\), and the remainder of
-\(S_A\) has two coefficients, at \(\rho^3\) and at \(\rho\). Up to
-constant factors they are
-\begin{equation}\label{eq:p6-matching}
- \begin{split}
- &49c_1^4-730c_1^2c_2+1655c_2^2-1100c_1+2310c_2+1155,\\
- &49c_1^3c_2-681c_1c_2^2-330c_1^2+693c_1c_2+924c_1-550c_2-1050.
- \end{split}
-\end{equation}
-Eliminating \(c_2\), which is determined by \(c_1\) at every solution,
-gives
+Here \(A=\rho^5+c_1\rho^3+c_2\rho\) and \(s_6=5544\). The remainder of
+\(S_A\) has two coefficients, at \(\rho^3\) and at \(\rho\), which are
+polynomials in \(c_1,c_2\) of weights eight and ten; the ancillary
+script prints them. Eliminating \(c_2\), which is determined by \(c_1\)
+at every solution, gives
 \begin{equation}\label{eq:p6-eliminant}
  (c_1+5)(c_1+10)(49c_1^2-5c_1+10)\,g_6(c_1)=0,
 \end{equation}
-where \(g_6\) is an irreducible sextic without real roots; it is
-printed by the ancillary script. The ten roots are distinct, in
+where \(g_6\) is an irreducible sextic without real roots, also printed
+by the script. The ten roots are distinct, in
 agreement with \(F_6=\binom52=10\). Two pairs are real:
 \begin{equation}\label{eq:p6-real}
  \begin{array}{c|c|c}
@@ -377,8 +374,9 @@ gives \(2F_6=20\) for the elliptic pairs of this family.
 
 At \(p=5\) the purely dissipative operators are
 \(P=D^5+a_3D^3+a_1D+a_0\), and \(A=\rho^4+c_1\rho^2+c_2\).
-The scheme \(\mathcal X_5\) is reduced
-(Section~\ref{sec:further}), so there are exactly \(F_5=6\) pairs.
+All \(126\) pairs at \(p=5\) are simple
+(Section~\ref{sec:further}), so there are exactly \(F_5=6\) distinct
+pairs here.
 They are
 \begin{equation}\label{eq:p5-symmetric}
  A=(\rho^2-1)(\rho^2-4),\qquad

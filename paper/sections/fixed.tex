@@ -36,14 +36,18 @@ waves differ by the constant \(b_p\lambda^ps_pA(0)\), which is a
 Galilean shift.
 \end{proof}
 
-Let \(\pi(A)=([\rho^{p-1}]P_A,\ldots,[\rho^{1}]P_A)\in\CC^{p-1}\), and
-let \(\lambda\in\CC^\ast\) act on \(\CC^{p-1}\) with weights
-\(1,2,\ldots,p-1\). Condition \eqref{eq:fixed-conditions} says that the
-coefficient vector
-\(\beta=(b_{p-1}/b_p,\ldots,b_1/b_p)\) lies in the orbit of \(\pi(A)\).
-Rescaling \(x\) moves an equation along such an orbit, which is a
-weighted curve. This is the reason for fixing the rate in the count:
-\(N_p\) counts these curves together with the waves that they carry.
+Let \(\pi(A)=([\rho^{p-1}]P_A,\ldots,[\rho^{1}]P_A)\) be the vector of
+lower coefficients of \(P_A\), and let
+\(\beta=(b_{p-1}/b_p,\ldots,b_1/b_p)\) be the coefficient vector of the
+equation; this \(\beta\) is not the constant \(\beta\) of
+Section~\ref{sec:elliptic-counting}. Condition
+\eqref{eq:fixed-conditions} says that \(\beta\) is obtained from
+\(\pi(A)\) by multiplying its \(k\)th entry by \(\lambda^k\), for some
+\(\lambda\ne0\). As \(\lambda\) varies these vectors trace a curve, the
+orbit \(\CC^\ast\pi(A)\), and rescaling \(x\) moves an equation along
+it. This is the reason for fixing the rate: without it every pair would
+be a one-parameter family. Each of the \(N_p\) pairs marks one orbit,
+and several pairs may mark the same orbit.
 
 \begin{corollary}[Solvable equations]\label{cor:solvable}
 Assume that \(\Xp\) is finite, for instance that
@@ -64,9 +68,9 @@ at most one in \(\CC^{p-1}\). A generic equation
 
 \begin{proof}
 Part~(i) restates Proposition~\ref{prop:fixed}. For the bound,
-\(\pi(\iota A)=(-1)\cdot\pi(A)\) by \eqref{eq:reflection-pair}, so the
-orbit depends only on the \(\iota\)-orbit of \(A\). The number of
-\(\iota\)-orbits of points is half the number of points plus half the
+\(\pi(\iota A)=(-1)\cdot\pi(A)\) by \eqref{eq:reflection-pair}, so \(A\)
+and its mirror image \(\iota A\) give the same orbit. The number of
+classes \(\{A,\iota A\}\) is half the number of points plus half the
 number of fixed points, and these two numbers are at most
 \(\len\Xp\le N_p\) and \(\len\Xp^{\mathrm{sym}}\le F_p\); the last
 inequality is the B\'ezout bound in the proof of
@@ -86,10 +90,11 @@ equations with a nonzero Burgers coefficient. Each of them has one
 family of fronts, at the rate fixed by that coefficient. The table of
 Section~\ref{sec:kdvb} represents this front twice, by the mirror
 images \(a=1\) and \(a=-1\); these are the data \((A,\lambda)\) and
-\((\iota A,-\lambda)\) of Proposition~\ref{prop:fixed}. At \(p=3\), with
-\(\beta=(B,\mu)\), the orbits are the curves \(B^2=\sigma\mu\) with
-the origin removed, and
-Table~\ref{tab:ks} gives the four classical values
+\((\iota A,-\lambda)\) of Proposition~\ref{prop:fixed}. At \(p=3\), write \(P=D^3+BD^2+\mu D+a_0\), so that \(\beta=(B,\mu)\).
+The orbits are the curves \(B^2=\sigma\mu\) with the origin removed.
+For the ten pairs \(A=\rho^2+a\rho+b\) of Table~\ref{tab:ks},
+\eqref{eq:ksoperator} gives \(B=4a\) and \(\mu=a^2+19b\), hence the
+four classical values
 \begin{equation}\label{eq:ks-sigma}
  \sigma=\frac{16a^2}{a^2+19b}\in
  \Bigl\{0,\ 16,\ \frac{144}{47},\ \frac{256}{73}\Bigr\}.
@@ -102,7 +107,7 @@ For odd \(p\) the classification turns
 Corollary~\ref{cor:solvable} into a statement about all meromorphic
 travelling waves.
 
-\begin{corollary}[Generic equations of even order]
+\begin{corollary}[Generic equations with \(p\) odd]
 \label{cor:generic}
 Let \(p\ge5\) be odd and assume \((\mathrm R_{p-1})\). The coefficient
 vectors \(\beta\in\CC^{p-1}\) for which \eqref{eq:pde} has a

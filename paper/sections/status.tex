@@ -1,12 +1,15 @@
 \section{Which orders are settled}\label{sec:further}
 
-The formulas count pairs with multiplicity, and in that form they
-follow from the rigidity condition \((\mathrm R_{p-1})\). When the
-rational-exponential matching scheme \(\Xp\) is reduced, its pairs are
-distinct, and the elliptic pairs are distinct on a generic lattice. On
-a special lattice several elliptic pairs can merge, while the count
-with multiplicity stays the same; Section~\ref{sec:ks} shows this at
-order three. Table~\ref{tab:status} records what is known.
+Each formula needs two facts at a given \(p\). The first is the
+rigidity condition \((\mathrm R_{p-1})\) of Section~\ref{sec:counting}.
+It gives \(N_p\), \(M_p\), \(F_p\) and \(2F_p\) as counts with
+multiplicity: the multiplicities of the pairs add up to these numbers.
+The second is that every rational-exponential pair is simple, that is,
+\(\Xp\) is reduced. Then the pairs are distinct, and the elliptic pairs
+are distinct on a generic lattice. On a special lattice several
+elliptic pairs can merge, while the count with multiplicity stays the
+same; Section~\ref{sec:ks} shows this at order three.
+Table~\ref{tab:status} records what is known about each fact.
 
 \begin{table}[htbp]
 \centering
@@ -28,22 +31,9 @@ all \(p\)&conjectured&conjectured\\
 
 The prime-index argument excluded solutions at infinity by reducing
 the continuous convolution modulo \(\ell\). The same argument proves
-\eqref{eq:length} whenever \(2p-1=\ell^e\) is an odd prime power.
-For \(\deg A=(\ell^e-1)/2\), the normalized continuous convolution
-satisfies
-\[
- \ell^eH_A(\rho)\equiv u\rho^{\ell^e}\pmod\ell,\qquad u\ne0.
-\]
-Every bilinear coefficient other than the leading one has
-denominator valuation at most \(e-1\), whereas the leading
-coefficient has valuation \(-e\).
-This follows either from the factorial formula or from
-\[
- \frac{i!j!}{(i+j+1)!}
-   =\sum_{r=0}^{j}\frac{(-1)^r\binom jr}{i+r+1}.
-\]
-This argument controls only the leading system. It gives the length,
-but no simple-root lifting statement for the discrete matching system.
+\eqref{eq:length} whenever \(2p-1=\ell^e\) is an odd prime power
+(Appendix~\ref{app:verification}). It gives the count with
+multiplicity, but it does not show that the pairs are distinct.
 
 More generally, the exact arithmetic certificates supplied with the
 paper establish \((\mathrm R_d)\) for every \(d\le72\), hence
@@ -58,8 +48,8 @@ Corollary~\ref{cor:elliptic-symmetric} give
 \(\len\mathcal E_p^{\mathrm{sym}}(g_2,g_3)=2F_p\).
 Together with the ancillary proof, the certificates also cover infinite
 families of higher orders.
-They cover all complex coefficient vectors in these
-degrees. The ancillary proof and the full certificate are described
+The certificates hold for all complex coefficients, not only real or
+rational ones. The ancillary proof and the full certificate are described
 in Appendix~\ref{app:verification}.
 
 Equation \eqref{eq:coverage} is a statement about lengths only.

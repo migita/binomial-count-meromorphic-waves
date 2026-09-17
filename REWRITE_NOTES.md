@@ -45,17 +45,30 @@ Held for a second paper and not mentioned: the even-order landscape beyond Fishe
 4. Proposition 8.1, Corollaries 8.2, 8.3.
 5. Examples: the ten pairs at p = 6 and the six at p = 5.
 
-Review status: the reviewing Codex session audited all of 1–5 (report:
+Review status. (a) Mathematics: the reviewing Codex session audited all of 1–5 (report:
 `~/projects/KS-260829/codex_binomial_review_20260917/mathematical_audit.md`, with an independent recomputation of the p = 5 and
-p = 6 lists). No mathematical error was found. Its wording and scope findings are applied: primitive period in Prop. 8.1;
-punctured curves at p = 3; generic-lattice qualification in the status table; KdV versus Burgers orbits; scope of "three
-kinds"; "dimension at most two"; hypothesis and equivalence convention for the M_p/2 sentence; "pulses only / fronts only"
-restricted to rational-exponential waves; the finiteness claim in the introduction stated with its hypothesis. Readability
-reads (Codex, and a fresh reader with no knowledge of the project) were still running when this note was last updated.
+p = 6 lists and of the KS multiplicities). No mathematical error was found; its wording and scope findings are applied.
+(b) Readability: two cold reads are integrated — Codex (`readability_review.md`, `final_pass.md`) and a fresh reader with no
+knowledge of the project. From them: the normalization is explained in ordinary language before the technical list; "a single
+equation" is told through scaling curves and the KdV/Burgers contrast; uniqueness is stated for a fixed operator P; "order"
+always means p (stated once in the introduction) and parities are written through p; "index" is defined; multiplicity is
+explained like a multiple root, and the three algebraic notions are tied to "count with multiplicity" and "distinct"; the six
+classical KS cases / ten members are explained in the first paragraph; the reflection is motivated before its formulas and
+Theorem 5.8 has a plain restatement; Section 7 opens with "two facts"; Section 8 avoids orbit jargon; Fisher is tied to the
+profile equation of KdV–Burgers; rational waves are said not to be counted, and why.
+
+Later cuts and moves (all reversible): the proof itinerary in the Lean remark (kept in the repository docs; the appendix still
+lists the files); Systems "Fixed operators"; the order-seven paragraph; the two long remainder polynomials at p = 6 (printed by
+the script); the prime-power details moved from Section 7 to Appendix A; the closing paragraph of Section 3 and the paragraph
+after Proposition 5.2 (repetitions); in the paragraph on simple/multiplicity/length/reduced, the "infinitesimal deformation"
+equivalence and the "local uniqueness" sentence (the latter's point is now made in Section 10).
 
 ## For the author to decide or confirm
 
 1. "the four with real coefficients are, after the scales are restored, the solutions (1.4) of Kudryashov–Migita 2007" (§9.4) and "Nikolaevskiy equation" as the p = 5 example of a purely dissipative equation (§2.2, Table 2).
 2. Length: 36–37 pages (was 31). Readability was preferred to compression. Further wholesale cuts, if wanted: the prime-power paragraph of §7 (0.4 p), the literature-normalization sentences in §9.3 (0.2 p), parts of "Relation to earlier work".
-3. Disclosure section: the Claude Code item now lists the new results and the reorganization; the Codex item is unchanged.
-4. On adoption: copy `paper/` back to `arxiv_meromorphic_waves/` with a `history/` backup, rebuild the tarball and `validation.json` there (the branch already has a regenerated `MANIFEST.sha256`, README and `anc/symmetry_checks/`).
+3. The sentence citing Kudryashov–Sinelshchikov 2012 in §9.3 ("elliptic formulas with nonzero odd derivative coefficients in the
+   full fifth-order evolution equation") is kept verbatim; a cold reader found it ambiguous (odd powers of D in P, or odd-order
+   derivatives in the evolution equation?). Only the author can say which is meant.
+4. Disclosure section: the Claude Code item now lists the new results and the reorganization; the Codex item is unchanged.
+5. On adoption: copy `paper/` back to `arxiv_meromorphic_waves/` with a `history/` backup, rebuild the tarball and `validation.json` there (the branch already has a regenerated `MANIFEST.sha256`, README and `anc/symmetry_checks/`).

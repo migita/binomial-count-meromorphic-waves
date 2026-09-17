@@ -20,6 +20,26 @@ Their reductions give a nonzero common zero over
 The argument needs the algebraic closure of the residue field;
 a search only over \(\FF_\ell\) would not suffice.
 
+\paragraph{Prime powers.}
+Let \(2p-1=\ell^e\) be an odd prime power. For
+\(\deg A=(\ell^e-1)/2\), the normalized continuous convolution
+satisfies
+\[
+ \ell^eH_A(\rho)\equiv u\rho^{\ell^e}\pmod\ell,\qquad u\ne0.
+\]
+Every bilinear coefficient other than the leading one has
+denominator valuation at most \(e-1\), whereas the leading
+coefficient has valuation \(-e\).
+This follows either from the factorial formula or from
+\[
+ \frac{i!j!}{(i+j+1)!}
+   =\sum_{r=0}^{j}\frac{(-1)^r\binom jr}{i+r+1}.
+\]
+The lemma above then gives \((\mathrm R_{p-1})\), as in Step~3 of the
+proof of Theorem~\ref{thm:prime}. This argument controls only the
+leading system, so it gives no simple-root lifting statement for the
+discrete matching system.
+
 The ancillary material contains four kinds of checks.
 
 \begin{enumerate}
@@ -80,7 +100,7 @@ with the correspondence between the two formulations for every
 \(p\ge2\). The discrete convolution is defined there by the
 Bernoulli-polynomial power sums, and the remainder equations and their
 Jacobian are those of Section~\ref{sec:counting}. The proof route is
-described in Remark~\ref{rem:lean}. The files
+outlined in Remark~\ref{rem:lean} and documented in the repository. The files
 \texttt{EnumerationCheck.lean} and \texttt{Check.lean} verify that the
 proofs have exactly the stated propositions as their types and that the
 theorems depend only on the axioms \texttt{propext},

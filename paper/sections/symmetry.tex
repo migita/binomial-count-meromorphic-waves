@@ -11,6 +11,12 @@ For a monic polynomial \(A\) of degree \(d=p-1\) put
  (\iota A)(\rho)=(-1)^dA(-\rho),\qquad\text{that is,}\qquad
  \alpha_j\longmapsto(-1)^j\alpha_j .
 \end{equation}
+Proposition~\ref{prop:reflection} shows that \(\iota\) is the reflection
+\(z\mapsto-z\) written in the coordinates \(\alpha_j\). It reads the
+wave \(v_A\) in the opposite direction and then restores the
+normalization: it moves the zero limit back to the end \(e^z\to0\), and
+for odd \(p\) it changes the sign of the profile.
+
 
 \begin{proposition}[Reflection]\label{prop:reflection}
 For every monic \(A\) of degree \(d\),
@@ -26,12 +32,9 @@ At a point of \(\Xp\),
 \end{equation}
 \end{proposition}
 
-In words, \(\iota\) reads a wave in the opposite direction and then
-restores the normalization: it moves the zero limit back to the end
-\(e^z\to0\), and for odd \(p\) it changes the sign of the profile. The
-pairs \(A\) and \(\iota A\) are the mirror images that \(N_p\) counts
-separately. For \(p=3\) the involution is \((a,b)\mapsto(-a,b)\) in
-Table~\ref{tab:ks}.
+The pairs \(A\) and \(\iota A\) are the mirror images that \(N_p\)
+counts separately. For \(p=3\) the involution is
+\((a,b)\mapsto(-a,b)\) in Table~\ref{tab:ks}.
 
 \begin{proof}
 Since \(Q(-z)=1-Q(z)\), and \(D\) changes sign under \(z\mapsto-z\),
@@ -96,11 +99,18 @@ with real coefficients is a front without any hypothesis.
 \end{enumerate}
 \end{theorem}
 
-Thus the rational-exponential waves of a purely dispersive equation are
-pulses, and those of a purely dissipative equation are fronts. The
-first statement holds in every even order. The second is proved
-whenever all pairs are distinct, and for real waves in every odd order.
-Elliptic waves occur in both subfamilies and are not concerned.
+In plain terms, the pairs that coincide with their mirror image are
+exactly the pairs of the purely dispersive equations, for even \(p\),
+or of the purely dissipative equations, for odd \(p\). Counted with
+multiplicity there are \(F_p\) of them whenever rigidity holds, in
+particular for \(p\le73\). They are \(F_p\) distinct pairs whenever all
+\(N_p\) pairs for that \(p\) are distinct, in particular when \(2p-1\)
+is prime. The rational-exponential waves of a purely dispersive
+equation are pulses, for every even \(p\). Those of a purely
+dissipative equation are fronts; this is proved whenever all \(N_p\)
+pairs are distinct, and for waves with real coefficients at every odd
+\(p\). Elliptic waves occur in both subfamilies; the distinction
+between pulses and fronts does not apply to them.
 
 \begin{proof}
 \emph{(i).} If \(\iota A=A\), then \eqref{eq:reflection-pair} gives

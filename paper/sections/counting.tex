@@ -133,12 +133,6 @@ This is impossible: \(e<d\) implies \(t^e>t^d\) for \(0<t<1\), so
 the left side exceeds twice the right side. Thus \(h=0\).
 \end{proof}
 
-For odd \(p\), Theorem~\ref{thm:complete} gives uniqueness among all
-nonconstant meromorphic solutions up to translation; for even \(P\),
-it does so on a fixed energy level.
-Proposition~\ref{prop:injective} fixes the rational-exponential
-normalization and holds for every monic operator.
-
 Divide \(S_A\) by the monic polynomial \(A\):
 \begin{equation}\label{eq:remainder}
  S_A=AC_A+R_A,\qquad
@@ -154,21 +148,19 @@ defined by the \(R_r\).
 
 Three notions from algebra are used to count. A solution is
 \emph{simple} if the Jacobian matrix of \((R_0,\ldots,R_{d-1})\) with
-respect to \((\alpha_1,\ldots,\alpha_d)\) is invertible there;
-equivalently, the equations admit no nonzero infinitesimal
-deformation of the solution.
-Every isolated solution has a \emph{multiplicity}, the dimension over
-\(\CC\) of the local quotient
-algebra of the equations at that point. For a square system such as
-this one it may be pictured as the number of simple solutions into
-which the point splits under a generic small perturbation of the
-equations; it equals one exactly for simple solutions.
+respect to \((\alpha_1,\ldots,\alpha_d)\) is invertible there.
+Every isolated solution has a \emph{multiplicity}. For a square system
+such as this one it may be pictured as the number of simple solutions
+into which the point splits under a generic small perturbation of the
+equations; formally it is the dimension over \(\CC\) of the local
+quotient algebra of the equations at that point. It equals one exactly
+for simple solutions.
 When \(\Xp\) is finite, its \emph{length} is the sum of the
 multiplicities of its points, and \(\Xp\) is \emph{reduced} when every
 point is simple, so that the length is the number of points.
-An isolated solution of multiplicity greater than one is still the
-only solution near itself; local uniqueness is therefore weaker than
-simplicity.
+In these terms, a count with multiplicity is a statement about the
+length of \(\Xp\), and the statement that all pairs are distinct means
+that \(\Xp\) is reduced.
 
 \subsection{Weighted degree and the role of continuous convolution}
 
