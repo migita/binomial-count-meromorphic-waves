@@ -1,0 +1,428 @@
+\subsection{Reflection and the two classical hierarchies}\label{sec:reflection}
+
+The operator families met most often in applications are smaller than
+the full monic family, and \(N_p\) and \(M_p\) do not apply to them
+directly. An evolution equation that contains only odd-order
+derivatives, such as the KdV, Kawahara and seventh-order KdV
+equations, gives an even polynomial \(P\) of even degree. An equation
+whose linear part contains only even-order derivatives, such as the
+Kuramoto--Sivashinsky equation without dispersion, gives a polynomial
+of odd degree whose nonconstant part is odd. Both families are the
+fixed locus of a reflection, and the count inside them is again a
+binomial coefficient.
+
+We call a monic polynomial \(P\) of degree \(p\)
+\emph{reflection-symmetric} if \(P-P(0)\) has the parity of
+\(\rho^p\):
+\begin{equation}\label{eq:symmetric-class}
+ P(-\rho)=P(\rho)\quad(p\text{ even}),\qquad
+ P(\rho)+P(-\rho)=2P(0)\quad(p\text{ odd}).
+\end{equation}
+In the evolution equation of Section~\ref{sec:intro} this means
+\(b_j=0\) whenever \(p-j\) is odd. The equation is then invariant under
+\((x,t)\mapsto(-x,-t)\) for even \(p\), and under
+\((x,u)\mapsto(-x,-u)\) for odd \(p\).
+
+For a monic polynomial \(A\) of degree \(d=p-1\) put
+\begin{equation}\label{eq:iota}
+ (\iota A)(\rho)=(-1)^dA(-\rho),\qquad\text{that is,}\qquad
+ \alpha_j\longmapsto(-1)^j\alpha_j .
+\end{equation}
+
+\begin{proposition}[Reflection]\label{prop:reflection}
+For every monic \(A\) of degree \(d\),
+\begin{equation}\label{eq:reflection-S}
+ S_{\iota A}(\rho)=-S_A(-\rho)-2A(0)A(-\rho),\qquad
+ R_{\iota A}(\rho)=-R_A(-\rho).
+\end{equation}
+Consequently \(\iota\) is an involution of the scheme \(\Xp\).
+At a point of \(\Xp\),
+\begin{equation}\label{eq:reflection-pair}
+ v_{\iota A}(z)=(-1)^p\bigl(v_A(-z)-s_pA(0)\bigr),\qquad
+ P_{\iota A}(\rho)=(-1)^p\bigl(P_A(-\rho)+s_pA(0)\bigr).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Since \(Q(-z)=1-Q(z)\), and \(D\) changes sign under \(z\mapsto-z\),
+\[
+ \bigl(A(D)Q\bigr)(-z)=A(0)-A(-D)Q=A(0)-(-1)^d(\iota A)(D)Q .
+\]
+This is the first formula in \eqref{eq:reflection-pair}.
+Evaluate \eqref{eq:discrete-square} at \(-z\), and use
+\eqref{eq:discrete-square} for \(\iota A\) on the left:
+\[
+ A(0)^2-2A(0)A(-D)Q-S_{\iota A}(D)Q=-S_A(0)+S_A(-D)Q .
+\]
+Every \(B(D)Q\) is a polynomial in \(Q\) without constant term, so
+letting \(z\to-\infty\) gives \(S_A(0)=-A(0)^2\). The remaining terms,
+and the injectivity of \(B\mapsto B(D)Q\), give the first identity in
+\eqref{eq:reflection-S}. Now substitute \(S_A=AC_A+R_A\) at \(-\rho\):
+\[
+ S_{\iota A}(\rho)
+ =(\iota A)(\rho)\,(-1)^p\bigl(C_A(-\rho)+2A(0)\bigr)-R_A(-\rho).
+\]
+Division by the monic polynomial \(\iota A\) is unique. Hence
+\[
+ R_{\iota A}(\rho)=-R_A(-\rho),\qquad
+ C_{\iota A}(\rho)=(-1)^p\bigl(C_A(-\rho)+2A(0)\bigr).
+\]
+The first relation reads \(R_r(\iota\alpha)=(-1)^{r+1}R_r(\alpha)\), so
+the linear map \eqref{eq:iota} preserves the ideal of the matching
+equations. The second relation and \eqref{eq:operator-A} give the
+formula for \(P_{\iota A}\).
+\end{proof}
+
+Thus \(\iota\) reads a wave in the opposite direction and moves its
+zero endpoint back to the left; for odd \(p\) it also changes the sign
+of the profile. The pairs \(A\) and \(\iota A\) are counted separately
+in \(N_p\). For \(p=3\) the involution is \((a,b)\mapsto(-a,b)\) in
+Table~\ref{tab:ks}.
+
+Let
+\[
+ \Xp^{\mathrm{sym}}=\Xp\cap\{\alpha_j=0\text{ for odd }j\}
+\]
+be the fixed locus of \(\iota\), with its induced scheme structure, and
+put
+\begin{equation}\label{eq:Fp}
+ F_p=\binom{p-1}{\lfloor (p-1)/2\rfloor}.
+\end{equation}
+
+\begin{theorem}[Count in the symmetric families]\label{thm:symmetric}
+\begin{enumerate}
+\item[\textup{(i)}] A point \(A\) of \(\Xp\) lies in
+\(\Xp^{\mathrm{sym}}\) if and only if the operator \(P_A\) is
+reflection-symmetric. Thus \(\Xp^{\mathrm{sym}}\) is the set of
+normalized rational-exponential pairs of the family
+\eqref{eq:symmetric-class}.
+\item[\textup{(ii)}] If \((\mathrm R_{p-1})\) holds, then
+\(\len\Xp^{\mathrm{sym}}=F_p\).
+\item[\textup{(iii)}] If, in addition, \(\Xp\) is reduced, then
+\(\Xp^{\mathrm{sym}}\) consists of \(F_p\) distinct pairs, each a simple
+solution of the matching equations of the symmetric family. For even
+\(p\) all of them are pulses, and for odd \(p\) all of them are fronts.
+If \(2p-1\) is prime, they are the points whose label in
+\eqref{eq:prime-labels} satisfies \(S=-S\).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\emph{(i).} If \(\iota A=A\), then \eqref{eq:reflection-pair} gives
+\(P_A(\rho)=(-1)^p(P_A(-\rho)+s_pA(0))\). For even \(p\) the
+polynomial \(A\) is odd, so \(A(0)=0\) and \(P_A\) is even. For odd
+\(p\) the sum \(P_A(\rho)+P_A(-\rho)\) is the constant \(-s_pA(0)\).
+In both cases \(P_A\) is reflection-symmetric.
+
+Conversely, let \(P=P_A\) be reflection-symmetric. Suppose first that
+\(p\) is even. Then \(w(z)=v_A(-z)\) solves \eqref{eq:main} with the
+same operator, and it has a pole at \(i\pi\) because
+\(-i\pi\equiv i\pi\) modulo \(2\pi i\). Its energy equals that of
+\(v_A\), since every term of \eqref{eq:energyterms} and
+\eqref{eq:energy} contains an even total number of derivatives.
+By the fixed-energy Laurent uniqueness of
+Section~\ref{sec:completeness}, \(w=v_A\). Letting \(z\to-\infty\) in
+\(v_A(-z)=v_A(z)\) gives \(A(0)=0\), and \eqref{eq:reflection-pair}
+becomes \(v_{\iota A}=v_A\). Hence \(\iota A=A\) by the uniqueness of
+the form \eqref{eq:normalized-A}.
+Suppose next that \(p\) is odd. By \eqref{eq:symmetric-class},
+\(-P(-\rho)=P(\rho)-2P(0)\), and a direct substitution shows that
+\(-v_A(-z)\) and \(v_A(z)+2P(0)\) both solve \eqref{eq:main} with the
+operator \(P-2P(0)\). Both have a pole at \(i\pi\). For odd \(p\) the
+Laurent expansion at a pole is unique, so
+\(-v_A(-z)=v_A(z)+2P(0)\). By \eqref{eq:reflection-pair},
+\(v_{\iota A}(z)=v_A(z)+2P(0)+s_pA(0)\). Letting \(z\to-\infty\) gives
+\(s_pA(0)=-2P(0)\), and again \(v_{\iota A}=v_A\).
+
+\emph{(ii).} On the subspace \(\{\alpha_j=0,\ j\text{ odd}\}\) we have
+\(\iota A=A\), and \eqref{eq:reflection-S} shows that \(R_A\) is an odd
+polynomial. The equations \(R_r=0\) with \(r\) even therefore hold
+identically there. With \(m=\lfloor d/2\rfloor\), there remain the
+\(m\) equations \(R_1,R_3,\ldots,R_{2m-1}\) in the \(m\) unknowns
+\(\alpha_2,\alpha_4,\ldots,\alpha_{2m}\). By \eqref{eq:weights} their
+weights are
+\[
+ \begin{array}{c|c}
+ \text{variables}&2,4,\ldots,2m\\
+ \text{equations}&2d,2d-2,\ldots,2(d-m+1).
+ \end{array}
+\]
+Their highest weighted parts are the restrictions of those of the full
+system. The highest weighted parts of the omitted equations vanish
+identically on the subspace, because \(H_A\) is an odd polynomial when
+\(\iota A=A\). A common zero of the restricted leading
+forms is therefore a polynomial \(A\) with \(A\mid H_A\), and
+\((\mathrm R_d)\) gives \(A=\rho^d\). The finite-cover argument of
+Theorem~\ref{thm:length}, with \(\alpha_{2i}=y_i^{2i}\), gives
+\[
+ \len\Xp^{\mathrm{sym}}
+ =\prod_{i=1}^{m}\frac{2(d-i+1)}{2i}=\binom dm .
+\]
+
+\emph{(iii).} A closed subscheme of a finite reduced scheme is reduced,
+as in the proof of Proposition~\ref{cor:endpoints}, and a reduced point
+of a square system is a simple solution of it. For even \(p\) the
+polynomial \(A\) is odd, so \(A(0)=0\). For odd \(p\), a point with
+\(A(0)=0\) would have \(P_A(0)=-s_pA(0)/2=0\) by the proof of~(i),
+contrary to Proposition~\ref{cor:endpoints}. Finally, the map
+\eqref{eq:iota} negates the roots of \(\overline A\), so it acts on the
+labels by \(S\mapsto-S\), and the labelling is a bijection.
+\end{proof}
+
+The label count agrees with \eqref{eq:Fp}. The nonzero residues modulo
+\(\ell=2d+1\) form \(d\) pairs \(\{s,-s\}\). A set \(S=-S\) of \(d\)
+elements consists of \(d/2\) pairs if \(d\) is even, and of \(0\) and
+\((d-1)/2\) pairs if \(d\) is odd, which gives
+\(\binom{d}{\lfloor d/2\rfloor}\) sets in both cases. It contains
+\(0\) exactly when \(d\) is odd, in agreement with the pulses and
+fronts of part~(iii).
+
+\begin{corollary}[Elliptic pairs with an even operator]
+\label{cor:elliptic-symmetric}
+Let \(p\) be even and assume \((\mathrm R_{p-1})\). On every fixed
+nonsingular lattice, the elliptic pairs whose operator is an even
+polynomial form a closed subscheme
+\(\mathcal E_p^{\mathrm{sym}}(g_2,g_3)\) of
+\(\mathcal E_p(g_2,g_3)\), defined by \(u_j=0\) for odd \(j\), and
+\begin{equation}\label{eq:elliptic-symmetric-length}
+ \len\mathcal E_p^{\mathrm{sym}}(g_2,g_3)=2F_p .
+\end{equation}
+If \(\Xp\) is reduced, \(\mathcal E_p^{\mathrm{sym}}(g_2,g_3)\) is
+reduced for \((g_2,g_3)\) in a nonempty Zariski-open set of nonsingular
+parameters.
+\end{corollary}
+
+\begin{proof}
+If the profile \eqref{eq:elliptic-enumeration-profile} is even, the odd
+part of \eqref{eq:main} is \(\sum_{j\text{ odd}}a_jD^jV=0\). The
+functions \(D^jV\) have distinct pole orders, so \(a_j=0\) for odd
+\(j\). Conversely, for an even operator \(V(-z)\) is a solution with
+the same energy and the same pole, hence equals \(V\), as in the proof
+of Theorem~\ref{thm:symmetric}.
+On the subspace \(u_j=0\), \(j\) odd, the residual of Step~1 in the
+proof of Theorem~\ref{thm:elliptic-count} is even. There remain the
+equations and unknowns of even weight in
+\eqref{eq:elliptic-weights}:
+\[
+ \begin{array}{c|c}
+ \text{variables}&2,4,\ldots,p-2,p\\
+ \text{equations}&p+2,p+4,\ldots,2p-2,2p.
+ \end{array}
+\]
+The omitted leading forms vanish identically on the subspace, so the
+remaining ones have only the trivial common zero, by Step~3 of that
+proof. Weighted B\'ezout gives
+\[
+ \frac{(p+2)(p+4)\cdots(2p-2)\,(2p)}{2\cdot4\cdots(p-2)\,p}
+ =2\binom{p-1}{p/2-1}=2F_p .
+\]
+At the node, reflection is \(Q\mapsto1-Q\), which fixes \(X\) and
+changes the sign of \(Y\). An even nodal profile is
+\(\beta+v_A\) with \(\iota A=A\), so the nodal fiber is
+\eqref{eq:nodal-matching} with \(A\in\Xp^{\mathrm{sym}}\). If \(\Xp\)
+is reduced, it has \(2F_p\) simple points by
+Theorem~\ref{thm:symmetric} and Proposition~\ref{cor:endpoints}, and
+Step~5 applies without change.
+\end{proof}
+
+For odd \(p\) there is no fixed-lattice analogue. The symmetric profile
+is \(-P(0)\) plus a function odd about the pole, and the matching
+system has one equation more than it has unknowns, so symmetric
+elliptic pairs are not expected on a generic lattice. At \(p=3\) they
+occur exactly when \(g_2=0\), as \eqref{eq:ks-elliptic-scheme} shows
+for \(B=0\).
+
+\begin{table}[htbp]
+\centering
+\caption{The symmetric counts: \(F_p\) rational-exponential pairs, and
+\(2F_p\) elliptic pairs on a generic fixed lattice when \(p\) is even. They are lengths for \(p\le73\) and numbers of distinct simple
+pairs under the reducedness hypothesis of
+Theorem~\ref{thm:symmetric}.}
+\label{tab:symmetric}
+\begin{tabular}{@{}cllcc@{}}
+\toprule
+\(p\)&Symmetric operator&Example&\(F_p\)&Elliptic\\
+\midrule
+2&\(D^2+a_0\)&KdV&1&2\\
+3&\(D^3+a_1D+a_0\)&KS without dispersion&2&--\\
+4&\(D^4+a_2D^2+a_0\)&Kawahara&3&6\\
+5&\(D^5+a_3D^3+a_1D+a_0\)&sixth-order model&6&--\\
+6&\(D^6+a_4D^4+a_2D^2+a_0\)&seventh-order KdV&10&20\\
+7&\(D^7+a_5D^5+a_3D^3+a_1D+a_0\)&&20&--\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:symmetric} lists the first values. The rows \(p=2,3,4\)
+are the KdV pulse of \eqref{eq:kdvb-pairs}, the two pairs with \(a=0\)
+in Table~\ref{tab:ks}, and the Kawahara counts of
+Section~\ref{sec:kawahara}. At \(p=5\) the scheme \(\mathcal X_5\) is
+reduced (Section~\ref{sec:further}), so there are exactly six symmetric
+pairs. With \(A=\rho^4+c_1\rho^2+c_2\) they are
+\begin{equation}\label{eq:p5-symmetric}
+ A=(\rho^2-1)(\rho^2-4),\qquad
+ A=(\rho^2-1)(\rho^2-9),\qquad
+ A=(\rho^2-1)\Bigl(\rho^2+\frac15\Bigr),
+\end{equation}
+and the three pairs with
+\[
+ 1105c_1^3-2969c_1^2+5570c_1-4000=0,\qquad
+ c_2=\frac{5c_1^3+21c_1-10}{79c_1+210}.
+\]
+The cubic has one real root. All six pairs are fronts, as
+Theorem~\ref{thm:symmetric} requires, and the four with real
+coefficients are, after the scales are restored, the solutions~(1.4)
+of \citet{KudryashovMigita2007}. For instance,
+\(A=(\rho^2-1)(\rho^2-4)\) gives
+\[
+ v_A=1260\bigl(40Q^3-60Q^4+24Q^5\bigr),\qquad
+ P_A=\rho^5-55\rho^3+1254\rho-2520 .
+\]
+
+\subsection{Fixed equations}\label{sec:fixed}
+
+The enumeration lets the operator vary. We now read it for a single
+evolution equation
+\begin{equation}\label{eq:pde-fixed}
+ u_t+uu_x+\sum_{j=1}^{p}b_j\partial_x^{j+1}u=0,\qquad b_p\ne0,
+\end{equation}
+with fixed complex coefficients. Equation \eqref{eq:pde-fixed} is
+invariant under translations and under the Galilean shifts
+\(u\mapsto u+k\), \(x\mapsto x-kt\).
+
+\begin{proposition}[The waves of a fixed equation]\label{prop:fixed}
+Let \(\lambda\ne0\). Up to a translation and a Galilean shift, the
+travelling waves \(u=w(x-ct)\) of \eqref{eq:pde-fixed} that are
+rational in \(e^{\lambda(x-ct)}\), with one pole modulo
+\(2\pi i/\lambda\), are
+\begin{equation}\label{eq:fixed-wave}
+ u=b_p\lambda^p\,v_A\bigl(\lambda(x-ct)\bigr),\qquad
+ c=-b_p\lambda^pP_A(0),
+\end{equation}
+where \(A\) ranges over the points of \(\Xp\) that satisfy
+\begin{equation}\label{eq:fixed-conditions}
+ \frac{b_j}{b_p}=\lambda^{p-j}\,[\rho^j]P_A,\qquad 1\le j\le p-1 .
+\end{equation}
+The data \((A,\lambda)\) and \((\iota A,-\lambda)\) describe the same
+wave.
+\end{proposition}
+
+\begin{proof}
+Such a wave has finite limits as \(e^{\lambda(x-ct)}\to0\) and
+\(\infty\), by Section~\ref{sec:systems}. A Galilean shift makes the
+first limit zero, and the integration constant of
+Section~\ref{sec:intro} is then zero. The substitution
+\(w(\xi)=b_p\lambda^pv(\lambda\xi)\) turns the integrated equation into
+\eqref{eq:main} with
+\[
+ [\rho^j]P=\frac{b_j}{b_p}\lambda^{j-p}\quad(1\le j\le p-1),\qquad
+ P(0)=-\frac{c}{b_p\lambda^p}.
+\]
+After a translation, \(v\) has the normalization of this section, so
+\(v=v_A\) and \(P=P_A\) by Proposition~\ref{prop:divisibility}.
+The last assertion follows from \eqref{eq:reflection-pair}: the two
+waves differ by the constant \(b_p\lambda^ps_pA(0)\), which is a
+Galilean shift.
+\end{proof}
+
+Let \(\pi(A)=([\rho^{p-1}]P_A,\ldots,[\rho^{1}]P_A)\in\CC^{p-1}\), and
+let \(\lambda\in\CC^\ast\) act on \(\CC^{p-1}\) with weights
+\(1,2,\ldots,p-1\). Condition \eqref{eq:fixed-conditions} says that the
+coefficient vector
+\(\beta=(b_{p-1}/b_p,\ldots,b_1/b_p)\) lies in the orbit of \(\pi(A)\).
+The rate rescaling moves an operator along a weighted curve, and this
+is the reason for fixing the rate in the enumeration: \(N_p\) counts
+these curves together with the waves that they carry.
+
+\begin{corollary}[Solvable equations]\label{cor:solvable}
+Assume that \(\Xp\) is finite, for instance that
+\((\mathrm R_{p-1})\) holds.
+\begin{enumerate}
+\item[\textup{(i)}] Equation \eqref{eq:pde-fixed} has a travelling
+wave that is rational in an exponential, with one pole per period, if
+and only if \(\beta\) lies in one of the orbits
+\(\CC^\ast\pi(A)\), \(A\in\Xp\). There are at most \((N_p+F_p)/2\)
+such orbits.
+\item[\textup{(ii)}] If \(\beta\ne0\), there are finitely many such
+waves up to translations and Galilean shifts.
+\item[\textup{(iii)}] If \(p\ge3\), the orbits form a set of dimension
+at most one in \(\CC^{p-1}\). A generic equation
+\eqref{eq:pde-fixed} has no such wave.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Part~(i) restates Proposition~\ref{prop:fixed}. For the bound,
+\(\pi(\iota A)=(-1)\cdot\pi(A)\) by \eqref{eq:reflection-pair}, so the
+orbit depends only on the \(\iota\)-orbit of \(A\). The number of
+\(\iota\)-orbits of points is half the number of points plus half the
+number of fixed points, and these two numbers are at most
+\(\len\Xp\le N_p\) and \(\len\Xp^{\mathrm{sym}}\le F_p\); the last
+inequality is the B\'ezout bound in the proof of
+Theorem~\ref{thm:symmetric}, which does not require
+\((\mathrm R_{p-1})\). For~(ii), if \(\beta\ne0\) and
+\(\beta\in\CC^\ast\pi(A)\), some coordinate \([\rho^j]P_A\) is nonzero,
+and \eqref{eq:fixed-conditions} leaves at most \(p-j\) values of
+\(\lambda\). Part~(iii) is a dimension count.
+\end{proof}
+
+When \(\beta=0\) the equation is invariant under the scaling itself,
+and its waves come in one-parameter families of rates, as for the KdV
+soliton. At \(p=2\) there are two orbits, \(\beta=0\) and
+\(\beta\ne0\), and both carry waves: every KdV--Burgers equation has
+the two fronts of Section~\ref{sec:kdvb}. At \(p=3\), with
+\(\beta=(B,\mu)\), the orbits are the curves \(B^2=\sigma\mu\), and
+Table~\ref{tab:ks} gives the four classical values
+\begin{equation}\label{eq:ks-sigma}
+ \sigma=\frac{16a^2}{a^2+19b}\in
+ \Bigl\{0,\ 16,\ \frac{144}{47},\ \frac{256}{73}\Bigr\}.
+\end{equation}
+Here the bound \((N_3+F_3)/2=6\) is the number of \(\iota\)-orbits.
+It is not attained, because the two orbits with \(a=0\) share
+\(\sigma=0\), and \((\pm1,0)\) and \((\pm i,0)\) share \(\sigma=16\).
+A floating-point evaluation of \(\pi\) on the exact solution lists
+indicates \(17\) orbits at \(p=4\), where the three Kawahara pairs share
+one orbit, and equality in the bound, \(66\) and \(236\) orbits, at
+\(p=5\) and \(p=6\). We have not certified these three values.
+
+For odd \(p\) the completeness theorem turns
+Corollary~\ref{cor:solvable} into a statement about all meromorphic
+travelling waves.
+
+\begin{corollary}[Generic equations of odd order \(p\)]
+\label{cor:generic}
+Let \(p\ge5\) be odd and assume \((\mathrm R_{p-1})\). The coefficient
+vectors \(\beta\in\CC^{p-1}\) for which \eqref{eq:pde-fixed} has a
+nonconstant meromorphic travelling wave lie in an algebraic subset of
+dimension at most two. In particular a generic equation has none.
+For \(p=3\) this set is the union of the four curves
+\(B^2=\sigma\mu\) of \eqref{eq:ks-sigma}.
+\end{corollary}
+
+\begin{proof}
+By Theorem~\ref{thm:complete}, such a wave is rational, rational in an
+exponential, or elliptic, with one pole modulo its periods. After a
+Galilean shift that moves a constant solution to zero, the
+substitution \(w=b_pv\) gives \eqref{eq:main} with
+\([\rho^j]P=b_j/b_p\) for \(1\le j\le p-1\).
+The rational-exponential waves give a set of dimension at most one, by
+Corollary~\ref{cor:solvable}. For a rational wave
+\eqref{eq:rational-system}, the argument of Step~3 in the proof of
+Theorem~\ref{thm:elliptic-count} applies verbatim, with the simple-pole
+term \(r_1z^{-1}\) included: it gives \(b=a_0=0\), and the Laplace
+correspondence gives \(A\mid H_A\) for a monic \(A\) of degree
+\(p-1\), now without the restriction \(A(0)=0\). By
+\((\mathrm R_{p-1})\), \(A=\rho^{p-1}\), hence \(P=D^p\) and
+\(\beta=0\).
+For the elliptic waves, the family of all
+\(\mathcal E_p(g_2,g_3)\) is finite over the \((g_2,g_3)\)-plane, by
+Step~4 of the same proof. It has dimension two, and so has its image
+under \(P\mapsto\beta\). For \(p=3\), Section~\ref{sec:ks} gives the
+elliptic condition \(B^2=16\mu\), which is one of the four curves; the
+point \(\beta=0\) lies on all of them.
+\end{proof}
+
+For even \(p\), Corollary~\ref{cor:solvable} and the dimension bound
+for the elliptic pairs hold without change, but
+Theorem~\ref{thm:complete} is available only when \(P\) is an even
+polynomial.

@@ -469,7 +469,9 @@ those avoiding \(0\) number \(\binom{2p-2}{p-1}=N_p-S_p\).
 
 \input{sections/elliptic_counting}
 
-\subsection{Further orders}
+\input{sections/symmetry}
+
+\subsection{Further orders}\label{sec:further}
 
 The prime-index argument excluded solutions at infinity by reducing
 the continuous convolution modulo \(\ell\). The same argument proves
@@ -497,6 +499,10 @@ paper establish \((\mathrm R_d)\) for every \(d\le72\), hence
  \len\mathcal E_p(g_2,g_3)=2\binom{2p-2}{p-2}
  \qquad(2\le p\le73).
 \end{equation}
+In the same range, Theorem~\ref{thm:symmetric} and
+Corollary~\ref{cor:elliptic-symmetric} give
+\(\len\Xp^{\mathrm{sym}}=F_p\) and, for even \(p\),
+\(\len\mathcal E_p^{\mathrm{sym}}(g_2,g_3)=2F_p\).
 Together with the ancillary proof, they also cover infinite families
 of higher orders.
 The certificate covers all complex coefficient vectors in these
@@ -509,6 +515,9 @@ calculation proves that all 126 rational-exponential points are
 simple; the input and its exact output are supplied in the ancillary
 material. Theorem~\ref{thm:elliptic-count} then gives 112 distinct
 elliptic pairs on a generic fixed lattice at that order.
+Inside the symmetric families a direct exact computation is much
+smaller: it shows that \(\Xp^{\mathrm{sym}}\) is reduced for every
+\(p\le8\), which includes the composite indices \(9\) and \(15\).
 
 \begin{corollary}[An order-seven consequence]\label{cor:p7}
 Among all monic operators of order seven, there are exactly

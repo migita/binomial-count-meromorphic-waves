@@ -20,7 +20,7 @@ Their reductions give a nonzero common zero over
 The argument needs the algebraic closure of the residue field;
 a search only over \(\FF_\ell\) would not suffice.
 
-The ancillary material contains three kinds of checks.
+The ancillary material contains four kinds of checks.
 
 \begin{enumerate}
 \item \texttt{verify\_manuscript.py} reconstructs the discrete and
@@ -54,6 +54,14 @@ The replay reconstructs the inputs, multiplies out every identity,
 and checks all 72 arithmetic choices.
 It does not infer characteristic-zero nonexistence from a list
 of residue-field points.
+\item \texttt{symmetry\_checks/} contains the exact checks for
+Sections~\ref{sec:reflection} and~\ref{sec:fixed}: the identities of
+Proposition~\ref{prop:reflection} with symbolic coefficients for
+\(d\le5\); the lengths \(F_p\) and the reducedness of
+\(\Xp^{\mathrm{sym}}\) for \(p\le8\); the lengths \(2F_p\) of
+Corollary~\ref{cor:elliptic-symmetric} for \(p\le6\) on a sample
+lattice; the six pairs \eqref{eq:p5-symmetric}; and the scaling
+\eqref{eq:fixed-wave} by substitution in the evolution equation.
 \end{enumerate}
 
 A Lean~4 formalization accompanies the paper at

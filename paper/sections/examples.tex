@@ -4,8 +4,9 @@ The three examples make both counts concrete and connect them to the
 classical literature. The first two use the full operator families of
 orders two and three, so their counts are the values \(N_2,M_2\) and
 \(N_3,M_3\) of the general formulas. The Kawahara equation restricts
-the order-four operator to an even polynomial; its counts must be
-computed within that restriction and differ from \(N_4\) and \(M_4\).
+the order-four operator to an even polynomial; its counts are the
+symmetric values \(F_4\) and \(2F_4\) of Section~\ref{sec:reflection},
+not \(N_4\) and \(M_4\).
 Table~\ref{tab:example-counts} summarizes the results.
 The normalizations are those of Section~\ref{sec:counting}: for
 rational-exponential profiles the rate is one and the left endpoint is
@@ -195,6 +196,16 @@ Their tables contain six parameter cases because they identify the
 two signs of the dispersion coefficient: two cases have zero
 dispersion and four have nonzero dispersion, and restoring the sign of
 the latter gives the ten pairs of Table~\ref{tab:ks}.
+In the language of Section~\ref{sec:reflection}, the six cases are the
+orbits of the reflection \((a,b)\mapsto(-a,b)\), and the two cases
+with \(a=0\) are the \(F_3=2\) symmetric pairs. By
+Corollary~\ref{cor:solvable}, an equation with
+\(P=D^3+BD^2+\mu D+a_0\) has such a wave exactly when
+\(B^2=\sigma\mu\) for one of the four values \eqref{eq:ks-sigma}.
+The pairs \((\pm1,0)\) and \((\pm i,0)\) belong to the same
+equations, with \(\sigma=16\); their rates differ by a factor \(i\), so
+for a real equation the second wave is periodic in \(x\), and its real
+form has poles on the real axis.
 Exhaustion of this classical list follows from
 \citet{Eremenko2006}.
 
@@ -325,13 +336,14 @@ Theorem~\ref{thm:complete} places that argument in the uniform
 operator setting, with the energy retained when fixing a Laurent
 expansion.
 
-The even restriction changes the rational-exponential count, and the
-reason is a symmetry. An even operator gives a profile even about its
-pole: reflection preserves both the equation and its energy, so
-Laurent uniqueness applies.
+The even operators form the reflection-symmetric family of
+Section~\ref{sec:reflection} at \(p=4\). By
+Theorem~\ref{thm:symmetric}, an even operator gives a profile even
+about its pole: reflection preserves both the equation and its energy,
+so Laurent uniqueness applies.
 In the logistic coordinate this is \(v(Q)=v(1-Q)\).
 Since \(v(0)=0\), both endpoints are zero; the normalized polynomial
-must have the form \(A=\rho^3+c\rho\).
+satisfies \(\iota A=A\), that is, \(A=\rho^3+c\rho\).
 Its quotient and remainder are
 \begin{equation}\label{eq:kawahara-exponential}
  \begin{split}
@@ -346,7 +358,7 @@ The three distinct roots are
  c=-1,\qquad c=\frac12\pm\frac{3i}{2\sqrt{31}}.
 \]
 They give the three simple rational-exponential pairs in this
-coefficient family. These are the three simply periodic parameter
+coefficient family, in agreement with \(F_4=\binom31=3\). These are the three simply periodic parameter
 choices of \citet[Section~3]{DeminaKudryashovKawahara2010},
 in the present normalization: the parameter in their Eq.~(31)
 equals \(1/c\) here. At \(c=-1\),
@@ -382,7 +394,9 @@ is a constant equilibrium and \(a_0=C_0-6w_\ast\).
 The same two equations give the fixed-lattice count directly:
 the first is cubic in \(b\), and the second is monic
 quadratic in \(a_0\).
-Their quotient algebra has dimension six for every fixed lattice.
+Their quotient algebra has dimension six for every fixed lattice,
+which is the length \(2F_4\) of
+Corollary~\ref{cor:elliptic-symmetric}.
 At \((g_2,g_3)=(1,0)\), the cubic has three distinct roots and
 the right side of \eqref{eq:kawahara-background} is nonzero at
 all of them. Thus the six points are simple on a nonempty open

@@ -64,6 +64,13 @@ fixed generic lattice, all of multiplicity one. Exact computer
 certificates establish both formulas with multiplicities for
 \(2\le p\le73\). We conjecture the same counting and multiplicity
 statements in every order.
+
+Inside the reflection-symmetric families, which contain the
+KdV--Kawahara hierarchy and the Kuramoto--Sivashinsky equation without
+dispersion, the rational-exponential count is
+\(\binom{p-1}{\lfloor(p-1)/2\rfloor}\). For a fixed evolution
+equation, the enumeration shows that such waves exist only on finitely
+many scaling curves in the space of coefficients.
 \end{abstract}
 
 \noindent\textbf{Keywords.}
@@ -154,7 +161,8 @@ exact computation shows that all \(126\) rational-exponential pairs
 are simple.
 We conjecture the same counting and simplicity statements in every
 order (Conjecture~\ref{conj:count}). The count is over operators,
-not over the waves of a single equation.
+not over the waves of a single equation; Section~\ref{sec:fixed}
+reads it for a single equation.
 
 For rational-exponential profiles, the pair \((P,v_A)\) solves
 \eqref{eq:main} if and only if \(A\) divides its own discrete
@@ -182,6 +190,36 @@ prime-power indices, certified by exact arithmetic through degree
 The other is simplicity of every rational-exponential pair, proved
 for prime indices and, by exact computation, at \(p=5\), and open in
 general (Conjecture~\ref{conj:count}).
+
+\paragraph{Symmetric families and fixed equations.}
+Two refinements connect the count with individual equations.
+The reflection \(z\mapsto-z\) acts on the normalized pairs, and its
+fixed points are the pairs whose operator is even, for even \(p\), or
+has an odd nonconstant part, for odd \(p\). These are the evolution
+equations with only odd-order derivatives, such as KdV and Kawahara,
+and those whose linear part has only even-order derivatives, such as
+Kuramoto--Sivashinsky without dispersion. Inside these families the
+number of rational-exponential pairs is
+\[
+ F_p=\binom{p-1}{\lfloor(p-1)/2\rfloor},
+\]
+under the same hypotheses as for \(N_p\), and for even \(p\) the even
+family has \(2F_p\) elliptic pairs on a generic lattice
+(Theorem~\ref{thm:symmetric} and
+Corollary~\ref{cor:elliptic-symmetric}). The Kawahara counts \(3\) and
+\(6\) are \(F_4\) and \(2F_4\), and at \(p=5\) the six symmetric pairs
+contain the four kink solutions of \citet{KudryashovMigita2007}.
+
+For a fixed evolution equation, rescaling the rate moves the operator
+along a weighted curve in the space of coefficients. The equation has a
+one-pole travelling wave rational in an exponential if and only if its
+coefficient vector lies on one of at most \((N_p+F_p)/2\) such curves,
+and then it has finitely many (Corollary~\ref{cor:solvable}). For odd
+\(5\le p\le73\), the equations with any nonconstant meromorphic
+travelling wave form a set of dimension at most two in the
+\((p-1)\)-dimensional space of coefficients, so a generic equation has
+none (Corollary~\ref{cor:generic}). At \(p=3\) this set is the union of
+the four classical Kuramoto--Sivashinsky curves.
 
 \paragraph{Relation to earlier work.}
 The completeness theorem is a uniform version of results that exist in
@@ -267,7 +305,8 @@ and validation of the source package.
 literature search behind the attributions in Section~\ref{sec:intro},
 the readability revision of all sections, and the leading-coefficient
 argument of Proposition~\ref{prop:injective}, which Codex then checked
-independently. It also audited the Lean formalization independently:
+independently. It also produced Sections~\ref{sec:reflection}
+and~\ref{sec:fixed}, with their exact checks. It also audited the Lean formalization independently:
 the formal statements against the manuscript, a rebuild from source,
 and the axiom audit.
 \end{itemize}
