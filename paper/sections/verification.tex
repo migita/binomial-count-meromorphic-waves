@@ -40,7 +40,7 @@ proof of Theorem~\ref{thm:prime}. This argument controls only the
 leading system, so it gives no simple-root lifting statement for the
 discrete matching system.
 
-The ancillary material contains four kinds of checks.
+The ancillary material contains five kinds of checks.
 
 \begin{enumerate}
 \item \texttt{verify\_manuscript.py} reconstructs the discrete and
@@ -63,6 +63,17 @@ Adjoining the matching Jacobian determinant gives the unit ideal,
 so all 126 points are simple.
 The input is reconstructed from the original polynomial sum by the
 Python checker; the saved transcript states the two exact outputs.
+\item At \(p=8\) the same two outputs, \(6435\) and the unit ideal, are
+obtained over the finite field \(\FF_{32003}\). Every point modulo
+\(32003\) is therefore simple and lifts uniquely by Hensel's lemma, as
+in Step~4 of the proof of Theorem~\ref{thm:prime}, and the lifts are
+all the points because the length is \(6435\). At \(p=11\) each of the
+\(352716\) points is certified over the \(19\)-adic numbers, by
+Hensel's lemma at the simple points of the reduction modulo \(19\) and
+by exact Newton-polygon and Newton--Kantorovich certificates at the
+singular ones; the archived certificate, with its description and the
+record of its validation, is in the repository, directory
+\texttt{certificates/}.
 \item \texttt{rigidity/} supplies the proof and exact certificate
 for \((\mathrm R_d)\), \(d\le72\).
 For \(2d+1=\ell^e+g\), \(g\in\{0,2,4,6\}\), the proof reduces the
@@ -77,8 +88,9 @@ of residue-field points.
 \item \texttt{symmetry\_checks/} contains the exact checks for the two
 pure subfamilies and for single equations: the identities of
 Proposition~\ref{prop:reflection} with symbolic coefficients for
-\(d\le5\); the lengths \(F_p\) and the reducedness of
-\(\Xp^{\mathrm{sym}}\) for \(p\le8\); the lengths \(2F_p\) of
+\(d\le5\); the lengths \(F_p\) for \(p\le8\), and finite-field
+certificates, of the same kind as at \(p=8\), that the \(F_p\) pairs
+are distinct for every \(p\le14\); the lengths \(2F_p\) of
 Corollary~\ref{cor:elliptic-symmetric} for \(p\le6\) on a sample
 lattice; the six pairs \eqref{eq:p5-symmetric} and the ten pairs
 \eqref{eq:p6-eliminant}, with the sextic factor in full; and the

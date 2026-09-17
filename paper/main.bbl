@@ -1,4 +1,4 @@
-\begin{thebibliography}{46}
+\begin{thebibliography}{50}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -11,6 +11,13 @@ Mark~J. Ablowitz and Anthony Zeppetella.
 \newblock \emph{Bulletin of Mathematical Biology}, 41\penalty0 (6):\penalty0
   835--840, 1979.
 \newblock \doi{10.1007/BF02462380}.
+
+\bibitem[Benney(1966)]{Benney1966}
+D.~J. Benney.
+\newblock Long waves on liquid films.
+\newblock \emph{Journal of Mathematics and Physics}, 45:\penalty0 150--155,
+  1966.
+\newblock \doi{10.1002/sapm1966451150}.
 
 \bibitem[Conrad(n.d.)]{ConradHensel}
 Keith Conrad.
@@ -191,6 +198,13 @@ Takuji Kawahara.
   (1):\penalty0 260--264, 1972.
 \newblock \doi{10.1143/JPSJ.33.260}.
 
+\bibitem[Kawahara and Toh(1988)]{KawaharaToh1988}
+Takuji Kawahara and Sadayoshi Toh.
+\newblock Pulse interactions in an unstable dissipative-dispersive nonlinear
+  system.
+\newblock \emph{Physics of Fluids}, 31:\penalty0 2103--2111, 1988.
+\newblock \doi{10.1063/1.866610}.
+
 \bibitem[Kudryashov(1988)]{Kudryashov1988}
 N.~A. Kudryashov.
 \newblock Exact soliton solutions of the generalized evolution equation of wave
@@ -302,6 +316,12 @@ Y.~Kuramoto and T.~Tsuzuki.
   356--369, 1976.
 \newblock \doi{10.1143/PTP.55.356}.
 
+\bibitem[Lin(1974)]{Lin1974}
+S.~P. Lin.
+\newblock Finite amplitude side-band stability of a viscous film.
+\newblock \emph{Journal of Fluid Mechanics}, 63:\penalty0 417--429, 1974.
+\newblock \doi{10.1017/S0022112074001704}.
+
 \bibitem[McCue et~al.(2021)McCue, El-Hachem, and
   Simpson]{McCueElHachemSimpson2021}
 Scott~W. McCue, Maud El-Hachem, and Matthew~J. Simpson.
@@ -326,6 +346,13 @@ Tuen-Wai Ng and Cheng-Fa Wu.
   1--38, 2019.
 \newblock \doi{10.1007/s11856-018-1791-0}.
 \newblock URL \url{https://arxiv.org/abs/1710.08593}.
+
+\bibitem[Nikolaevskii(1989)]{Nikolaevskii1989}
+V.~N. Nikolaevskii.
+\newblock Dynamics of viscoelastic media with internal oscillators.
+\newblock In \emph{Recent Advances in Engineering Science}, volume~39 of
+  \emph{Lecture Notes in Engineering}, pages 210--221. Springer, Berlin, 1989.
+\newblock \doi{10.1007/978-3-642-83695-4_21}.
 
 \bibitem[{NIST}(n.d.)]{DLMF}
 {NIST}.

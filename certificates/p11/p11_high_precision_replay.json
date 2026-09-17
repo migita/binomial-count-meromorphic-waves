@@ -1,0 +1,366 @@
+{
+  "created_utc": "2026-09-17T16:25:33.778064+00:00",
+  "elapsed_seconds": 1.2788132652640343,
+  "p": 11,
+  "prime": 19,
+  "stage_source": "../coll/stage1_p11.pkl",
+  "stage_sha256": "bd4e97d139bef89e9f826f1706bca9579b2db84e049be23ddae0f3e97176dec6",
+  "source_batches": [
+    {
+      "path": "../coll/corank2v2_p11_wavehp_pt10_16_0_2_17_13_6_5_5_1.pkl",
+      "sha256": "9ecf7095d968454ccdd63f41aa8be5422d996a8528c4cf2bf06db0a0bb5af7db",
+      "records": 1
+    },
+    {
+      "path": "../coll/corank2v2_p11_wavehp_pt3_6_17_18_11_10_7_3_11_11.pkl",
+      "sha256": "3c92112ccb3e80819b48f82178dfe52cce47ba8010570451dc57407bc911168e",
+      "records": 1
+    },
+    {
+      "path": "../coll/corank2v2_p11_wavehp_pt8_11_16_5_8_12_9_13_5_7.pkl",
+      "sha256": "d15b2f151e629c6abf0d904d454aa563773050fef31776e88633d43920164d23",
+      "records": 1
+    },
+    {
+      "path": "../coll/corank2v2_p11_wavehp_pt9_16_9_16_2_5_11_1_4_2.pkl",
+      "sha256": "0af0eff51dd3a84b1b8bc302a89f739a4a6dc40394400edbff5c7609d2464afb",
+      "records": 1
+    }
+  ],
+  "checker_sha256": {
+    "codex_dvr_branch_certificate.py": "ea86a597dc6ad053765d4c7123e2757e624b46ebe236611562e216952a963a08",
+    "codex_dvr_refinement.py": "5b8cf4b705d7f50e8f97ca5cc3517fc91971d5c910156d50758fd10c98333fc9",
+    "codex_finite_algebra_certificate.py": "75749f47d10ebbd91926d285a5616ff13229142992971c448dce6617a8a63cf8",
+    "codex_verify_dvr_batches.py": "85d7347dc9ee9025ea4272859aad5dba419550248dabad55dbbbed0774c7437f"
+  },
+  "expected_corank_two_special_points": 11592,
+  "checked_special_points": 4,
+  "maximum_refinement_steps": 4,
+  "worker_processes": 1,
+  "complete_special_point_coverage": false,
+  "statuses": {
+    "certified": 4
+  },
+  "simple_points_certified_lower_bound": 16,
+  "claimed_complete_but_not_independently_certified": 0,
+  "certificates_matching_claimed_presentation_counts": 4,
+  "interpretation": "Independent exact-equation Hensel, field-generation and pairwise-disjointness certificates. Presentation counts are compared, not assumed to be local lengths. Inconclusive is not a multiple point.",
+  "results": [
+    {
+      "source": "../coll/corank2v2_p11_wavehp_pt10_16_0_2_17_13_6_5_5_1.pkl",
+      "source_record": 0,
+      "point": [
+        10,
+        16,
+        0,
+        2,
+        17,
+        13,
+        6,
+        5,
+        5,
+        1
+      ],
+      "claimed_complete": true,
+      "claimed_presentation_count": 4,
+      "claimed_certified_degree": 4,
+      "selected_candidates": 1,
+      "candidate_source": "exported_orbits",
+      "status": "certified",
+      "check": {
+        "certified": true,
+        "simple_points_certified": 4,
+        "claimed_total_field_degree": 4,
+        "branches": [
+          {
+            "degree": 4,
+            "prime": 19,
+            "precision": 40,
+            "ramification": 2,
+            "residue_degree": 2,
+            "residual_valuation_lower_bound": 36,
+            "jacobian_valuation": 3,
+            "hensel_certified": true,
+            "correction_valuation_lower_bound": 33,
+            "coefficient_precision_lower_bound": 16
+          }
+        ],
+        "separator": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "separation_checks": [
+          {
+            "kind": "discriminant",
+            "branches": [
+              0
+            ],
+            "known_precision": 40,
+            "valuation": 8,
+            "valuation_lower_bound": 8,
+            "required_strict_upper_bound": 16,
+            "passed": true
+          }
+        ],
+        "characteristic_polynomials_descending": [
+          [
+            1,
+            865461497115426114699859188781921800795229287874189,
+            1085310189405352820597339716203670948589407432720427,
+            482989406917964210419391658820307118898418288753911,
+            393122836533135937694863375718031484546139178313643
+          ]
+        ],
+        "reason": "strict_hensel_stable_discriminants_and_pairwise_resultants",
+        "refinement_history": [],
+        "refinement_steps": 0
+      },
+      "matches_claimed_presentation_count": true
+    },
+    {
+      "source": "../coll/corank2v2_p11_wavehp_pt3_6_17_18_11_10_7_3_11_11.pkl",
+      "source_record": 0,
+      "point": [
+        3,
+        6,
+        17,
+        18,
+        11,
+        10,
+        7,
+        3,
+        11,
+        11
+      ],
+      "claimed_complete": true,
+      "claimed_presentation_count": 4,
+      "claimed_certified_degree": 4,
+      "selected_candidates": 1,
+      "candidate_source": "exported_orbits",
+      "status": "certified",
+      "check": {
+        "certified": true,
+        "simple_points_certified": 4,
+        "claimed_total_field_degree": 4,
+        "branches": [
+          {
+            "degree": 4,
+            "prime": 19,
+            "precision": 40,
+            "ramification": 2,
+            "residue_degree": 2,
+            "residual_valuation_lower_bound": 36,
+            "jacobian_valuation": 3,
+            "hensel_certified": true,
+            "correction_valuation_lower_bound": 33,
+            "coefficient_precision_lower_bound": 16
+          }
+        ],
+        "separator": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "separation_checks": [
+          {
+            "kind": "discriminant",
+            "branches": [
+              0
+            ],
+            "known_precision": 40,
+            "valuation": 8,
+            "valuation_lower_bound": 8,
+            "required_strict_upper_bound": 16,
+            "passed": true
+          }
+        ],
+        "characteristic_polynomials_descending": [
+          [
+            1,
+            389888313631664787984732450140641440352273862510937,
+            502152597853577357201806359699921577679755886517581,
+            403389429595324787659131454688708170595874008559812,
+            894810616275683856042037667566660390335430020386087
+          ]
+        ],
+        "reason": "strict_hensel_stable_discriminants_and_pairwise_resultants",
+        "refinement_history": [],
+        "refinement_steps": 0
+      },
+      "matches_claimed_presentation_count": true
+    },
+    {
+      "source": "../coll/corank2v2_p11_wavehp_pt8_11_16_5_8_12_9_13_5_7.pkl",
+      "source_record": 0,
+      "point": [
+        8,
+        11,
+        16,
+        5,
+        8,
+        12,
+        9,
+        13,
+        5,
+        7
+      ],
+      "claimed_complete": true,
+      "claimed_presentation_count": 4,
+      "claimed_certified_degree": 4,
+      "selected_candidates": 1,
+      "candidate_source": "exported_orbits",
+      "status": "certified",
+      "check": {
+        "certified": true,
+        "simple_points_certified": 4,
+        "claimed_total_field_degree": 4,
+        "branches": [
+          {
+            "degree": 4,
+            "prime": 19,
+            "precision": 40,
+            "ramification": 2,
+            "residue_degree": 2,
+            "residual_valuation_lower_bound": 36,
+            "jacobian_valuation": 3,
+            "hensel_certified": true,
+            "correction_valuation_lower_bound": 33,
+            "coefficient_precision_lower_bound": 16
+          }
+        ],
+        "separator": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "separation_checks": [
+          {
+            "kind": "discriminant",
+            "branches": [
+              0
+            ],
+            "known_precision": 40,
+            "valuation": 8,
+            "valuation_lower_bound": 8,
+            "required_strict_upper_bound": 16,
+            "passed": true
+          }
+        ],
+        "characteristic_polynomials_descending": [
+          [
+            1,
+            731582943485228739943812259716382507699034917467365,
+            1219214211988396726762262446071476809116274732362480,
+            1227932812473103869463257363977605506224642493220243,
+            451690626093489947451817580823363704003477305364159
+          ]
+        ],
+        "reason": "strict_hensel_stable_discriminants_and_pairwise_resultants",
+        "refinement_history": [],
+        "refinement_steps": 0
+      },
+      "matches_claimed_presentation_count": true
+    },
+    {
+      "source": "../coll/corank2v2_p11_wavehp_pt9_16_9_16_2_5_11_1_4_2.pkl",
+      "source_record": 0,
+      "point": [
+        9,
+        16,
+        9,
+        16,
+        2,
+        5,
+        11,
+        1,
+        4,
+        2
+      ],
+      "claimed_complete": true,
+      "claimed_presentation_count": 4,
+      "claimed_certified_degree": 4,
+      "selected_candidates": 1,
+      "candidate_source": "exported_orbits",
+      "status": "certified",
+      "check": {
+        "certified": true,
+        "simple_points_certified": 4,
+        "claimed_total_field_degree": 4,
+        "branches": [
+          {
+            "degree": 4,
+            "prime": 19,
+            "precision": 40,
+            "ramification": 2,
+            "residue_degree": 2,
+            "residual_valuation_lower_bound": 36,
+            "jacobian_valuation": 3,
+            "hensel_certified": true,
+            "correction_valuation_lower_bound": 33,
+            "coefficient_precision_lower_bound": 16
+          }
+        ],
+        "separator": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "separation_checks": [
+          {
+            "kind": "discriminant",
+            "branches": [
+              0
+            ],
+            "known_precision": 40,
+            "valuation": 8,
+            "valuation_lower_bound": 8,
+            "required_strict_upper_bound": 16,
+            "passed": true
+          }
+        ],
+        "characteristic_polynomials_descending": [
+          [
+            1,
+            672087469122807750840189078625680310331221037209319,
+            907814302543541684670587543363724785567514065636829,
+            110661828600316426704001151045586588390487626472177,
+            85046983265490364862034549880204694190307695009924
+          ]
+        ],
+        "reason": "strict_hensel_stable_discriminants_and_pairwise_resultants",
+        "refinement_history": [],
+        "refinement_steps": 0
+      },
+      "matches_claimed_presentation_count": true
+    }
+  ]
+}

@@ -13,18 +13,20 @@ Table~\ref{tab:status} records what is known about each fact.
 
 \begin{table}[htbp]
 \centering
-\caption{Status of the counts \(N_p\), \(M_p\), \(F_p\) and \(2F_p\).
-For elliptic pairs, distinctness is asserted only on a generic
-lattice.}
+\caption{What is known. For elliptic pairs, distinctness is asserted
+only on a generic lattice.}
 \label{tab:status}
-\begin{tabular}{@{}lll@{}}
+\begin{tabular}{@{}p{0.36\linewidth}p{0.58\linewidth}@{}}
 \toprule
-Orders&Counts with multiplicity&Pairs distinct\\
+Statement&Known for\\
 \midrule
-\(2p-1\) prime&proved&proved\\
-\(2p-1\) a prime power&proved&open, except \(p=5\)\\
-\(2\le p\le73\)&exact certificate&open in general\\
-all \(p\)&conjectured&conjectured\\
+Counts with multiplicity&\(2p-1\) a prime or a prime power (proved);
+every \(p\le73\) (exact certificate)\\[2pt]
+All \(N_p\) pairs distinct&\(2p-1\) prime (proved); \(p=5,8,11\) (exact
+computations); hence every \(p\le12\)\\[2pt]
+All \(F_p\) pairs of the pure subfamily distinct&whenever all \(N_p\)
+pairs are distinct; every \(p\le14\) (exact computations)\\[2pt]
+Both statements, every \(p\)&conjectured\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -52,13 +54,13 @@ The certificates hold for all complex coefficients, not only real or
 rational ones. The ancillary proof and the full certificate are described
 in Appendix~\ref{app:verification}.
 
-Equation \eqref{eq:coverage} is a statement about lengths only.
-At composite indices we establish simplicity here for \(p=5\) only,
-where \(2p-1=9\) is the first composite index: a separate exact
-calculation proves that all 126 rational-exponential points are
-simple; the input and its exact output are supplied in the ancillary
-material. Theorem~\ref{thm:elliptic-count} then gives 112 distinct
-elliptic pairs on a generic fixed lattice at that order.
-Inside the two pure subfamilies a direct exact computation is much
-smaller: it shows that \(\Xp^{\mathrm{sym}}\) is reduced for every
-\(p\le8\), which includes the composite indices \(9\) and \(15\).
+Equation \eqref{eq:coverage} is a statement about counts with
+multiplicity only. At composite indices, exact computations show that
+all pairs are simple at \(p=5\), \(p=8\) and \(p=11\)
+(Appendix~\ref{app:verification}). With Theorem~\ref{thm:prime}, all
+pairs are therefore distinct for every \(p\le12\), and
+Theorem~\ref{thm:elliptic-count} gives \(M_p\) distinct elliptic pairs
+on a generic lattice at these orders. Inside the two pure subfamilies
+the computation is much smaller, and it shows that the \(F_p\) pairs
+are distinct for every \(p\le14\), which includes the composite indices
+\(9\), \(15\), \(21\), \(25\) and \(27\).

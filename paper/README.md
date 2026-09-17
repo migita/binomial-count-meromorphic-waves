@@ -39,9 +39,12 @@ monic operator varies over its full coefficient family:
 Neither count requires the hypotheses of the classification.
 Continuous-convolution rigidity gives both counts with multiplicities through
 p=73. When 2p-1 is prime, all rational-exponential pairs are simple, and the
-elliptic pairs are simple on a nonempty open set of lattices. The separate
-exact p=5 calculation gives 126 simple rational-exponential points and, by the
-nodal transfer theorem, 112 generically simple elliptic points. General
+elliptic pairs are simple on a nonempty open set of lattices. Exact computations
+give simplicity at the composite indices p=5 (126 points, Groebner basis over Q,
+in this package), p=8 (6435 points, finite field and Hensel lifting) and p=11
+(352716 points, archived 19-adic certificate); the last two are in the
+repository directory certificates/. With the prime-index theorem, all pairs are
+distinct for every 2 <= p <= 12, and the first open case is p=13. General
 simplicity is not asserted throughout the degree-73 range.
 
 **The two pure subfamilies.** The reflection z -> -z acts on the pairs. Its
@@ -88,7 +91,9 @@ dispersive pairs are listed, two of them real. At p=5 the six purely
 dissipative pairs are listed; the four real ones are the kink solutions of
 Kudryashov--Migita (2007).
 
-The all-degree rigidity and simplicity conjectures remain open. Mixed equations
+In the two pure subfamilies, finite-field certificates show that the F_p pairs
+are distinct for every p <= 14. The all-degree rigidity and simplicity
+conjectures remain open. Mixed equations
 of odd order and the Fisher example are confined to the open-questions
 discussion.
 

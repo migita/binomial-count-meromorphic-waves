@@ -1,0 +1,14 @@
+{
+  "input": "full_p8_q32003_dp_slimgb.sing",
+  "exit_code": 0,
+  "timed_out": false,
+  "singular_errors": false,
+  "markers": {
+    "DIMENSION": 0,
+    "LENGTH": 6435,
+    "ALL_SIMPLE": 1
+  },
+  "certificate_ready": true,
+  "elapsed_seconds": 386.264,
+  "log": "/home/amigita/projects/KS-260829/codex_binomial_review_20260917/distinctness/full_p8_q32003_dp_slimgb.log"
+}

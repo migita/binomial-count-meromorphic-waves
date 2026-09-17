@@ -1,0 +1,28 @@
+{
+  "p": 11,
+  "residue_characteristic": 19,
+  "independently_reconstructed_equations_match": true,
+  "source_audit_and_checker_hashes_match": true,
+  "corank_one_exact_label_coverage": 47801,
+  "corank_one_local_lengths": {
+    "2": 45432,
+    "3": 2369
+  },
+  "corank_two_exact_label_coverage": 11592,
+  "corank_two_selected_audit_entries_validated": true,
+  "distinct_residue_labels_not_added_twice": true,
+  "preserved_subtotals": {
+    "simple_rational": 119781,
+    "simple_quadratic": 87372,
+    "corank_one": 97971,
+    "corank_two": 47592
+  },
+  "preserved_total_simple_points": 352716,
+  "fresh_high_precision_replay": {
+    "special_points": 4,
+    "simple_points": 16,
+    "failed": 0
+  },
+  "full_fresh_equation_level_replay": false,
+  "scope": "Validates the preserved complete certificate record and independently reconstructs its equations. The complete old local computations are carried forward; only the four final high-precision records were freshly replayed in this run."
+}

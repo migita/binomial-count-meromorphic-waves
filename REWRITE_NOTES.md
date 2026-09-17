@@ -63,8 +63,25 @@ the script); the prime-power details moved from Section 7 to Appendix A; the clo
 after Proposition 5.2 (repetitions); in the paragraph on simple/multiplicity/length/reduced, the "infinitesimal deformation"
 equivalence and the "local uniqueness" sentence (the latter's point is now made in Section 10).
 
+## Distinctness: what the paper now claims (Section 7, Table 2, Appendix A)
+
+All pairs distinct for every p <= 12: prime indices (theorem), p = 5 (Singular over Q, in anc/), p = 8 (finite field + Hensel;
+the 2 Sep run and an independent replay by the reviewing session, both in `certificates/p8/`), p = 11 (the archived 19-adic
+certificate of 2 Sep, `certificates/p11/`, validated on 17 Sep: integrity, inputs, coverage, accounting, four high-precision
+records replayed; NOT rerun in full). The paper spends one sentence on p = 11, in Appendix A, as the author asked. Pure
+subfamilies: finite-field certificates for p <= 14 (`paper/anc/symmetry_checks/modular/`); purely dissipative equations have no
+elliptic pairs on a generic lattice for p = 3, 5, 7 (`elliptic_dissipative.py`).
+
+The introduction now has Table 1, the named equations with p <= 6 and their counts (author's suggestion); four references were
+added for it (Benney 1966, Lin 1974, Kawahara–Toh 1988, Nikolaevskii 1989; bibliographic data checked against Crossref, not
+against the papers). The by-order table of the examples section is gone.
+
 ## For the author to decide or confirm
 
+0. Names and references in Table 1: "KS with dispersion (Benney or KdV–KS equation)" with Kawahara–Toh 1988; "Benney–Lin" with
+   Benney 1966 and Lin 1974; "Nikolaevskiy" with Nikolaevskii 1989 (booktitle "Recent Advances in Engineering Science", Lecture
+   Notes in Engineering 39 — please confirm); "Nikolaevskiy with dispersion" with Kudryashov–Migita 2007 and Simbawa et al. 2010.
+   The reference-audit files of the arXiv folder do not yet know these four entries.
 1. "the four with real coefficients are, after the scales are restored, the solutions (1.4) of Kudryashov–Migita 2007" (§9.4) and "Nikolaevskiy equation" as the p = 5 example of a purely dissipative equation (§2.2, Table 2).
 2. Length: 36–37 pages (was 31). Readability was preferred to compression. Further wholesale cuts, if wanted: the prime-power paragraph of §7 (0.4 p), the literature-normalization sentences in §9.3 (0.2 p), parts of "Relation to earlier work".
 3. The sentence citing Kudryashov–Sinelshchikov 2012 in §9.3 ("elliptic formulas with nonzero odd derivative coefficients in the
