@@ -18,41 +18,49 @@ by substituting \eqref{eq:elliptic-enumeration-profile} in
 \eqref{eq:main}, in the unknowns \(a_0,\ldots,a_{p-1}\),
 \(u_0,\ldots,u_{p-3}\) and \(b\), together with their solution set.
 The operator coefficients may equivalently be eliminated first, as in
-the proof below. Length, simplicity and reducedness are understood as
+the proof below. Multiplicity and simplicity are understood as
 in Section~\ref{sec:counting}.
 
 \begin{theorem}[Fixed-lattice elliptic enumeration]\label{thm:elliptic-count}
-Assume \((\mathrm R_{p-1})\).
-For every fixed nonsingular lattice,
+Let \(2p-1\) be prime.
+\begin{enumerate}
+\item[\textup{(a)}] On every nonsingular lattice the elliptic pairs are
+finite in number, and counted with multiplicity there are
 \begin{equation}\label{eq:elliptic-length}
- \len\mathcal E_p(g_2,g_3)
-   =M_p:=2\binom{2p-2}{p-2}.
+ M_p:=2\binom{2p-2}{p-2}=2S_p
 \end{equation}
-If, in addition, \(\Xp\) is reduced, then
-\(\mathcal E_p(g_2,g_3)\) is reduced for
-\((g_2,g_3)\) in a nonempty Zariski-open subset of
-\(\{g_2^3-27g_3^2\ne0\}\).
-In particular, if \(2p-1\) is prime, a generic fixed lattice
-admits exactly \(M_p\) normalized elliptic operator--profile
-pairs, all simple.
+of them.
+\item[\textup{(b)}] For \((g_2,g_3)\) in a nonempty Zariski-open subset
+of \(\{g_2^3-27g_3^2\ne0\}\), all of them are simple. Thus a generic
+lattice admits exactly \(M_p\) distinct elliptic pairs.
+\end{enumerate}
 \end{theorem}
 
-Thus the elliptic assertion on an arbitrary lattice is a count
+The number \(M_p\) is twice the number \(S_p\) of pulses of
+Proposition~\ref{cor:endpoints}, and the proof shows why: when one
+period of the lattice becomes infinite, every elliptic pair becomes a
+pulse on one of its two constant backgrounds, and every pulse on either
+background arises in this way exactly once.
+On an arbitrary lattice the assertion is a count
 with multiplicities. Exceptional lattices, on which distinct pairs
 merge, do occur and cannot be discarded when counting distinct
 solutions; Section~\ref{sec:ks} determines them at order three.
 
 The proof has five steps. We eliminate the operator, which leaves
-\(p-1\) equations in the \(p-1\) profile unknowns. We assign weights to the unknowns, under which the highest weighted
-parts of the equations are obtained by setting \(g_2=g_3=0\). We show
-that at this cusp the equations have only the trivial common zero;
-this is where \((\mathrm R_{p-1})\) enters, and it means that there
-are no solutions at weighted infinity for any \(g_2,g_3\). Weighted B\'ezout then gives the length \(M_p\) on every
-lattice. Finally, at a nodal cubic the elliptic problem becomes the
-equal-endpoint case of the rational-exponential problem, whose
-solutions are simple by Proposition~\ref{cor:endpoints} when \(\Xp\)
-is reduced, and simplicity spreads from the nodal parameter value to
-nearby nonsingular parameters.
+\(p-1\) equations in the \(p-1\) profile unknowns, with coefficients
+that are polynomials in \(g_2,g_3\). We assign weights to the unknowns,
+under which the highest weighted parts of the equations are obtained by
+setting \(g_2=g_3=0\). At this cusp both periods are infinite and the
+problem is the rational one, which has only the trivial solution by
+rigidity; this means that on no lattice can solutions escape to
+infinity. It follows that the pairs form a finite flat family over the
+whole \((g_2,g_3)\)-plane, singular cubics included, so that the number
+of pairs counted with multiplicity is the same on every fibre. Finally
+we count on the nodal cubic, where the elliptic problem becomes the
+pulse case of the rational-exponential problem, with two choices of
+background; its solutions are simple by
+Proposition~\ref{cor:endpoints}, and simplicity spreads from the nodal
+parameter value to nearby nonsingular parameters.
 
 \begin{proof}
 \emph{Step 1: eliminating the operator.}
@@ -112,34 +120,44 @@ and multiplication of the rational functions corresponds to
 continuous convolution.
 After a nonzero scalar normalization, the equation for \(f\)
 therefore gives \(A\mid H_A\) for a monic \(A\) of degree \(p-1\).
-By \((\mathrm R_{p-1})\), \(A=\rho^{p-1}\).
+By rigidity, which holds by Theorem~\ref{thm:prime}(c), \(A=\rho^{p-1}\).
 Thus \(f=c_\ast z^{-p}\), and all the variables in
 \eqref{eq:elliptic-enumeration-profile} vanish.
 The leading equations have no nonzero common zero.
 
-\emph{Step 4: the length.}
-The same finite-cover B\'ezout argument as in
-Theorem~\ref{thm:length}, now with the weights
-\eqref{eq:elliptic-weights}, gives
+\emph{Step 4: a finite flat family.}
+Let \(E_1,\ldots,E_{p-1}\) be the residual equations of Step~1. They
+are polynomials in the \(p-1\) profile unknowns and in \(g_2,g_3\),
+weighted-homogeneous for the weights of Step~2, and
 \[
- \len\mathcal E_p(g_2,g_3)
- =\frac{(p+1)(p+2)\cdots(2p-2)(2p)}{(p-2)!\,p}
- =2\binom{2p-2}{p-2}.
+ \mathcal A=\CC[g_2,g_3][u_0,\ldots,u_{p-3},b]/(E_1,\ldots,E_{p-1})
 \]
-For \(p=3\), this is \((4\cdot6)/(1\cdot3)=8\).
-Empty products are one, so the calculation includes \(p=2\).
-It proves this length at every \((g_2,g_3)\), including the
-singular parameters used below; at the cusp itself the whole length
-sits at the single solution where every unknown vanishes.
-It also makes the whole coefficient family finite over
-\(\CC[g_2,g_3]\): sufficiently large weighted monomials reduce
-to bounded weight using the leading equations, which are
-independent of \(g_2,g_3\). This finiteness is what allows
-simplicity to be transferred from the nodal parameter value to nearby
-nonsingular parameters in the last step.
+is the coordinate ring of the family of all the systems
+\(\mathcal E_p(g_2,g_3)\). By Step~3 the cusp system has the origin as
+its only solution, so \(\mathcal A/(g_2,g_3)\mathcal A\) is a
+finite-dimensional vector space. The graded form of Nakayama's lemma
+then shows that \(\mathcal A\) is a finitely generated module over
+\(\CC[g_2,g_3]\): homogeneous elements whose classes span the cusp ring
+generate it. In particular every fibre is finite, which proves the
+finiteness in (a) and makes precise the statement that solutions do not
+escape to infinity on any lattice.
+
+The family is also flat. It is defined by \(p-1\) equations in \(p+1\)
+variables, so each of its components has dimension at least two, and it
+is finite over the plane, so its dimension is exactly two. Hence
+\(E_1,\ldots,E_{p-1}\) is a regular sequence and \(\mathcal A\) is
+Cohen--Macaulay. A Cohen--Macaulay algebra that is finite over a
+regular ring of the same dimension is flat over it
+\citep[Theorem~23.1]{Matsumura1986}, and a finite flat module over
+\(\CC[g_2,g_3]\) is locally free. Consequently the number of solutions
+of \(\mathcal E_p(g_2,g_3)\), counted with multiplicity, is the same at
+every point of the \((g_2,g_3)\)-plane, the singular cubics included.
+At the cusp itself all of this multiplicity sits at the single solution
+where every unknown vanishes.
 
 \emph{Step 5: the node.}
-To prove generic simplicity, consider the nodal parameters
+To find this common number, and to prove generic simplicity, consider
+the nodal parameters
 \begin{equation}\label{eq:nodal-parameters}
  g_2=\frac1{12},\qquad g_3=-\frac1{216}.
 \end{equation}
@@ -165,7 +183,8 @@ Consequently the nodal specialization of
 where \(\beta\) is the common endpoint.
 The coefficient change is invertible and affine over \(\QQ\).
 
-The matching equations become, as equations of schemes,
+The matching equations become, as systems of equations with their
+multiplicities,
 \begin{equation}\label{eq:nodal-matching}
  A\in\mathcal Z_p,\qquad
  P=P_A-\beta,\qquad
@@ -181,24 +200,27 @@ The coefficient changes and monic division used here work over
 arbitrary \(\CC\)-algebras, so the correspondence preserves
 local multiplicities.
 
-If \(\Xp\) is reduced, Proposition~\ref{cor:endpoints} gives
-\(S_p\) simple points of \(\mathcal Z_p\), with
-\(P_A(0)\ne0\) at every point.
+By Proposition~\ref{cor:endpoints}, \(\mathcal Z_p\) consists of
+\(S_p\) simple points, with \(P_A(0)\ne0\) at every point.
 Each quadratic in \eqref{eq:nodal-matching} then has two
-distinct roots. The nodal fiber has \(2S_p=M_p\) simple points.
+distinct roots, and the nodal fibre consists of \(2S_p\) simple points.
+By Step~4 every fibre has the same number of points counted with
+multiplicity, namely \(2S_p=M_p\). This proves (a).
+
 In the finite coefficient family, the image of the closed locus
 where the matching Jacobian vanishes is closed.
 Its complement contains \eqref{eq:nodal-parameters}, and hence
 meets the nonsingular-lattice locus in a nonempty open set.
-Every fiber in that open set is reduced, proving the theorem.
+Every fibre in that open set consists of simple points, which
+proves (b).
 \end{proof}
 
 The factor two in \(M_p\) retains the two choices of background in
 \eqref{eq:shift}. That transformation preserves the evolution equation
 and the lattice; it changes the operator \(P\) and the speed. At the
-nodal fiber it exchanges the two roots in
-\eqref{eq:nodal-matching}, which are distinct when \(\Xp\) is reduced.
-In that case the two backgrounds are distinct on a generic lattice, and
+nodal fibre it exchanges the two roots in
+\eqref{eq:nodal-matching}, which are distinct. The two backgrounds are
+therefore distinct on a generic lattice, and
 the \(M_p\) pairs represent \(M_p/2\) elliptic waves, up to
 translations and Galilean shifts, each counted with both of its
 backgrounds. On special nonsingular lattices the two backgrounds may
@@ -207,17 +229,14 @@ coalesce, as Section~\ref{sec:ks} shows.
 \subsection{Elliptic pairs of purely dispersive equations}
 
 \begin{corollary}\label{cor:elliptic-symmetric}
-Let \(p\) be even and assume \((\mathrm R_{p-1})\). On every fixed
-nonsingular lattice, the elliptic pairs whose operator is an even
-polynomial form a closed subscheme
-\(\mathcal E_p^{\mathrm{sym}}(g_2,g_3)\) of
-\(\mathcal E_p(g_2,g_3)\), defined by \(u_j=0\) for odd \(j\), and
+Let \(p\) be even, with \(2p-1\) prime. On every nonsingular lattice,
+the elliptic pairs whose operator is an even polynomial are those with
+\(u_j=0\) for odd \(j\) in \eqref{eq:elliptic-enumeration-profile}, and
+counted with multiplicity there are
 \begin{equation}\label{eq:elliptic-symmetric-length}
- \len\mathcal E_p^{\mathrm{sym}}(g_2,g_3)=2F_p .
+ 2F_p
 \end{equation}
-If \(\Xp\) is reduced, \(\mathcal E_p^{\mathrm{sym}}(g_2,g_3)\) is
-reduced for \((g_2,g_3)\) in a nonempty Zariski-open set of nonsingular
-parameters.
+of them. On a generic lattice they are distinct.
 \end{corollary}
 
 \begin{proof}
@@ -235,19 +254,17 @@ and there remain the equations and unknowns of even weight in
  \text{equations}&p+2,p+4,\ldots,2p-2,2p.
  \end{array}
 \]
-The omitted leading forms vanish identically on the subspace, so the
-remaining ones have only the trivial common zero, by Step~3.
-Weighted B\'ezout gives
-\[
- \frac{(p+2)(p+4)\cdots(2p-2)\,(2p)}{2\cdot4\cdots(p-2)\,p}
- =2\binom{p-1}{p/2-1}=2F_p .
-\]
+There are \(p/2\) of each. The omitted leading forms vanish identically
+on the subspace, so the remaining ones have only the trivial common
+zero, by Step~3, and Step~4 applies without change: the even pairs form
+a finite flat family over the \((g_2,g_3)\)-plane.
 At the node, reflection is \(Q\mapsto1-Q\). An even nodal profile is
-\(\beta+v_A\) with \(\iota A=A\), so the nodal fiber is
-\eqref{eq:nodal-matching} with \(A\in\Xp^{\mathrm{sym}}\). If \(\Xp\)
-is reduced, it has \(2F_p\) simple points, by
-Theorem~\ref{thm:symmetric} and Proposition~\ref{cor:endpoints}, and
-Step~5 applies without change.
+\(\beta+v_A\) with \(\iota A=A\), so the nodal fibre is
+\eqref{eq:nodal-matching} with \(A\in\Xp^{\mathrm{sym}}\). By
+Theorem~\ref{thm:symmetric} there are \(F_p\) such \(A\), all pulses,
+each a simple solution of the equations of the subfamily, and
+\(P_A(0)\ne0\) by Proposition~\ref{cor:endpoints}. The nodal fibre thus
+has \(2F_p\) simple points, and Step~5 applies without change.
 \end{proof}
 
 For odd \(p\) there is no fixed-lattice analogue. A purely dissipative

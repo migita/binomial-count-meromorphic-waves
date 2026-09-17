@@ -50,8 +50,9 @@ be a one-parameter family. Each of the \(N_p\) pairs marks one orbit,
 and several pairs may mark the same orbit.
 
 \begin{corollary}[Solvable equations]\label{cor:solvable}
-Assume that \(\Xp\) is finite, for instance that
-\((\mathrm R_{p-1})\) holds.
+Assume that the matching equations have finitely many solutions.
+This holds when \(2p-1\) is prime, and for every \(p\le573\)
+(Section~\ref{sec:further}).
 \begin{enumerate}
 \item[\textup{(i)}] Equation \eqref{eq:pde} has a travelling
 wave that is rational in an exponential, with one pole per period, if
@@ -71,11 +72,8 @@ Part~(i) restates Proposition~\ref{prop:fixed}. For the bound,
 \(\pi(\iota A)=(-1)\cdot\pi(A)\) by \eqref{eq:reflection-pair}, so \(A\)
 and its mirror image \(\iota A\) give the same orbit. The number of
 classes \(\{A,\iota A\}\) is half the number of points plus half the
-number of fixed points, and these two numbers are at most
-\(\len\Xp\le N_p\) and \(\len\Xp^{\mathrm{sym}}\le F_p\); the last
-inequality is the B\'ezout bound in the proof of
-Theorem~\ref{thm:symmetric}, which does not require
-\((\mathrm R_{p-1})\). For~(ii), if \(\beta\ne0\) and
+number of fixed points, and these two numbers are at most \(N_p\) and
+\(F_p\), by Proposition~\ref{prop:general}(i). For~(ii), if \(\beta\ne0\) and
 \(\beta\in\CC^\ast\pi(A)\), some coordinate \([\rho^j]P_A\) is nonzero,
 and \eqref{eq:fixed-conditions} leaves at most \(p-j\) values of
 \(\lambda\). Part~(iii) is a dimension count.
@@ -109,7 +107,8 @@ travelling waves.
 
 \begin{corollary}[Generic equations with \(p\) odd]
 \label{cor:generic}
-Let \(p\ge5\) be odd and assume \((\mathrm R_{p-1})\). The coefficient
+Let \(p\ge5\) be odd and assume rigidity \((\mathrm R_{p-1})\), which
+holds when \(2p-1\) is prime and for every \(p\le573\). The coefficient
 vectors \(\beta\in\CC^{p-1}\) for which \eqref{eq:pde} has a
 nonconstant meromorphic travelling wave lie in an algebraic subset of
 dimension at most two. In particular a generic equation has none.

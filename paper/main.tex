@@ -73,9 +73,11 @@ dissipative case.
 The purely dispersive subfamily also contains \(2F_p\) of the elliptic
 pairs.
 
-When \(2p-1\) is prime, these statements are proved and all pairs are
-distinct. Exact computations establish the counts, with
-multiplicities, for \(2\le p\le573\). We conjecture the same in every
+When \(2p-1\) is prime, these statements are proved, all pairs are
+distinct, and each rational-exponential pair is labelled by a
+\((p-1)\)-element subset of the integers modulo \(2p-1\). Exact
+computations extend the statements to every \(p\le12\), and the counts
+with multiplicities to \(p\le573\). We conjecture them in every
 order.
 \end{abstract}
 
@@ -144,7 +146,12 @@ and \(P-P(0)\) is an odd polynomial. All other equations, such as
 KdV--Burgers, are \emph{mixed}. Both pure subfamilies have a
 reflection symmetry, which is described in Section~\ref{sec:setting}.
 
-\paragraph{Classification.}
+\paragraph{Which waves occur.}
+A travelling wave is \emph{meromorphic} if its profile is a
+single-valued meromorphic function of the complex variable \(z\). The
+familiar exact solutions are of this kind: a polynomial in
+\(\tanh\) or \(\operatorname{sech}\) is a rational function of an
+exponential, and a cnoidal wave is an elliptic function.
 Eremenko's theorem states that an autonomous algebraic differential
 equation with a single monomial of top degree and finitely many Laurent
 expansions at a pole has only three kinds of nonconstant meromorphic
@@ -156,25 +163,32 @@ expansion at a pole is unique. The second is the purely dispersive
 case: there one Laurent coefficient is free, but \eqref{eq:main} is
 invariant under \(z\mapsto-z\) and conserves an energy, and fixing the
 energy fixes that coefficient. In both cases every nonconstant
-meromorphic travelling wave is of one of the three kinds and has one
-pole per period. For a fixed operator \(P\) there is at most one such
-profile up to translation when \(p\) is odd, and at most one on each
-energy level when the equation is purely dispersive. Mixed operators
-with \(p\) even, such as that of KdV--Burgers, are not covered, and
-cannot be: Section~\ref{sec:open} recalls an example with \(p=2\) that
-has other meromorphic waves. Section~\ref{sec:systems} writes
-each of the three kinds as a finite polynomial system, following the
-principal-part construction of
+meromorphic travelling wave is of one of the three kinds and has
+\emph{one pole per period}: all its poles are translates of a single
+pole by its periods. For a fixed operator \(P\) there is at most one
+such profile up to translation when \(p\) is odd, and at most one on
+each energy level when the equation is purely dispersive.
+
+Mixed operators with \(p\) even, such as that of KdV--Burgers, are not
+covered, and cannot be: Section~\ref{sec:open} recalls an example with
+\(p=2\) that has other meromorphic waves. For these operators we still
+count the one-pole waves of the three kinds, without claiming that
+there are no others. Section~\ref{sec:systems} writes each of the three
+kinds as a finite polynomial system, following the principal-part
+construction of
 \citet{DeminaKudryashov2011,DeminaKudryashovElliptic2011}.
 
 \paragraph{The count.}
-One-pole waves of these three kinds are exceptional. In every order
-\(p\ge3\) for which the count below is established, a generic equation
-of the family has none of them (Section~\ref{sec:fixed}). Here and
-below, generic means outside a proper algebraic subset of the
-coefficients, or of the lattices. It refers to the full family: a pure
-subfamily of low order, such as the KdV or Kawahara equations, can lie
-on the exceptional set. We count the exceptions.
+One-pole waves of these three kinds are exceptional: for \(p\ge3\) a
+generic equation of the family has none of them
+(Section~\ref{sec:fixed} proves this for every \(p\le573\)). Here and below, generic means outside a
+proper algebraic subset of the coefficients, or of the lattices; it
+refers to the full family, and a pure subfamily of low order, such as
+the KdV or Kawahara equations, can lie on the exceptional set. This is
+why the classical solutions appear only at special values of the
+coefficients. It also suggests the right question. We do not ask how
+many waves a given equation has, but how many pairs of an equation and
+a wave there are in the whole family.
 
 Translations and changes of length scale produce continuous families of
 equivalent descriptions, so before asking for a finite count we fix
@@ -200,53 +214,89 @@ The answers are
      &&\text{elliptic pairs on a generic lattice}.
  \end{aligned}
 \]
-The pairs are the solutions of a polynomial system with as many
-equations as unknowns, and a solution can be simple or multiple, like a
-root of a polynomial.
-Whenever \(2p-1\) is prime, both formulas hold and every pair has
-multiplicity one, so there are exactly \(N_p\) distinct pairs, and
-exactly \(M_p\) on a generic lattice
-(Theorems~\ref{thm:prime} and~\ref{thm:elliptic-count}).
-For every \(2\le p\le573\), the formulas hold when each pair is counted
-with its multiplicity (Section~\ref{sec:further}); the number of
-distinct pairs is then at most \(N_p\) or \(M_p\), with equality when
-no pair is multiple. On special lattices elliptic
-pairs do merge, and Section~\ref{sec:ks} determines where this happens
-at order three.
-At \(p=5\), where \(2p-1=9\) is the first composite index, a separate
-exact computation shows that all \(126\) rational-exponential pairs
-have multiplicity one.
-We conjecture the same counting and multiplicity statements in every
-order (Conjecture~\ref{conj:count}). The counts are over \(\CC\) and
-range over all monic \(P\), mixed operators included. The
+Our main result establishes these numbers whenever \(2p-1\) is a prime
+number:
+\begin{itemize}
+\item there are exactly \(N_p\) rational-exponential pairs, and they
+are all distinct (Theorem~\ref{thm:prime});
+\item exactly \(S_p=\binom{2p-2}{p-2}\) of them are \emph{pulses},
+which return to the same constant at both ends, and the others are
+\emph{fronts}, which connect two different constants
+(Proposition~\ref{cor:endpoints});
+\item a generic lattice carries exactly \(M_p=2S_p\) elliptic pairs,
+and they are all distinct (Theorem~\ref{thm:elliptic-count}).
+\end{itemize}
+The orders with \(2p-1\) prime are \(p=2,3,4,6,7,9,10,12,\ldots\); they
+include KdV--Burgers, Kuramoto--Sivashinsky and Kawahara. At the three
+remaining orders up to twelve, \(p=5\), \(8\) and \(11\), the same
+statements are established by exact computer calculations. They
+therefore hold for every \(p\le12\) (Corollary~\ref{cor:twelve}), and
+in particular for every named equation in Table~\ref{tab:named}. We
+conjecture them in every order (Conjecture~\ref{conj:count});
+Section~\ref{sec:further} describes what is known beyond \(p=12\).
+
+Three remarks make precise what is counted. The counts are over
+\(\CC\) and range over all monic \(P\), mixed operators included; the
 classification is used only to know that, where it applies, there are
-no other meromorphic waves. Rational waves are not counted: under the
-rigidity condition of Section~\ref{sec:counting} the only one is
-\(v=c_\ast z^{-p}\), for \(P=D^p\).
+no other meromorphic waves. The word \emph{distinct} carries content:
+the pairs are the solutions of a polynomial system with as many
+equations as unknowns, and a solution of such a system can be multiple,
+like a multiple root of a polynomial. On special lattices elliptic
+pairs do merge in this way, and Section~\ref{sec:ks} determines where
+this happens at order three. Finally, rational waves are not counted:
+at the orders above the only one is \(v=c_\ast z^{-p}\), for \(P=D^p\).
+
+\paragraph{Every wave has a label.}
+The binomial coefficient \(N_p\) has a concrete meaning. Every
+rational-exponential pair has a profile of the form
+\(v_A=s_pA(D)Q\), where \(Q=1/(1+e^{-z})\), \(s_p\) is a fixed scale
+and \(A\) is a monic polynomial of degree \(p-1\). The pair solves
+\eqref{eq:main} if and only if \(A\) divides its own discrete
+self-convolution \(S_A(n)=\sum_{j=1}^{n-1}A(j)A(n-j)\)
+(Proposition~\ref{prop:divisibility}). When \(\ell=2p-1\) is prime,
+this condition becomes, modulo \(\ell\), the condition that \(A\)
+divides \(\rho^\ell-\rho\). Now \(\rho^\ell-\rho\) is the product of
+\(\rho-s\) over all residues \(s\) modulo \(\ell\). Its monic divisors
+of degree \(p-1\) are therefore given by the \((p-1)\)-element subsets
+\(S\) of the integers modulo \(\ell\), and there are
+\(\binom{\ell}{p-1}\) of them. We prove that every pair reduces modulo
+\(\ell\) to one of these divisors, and that every divisor comes from
+exactly one pair.
+
+Thus each pair has a \emph{label} \(S\), and the labels can be read.
+The pair is a pulse exactly when \(S\) contains \(0\), and the mirror
+image of the pair with label \(S\) has label \(-S\). At \(p=3\), for
+example, the ten classical waves correspond to the ten two-element
+subsets of \(\{0,1,2,3,4\}\) (Table~\ref{tab:ks}), and the four pulses
+are the subsets that contain \(0\).
+
+The elliptic count comes from the pulses. When one period of the
+lattice tends to infinity, an elliptic pair becomes a pulse on one of
+its two constant backgrounds. We show that every pulse, on either
+background, arises in this way exactly once, and this gives
+\(M_p=2S_p\).
 
 \paragraph{Purely dispersive and purely dissipative equations.}
 Reading a wave in the opposite direction, \(z\mapsto-z\), and restoring
 the normalization sends pairs to pairs. The pairs that coincide with
 their mirror image are exactly those whose equation is purely
 dispersive, for even \(p\), or purely dissipative, for odd \(p\)
-(Theorem~\ref{thm:symmetric}). Their number is
+(Theorem~\ref{thm:symmetric}). In terms of labels they are the pairs
+with \(S=-S\), and the number of such subsets is
 \[
- F_p=\binom{p-1}{\lfloor(p-1)/2\rfloor},
+ F_p=\binom{p-1}{\lfloor(p-1)/2\rfloor}.
 \]
-with the same status as \(N_p\): it is proved, with all pairs distinct,
-when \(2p-1\) is prime, and as a count with multiplicity for
-\(2\le p\le573\). The purely dispersive equations also account for
-\(2F_p\) of the elliptic pairs on a generic lattice
-(Corollary~\ref{cor:elliptic-symmetric}).
+This is the number of rational-exponential pairs in the pure subfamily
+of order \(p\), when \(2p-1\) is prime and for every \(p\le12\). The
+purely dispersive equations also account for \(2F_p\) of the elliptic
+pairs on a generic lattice (Corollary~\ref{cor:elliptic-symmetric}).
 
 The two subfamilies carry different kinds of rational-exponential
-waves. Those of a purely dispersive equation are all pulses, which
-return to the same constant at both ends; this holds for every even
-\(p\). Those of a purely dissipative equation are all fronts, which
-connect two different constants. This second statement is proved for
-every \(p\) at which all \(N_p\) pairs are distinct, in particular when
-\(2p-1\) is prime, and for waves with real coefficients at every odd
-\(p\). For example, the Kawahara family has three rational-exponential
+waves. Those of a purely dispersive equation are all pulses; this holds
+for every even \(p\). Those of a purely dissipative equation are all
+fronts; this holds when \(2p-1\) is prime, for every \(p\le12\), and
+for waves with real coefficients at every odd \(p\). For example, the
+Kawahara family has three rational-exponential
 pairs and six elliptic pairs on a generic lattice, which are \(F_4\)
 and \(2F_4\); the seventh-order KdV family has ten pairs, two of them
 real; and the six pairs of the purely dissipative family with \(p=5\)
@@ -266,34 +316,29 @@ already mentioned.
 \centering
 \caption{The named equations of the family with \(p\le6\); here
 \(u_{kx}=\partial_x^ku\). Each name stands for a family with free
-coefficients, and the numbers count normalized pairs across that
-family: rational-exponential pairs at unit rate, and elliptic pairs on
-a generic fixed lattice. Each count is written as the formula that
-gives it, with \(N_p=\binom{2p-1}{p-1}\), \(M_p=2\binom{2p-2}{p-2}\)
-and \(F_p=\binom{p-1}{\lfloor(p-1)/2\rfloor}\). Dispersive and
-dissipative mean purely dispersive and purely dissipative; a full
+coefficients, and the numbers count distinct normalized pairs across
+that family: rational-exponential pairs at unit rate, and elliptic
+pairs on a generic fixed lattice. The pure subfamilies are counted by
+\(F_p\) and \(2F_p\), the full families by \(N_p\) and \(M_p\); a full
 family contains the pure subfamily of the same \(p\), so the three
-pairs of KdV--Burgers include the KdV soliton. All numbers are counts
-of distinct pairs. The last column says whether the classification
-applies to the whole family; if it does, the pairs counted here are all
-its nonconstant meromorphic travelling waves, apart from a rational
-wave when all lower coefficients vanish. For KdV--Burgers other meromorphic waves exist
-(Section~\ref{sec:open}); for Benney--Lin the question is open.}
+pairs of KdV--Burgers include the KdV soliton. Except for KdV--Burgers
+and Benney--Lin, the pairs counted here are all the nonconstant
+meromorphic travelling waves of these equations, apart from a rational
+wave when all lower coefficients vanish.}
 \label{tab:named}
-\setlength{\tabcolsep}{4.5pt}
-\begin{tabular}{@{}llclrrl@{}}
+\begin{tabular}{@{}llcrr@{}}
 \toprule
-Equation&Linear terms&\(p\)&Family&Rat.-exp.&Ellipt.&All waves\\
+Equation&Linear terms&\(p\)&Rational-exponential&Elliptic\\
 \midrule
-KdV&\(u_{3x}\)&2&dispersive&\(F_2=1\)&\(2F_2=2\)&yes\\
-KdV--Burgers&\(u_{2x},u_{3x}\)&2&full&\(N_2=3\)&\(M_2=2\)&no\\
-Kuramoto--Sivashinsky (KS)&\(u_{2x},u_{4x}\)&3&dissipative&\(F_3=2\)&\(0\)&yes\\
-KS with dispersion&\(u_{2x},u_{3x},u_{4x}\)&3&full&\(N_3=10\)&\(M_3=8\)&yes\\
-Kawahara&\(u_{3x},u_{5x}\)&4&dispersive&\(F_4=3\)&\(2F_4=6\)&yes\\
-Benney--Lin&\(u_{2x},\ldots,u_{5x}\)&4&full&\(N_4=35\)&\(M_4=30\)&open\\
-Nikolaevskiy&\(u_{2x},u_{4x},u_{6x}\)&5&dissipative&\(F_5=6\)&\(0\)&yes\\
-Nikolaevskiy with dispersion&\(u_{2x},\ldots,u_{6x}\)&5&full&\(N_5=126\)&\(M_5=112\)&yes\\
-seventh-order KdV&\(u_{3x},u_{5x},u_{7x}\)&6&dispersive&\(F_6=10\)&\(2F_6=20\)&yes\\
+KdV&\(u_{3x}\)&2&\(F_2=1\)&\(2F_2=2\)\\
+KdV--Burgers&\(u_{2x},u_{3x}\)&2&\(N_2=3\)&\(M_2=2\)\\
+Kuramoto--Sivashinsky (KS)&\(u_{2x},u_{4x}\)&3&\(F_3=2\)&\(0\)\\
+KS with dispersion&\(u_{2x},u_{3x},u_{4x}\)&3&\(N_3=10\)&\(M_3=8\)\\
+Kawahara&\(u_{3x},u_{5x}\)&4&\(F_4=3\)&\(2F_4=6\)\\
+Benney--Lin&\(u_{2x},\ldots,u_{5x}\)&4&\(N_4=35\)&\(M_4=30\)\\
+Nikolaevskiy&\(u_{2x},u_{4x},u_{6x}\)&5&\(F_5=6\)&\(0\)\\
+Nikolaevskiy with dispersion&\(u_{2x},\ldots,u_{6x}\)&5&\(N_5=126\)&\(M_5=112\)\\
+seventh-order KdV&\(u_{3x},u_{5x},u_{7x}\)&6&\(F_6=10\)&\(2F_6=20\)\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -310,40 +355,30 @@ and Galilean shifts are identified. The scale-invariant case is
 different: the KdV equation, for example, retains its family of
 solitons of different widths. Section~\ref{sec:fixed} gives the precise
 criterion, recovers the four familiar Kuramoto--Sivashinsky coefficient
-curves, and shows that for odd \(p\ge3\) in the settled range a generic
-equation has no nonconstant meromorphic travelling wave at all.
+curves, and shows that for odd \(p\ge3\) in the same range a generic equation
+has no nonconstant meromorphic travelling wave at all. The same section notes
+that many other equations, with mixed derivatives or in several space
+variables, have the same profile equation, and what the counts imply
+for the ansatz methods by which exact travelling waves are usually
+found.
 
-\paragraph{Method.}
-Every rational-exponential pair has a profile of the form
-\(v_A=s_pA(D)Q\), where \(Q=1/(1+e^{-z})\), \(s_p\) is a fixed scale
-and \(A\) is a monic polynomial of degree \(p-1\). The pair solves
-\eqref{eq:main} if and only if \(A\) divides its own discrete
-self-convolution \(S_A(n)=\sum_{j=1}^{n-1}A(j)A(n-j)\)
-(Proposition~\ref{prop:divisibility}). When \(\ell=2p-1\) is prime,
-this condition becomes \(A\mid\rho^\ell-\rho\) modulo \(\ell\), so its
-solutions are labelled by the \((p-1)\)-element subsets \(S\) of
-\(\FF_\ell\). This is where the binomial coefficient comes from. Each
-label lifts to exactly one solution, and the reflection acts on the
-labels by \(S\mapsto-S\), which gives \(F_p\). The elliptic count uses
-two limits of the lattice. When both periods become infinite, the
-elliptic problem becomes a rational one, and this limit gives the count
-with multiplicity on every nonsingular lattice. When one period becomes
-infinite, it becomes the pulse case of the exponential problem, with
-two choices of background, and this limit shows that the pairs have
-multiplicity one on a generic lattice.
-
-Two ingredients are not yet proved in every order. The first is a
-rigidity statement: the only rational solution of \eqref{eq:main} with
+\paragraph{Other orders.}
+The proofs use the prime \(\ell\) in two places, and these are the two
+facts that are not yet proved in every order. The first is
+\emph{rigidity}: the only rational solution of \eqref{eq:main} with
 one pole that vanishes at infinity is \(c_\ast z^{-p}\), with
 \(P=D^p\). Equivalently, a monic polynomial \(A\) of degree \(p-1\)
 that divides its continuous self-convolution
-\(\int_0^\rho A(t)A(\rho-t)\dd t\) is \(\rho^{p-1}\). Rigidity gives all
-counts with multiplicity. It is proved when \(2p-1\) is a prime or a
-prime power, and established by exact computations for \(p\le573\). The
-second is that every rational-exponential pair has multiplicity one,
+\(\int_0^\rho A(t)A(\rho-t)\dd t\) is \(\rho^{p-1}\). Rigidity prevents
+pairs from escaping to infinity, and it gives all the counts when pairs
+are counted with multiplicity. It is proved when \(2p-1\) is a prime or
+a prime power, and established by exact computations for \(p\le573\).
+The second fact is that every rational-exponential pair is simple,
 which makes the pairs distinct. It is proved when \(2p-1\) is prime
-and, by exact computations, at \(p=5\), \(8\) and \(11\). Both are conjectured in general
-(Conjecture~\ref{conj:count}).
+and, by exact computations, at \(p=5\), \(8\) and \(11\). Both are
+conjectured in general. Section~\ref{sec:further} states what follows
+from each of them, and the companion note in the source package
+contains the proofs at general order.
 
 \paragraph{Relation to earlier work.}
 The classification theorem is a uniform version of results that exist
@@ -363,9 +398,11 @@ the examples make explicit.
 Section~\ref{sec:setting} fixes the normalizations and the vocabulary.
 Sections~\ref{sec:completeness} and~\ref{sec:systems} contain the
 classification and the three polynomial systems.
-Sections~\ref{sec:counting} and~\ref{sec:elliptic-counting} prove the
-two counts, Section~\ref{sec:further} records which orders are
-settled, and Section~\ref{sec:fixed} reads the count for a single
+Section~\ref{sec:counting} proves the count of rational-exponential
+pairs at a prime index and reads the labels, and
+Section~\ref{sec:elliptic-counting} proves the elliptic count.
+Section~\ref{sec:further} records what is known at the other orders,
+and Section~\ref{sec:fixed} reads the count for a single
 equation. Section~\ref{sec:examples} works out the lowest orders and
 the two pure subfamilies, including the lattices on which elliptic
 pairs merge. Section~\ref{sec:open} collects the open questions, and
@@ -398,8 +435,9 @@ results, and for the attribution of prior work, rest with the author.
 \begin{itemize}
 \item \texttt{gpt-6-astra} (OpenAI), August--September 2026. The main
 mathematical ideas of the paper, the proofs of
-Theorems~\ref{thm:complete}, \ref{thm:length}, \ref{thm:prime}
-and~\ref{thm:elliptic-count}, the rigidity condition
+Theorems~\ref{thm:complete}, \ref{thm:prime}
+and~\ref{thm:elliptic-count} and of the weighted count in the companion
+note, the rigidity condition
 \((\mathrm R_d)\) and its certificate, the exact verification scripts,
 the \textsc{Singular} input, the first complete draft of the text,
 and the Lean~4 formalization of Remark~\ref{rem:lean} were produced by
@@ -415,7 +453,15 @@ independently. In the final revision it proposed and proved the
 results on the two pure subfamilies and on single equations
 (Corollary~\ref{cor:symmetric-waves}, Section~\ref{sec:reflection},
 Corollary~\ref{cor:elliptic-symmetric} and Section~\ref{sec:fixed}),
-with their exact checks, and reorganized the manuscript around them. It also audited the Lean formalization independently:
+with their exact checks, and reorganized the manuscript around them.
+In the last revision it made the prime-index theorem the spine of the
+paper: it wrote the proof of Theorem~\ref{thm:prime} in the form used
+by the Lean formalization, derived
+Proposition~\ref{cor:endpoints} and Theorem~\ref{thm:symmetric} from
+the labels, replaced the B\'ezout count in the proof of
+Theorem~\ref{thm:elliptic-count} by a flat-family argument, and moved
+the general-order material to the companion note; Codex reviewed these
+arguments. It also audited the Lean formalization independently:
 the formal statements against the manuscript, a rebuild from source,
 and the axiom audit.
 \end{itemize}

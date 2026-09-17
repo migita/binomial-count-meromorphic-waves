@@ -3,7 +3,13 @@
 English manuscript: **A binomial count of meromorphic travelling waves**.
 
 The readable manuscript is [main.pdf](main.pdf). Its editable sources are
-main.tex, authors.tex, references.bib, and sections/.
+main.tex, authors.tex, references.bib, and sections/. The companion note
+[anc/general_orders.pdf](anc/general_orders.pdf) (source general_orders.tex,
+compiled after main.tex because it imports the paper's labels) contains the
+results at the orders for which 2p-1 is not prime: the weighted Bezout count,
+the general-order versions of the theorems on pulses, on the two pure
+subfamilies and on elliptic pairs, the prime-power case of rigidity, and the
+table of what is known at each order.
 
 The author is Alexander Migita. A Tool and computational resource
 disclosure section at the end of the paper names all AI systems used and

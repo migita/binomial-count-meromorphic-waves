@@ -113,25 +113,32 @@ The Jacobian determinant is nonzero at every point, so all
 \begin{table}[htbp]
 \centering
 \caption{All ten rational-exponential pairs at order three.
-The determinant is taken in the order \((E_0,E_1)\) against
-\((a,b)\). The last column describes \(v_A\) on the real axis, at unit
-rate.}
+The label is the set of roots of \(A\) modulo \(5\)
+(Theorem~\ref{thm:prime}); for the two complex pairs it depends on the
+choice of \(i\) modulo \(5\). The determinant is taken in the order
+\((E_0,E_1)\) against \((a,b)\). The last column describes \(v_A\) on
+the real axis, at unit rate.}
 \label{tab:ks}
-\begin{tabular}{@{}ccrcl@{}}
+\begin{tabular}{@{}cclcl@{}}
 \toprule
-\(a\)&\(b\)&Number&
+\(a\)&\(b\)&Labels&
 \(\det\partial(E_0,E_1)/\partial(a,b)\)&Real profiles\\
 \midrule
-\(\pm1\)&\(0\)&2&\(-24\)&Pulses\\
-\(\pm i\)&\(0\)&2&\(-16\)&Not real\\
-\(0\)&\(-1\)&1&\(144\)&Front\\
-\(0\)&\(1/11\)&1&\(576/121\)&Front\\
-\(\pm3\)&\(2\)&2&\(-144\)&Fronts\\
-\(\pm4\)&\(3\)&2&\(384\)&Fronts\\
+\(\pm1\)&\(0\)&\(\{0,4\}\), \(\{0,1\}\)&\(-24\)&Pulses\\
+\(\pm i\)&\(0\)&\(\{0,2\}\), \(\{0,3\}\)&\(-16\)&Not real\\
+\(0\)&\(-1\)&\(\{1,4\}\)&\(144\)&Front\\
+\(0\)&\(1/11\)&\(\{2,3\}\)&\(576/121\)&Front\\
+\(\pm3\)&\(2\)&\(\{3,4\}\), \(\{1,2\}\)&\(-144\)&Fronts\\
+\(\pm4\)&\(3\)&\(\{2,4\}\), \(\{1,3\}\)&\(384\)&Fronts\\
 \bottomrule
 \end{tabular}
 \end{table}
 
+The ten labels are the ten two-element subsets of
+\(\{0,1,2,3,4\}\). The four pulses are the pairs whose label contains
+\(0\), and the mirror image \((a,b)\mapsto(-a,b)\) replaces a label
+\(S\) by \(-S\), as Proposition~\ref{cor:endpoints} and
+Theorem~\ref{thm:symmetric} assert.
 There are ten complex pairs, eight with real coefficients.
 All eight are smooth and bounded on the real axis:
 two pulses and six fronts.
@@ -282,7 +289,11 @@ At \(c=-1\),
 \end{equation}
 This is the familiar solitary wave of the Kawahara equation;
 the other two pairs are complex at unit real rate.
-The unrestricted order-four count is \(N_4=35\).
+The unrestricted order-four count is \(N_4=35\). Of these pairs,
+\(21\) have real coefficients, and all \(21\) are rational: five pulses
+and sixteen fronts, which are eleven wave shapes up to reflection. They
+are the one-pole waves of the mixed fifth-order equations, such as the
+Benney--Lin equation, and the repository dictionary lists them.
 
 All elliptic members of \eqref{eq:kawahara-P} have the form
 \begin{equation}\label{eq:kawahara-elliptic}

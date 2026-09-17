@@ -1,9 +1,10 @@
-\subsection{Reflection: the two pure subfamilies}\label{sec:reflection}
+\subsection{Mirror images: the two pure subfamilies}\label{sec:reflection}
 
 The numbers \(N_p\) and \(M_p\) refer to the full monic family. We now
 count the pairs whose equation is purely dispersive or purely
-dissipative. These are the fixed points of the reflection
-\(z\mapsto-z\) acting on the pairs, and their number is again a
+dissipative. These are the pairs that coincide with their own mirror
+image under the reflection \(z\mapsto-z\). On the labels the reflection
+is \(S\mapsto-S\), and the number of labels with \(S=-S\) is again a
 binomial coefficient.
 
 For a monic polynomial \(A\) of degree \(d=p-1\) put
@@ -24,7 +25,8 @@ For every monic \(A\) of degree \(d\),
  S_{\iota A}(\rho)=-S_A(-\rho)-2A(0)A(-\rho),\qquad
  R_{\iota A}(\rho)=-R_A(-\rho).
 \end{equation}
-Consequently \(\iota\) is an involution of the scheme \(\Xp\).
+Consequently \(\iota\) maps solutions of the matching equations to
+solutions, and simple solutions to simple solutions.
 At a point of \(\Xp\),
 \begin{equation}\label{eq:reflection-pair}
  v_{\iota A}(z)=(-1)^p\bigl(v_A(-z)-s_pA(0)\bigr),\qquad
@@ -66,12 +68,8 @@ equations. The second relation and \eqref{eq:operator-A} give the
 formula for \(P_{\iota A}\).
 \end{proof}
 
-Let
-\[
- \Xp^{\mathrm{sym}}=\Xp\cap\{\alpha_j=0\text{ for odd }j\}
-\]
-be the fixed locus of \(\iota\), with its induced scheme structure, and
-put
+A pair is fixed by \(\iota\) when \(\alpha_j=0\) for every odd \(j\).
+We write \(\Xp^{\mathrm{sym}}\) for the set of these pairs, and put
 \begin{equation}\label{eq:Fp}
  F_p=\binom{p-1}{\lfloor (p-1)/2\rfloor}.
 \end{equation}
@@ -80,37 +78,34 @@ Table~\ref{tab:named} lists the equations to which they belong.
 
 \begin{theorem}[Count in the two pure subfamilies]\label{thm:symmetric}
 \begin{enumerate}
-\item[\textup{(i)}] A point \(A\) of \(\Xp\) lies in
-\(\Xp^{\mathrm{sym}}\) if and only if \(P_A\) is reflection-symmetric.
-Thus \(\Xp^{\mathrm{sym}}\) consists of the rational-exponential pairs
-of the purely dispersive equations when \(p\) is even, and of the
-purely dissipative equations when \(p\) is odd.
-\item[\textup{(ii)}] If \((\mathrm R_{p-1})\) holds, then
-\(\len\Xp^{\mathrm{sym}}=F_p\).
-\item[\textup{(iii)}] If, in addition, \(\Xp\) is reduced, then
-\(\Xp^{\mathrm{sym}}\) consists of \(F_p\) distinct pairs, each a simple
-solution of the matching equations of its subfamily. If \(2p-1\) is
-prime, they are the points whose label in \eqref{eq:prime-labels}
-satisfies \(S=-S\).
-\item[\textup{(iv)}] For even \(p\), every pair of
-\(\Xp^{\mathrm{sym}}\) is a pulse. For odd \(p\), every pair of
-\(\Xp^{\mathrm{sym}}\) is a front if \(\Xp\) is reduced, and every pair
-with real coefficients is a front without any hypothesis.
+\item[\textup{(i)}] For every \(p\), a pair \(A\) coincides with its
+mirror image, \(\iota A=A\), if and only if \(P_A\) is
+reflection-symmetric. Thus \(\Xp^{\mathrm{sym}}\) consists of the
+rational-exponential pairs of the purely dispersive equations when
+\(p\) is even, and of the purely dissipative equations when \(p\) is
+odd.
+\item[\textup{(ii)}] Let \(\ell=2p-1\) be prime. If \(A\) has label
+\(S\), then \(\iota A\) has label \(-S\). Hence \(\iota A=A\) if and
+only if \(S=-S\), and there are exactly \(F_p\) such pairs. Each of
+them is a simple solution of the matching equations of its subfamily.
+\item[\textup{(iii)}] For even \(p\), every pair of
+\(\Xp^{\mathrm{sym}}\) is a pulse. For odd \(p\) with \(2p-1\) prime,
+every pair of \(\Xp^{\mathrm{sym}}\) is a front; for every odd \(p\),
+every pair of \(\Xp^{\mathrm{sym}}\) with real coefficients is a front.
 \end{enumerate}
 \end{theorem}
 
 In plain terms, the pairs that coincide with their mirror image are
 exactly the pairs of the purely dispersive equations, for even \(p\),
-or of the purely dissipative equations, for odd \(p\). Counted with
-multiplicity there are \(F_p\) of them whenever rigidity holds, in
-particular for \(p\le573\). They are \(F_p\) distinct pairs whenever all
-\(N_p\) pairs for that \(p\) are distinct, in particular when \(2p-1\)
-is prime. The rational-exponential waves of a purely dispersive
-equation are pulses, for every even \(p\). Those of a purely
-dissipative equation are fronts; this is proved whenever all \(N_p\)
-pairs are distinct, and for waves with real coefficients at every odd
-\(p\). Elliptic waves occur in both subfamilies; the distinction
-between pulses and fronts does not apply to them.
+or of the purely dissipative equations, for odd \(p\). When \(2p-1\) is
+prime there are exactly \(F_p\) of them, and they are the pairs whose
+label is symmetric. The rational-exponential waves of a purely
+dispersive equation are pulses, for every even \(p\). Those of a
+purely dissipative equation are fronts: when \(2p-1\) is prime, and
+for waves with real coefficients at every odd \(p\). Elliptic waves
+occur in both subfamilies; the distinction between pulses and fronts
+does not apply to them. Section~\ref{sec:further} records what is known
+at the remaining orders.
 
 \begin{proof}
 \emph{(i).} If \(\iota A=A\), then \eqref{eq:reflection-pair} gives
@@ -132,51 +127,35 @@ becomes \(v_{\iota A}=v_A\). If \(p\) is odd, then
 that the constant vanishes. In both cases \(v_{\iota A}=v_A\), hence
 \(\iota A=A\) by the uniqueness of the form \eqref{eq:normalized-A}.
 
-\emph{(ii).} On the subspace \(\{\alpha_j=0,\ j\text{ odd}\}\) we have
+\emph{(ii).} The map \eqref{eq:iota} negates the roots of
+\(\overline A\), so the label of \(\iota A\) is \(-S\). A label
+determines its pair (Theorem~\ref{thm:prime}), so \(\iota A=A\) exactly
+when \(S=-S\). To count these labels, note that the nonzero residues
+modulo \(\ell=2d+1\) form \(d\) pairs \(\{s,-s\}\). A set \(S=-S\) of
+\(d\) elements consists of \(d/2\) such pairs if \(d\) is even, and of
+\(0\) and \((d-1)/2\) pairs if \(d\) is odd. In both cases there are
+\(\binom{d}{\lfloor d/2\rfloor}=F_p\) sets.
+
+On the subspace \(\{\alpha_j=0,\ j\text{ odd}\}\) we have
 \(\iota A=A\), and \eqref{eq:reflection-S} shows that \(R_A\) is an odd
 polynomial. The equations \(R_r=0\) with \(r\) even therefore hold
-identically there. With \(m=\lfloor d/2\rfloor\), there remain the
-\(m\) equations \(R_1,R_3,\ldots,R_{2m-1}\) in the \(m\) unknowns
-\(\alpha_2,\alpha_4,\ldots,\alpha_{2m}\). By \eqref{eq:weights} their
-weights are
-\[
- \begin{array}{c|c}
- \text{variables}&2,4,\ldots,2m\\
- \text{equations}&2d,2d-2,\ldots,2(d-m+1).
- \end{array}
-\]
-Their highest weighted parts are the restrictions of those of the full
-system. The highest weighted parts of the omitted equations vanish
-identically on the subspace, because \(H_A\) is an odd polynomial when
-\(\iota A=A\). A common zero of the restricted leading
-forms is therefore a polynomial \(A\) with \(A\mid H_A\), and
-\((\mathrm R_d)\) gives \(A=\rho^d\). The finite-cover argument of
-Theorem~\ref{thm:length}, with \(\alpha_{2i}=y_i^{2i}\), gives
-\[
- \len\Xp^{\mathrm{sym}}
- =\prod_{i=1}^{m}\frac{2(d-i+1)}{2i}=\binom dm .
-\]
+identically there, and the matching equations of the subfamily are the
+equations \(R_r=0\), \(r\) odd, in the unknowns \(\alpha_j\), \(j\)
+even. Differentiating the relation
+\(R_r(\iota\alpha)=(-1)^{r+1}R_r(\alpha)\) at a fixed point shows that
+\(\partial R_r/\partial\alpha_j=0\) unless \(j\equiv r+1\) modulo two.
+The Jacobian matrix of the full system therefore splits into two square
+blocks. It is invertible, so both blocks are, and one of them is the
+Jacobian of the equations of the subfamily.
 
-\emph{(iii).} A closed subscheme of a finite reduced scheme is reduced,
-as in the proof of Proposition~\ref{cor:endpoints}, and a reduced point
-of a square system is a simple solution of it. The map
-\eqref{eq:iota} negates the roots of \(\overline A\), so it acts on the
-labels by \(S\mapsto-S\), and the labelling is a bijection.
-
-\emph{(iv).} For even \(p\) the polynomial \(A\) is odd, so \(A(0)=0\).
-Let \(p\) be odd, and suppose that a point of \(\Xp^{\mathrm{sym}}\) is
-a pulse, \(A(0)=0\). Then \(P_A(0)=0\) by
-\eqref{eq:symmetric-endpoint}. If \(\Xp\) is reduced, this contradicts
-Proposition~\ref{cor:endpoints}. If \(A\) has real coefficients, then
-\(v_A\) is real on the real axis, and it tends to zero with all its
-derivatives at both ends. Integrating \eqref{eq:main} along the real
-axis, and using \(P_A(0)=0\), gives \(\int v_A^2\dd z=0\). Hence
-\(v_A=0\), which is impossible.
+\emph{(iii).} For even \(p\) the polynomial \(A\) is odd, so \(A(0)=0\).
+Let \(p\) be odd. If \(2p-1\) is prime, a label with \(S=-S\) has an
+even number \(d\) of elements, so it does not contain \(0\), and the
+pair is a front by Proposition~\ref{cor:endpoints}. For a general odd
+\(p\), suppose that a point of \(\Xp^{\mathrm{sym}}\) with real
+coefficients is a pulse, \(A(0)=0\). Then \(P_A(0)=0\) by
+\eqref{eq:symmetric-endpoint}. Now \(v_A\) is real on the real axis,
+and it tends to zero with all its derivatives at both ends. Integrating
+\eqref{eq:main} along the real axis, and using \(P_A(0)=0\), gives
+\(\int v_A^2\dd z=0\). Hence \(v_A=0\), which is impossible.
 \end{proof}
-
-The label count agrees with \eqref{eq:Fp}. The nonzero residues modulo
-\(\ell=2d+1\) form \(d\) pairs \(\{s,-s\}\). A set \(S=-S\) of \(d\)
-elements consists of \(d/2\) pairs if \(d\) is even, and of \(0\) and
-\((d-1)/2\) pairs if \(d\) is odd, which gives
-\(\binom{d}{\lfloor d/2\rfloor}\) sets in both cases. It contains
-\(0\) exactly when \(d\) is odd, in agreement with part~(iv).

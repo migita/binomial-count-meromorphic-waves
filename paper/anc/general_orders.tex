@@ -1,0 +1,699 @@
+\documentclass[11pt]{article}
+\usepackage[margin=27mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage{booktabs,array,microtype}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\usepackage{xr}
+\externaldocument[P-]{../main}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\FF}{\mathbb F}
+\newcommand{\remA}{\operatorname{rem}_{A}}
+\newcommand{\len}{\operatorname{length}}
+\newcommand{\Xp}{\mathcal X_p}
+\newcommand{\dd}{\,\mathrm d}
+\numberwithin{equation}{section}
+\setlength{\emergencystretch}{2em}
+\title{Counts with multiplicity at general orders\\[4pt]
+\large Companion note to ``A binomial count of meromorphic travelling waves''}
+\input{../authors}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The paper proves its counts when \(2p-1\) is prime, by reduction modulo
+that prime. This note contains what is known at the other orders. A
+weighted form of B\'ezout's theorem gives the upper bound
+\(\binom{2p-1}{p-1}\) at every order, and equality, with pairs counted
+with multiplicity, whenever a rigidity condition holds. The same method
+gives the counts of pulses, of the pairs of the two pure subfamilies and
+of elliptic pairs. The note also proves rigidity when \(2p-1\) is a
+prime power and records the computations that establish it for
+\(p\le573\), and distinctness of all pairs for \(p\le12\). The text is
+that of the first complete version of the paper, where these results
+were part of the main line.
+\end{abstract}
+
+\section{Notation}
+
+References of the form ``Theorem~P\,5.4'' are to the paper. We use its
+notation throughout. The profile equation is
+\(P(D)v+v^2/2=0\) with \(P\) monic of degree \(p\)
+(equation \eqref{P-eq:main} of the paper). A rational-exponential pair
+has the profile \(v_A=s_pA(D)Q\), where \(Q=1/(1+e^{-z})\) and
+\(A(\rho)=\rho^d+\alpha_1\rho^{d-1}+\cdots+\alpha_d\), \(d=p-1\). The
+discrete convolution is \(S_A=A\star A\), and the pair exists exactly
+when \(A\mid S_A\) (Proposition~P\,\ref{P-prop:divisibility}). Writing
+\(S_A=AC_A+R_A\), \(R_A=\sum_{r<d}R_r\rho^r\), the matching equations are
+\(R_0=\cdots=R_{d-1}=0\), and \(\Xp\) is the affine scheme that they
+define. A solution is \emph{simple} if the Jacobian matrix of the
+\(R_r\) is invertible there. When \(\Xp\) is finite, its \emph{length}
+is the sum of the multiplicities of its points, and \(\Xp\) is
+\emph{reduced} when every point is simple, so that the length is the
+number of points. We put
+\[
+ N_p=\binom{2p-1}{p-1},\qquad S_p=\binom{2p-2}{p-2},\qquad
+ F_p=\binom{p-1}{\lfloor(p-1)/2\rfloor},\qquad M_p=2S_p .
+\]
+The variable \(\alpha_j\) has weight \(j\) and \(\rho\) has weight one;
+\(H_A(\rho)=\int_0^\rho A(t)A(\rho-t)\dd t\) is the continuous
+convolution, and \((\mathrm R_d)\) is the rigidity statement
+\eqref{P-eq:rigidity} of the paper: a monic \(A\) of degree \(d\) with
+\(A\mid H_A\) is \(\rho^d\). The reflection is
+\((\iota A)(\rho)=(-1)^dA(-\rho)\), with the identities of
+Proposition~P\,\ref{P-prop:reflection}. For a fixed lattice,
+\(\mathcal E_p(g_2,g_3)\) is the elliptic matching system of
+Section~P\,\ref{P-sec:elliptic-counting}.
+
+\section{Weighted degree and the count with multiplicities}
+
+B\'ezout's theorem bounds the sum of the multiplicities of the
+isolated solutions of \(d\) polynomial equations in \(d\) unknowns
+by the product of their degrees. Equality holds when the system has
+no solutions at infinity, that is, when the highest-degree parts of
+the equations have no common zero other than the origin. The ordinary
+degrees of the matching equations give a poor bound. The right
+measure of their size is a weighted degree that reflects how the
+\(\alpha_j\) scale.
+Give \(\alpha_j\) weight \(j\), and \(\rho\) weight one.
+The remainder equations have highest weighted degrees
+\begin{equation}\label{eq:weights}
+ 2d+1-r\quad(0\le r<d),\qquad\text{namely }d+2,\ldots,2d+1.
+\end{equation}
+Their highest weighted parts are the coefficients of
+\(\remA H_A\), where
+\begin{equation}\label{eq:continuous}
+ H_A(\rho)=\int_0^\rho A(t)A(\rho-t)\dd t.
+\end{equation}
+Indeed, if \(A(\rho)=\sum a_i\rho^i\), then
+\[
+ H_A(\rho)=\sum_{i,j=0}^{d}
+     \frac{i!j!}{(i+j+1)!}a_ia_j\rho^{i+j+1}.
+\]
+These are precisely the highest weighted terms of the power sums
+defining \(S_A\), and monic division preserves the highest weighted
+part. Indeed, \(A\) is weighted-homogeneous of weight \(d\), and each
+step of long division subtracts a multiple of \(A\) of the same
+weight as the term being removed.
+In words, the discrete convolution \(S_A\) is a lower-order
+perturbation of the continuous convolution \(H_A\), and the behaviour
+of the matching equations at infinity is governed by the continuous
+problem \(A\mid H_A\).
+
+For this degree, denote by \((\mathrm{R}_d)\) the condition
+\begin{equation}\label{eq:rigidity}
+ A\text{ monic},\quad\deg A=d,\quad A\mid H_A
+ \quad\Longrightarrow\quad A(\rho)=\rho^d.
+\end{equation}
+It says that the continuous problem has only the trivial solution.
+By the preceding paragraph, it is exactly the condition that the
+matching equations have no solution at weighted infinity.
+
+\begin{theorem}[Count with algebraic multiplicities]\label{thm:length}
+For every \(p\ge2\), the sum of multiplicities of the isolated points
+of \(\Xp\) is at most
+\[
+ N_p=\binom{2p-1}{p-1}.
+\]
+If \((\mathrm R_{p-1})\) holds, then \(\Xp\) is finite and
+\begin{equation}\label{eq:length}
+ \len\Xp=N_p.
+\end{equation}
+This equality does not require simplicity.
+\end{theorem}
+
+\begin{proof}
+Weighted degree is turned into ordinary degree by the finite
+substitution
+\begin{equation}\label{eq:weighted-cover}
+ \alpha_j=y_j^j,\qquad 1\le j\le d.
+\end{equation}
+A monomial of weight \(w\) in the \(\alpha_j\) becomes a monomial of
+ordinary degree \(w\) in the \(y_j\), so the pulled-back equations
+have ordinary degrees at most \(d+2,\ldots,2d+1\), and their
+highest-degree parts are the pull-backs of the highest weighted parts.
+B\'ezout's inequality for isolated solutions bounds the sum of their
+multiplicities by
+\((d+2)\cdots(2d+1)\); see \citet[Chapter~VIII]{Mondal2021}.
+If \((\mathrm R_d)\) holds, the leading homogeneous forms have
+no nonzero common zero. The homogenized system has no point at
+infinity, and ordinary B\'ezout gives equality
+\citep{CoxLittleOShea2005}.
+
+It remains to return from the \(y_j\) to the \(\alpha_j\).
+A solution in the \(\alpha_j\) with all \(\alpha_j\ne0\) has
+\(1\cdot2\cdots d=d!\) preimages in the \(y_j\), one for each
+choice of the roots \(y_j=\alpha_j^{1/j}\), each with the original
+multiplicity. In general, for each solution the sum of the
+multiplicities of its preimages is \(d!\) times its original
+multiplicity, including at branch points where some \(\alpha_j\)
+vanish. Thus the substitution multiplies the total length by \(d!\).
+Algebraically, \(\CC[y_1,\ldots,y_d]\) is a free module over
+\(\CC[\alpha_1,\ldots,\alpha_d]\), with basis
+\[
+ y_1^{e_1}\cdots y_d^{e_d},\qquad 0\le e_j<j.
+\]
+This remains true after imposing the equations and restricting to
+an isolated component.
+Dividing the B\'ezout count by \(d!\) gives
+\[
+ \frac{(d+2)\cdots(2d+1)}{d!}=\binom{2d+1}{d}.
+\]
+The no-infinity condition also gives finiteness of the whole affine
+scheme, completing the proof.
+\end{proof}
+
+For \(p=3\), the variable weights are \(1,2\) and the equation
+weights are \(4,5\), so the calculation is
+\((4\cdot5)/(1\cdot2)=10\).
+
+
+\section{Pulses}
+
+The endpoints of \(v_A\) are \(0\) and \(s_pA(0)\); the pairs with
+\(A(0)=0\) are the pulses.
+
+\begin{proposition}[Equal endpoints]\label{cor:endpoints}
+Assume \((\mathrm R_{p-1})\), and let
+\(\mathcal Z_p=\Xp\cap\{A(0)=0\}\), with its induced scheme structure.
+Then
+\begin{equation}\label{eq:pulse-length}
+ \len\mathcal Z_p=S_p:=\binom{2p-2}{p-2}.
+\end{equation}
+If \(\Xp\) is reduced, these are \(S_p\) distinct pairs and
+\(P_A(0)\ne0\) at each of them.
+In particular, under the prime-index hypothesis, exactly
+\[
+ \binom{2p-2}{p-2}
+\]
+normalized pairs have equal zero endpoints. The remaining
+\(\binom{2p-2}{p-1}\) have unequal endpoints.
+These are counts over \(\CC\).
+\end{proposition}
+
+\begin{proof}
+Polynomial summation gives \(S_A(0)=-A(0)^2\), so the
+constant remainder satisfies the polynomial identity
+\begin{equation}\label{eq:constant-remainder}
+ R_0=-A(0)\bigl(A(0)+C_A(0)\bigr).
+\end{equation}
+Set \(\alpha_d=A(0)=0\).
+The equation \(R_0=0\) disappears, leaving \(d-1\) equations
+of weights \(d+2,\ldots,2d\) in variables of weights
+\(1,\ldots,d-1\).
+Their leading forms have no nonzero common zero by
+\((\mathrm R_d)\). The weighted calculation in
+Theorem~\ref{thm:length} gives
+\[
+ \len\mathcal Z_p
+ =\frac{(d+2)\cdots(2d)}{(d-1)!}
+ =\binom{2d}{d-1}.
+\]
+For \(d=1\) the system is empty and its length is one.
+
+If \(\Xp\) is finite and reduced, its coordinate algebra is a product
+of copies of \(\CC\); the same is true of any quotient, in particular
+that of \(\mathcal Z_p\), so \(\mathcal Z_p\) is reduced as well.
+At a point with \(A(0)=C_A(0)=0\), the differential of
+\eqref{eq:constant-remainder} vanishes.
+Such a point cannot be simple in the square matching system.
+Therefore \(C_A(0)\ne0\), and
+\(P_A(0)=s_pC_A(0)/2\ne0\), at every point of \(\mathcal Z_p\)
+when \(\Xp\) is reduced.
+The prime-index assertions now follow from Theorem~P\,\ref{P-thm:prime}
+and \(N_p-S_p=\binom{2p-2}{p-1}\).
+\end{proof}
+
+
+\section{The two pure subfamilies}
+
+Let
+\[
+ \Xp^{\mathrm{sym}}=\Xp\cap\{\alpha_j=0\text{ for odd }j\}
+\]
+be the fixed locus of \(\iota\), with its induced scheme structure, and
+put
+\begin{equation}\label{eq:Fp}
+ F_p=\binom{p-1}{\lfloor (p-1)/2\rfloor}.
+\end{equation}
+Its first values are \(1,2,3,6,10,20\) for \(p=2,\ldots,7\);
+Table~P\,\ref{P-tab:named} lists the equations to which they belong.
+
+\begin{theorem}[Count in the two pure subfamilies]\label{thm:symmetric}
+\begin{enumerate}
+\item[\textup{(i)}] A point \(A\) of \(\Xp\) lies in
+\(\Xp^{\mathrm{sym}}\) if and only if \(P_A\) is reflection-symmetric.
+Thus \(\Xp^{\mathrm{sym}}\) consists of the rational-exponential pairs
+of the purely dispersive equations when \(p\) is even, and of the
+purely dissipative equations when \(p\) is odd.
+\item[\textup{(ii)}] If \((\mathrm R_{p-1})\) holds, then
+\(\len\Xp^{\mathrm{sym}}=F_p\).
+\item[\textup{(iii)}] If, in addition, \(\Xp\) is reduced, then
+\(\Xp^{\mathrm{sym}}\) consists of \(F_p\) distinct pairs, each a simple
+solution of the matching equations of its subfamily. If \(2p-1\) is
+prime, they are the points whose label in (P\,\ref{P-eq:prime-labels})
+satisfies \(S=-S\).
+\item[\textup{(iv)}] For even \(p\), every pair of
+\(\Xp^{\mathrm{sym}}\) is a pulse. For odd \(p\), every pair of
+\(\Xp^{\mathrm{sym}}\) is a front if \(\Xp\) is reduced, and every pair
+with real coefficients is a front without any hypothesis.
+\end{enumerate}
+\end{theorem}
+
+In plain terms, the pairs that coincide with their mirror image are
+exactly the pairs of the purely dispersive equations, for even \(p\),
+or of the purely dissipative equations, for odd \(p\). Counted with
+multiplicity there are \(F_p\) of them whenever rigidity holds, in
+particular for \(p\le573\). They are \(F_p\) distinct pairs whenever all
+\(N_p\) pairs for that \(p\) are distinct, in particular when \(2p-1\)
+is prime. The rational-exponential waves of a purely dispersive
+equation are pulses, for every even \(p\). Those of a purely
+dissipative equation are fronts; this is proved whenever all \(N_p\)
+pairs are distinct, and for waves with real coefficients at every odd
+\(p\). Elliptic waves occur in both subfamilies; the distinction
+between pulses and fronts does not apply to them.
+
+\begin{proof}
+\emph{(i).} If \(\iota A=A\), then (P\,\ref{P-eq:reflection-pair}) gives
+\(P_A(\rho)=(-1)^p(P_A(-\rho)+s_pA(0))\). For even \(p\) the
+polynomial \(A\) is odd, so \(A(0)=0\) and \(P_A\) is even. For odd
+\(p\) the sum \(P_A(\rho)+P_A(-\rho)\) is the constant \(-s_pA(0)\).
+In both cases \(P_A\) is reflection-symmetric, and
+\begin{equation}\label{eq:symmetric-endpoint}
+ s_pA(0)=-2P_A(0)\qquad(p\text{ odd}).
+\end{equation}
+
+Conversely, let \(P=P_A\) be reflection-symmetric, and apply
+Corollary~P\,\ref{P-cor:symmetric-waves} at the pole \(i\pi\), using the
+period \(2\pi i\). If \(p\) is even, then \(v_A(-z)=v_A(z)\). Letting
+\(z\to-\infty\) gives \(A(0)=0\), and (P\,\ref{P-eq:reflection-pair})
+becomes \(v_{\iota A}=v_A\). If \(p\) is odd, then
+\(-v_A(-z)=v_A(z)+2P(0)\), and (P\,\ref{P-eq:reflection-pair}) becomes
+\(v_{\iota A}(z)=v_A(z)+2P(0)+s_pA(0)\). Letting \(z\to-\infty\) shows
+that the constant vanishes. In both cases \(v_{\iota A}=v_A\), hence
+\(\iota A=A\) by the uniqueness of the form (P\,\ref{P-eq:normalized-A}).
+
+\emph{(ii).} On the subspace \(\{\alpha_j=0,\ j\text{ odd}\}\) we have
+\(\iota A=A\), and (P\,\ref{P-eq:reflection-S}) shows that \(R_A\) is an odd
+polynomial. The equations \(R_r=0\) with \(r\) even therefore hold
+identically there. With \(m=\lfloor d/2\rfloor\), there remain the
+\(m\) equations \(R_1,R_3,\ldots,R_{2m-1}\) in the \(m\) unknowns
+\(\alpha_2,\alpha_4,\ldots,\alpha_{2m}\). By \eqref{eq:weights} their
+weights are
+\[
+ \begin{array}{c|c}
+ \text{variables}&2,4,\ldots,2m\\
+ \text{equations}&2d,2d-2,\ldots,2(d-m+1).
+ \end{array}
+\]
+Their highest weighted parts are the restrictions of those of the full
+system. The highest weighted parts of the omitted equations vanish
+identically on the subspace, because \(H_A\) is an odd polynomial when
+\(\iota A=A\). A common zero of the restricted leading
+forms is therefore a polynomial \(A\) with \(A\mid H_A\), and
+\((\mathrm R_d)\) gives \(A=\rho^d\). The finite-cover argument of
+Theorem~\ref{thm:length}, with \(\alpha_{2i}=y_i^{2i}\), gives
+\[
+ \len\Xp^{\mathrm{sym}}
+ =\prod_{i=1}^{m}\frac{2(d-i+1)}{2i}=\binom dm .
+\]
+
+\emph{(iii).} A closed subscheme of a finite reduced scheme is reduced,
+as in the proof of Proposition~\ref{cor:endpoints}, and a reduced point
+of a square system is a simple solution of it. The map
+(P\,\ref{P-eq:iota}) negates the roots of \(\overline A\), so it acts on the
+labels by \(S\mapsto-S\), and the labelling is a bijection.
+
+\emph{(iv).} For even \(p\) the polynomial \(A\) is odd, so \(A(0)=0\).
+Let \(p\) be odd, and suppose that a point of \(\Xp^{\mathrm{sym}}\) is
+a pulse, \(A(0)=0\). Then \(P_A(0)=0\) by
+\eqref{eq:symmetric-endpoint}. If \(\Xp\) is reduced, this contradicts
+Proposition~\ref{cor:endpoints}. If \(A\) has real coefficients, then
+\(v_A\) is real on the real axis, and it tends to zero with all its
+derivatives at both ends. Integrating (P\,\ref{P-eq:main}) along the real
+axis, and using \(P_A(0)=0\), gives \(\int v_A^2\dd z=0\). Hence
+\(v_A=0\), which is impossible.
+\end{proof}
+
+
+\section{Elliptic pairs}
+
+\begin{theorem}[Fixed-lattice elliptic enumeration]\label{thm:elliptic-count}
+Assume \((\mathrm R_{p-1})\).
+For every fixed nonsingular lattice,
+\begin{equation}\label{eq:elliptic-length}
+ \len\mathcal E_p(g_2,g_3)
+   =M_p:=2\binom{2p-2}{p-2}.
+\end{equation}
+If, in addition, \(\Xp\) is reduced, then
+\(\mathcal E_p(g_2,g_3)\) is reduced for
+\((g_2,g_3)\) in a nonempty Zariski-open subset of
+\(\{g_2^3-27g_3^2\ne0\}\).
+In particular, if \(2p-1\) is prime, a generic fixed lattice
+admits exactly \(M_p\) normalized elliptic operator--profile
+pairs, all simple.
+\end{theorem}
+
+Thus the elliptic assertion on an arbitrary lattice is a count
+with multiplicities. Exceptional lattices, on which distinct pairs
+merge, do occur and cannot be discarded when counting distinct
+solutions; Section~P\,\ref{P-sec:ks} determines them at order three.
+
+The proof has five steps. We eliminate the operator, which leaves
+\(p-1\) equations in the \(p-1\) profile unknowns. We assign weights to the unknowns, under which the highest weighted
+parts of the equations are obtained by setting \(g_2=g_3=0\). We show
+that at this cusp the equations have only the trivial common zero;
+this is where \((\mathrm R_{p-1})\) enters, and it means that there
+are no solutions at weighted infinity for any \(g_2,g_3\). Weighted B\'ezout then gives the length \(M_p\) on every
+lattice. Finally, at a nodal cubic the elliptic problem becomes the
+equal-endpoint case of the rational-exponential problem, whose
+solutions are simple by Proposition~\ref{cor:endpoints} when \(\Xp\)
+is reduced, and simplicity spreads from the nodal parameter value to
+nearby nonsingular parameters.
+
+\begin{proof}
+\emph{Step 1: eliminating the operator.}
+The coefficient at pole order \(2p\) vanishes by the choice of
+\(s_p\).
+The coefficients at orders \(2p-1,\ldots,p\) determine
+\(a_{p-1},\ldots,a_0\) successively.
+At each step the coefficient of the new \(a_j\) is the nonzero
+rational leading coefficient of \(D^jV\).
+This is a polynomial elimination, valid over any
+\(\QQ\)-algebra.
+The residual has pole order at most \(p-1\) and zero residue.
+It lies in the span of
+\[
+ \{1\}\ \cup\ \{\mathscr D^jX:0\le j\le p-3\}.
+\]
+Hence \(p-1\) equations remain in the \(p-1\) profile
+coefficients \(u_j,b\).
+
+\emph{Step 2: weights.}
+Give \(D,X,g_2,g_3\) weights \(1,2,4,6\), respectively, and give
+the profile weight \(p\).
+Then \(u_j\) has weight \(p-j-2\), and \(b\) has weight \(p\).
+After the triangular elimination, the residual principal-part
+coefficients and the residual Laurent constant have weights
+\begin{equation}\label{eq:elliptic-weights}
+ \begin{array}{c|c}
+ \text{variables}&1,2,\ldots,p-2,p\\
+ \text{equations}&p+1,p+2,\ldots,2p-2,2p.
+ \end{array}
+\end{equation}
+The Laurent expansions and the eliminations are polynomial in
+\(g_2,g_3\), so these statements extend to the singular cubics.
+For fixed \(g_2,g_3\), the highest weighted parts of the equations in
+the profile variables are obtained by setting \(g_2=g_3=0\), since
+\(g_2\) and \(g_3\) carry positive weight.
+
+\emph{Step 3: the cusp.}
+At the cusp \(g_2=g_3=0\), \(X=z^{-2}\) and \(Y=-2z^{-3}\), so the
+profile is a rational function.
+Write \(V=b+f(z)\), where \(f\) has its sole pole at zero
+and vanishes at infinity.
+The constant and decaying parts of the equation give
+\[
+ a_0b+\frac12b^2=0,\qquad
+ (P+b)(D)f+\frac12f^2=0.
+\]
+The leading term of \(f\) at infinity forces \(a_0+b=0\).
+It follows that \(b=a_0=0\).
+Under the polynomial Laplace correspondence
+\[
+ \sum_k A_k\rho^k\ \longmapsto\
+       \sum_k k!A_k z^{-k-1},
+\]
+differentiation corresponds to multiplication by \(-\rho\),
+and multiplication of the rational functions corresponds to
+continuous convolution.
+After a nonzero scalar normalization, the equation for \(f\)
+therefore gives \(A\mid H_A\) for a monic \(A\) of degree \(p-1\).
+By \((\mathrm R_{p-1})\), \(A=\rho^{p-1}\).
+Thus \(f=c_\ast z^{-p}\), and all the variables in
+(P\,\ref{P-eq:elliptic-enumeration-profile}) vanish.
+The leading equations have no nonzero common zero.
+
+\emph{Step 4: the length.}
+The same finite-cover B\'ezout argument as in
+Theorem~\ref{thm:length}, now with the weights
+\eqref{eq:elliptic-weights}, gives
+\[
+ \len\mathcal E_p(g_2,g_3)
+ =\frac{(p+1)(p+2)\cdots(2p-2)(2p)}{(p-2)!\,p}
+ =2\binom{2p-2}{p-2}.
+\]
+For \(p=3\), this is \((4\cdot6)/(1\cdot3)=8\).
+Empty products are one, so the calculation includes \(p=2\).
+It proves this length at every \((g_2,g_3)\), including the
+singular parameters used below; at the cusp itself the whole length
+sits at the single solution where every unknown vanishes.
+It also makes the whole coefficient family finite over
+\(\CC[g_2,g_3]\): sufficiently large weighted monomials reduce
+to bounded weight using the leading equations, which are
+independent of \(g_2,g_3\). This finiteness is what allows
+simplicity to be transferred from the nodal parameter value to nearby
+nonsingular parameters in the last step.
+
+\emph{Step 5: the node.}
+To prove generic simplicity, consider the nodal parameters
+\begin{equation}\label{eq:nodal-parameters}
+ g_2=\frac1{12},\qquad g_3=-\frac1{216}.
+\end{equation}
+In the logistic coordinate they are realized by
+\[
+ X=Q^2-Q+\frac1{12},\qquad
+ Y=(2Q-1)Q(1-Q),\qquad DQ=Q(1-Q).
+\]
+The nodal coordinate ring is
+\[
+ \CC[X,Y]=\{f\in\CC[Q]:f(0)=f(1)\}.
+\]
+Indeed the right side is
+\(\CC+Q(1-Q)\CC[Q]\); it is generated by \(X,Y\), since,
+with \(S=Q(1-Q)\),
+\(S=1/12-X\), \(SQ=(Y+S)/2\), and \(Q^2=Q-S\).
+The pole filtration is the ordinary polynomial degree in \(Q\).
+Consequently the nodal specialization of
+(P\,\ref{P-eq:elliptic-enumeration-profile}) has the unique form
+\[
+ V=\beta+v_A,\qquad A\text{ monic of degree }p-1,\quad A(0)=0,
+\]
+where \(\beta\) is the common endpoint.
+The coefficient change is invertible and affine over \(\QQ\).
+
+The matching equations become, as equations of schemes,
+\begin{equation}\label{eq:nodal-matching}
+ A\in\mathcal Z_p,\qquad
+ P=P_A-\beta,\qquad
+ \beta\bigl(\beta-2P_A(0)\bigr)=0.
+\end{equation}
+To see this directly, the constant equation is
+\(P(0)\beta+\beta^2/2=0\).
+The remaining polynomial identity is
+\((P+\beta)(D)v_A+v_A^2/2=0\), equivalent by
+Proposition~P\,\ref{P-prop:divisibility} to \(A\mid S_A\) and
+\(P+\beta=P_A\).
+The coefficient changes and monic division used here work over
+arbitrary \(\CC\)-algebras, so the correspondence preserves
+local multiplicities.
+
+If \(\Xp\) is reduced, Proposition~\ref{cor:endpoints} gives
+\(S_p\) simple points of \(\mathcal Z_p\), with
+\(P_A(0)\ne0\) at every point.
+Each quadratic in \eqref{eq:nodal-matching} then has two
+distinct roots. The nodal fiber has \(2S_p=M_p\) simple points.
+In the finite coefficient family, the image of the closed locus
+where the matching Jacobian vanishes is closed.
+Its complement contains \eqref{eq:nodal-parameters}, and hence
+meets the nonsingular-lattice locus in a nonempty open set.
+Every fiber in that open set is reduced, proving the theorem.
+\end{proof}
+
+The factor two in \(M_p\) retains the two choices of background in
+(P\,\ref{P-eq:shift}). That transformation preserves the evolution equation
+and the lattice; it changes the operator \(P\) and the speed. At the
+nodal fiber it exchanges the two roots in
+\eqref{eq:nodal-matching}, which are distinct when \(\Xp\) is reduced.
+In that case the two backgrounds are distinct on a generic lattice, and
+the \(M_p\) pairs represent \(M_p/2\) elliptic waves, up to
+translations and Galilean shifts, each counted with both of its
+backgrounds. On special nonsingular lattices the two backgrounds may
+coalesce, as Section~P\,\ref{P-sec:ks} shows.
+
+\begin{corollary}\label{cor:elliptic-symmetric}
+Let \(p\) be even and assume \((\mathrm R_{p-1})\). On every fixed
+nonsingular lattice, the elliptic pairs whose operator is an even
+polynomial form a closed subscheme
+\(\mathcal E_p^{\mathrm{sym}}(g_2,g_3)\) of
+\(\mathcal E_p(g_2,g_3)\), defined by \(u_j=0\) for odd \(j\), and
+\begin{equation}\label{eq:elliptic-symmetric-length}
+ \len\mathcal E_p^{\mathrm{sym}}(g_2,g_3)=2F_p .
+\end{equation}
+If \(\Xp\) is reduced, \(\mathcal E_p^{\mathrm{sym}}(g_2,g_3)\) is
+reduced for \((g_2,g_3)\) in a nonempty Zariski-open set of nonsingular
+parameters.
+\end{corollary}
+
+\begin{proof}
+An even operator has an even profile, by
+Corollary~P\,\ref{P-cor:symmetric-waves}. Conversely, if the profile
+(P\,\ref{P-eq:elliptic-enumeration-profile}) is even, the odd part of
+(P\,\ref{P-eq:main}) is \(\sum_{j\text{ odd}}a_jD^jV=0\); the functions
+\(D^jV\) have distinct pole orders, so \(a_j=0\) for odd \(j\).
+On the subspace \(u_j=0\), \(j\) odd, the residual of Step~1 is even,
+and there remain the equations and unknowns of even weight in
+\eqref{eq:elliptic-weights}:
+\[
+ \begin{array}{c|c}
+ \text{variables}&2,4,\ldots,p-2,p\\
+ \text{equations}&p+2,p+4,\ldots,2p-2,2p.
+ \end{array}
+\]
+The omitted leading forms vanish identically on the subspace, so the
+remaining ones have only the trivial common zero, by Step~3.
+Weighted B\'ezout gives
+\[
+ \frac{(p+2)(p+4)\cdots(2p-2)\,(2p)}{2\cdot4\cdots(p-2)\,p}
+ =2\binom{p-1}{p/2-1}=2F_p .
+\]
+At the node, reflection is \(Q\mapsto1-Q\). An even nodal profile is
+\(\beta+v_A\) with \(\iota A=A\), so the nodal fiber is
+\eqref{eq:nodal-matching} with \(A\in\Xp^{\mathrm{sym}}\). If \(\Xp\)
+is reduced, it has \(2F_p\) simple points, by
+Theorem~\ref{thm:symmetric} and Proposition~\ref{cor:endpoints}, and
+Step~5 applies without change.
+\end{proof}
+
+
+\section{What is known at each order}
+
+Each formula needs two facts at a given \(p\). The first is the
+rigidity condition \((\mathrm R_{p-1})\) of Section~P\,\ref{P-sec:counting}.
+It gives \(N_p\), \(M_p\), \(F_p\) and \(2F_p\) as counts with
+multiplicity: the multiplicities of the pairs add up to these numbers.
+The second is that every rational-exponential pair is simple, that is,
+\(\Xp\) is reduced. Then the pairs are distinct, and the elliptic pairs
+are distinct on a generic lattice. On a special lattice several
+elliptic pairs can merge, while the count with multiplicity stays the
+same; Section~P\,\ref{P-sec:ks} shows this at order three.
+Table~\ref{tab:status} records what is known about each fact.
+
+\begin{table}[htbp]
+\centering
+\caption{What is known. For elliptic pairs, distinctness is asserted
+only on a generic lattice.}
+\label{tab:status}
+\begin{tabular}{@{}p{0.36\linewidth}p{0.58\linewidth}@{}}
+\toprule
+Statement&Known for\\
+\midrule
+Counts with multiplicity&\(2p-1\) a prime or a prime power (proved);
+every \(p\le73\) (exact certificate); every \(p\le573\) (finite-field
+computations)\\[2pt]
+All \(N_p\) pairs distinct&\(2p-1\) prime (proved); \(p=5,8,11\) (exact
+computations); hence every \(p\le12\)\\[2pt]
+All \(F_p\) pairs of the pure subfamily distinct&whenever all \(N_p\)
+pairs are distinct; every \(p\le14\) (exact computations)\\[2pt]
+Both statements, every \(p\)&conjectured\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The prime-index argument excluded solutions at infinity by reducing
+the continuous convolution modulo \(\ell\). The same argument proves
+\eqref{eq:length} whenever \(2p-1=\ell^e\) is an odd prime power
+(Appendix~P\,\ref{P-app:verification}). It gives the count with
+multiplicity, but it does not show that the pairs are distinct.
+
+More generally, the exact arithmetic certificates supplied with the
+paper establish \((\mathrm R_d)\) for every \(d\le72\), hence
+\begin{equation}\label{eq:coverage}
+ \len\Xp=\binom{2p-1}{p-1},\qquad
+ \len\mathcal E_p(g_2,g_3)=2\binom{2p-2}{p-2}
+ \qquad(2\le p\le73).
+\end{equation}
+In the same range, Theorem~\ref{thm:symmetric} and
+Corollary~\ref{cor:elliptic-symmetric} give
+\(\len\Xp^{\mathrm{sym}}=F_p\) and, for even \(p\),
+\(\len\mathcal E_p^{\mathrm{sym}}(g_2,g_3)=2F_p\).
+Together with the ancillary proof, the certificates also cover infinite
+families of higher orders.
+Finite-field Gr\"obner computations, checked by independent pipelines,
+establish \((\mathrm R_d)\) for every \(d\le572\); they extend
+\eqref{eq:coverage} and the two symmetric lengths, as counts with
+multiplicity, to every \(2\le p\le573\) (repository, directory
+\texttt{certificates/rigidity\_572/}).
+The certificates hold for all complex coefficients, not only real or
+rational ones. The ancillary proof and the full certificate are described
+in Appendix~P\,\ref{P-app:verification}.
+
+Equation \eqref{eq:coverage} is a statement about counts with
+multiplicity only. At composite indices, exact computations show that
+all pairs are simple at \(p=5\), \(p=8\) and \(p=11\)
+(Appendix~P\,\ref{P-app:verification}). With Theorem~P\,\ref{P-thm:prime}, all
+pairs are therefore distinct for every \(p\le12\), and
+Theorem~\ref{thm:elliptic-count} gives \(M_p\) distinct elliptic pairs
+on a generic lattice at these orders. Inside the two pure subfamilies
+the computation is much smaller, and it shows that the \(F_p\) pairs
+are distinct for every \(p\le14\), which includes the composite indices
+\(9\), \(15\), \(21\), \(25\) and \(27\).
+
+\section{Reduction to characteristic \(\ell\), and prime powers}
+
+The lemma transfers the absence of solutions at infinity from
+characteristic \(\ell\) to characteristic zero.
+Let homogeneous polynomials \(F_1,\ldots,F_m\), with coefficients
+in \(\ZZ_{(\ell)}\), have no nonzero common zero over
+\(\overline{\FF}_\ell\).
+Then they have no nonzero common zero over \(\CC\).
+Indeed a complex projective zero yields a zero over
+\(\overline{\QQ}\) after fixing one nonzero coordinate.
+Choose a place above \(\ell\), extend it if necessary, and scale
+all coordinates by the inverse of a coordinate of smallest valuation.
+The coordinates are integral and one is a unit.
+Their reductions give a nonzero common zero over
+\(\overline{\FF}_\ell\), contradicting the hypothesis.
+The argument needs the algebraic closure of the residue field;
+a search only over \(\FF_\ell\) would not suffice.
+
+\paragraph{Prime powers.}
+Let \(2p-1=\ell^e\) be an odd prime power. For
+\(\deg A=(\ell^e-1)/2\), the normalized continuous convolution
+satisfies
+\[
+ \ell^eH_A(\rho)\equiv u\rho^{\ell^e}\pmod\ell,\qquad u\ne0.
+\]
+Every bilinear coefficient other than the leading one has
+denominator valuation at most \(e-1\), whereas the leading
+coefficient has valuation \(-e\).
+This follows either from the factorial formula or from
+\[
+ \frac{i!j!}{(i+j+1)!}
+   =\sum_{r=0}^{j}\frac{(-1)^r\binom jr}{i+r+1}.
+\]
+The lemma above then gives \((\mathrm R_{p-1})\), as in Step~3 of the
+proof of Theorem~P\,\ref{P-thm:prime}. This argument controls only the
+leading system, so it gives no simple-root lifting statement for the
+discrete matching system.
+
+
+The computations referred to above are described in
+Appendix~P\,\ref{P-app:verification} of the paper and in the repository
+\url{https://github.com/migita/binomial-count-meromorphic-waves},
+directories \texttt{certificates/} and \texttt{paper/anc/}.
+
+{\small\raggedright
+\bibliographystyle{plainnat}
+\bibliography{../references}
+}
+\end{document}

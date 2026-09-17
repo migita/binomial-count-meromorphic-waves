@@ -1,4 +1,4 @@
-\begin{thebibliography}{51}
+\begin{thebibliography}{50}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -69,13 +69,6 @@ Robert Conte, Micheline Musette, Tuen~Wai Ng, and Chengfa Wu.
   379--389, 2025.
 \newblock \doi{10.11845/sxjz.2024010a}.
 \newblock URL \url{https://arxiv.org/abs/2503.00834}.
-
-\bibitem[Cox et~al.(2005)Cox, Little, and O'Shea]{CoxLittleOShea2005}
-David~A. Cox, John Little, and Donal O'Shea.
-\newblock \emph{Using Algebraic Geometry}, volume 185 of \emph{Graduate Texts
-  in Mathematics}.
-\newblock Springer, New York, second edition, 2005.
-\newblock \doi{10.1007/b138611}.
 
 \bibitem[Dang(2023{\natexlab{a}})]{Dang2023Even}
 Guoqiang Dang.
@@ -330,6 +323,13 @@ S.~P. Lin.
 \newblock \emph{Journal of Fluid Mechanics}, 63:\penalty0 417--429, 1974.
 \newblock \doi{10.1017/S0022112074001704}.
 
+\bibitem[Matsumura(1986)]{Matsumura1986}
+H.~Matsumura.
+\newblock \emph{Commutative Ring Theory}, volume~8 of \emph{Cambridge Studies
+  in Advanced Mathematics}.
+\newblock Cambridge University Press, Cambridge, 1986.
+\newblock \doi{10.1017/CBO9781139171762}.
+
 \bibitem[McCue et~al.(2021)McCue, El-Hachem, and
   Simpson]{McCueElHachemSimpson2021}
 Scott~W. McCue, Maud El-Hachem, and Matthew~J. Simpson.
@@ -337,14 +337,6 @@ Scott~W. McCue, Maud El-Hachem, and Matthew~J. Simpson.
   equation.
 \newblock \emph{Applied Mathematics Letters}, 114:\penalty0 106918, 2021.
 \newblock \doi{10.1016/j.aml.2020.106918}.
-
-\bibitem[Mondal(2021)]{Mondal2021}
-Pinaki Mondal.
-\newblock \emph{How Many Zeroes? Counting Solutions of Systems of Polynomials
-  via Toric Geometry at Infinity}, volume~2 of \emph{CMS/CAIMS Books in
-  Mathematics}.
-\newblock Springer, Cham, 2021.
-\newblock \doi{10.1007/978-3-030-75174-6}.
 
 \bibitem[Ng and Wu(2019)]{NgWu2019}
 Tuen-Wai Ng and Cheng-Fa Wu.

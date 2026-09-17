@@ -1,44 +1,14 @@
 \section{Exact verification and ancillary material}\label{app:verification}
 
-This appendix records one lemma used in the proof of
-Theorem~\ref{thm:prime} and describes the computer checks that
-accompany the paper.
+This appendix describes the computer checks that accompany the paper,
+and the companion note.
 
-The lemma transfers the absence of solutions at infinity from
-characteristic \(\ell\) to characteristic zero.
-Let homogeneous polynomials \(F_1,\ldots,F_m\), with coefficients
-in \(\ZZ_{(\ell)}\), have no nonzero common zero over
-\(\overline{\FF}_\ell\).
-Then they have no nonzero common zero over \(\CC\).
-Indeed a complex projective zero yields a zero over
-\(\overline{\QQ}\) after fixing one nonzero coordinate.
-Choose a place above \(\ell\), extend it if necessary, and scale
-all coordinates by the inverse of a coordinate of smallest valuation.
-The coordinates are integral and one is a unit.
-Their reductions give a nonzero common zero over
-\(\overline{\FF}_\ell\), contradicting the hypothesis.
-The argument needs the algebraic closure of the residue field;
-a search only over \(\FF_\ell\) would not suffice.
-
-\paragraph{Prime powers.}
-Let \(2p-1=\ell^e\) be an odd prime power. For
-\(\deg A=(\ell^e-1)/2\), the normalized continuous convolution
-satisfies
-\[
- \ell^eH_A(\rho)\equiv u\rho^{\ell^e}\pmod\ell,\qquad u\ne0.
-\]
-Every bilinear coefficient other than the leading one has
-denominator valuation at most \(e-1\), whereas the leading
-coefficient has valuation \(-e\).
-This follows either from the factorial formula or from
-\[
- \frac{i!j!}{(i+j+1)!}
-   =\sum_{r=0}^{j}\frac{(-1)^r\binom jr}{i+r+1}.
-\]
-The lemma above then gives \((\mathrm R_{p-1})\), as in Step~3 of the
-proof of Theorem~\ref{thm:prime}. This argument controls only the
-leading system, so it gives no simple-root lifting statement for the
-discrete matching system.
+The companion note \texttt{anc/general\_orders.pdf} contains what is
+known at the orders for which \(2p-1\) is not prime: the weighted
+B\'ezout count behind Proposition~\ref{prop:general}, the general-order
+versions of the results of Sections~\ref{sec:labels},
+\ref{sec:reflection} and~\ref{sec:elliptic-counting}, and the proof of
+rigidity when \(2p-1\) is a prime power.
 
 The ancillary material contains five kinds of checks.
 
@@ -67,7 +37,8 @@ Python checker; the saved transcript states the two exact outputs.
 obtained over the finite field \(\FF_{32003}\). Every point modulo
 \(32003\) is therefore simple and lifts uniquely by Hensel's lemma, as
 in Step~4 of the proof of Theorem~\ref{thm:prime}, and the lifts are
-all the points because the length is \(6435\). At \(p=11\) each of the
+all the points because the count with multiplicity is \(6435\), by
+Proposition~\ref{prop:general}(ii). At \(p=11\) each of the
 \(352716\) points is certified over the \(19\)-adic numbers, by
 Hensel's lemma at the simple points of the reduction modulo \(19\) and
 by exact Newton-polygon and Newton--Kantorovich certificates at the
@@ -75,7 +46,7 @@ singular ones; the archived certificate, with its description and the
 record of its validation, is in the repository, directory
 \texttt{certificates/}.
 \item \texttt{rigidity/} supplies the proof and exact certificate
-for \((\mathrm R_d)\), \(d\le72\).
+for rigidity \((\mathrm R_d)\), \(d\le72\).
 For \(2d+1=\ell^e+g\), \(g\in\{0,2,4,6\}\), the proof reduces the
 normalized continuous convolution to a residual system of degree
 at most \(g\).
