@@ -1,0 +1,92 @@
+{
+  "checked_on_utc": "2026-09-17",
+  "python": "3.8.10",
+  "sympy": "1.13.3",
+  "unit_tests": {
+    "command": "python3 -m unittest -v",
+    "tests": 12,
+    "result": "passed",
+    "seconds": 3.92,
+    "includes_reference_pair_reconstructions": 33,
+    "includes_higher_profile_orders": [
+      5,
+      6,
+      8
+    ]
+  },
+  "catalogue": {
+    "command": "python3 verify_catalogue.py",
+    "result": "passed",
+    "all_real_pair_counts": {
+      "1": 1,
+      "2": 3,
+      "3": 8,
+      "4": 21
+    },
+    "all_real_coefficients_are_rational": true,
+    "p4_nonreal_quartic_recomputed": true,
+    "methods": [
+      "Exact rational matching equations",
+      "Graded reverse lexicographic Groebner basis",
+      "FGLM conversion to lexicographic order",
+      "Exact real-root exclusion and branch substitution"
+    ],
+    "stored_groebner_basis": false
+  },
+  "arithmetic": {
+    "command": "python3 verify_arithmetic.py",
+    "result": "passed",
+    "scope": "Every prime q>2d+1, over the algebraic closure, for d=2,3",
+    "bad_primes": {
+      "2": [
+        11
+      ],
+      "3": [
+        11,
+        31,
+        71,
+        4217
+      ]
+    },
+    "proof": "Integer nilpotence identities exclude other primes; explicit nonzero witnesses include all listed primes.",
+    "real_pair_denominator_primes": {
+      "3": [
+        11
+      ],
+      "4": [
+        3,
+        11,
+        31
+      ]
+    },
+    "label_3751_front": [
+      1,
+      4,
+      5
+    ],
+    "label_3751_mirror": [
+      2,
+      3,
+      6
+    ],
+    "label_field": 7,
+    "radical_rate_identities": [
+      47,
+      73,
+      313,
+      806
+    ]
+  },
+  "generic_model_smoke": {
+    "models": 34,
+    "families_per_model": 3,
+    "constructions_completed": 102,
+    "seconds": 18.022,
+    "meaning": "Every preset with symbolic parameters returned a profile result for each family; conditional and no_match results are retained as such."
+  },
+  "limitations": [
+    "No general multivariate parameter solver; exact conditions are retained.",
+    "Completeness is within the one-pole autonomous branch; the paper states when its meromorphic classification applies.",
+    "The reference catalogue contains real pairs only; the constructor is independent of it and allows complex coefficients."
+  ]
+}

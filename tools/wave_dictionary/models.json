@@ -1,0 +1,376 @@
+[
+  {
+    "id": "burgers",
+    "name": "Burgers",
+    "linear": "-nu*Dx**2 + Dt",
+    "quadratic": "Dx",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "kzk",
+    "name": "Khokhlov-Zabolotskaya-Kuznetsov (plane waves)",
+    "linear": "gamma*Dy**2 + Dx*(-nu*Dx**2 + Dt)",
+    "quadratic": "Dx**2",
+    "direction": [
+      "k",
+      "ell",
+      "0"
+    ]
+  },
+  {
+    "id": "kdv",
+    "name": "Korteweg-de Vries",
+    "linear": "mu*Dx**3 + Dt",
+    "quadratic": "Dx",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "bbm",
+    "name": "Benjamin-Bona-Mahony / regularized long wave",
+    "linear": "-Dt*Dx**2 + Dt + Dx",
+    "quadratic": "Dx",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "boussinesq",
+    "name": "Boussinesq (sign parameter s)",
+    "linear": "s*Dx**4 + Dt**2 - Dx**2",
+    "quadratic": "-2*Dx**2",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "improved_boussinesq",
+    "name": "improved Boussinesq",
+    "linear": "-Dt**2*Dx**2 + Dt**2 - Dx**2",
+    "quadratic": "-2*Dx**2",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "kp",
+    "name": "Kadomtsev-Petviashvili (plane waves)",
+    "linear": "3*s*Dy**2 + Dx*(Dt + Dx**3)",
+    "quadratic": "Dx**2",
+    "direction": [
+      "k",
+      "ell",
+      "0"
+    ]
+  },
+  {
+    "id": "zk",
+    "name": "Zakharov-Kuznetsov (plane waves)",
+    "linear": "Dt + Dx*(Dx**2 + Dy**2)",
+    "quadratic": "Dx",
+    "direction": [
+      "k",
+      "ell",
+      "0"
+    ]
+  },
+  {
+    "id": "quadratic_klein_gordon",
+    "name": "quadratic Klein-Gordon",
+    "linear": "a + Dt**2 - Dx**2",
+    "quadratic": "2*b",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "kdv_burgers",
+    "name": "KdV-Burgers",
+    "linear": "mu*Dx**3 - nu*Dx**2 + Dt",
+    "quadratic": "Dx",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "bbm_burgers",
+    "name": "BBM-Burgers",
+    "linear": "-nu*Dx**2 - Dt*Dx**2 + Dt + Dx",
+    "quadratic": "Dx",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "kp_burgers",
+    "name": "KP-Burgers (plane waves)",
+    "linear": "gamma*Dy**2 + Dx*(mu*Dx**3 - nu*Dx**2 + Dt)",
+    "quadratic": "Dx**2",
+    "direction": [
+      "k",
+      "ell",
+      "0"
+    ]
+  },
+  {
+    "id": "zk_burgers",
+    "name": "ZK-Burgers (plane waves)",
+    "linear": "mu*Dx*(Dx**2 + Dy**2) - nu*(Dx**2 + Dy**2) + Dt",
+    "quadratic": "Dx",
+    "direction": [
+      "k",
+      "ell",
+      "0"
+    ]
+  },
+  {
+    "id": "viscous_boussinesq",
+    "name": "Boussinesq with mixed-derivative damping",
+    "linear": "alpha*Dx**4 - 2*b*Dt*Dx**2 + Dt**2 - Dx**2",
+    "quadratic": "-2*beta*Dx**2",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "fisher",
+    "name": "Fisher-KPP",
+    "linear": "Dt - Dx**2 - 1",
+    "quadratic": "2",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "damped_klein_gordon",
+    "name": "damped quadratic Klein-Gordon (hyperbolic Fisher)",
+    "linear": "Dt**2*tau + Dt - Dx**2 - 1",
+    "quadratic": "2",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "ks",
+    "name": "Kuramoto-Sivashinsky",
+    "linear": "Dt + Dx**4 + Dx**2",
+    "quadratic": "Dx",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "dispersive_ks",
+    "name": "Kuramoto–Sivashinsky with dispersion / Topper–Kawahara form",
+    "linear": "sigma*Dx**3 + Dt + Dx**4 + Dx**2",
+    "quadratic": "Dx",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "kawahara",
+    "name": "Kawahara",
+    "linear": "alpha*Dx**3 + beta*Dx**5 + Dt",
+    "quadratic": "Dx",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "rosenau_kdv",
+    "name": "Rosenau-KdV",
+    "linear": "Dt*Dx**4 + Dt + Dx**3 + Dx",
+    "quadratic": "Dx",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "rosenau_kawahara",
+    "name": "Rosenau-Kawahara",
+    "linear": "Dt*Dx**4 + Dt - Dx**5 + Dx**3 + Dx",
+    "quadratic": "Dx",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "rosenau_rlw",
+    "name": "Rosenau-RLW",
+    "linear": "Dt*Dx**4 - Dt*Dx**2 + Dt + Dx",
+    "quadratic": "Dx",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "rosenau",
+    "name": "Rosenau",
+    "linear": "Dt*Dx**4 + Dt + Dx",
+    "quadratic": "Dx",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "sixth_order_boussinesq",
+    "name": "sixth-order Boussinesq",
+    "linear": "-alpha*Dx**4 - beta*Dx**6 + Dt**2 - Dx**2",
+    "quadratic": "-2*Dx**2",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "fifth_order_kp",
+    "name": "fifth-order KP (plane waves)",
+    "linear": "gamma*Dy**2 + Dx*(alpha*Dx**3 + beta*Dx**5 + Dt)",
+    "quadratic": "Dx**2",
+    "direction": [
+      "k",
+      "ell",
+      "0"
+    ]
+  },
+  {
+    "id": "quadratic_beam",
+    "name": "beam equation with quadratic nonlinearity",
+    "linear": "Dt**2 + Dx**4 + 1",
+    "quadratic": "-2",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "quadratic_swift_hohenberg",
+    "name": "Swift-Hohenberg with quadratic nonlinearity",
+    "linear": "-r + Dt + (Dx**2 + 1)**2",
+    "quadratic": "2",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "benney_lin",
+    "name": "Benney-Lin",
+    "linear": "b*(Dx**4 + Dx**2) + eta*Dx**5 + Dt + Dx**3",
+    "quadratic": "Dx",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "kawahara_burgers",
+    "name": "Kawahara-Burgers",
+    "linear": "alpha*Dx**3 + beta*Dx**5 - nu*Dx**2 + Dt",
+    "quadratic": "Dx",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "fourth_order_fisher",
+    "name": "fourth-order Fisher",
+    "linear": "gamma*Dx**4 + Dt - Dx**2 - 1",
+    "quadratic": "2",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "fifth_order_zk",
+    "name": "Fifth-order ZK-type quadratic equation",
+    "linear": "Dt + alpha*Dx*(Dx**2+Dy**2) + beta*Dx*(Dx**2+Dy**2)**2",
+    "quadratic": "Dx",
+    "direction": [
+      "k",
+      "ell",
+      "0"
+    ]
+  },
+  {
+    "id": "nikolaevskiy",
+    "name": "Nikolaevskiy (velocity form)",
+    "linear": "Dt + Dx**2*(epsilon-(1+Dx**2)**2)",
+    "quadratic": "Dx",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "dispersive_nikolaevskiy",
+    "name": "Nikolaevskiy with linear dispersion",
+    "linear": "Dt + Dx**2*(epsilon-(1+Dx**2)**2) - alpha*Dx**3 - beta*Dx**5",
+    "quadratic": "Dx",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "seventh_order_kdv",
+    "name": "Seventh-order quadratic KdV-type equation",
+    "linear": "Dt+alpha*Dx**3+beta*Dx**5+gamma*Dx**7",
+    "quadratic": "Dx",
+    "direction": [
+      "1",
+      "0",
+      "0"
+    ]
+  }
+]

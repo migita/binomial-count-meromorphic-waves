@@ -2,8 +2,8 @@
 
 Alexander Migita
 
-This repository holds the arXiv source package of the paper and a Lean 4
-formalisation of two of its theorems.
+This repository holds the arXiv source package of the paper, a Lean 4
+formalisation of two of its theorems, and an exact travelling-wave dictionary.
 
 ## Layout
 
@@ -19,6 +19,10 @@ formalisation of two of its theorems.
   distinct at the composite indices 15 (`p = 8`, finite field and Hensel lifting) and 21
   (`p = 11`, archived 19-adic certificate with its validation record);
   see `certificates/README.md`.
+- [`tools/wave_dictionary/`](tools/wave_dictionary/): 34 explicit PDE models,
+  their profile operators, and an exact constructor for rational,
+  rational-exponential and elliptic one-pole waves, with a formula lookup,
+  parameter conditions, and replayable low-order arithmetic checks.
 - `lean/`: a Lean 4 project pinned to Mathlib v4.33.1. It proves
 
   - continuous-convolution rigidity `(R_d)` when `2d+1` is prime
