@@ -45,10 +45,13 @@ Held for a second paper and not mentioned: the even-order landscape beyond Fishe
 4. Proposition 8.1, Corollaries 8.2, 8.3.
 5. Examples: the ten pairs at p = 6 and the six at p = 5.
 
-Review status: the reviewing Codex session audited 1, 2, the M_p/2 sentence and 5 (independent recomputation of both lists;
-files in `~/projects/KS-260829/codex_binomial_review_20260917/`), and proposed corrections that are applied (primitive period in
-Prop. 8.1, punctured curves at p = 3, generic-lattice qualification in the status table, KdV vs Burgers orbits, scope of "three
-kinds", "dimension at most two"). Its audit of 3–4 was still in progress when this note was written.
+Review status: the reviewing Codex session audited all of 1–5 (report:
+`~/projects/KS-260829/codex_binomial_review_20260917/mathematical_audit.md`, with an independent recomputation of the p = 5 and
+p = 6 lists). No mathematical error was found. Its wording and scope findings are applied: primitive period in Prop. 8.1;
+punctured curves at p = 3; generic-lattice qualification in the status table; KdV versus Burgers orbits; scope of "three
+kinds"; "dimension at most two"; hypothesis and equivalence convention for the M_p/2 sentence; "pulses only / fronts only"
+restricted to rational-exponential waves; the finiteness claim in the introduction stated with its hypothesis. Readability
+reads (Codex, and a fresh reader with no knowledge of the project) were still running when this note was last updated.
 
 ## For the author to decide or confirm
 
