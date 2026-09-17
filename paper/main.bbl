@@ -1,4 +1,4 @@
-\begin{thebibliography}{50}
+\begin{thebibliography}{51}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -204,6 +204,14 @@ Takuji Kawahara and Sadayoshi Toh.
   system.
 \newblock \emph{Physics of Fluids}, 31:\penalty0 2103--2111, 1988.
 \newblock \doi{10.1063/1.866610}.
+
+\bibitem[Khalil et~al.(2014)Khalil, Al~Horani, Yousef, and
+  Sababheh]{KhalilEtAl2014}
+R.~Khalil, M.~Al~Horani, A.~Yousef, and M.~Sababheh.
+\newblock A new definition of fractional derivative.
+\newblock \emph{Journal of Computational and Applied Mathematics},
+  264:\penalty0 65--70, 2014.
+\newblock \doi{10.1016/j.cam.2014.01.002}.
 
 \bibitem[Kudryashov(1988)]{Kudryashov1988}
 N.~A. Kudryashov.

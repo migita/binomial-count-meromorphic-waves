@@ -80,6 +80,17 @@ the abstract says "exact computations" instead of "exact computer certificates".
 the range of the replayable integer certificates in `paper/anc/rigidity/`. Ranges of distinctness (p <= 12; pure
 subfamilies p <= 14) are unchanged. The introduction's list of composite orders with all pairs distinct now reads p = 5, 8, 11.
 
+Remarks added 17 Sep (late), at the author's request relayed by the reviewing session: (1) after Proposition 5.1, every
+P_A has a root among 1, ..., p (the exponent of the leading term of v_A as e^z -> 0; unconditional); (2) at the end of
+Section 8, two paragraphs: "Other equations with the same profile equation" (any L u + M(u^2) = 0 whose plane-wave reduction
+integrates to (1.1); pointer to the repository directory `tools/wave_dictionary/`, which the reviewing session is preparing
+and which is NOT yet on the branch) and "Ansatz methods" (tanh, sech, exp-function, G'/G, Riccati simplest equation,
+Jacobi/Weierstrass expansions in their standard single-phase form produce only waves that are counted here; conformable
+derivative reduces to the classical equation by tau = t^alpha/alpha, not so for Caputo or Riemann-Liouville). One new
+reference, Khalil et al. 2014 (Crossref-checked). No named equations and no absence claims were taken from the prototype
+dictionary. Not included, for the author to decide: the one-way integrality statement (rigidity mod q => all coefficients
+q-integral), which would be two lines in the appendix lemma. Length is now 39 pages.
+
 The introduction now has Table 1, the named equations with p <= 6 and their counts (author's suggestion); four references were
 added for it (Benney 1966, Lin 1974, Kawahara–Toh 1988, Nikolaevskii 1989; bibliographic data checked against Crossref, not
 against the papers). The by-order table of the examples section is gone.

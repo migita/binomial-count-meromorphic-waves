@@ -145,3 +145,42 @@ no travelling wave that is rational, rational in an exponential, or
 elliptic with one pole per period.
 For even \(p\), however, Theorem~\ref{thm:complete} excludes other
 meromorphic waves only when the equation is purely dispersive.
+
+\paragraph{Other equations with the same profile equation.}
+The reduction of Section~\ref{sec:setting} uses only the travelling-wave
+variable. The counts therefore apply to any equation
+\(\mathcal L u+\mathcal M(u^2)=0\) with constant-coefficient operators,
+mixed derivatives and several space variables included, whose
+plane-wave reduction integrates to \eqref{eq:main}; the coefficients of
+\(P\) then depend on the speed and the direction of the wave. The
+repository lists such equations by profile operator, with their
+reductions (directory \texttt{tools/wave\_dictionary/}).
+
+\paragraph{Ansatz methods.}
+Many exact travelling waves in the literature are produced by
+substituting a finite expansion: the tanh and sech methods, the
+exp-function and \((G'/G)\)-expansion methods, the simplest-equation
+method with a Riccati equation, and the Jacobi and Weierstrass
+elliptic-function expansions \citep{Kudryashov2009Errors}. In their
+standard form, with one phase \(kx-\omega t\) and constant coefficients,
+the first group produces functions that are rational in one exponential
+and the second group elliptic functions of one argument; rational
+functions of \(z\) arise as limits. When
+Theorem~\ref{thm:complete} applies, every such solution of
+\eqref{eq:pde} has one pole per period. With respect to its primitive
+period it is then, up to the symmetries of
+Proposition~\ref{prop:fixed}, one of the waves \eqref{eq:fixed-wave},
+one of the elliptic waves of Section~\ref{sec:elliptic-counting}, or
+the rational wave. For the remaining operators the same holds for the
+outputs that have one pole per period. The number of distinct waves
+that these methods can produce for a given equation, and in the
+elliptic case for a given period lattice, is therefore bounded by the
+counts of this paper, whatever the expansion: translates, mirror
+images, changes of background, and real or imaginary rates belong to
+one pair.
+Equations written with the conformable derivative
+\(T_\alpha f(t)=t^{1-\alpha}f'(t)\), \(t>0\) \citep{KhalilEtAl2014},
+reduce to the classical ones, because \(T_\alpha=\dd/\dd\tau\) with
+\(\tau=t^\alpha/\alpha\), and likewise in \(x\); their travelling waves
+in \(x-c\,t^\alpha/\alpha\) are the waves counted here. This does not
+apply to the Caputo or Riemann--Liouville derivatives.
