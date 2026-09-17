@@ -49,9 +49,9 @@ fixed points are the pairs of the purely dispersive equations (p even) and of
 the purely dissipative equations (only even-order derivatives in the linear
 part, p odd). Their number is F_p = binomial(p-1, floor((p-1)/2)), under the same
 hypotheses as for N_p; the purely dispersive equations also account for 2 F_p of
-the elliptic pairs. Purely dispersive equations carry only pulses. Purely
-dissipative equations carry only fronts; this is proved when all pairs are
-distinct, and for real waves in every order.
+the elliptic pairs. The rational-exponential waves of purely dispersive
+equations are pulses. Those of purely dissipative equations are fronts; this is
+proved when all pairs are distinct, and for real waves in every order.
 
 **A single equation.** Rescaling x moves the coefficient vector of an equation
 along a weighted curve. An equation has a one-pole travelling wave rational in
