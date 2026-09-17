@@ -268,15 +268,16 @@ already mentioned.
 \(u_{kx}=\partial_x^ku\). Each name stands for a family with free
 coefficients, and the numbers count normalized pairs across that
 family: rational-exponential pairs at unit rate, and elliptic pairs on
-a generic fixed lattice. A full family has the counts \(N_p\) and
-\(M_p\), and it contains the pure subfamily of the same \(p\): the
-three pairs of KdV--Burgers include the KdV soliton. A pure subfamily
-has \(F_p\) rational-exponential pairs, and \(2F_p\) elliptic pairs or
-none. All numbers in this table are counts of distinct pairs. The last
-column says whether the classification applies to the whole family.
-If it does, the pairs counted here are all its nonconstant meromorphic
-travelling waves, apart from a rational wave when all lower
-coefficients vanish. For KdV--Burgers other meromorphic waves exist
+a generic fixed lattice. Each count is written as the formula that
+gives it, with \(N_p=\binom{2p-1}{p-1}\), \(M_p=2\binom{2p-2}{p-2}\)
+and \(F_p=\binom{p-1}{\lfloor(p-1)/2\rfloor}\). Dispersive and
+dissipative mean purely dispersive and purely dissipative; a full
+family contains the pure subfamily of the same \(p\), so the three
+pairs of KdV--Burgers include the KdV soliton. All numbers are counts
+of distinct pairs. The last column says whether the classification
+applies to the whole family; if it does, the pairs counted here are all
+its nonconstant meromorphic travelling waves, apart from a rational
+wave when all lower coefficients vanish. For KdV--Burgers other meromorphic waves exist
 (Section~\ref{sec:open}); for Benney--Lin the question is open.}
 \label{tab:named}
 \setlength{\tabcolsep}{4.5pt}
@@ -284,15 +285,15 @@ coefficients vanish. For KdV--Burgers other meromorphic waves exist
 \toprule
 Equation&Linear terms&\(p\)&Family&Rat.-exp.&Ellipt.&All waves\\
 \midrule
-KdV&\(u_{3x}\)&2&purely dispersive&1&2&yes\\
-KdV--Burgers&\(u_{2x},u_{3x}\)&2&full&3&2&no\\
-Kuramoto--Sivashinsky (KS)&\(u_{2x},u_{4x}\)&3&purely dissipative&2&0&yes\\
-KS with dispersion&\(u_{2x},u_{3x},u_{4x}\)&3&full&10&8&yes\\
-Kawahara&\(u_{3x},u_{5x}\)&4&purely dispersive&3&6&yes\\
-Benney--Lin&\(u_{2x},\ldots,u_{5x}\)&4&full&35&30&open\\
-Nikolaevskiy&\(u_{2x},u_{4x},u_{6x}\)&5&purely dissipative&6&0&yes\\
-Nikolaevskiy with dispersion&\(u_{2x},\ldots,u_{6x}\)&5&full&126&112&yes\\
-seventh-order KdV&\(u_{3x},u_{5x},u_{7x}\)&6&purely dispersive&10&20&yes\\
+KdV&\(u_{3x}\)&2&dispersive&\(F_2=1\)&\(2F_2=2\)&yes\\
+KdV--Burgers&\(u_{2x},u_{3x}\)&2&full&\(N_2=3\)&\(M_2=2\)&no\\
+Kuramoto--Sivashinsky (KS)&\(u_{2x},u_{4x}\)&3&dissipative&\(F_3=2\)&\(0\)&yes\\
+KS with dispersion&\(u_{2x},u_{3x},u_{4x}\)&3&full&\(N_3=10\)&\(M_3=8\)&yes\\
+Kawahara&\(u_{3x},u_{5x}\)&4&dispersive&\(F_4=3\)&\(2F_4=6\)&yes\\
+Benney--Lin&\(u_{2x},\ldots,u_{5x}\)&4&full&\(N_4=35\)&\(M_4=30\)&open\\
+Nikolaevskiy&\(u_{2x},u_{4x},u_{6x}\)&5&dissipative&\(F_5=6\)&\(0\)&yes\\
+Nikolaevskiy with dispersion&\(u_{2x},\ldots,u_{6x}\)&5&full&\(N_5=126\)&\(M_5=112\)&yes\\
+seventh-order KdV&\(u_{3x},u_{5x},u_{7x}\)&6&dispersive&\(F_6=10\)&\(2F_6=20\)&yes\\
 \bottomrule
 \end{tabular}
 \end{table}
