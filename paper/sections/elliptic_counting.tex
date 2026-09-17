@@ -1,7 +1,8 @@
-\subsection{Elliptic pairs on a fixed lattice}\label{sec:elliptic-counting}
+\section{The count of elliptic pairs}\label{sec:elliptic-counting}
 
-We now count the elliptic pairs. Fix a lattice \(\Lambda\subset\CC\),
-including its scale, and put \(g_i=g_i(\Lambda)\).
+We now count the elliptic pairs of Section~\ref{sec:setting}. Fix a
+lattice \(\Lambda\subset\CC\), including its scale, and put
+\(g_i=g_i(\Lambda)\).
 We place the pole at zero, allow \(P\) to vary over all monic
 polynomials of degree \(p\), and retain the constant term of the
 profile. Neither reflection nor a lattice automorphism is
@@ -39,8 +40,7 @@ pairs, all simple.
 Thus the elliptic assertion on an arbitrary lattice is a count
 with multiplicities. Exceptional lattices, on which distinct pairs
 merge, do occur and cannot be discarded when counting distinct
-solutions; Section~\ref{sec:ks} gives explicit collisions at order
-three.
+solutions; Section~\ref{sec:ks} determines them at order three.
 
 The proof has five steps. We eliminate the operator, which leaves
 \(p-1\) equations in the \(p-1\) profile unknowns. We assign weights to the unknowns, under which the highest weighted
@@ -193,12 +193,63 @@ meets the nonsingular-lattice locus in a nonempty open set.
 Every fiber in that open set is reduced, proving the theorem.
 \end{proof}
 
-The factor two in \(M_p\) retains the two choices of constant
-equilibrium. The transformation
+The factor two in \(M_p\) retains the two choices of background in
+\eqref{eq:shift}. That transformation preserves the equation and the
+lattice, and at the nodal fiber it exchanges the two roots in
+\eqref{eq:nodal-matching}. On special nonsingular lattices the two
+choices may coalesce. In terms of the evolution equation, a generic
+lattice thus carries \(M_p/2\) elliptic waves, each counted with both
+of its backgrounds.
+
+\subsection{Elliptic pairs of purely dispersive equations}
+
+\begin{corollary}\label{cor:elliptic-symmetric}
+Let \(p\) be even and assume \((\mathrm R_{p-1})\). On every fixed
+nonsingular lattice, the elliptic pairs whose operator is an even
+polynomial form a closed subscheme
+\(\mathcal E_p^{\mathrm{sym}}(g_2,g_3)\) of
+\(\mathcal E_p(g_2,g_3)\), defined by \(u_j=0\) for odd \(j\), and
+\begin{equation}\label{eq:elliptic-symmetric-length}
+ \len\mathcal E_p^{\mathrm{sym}}(g_2,g_3)=2F_p .
+\end{equation}
+If \(\Xp\) is reduced, \(\mathcal E_p^{\mathrm{sym}}(g_2,g_3)\) is
+reduced for \((g_2,g_3)\) in a nonempty Zariski-open set of nonsingular
+parameters.
+\end{corollary}
+
+\begin{proof}
+An even operator has an even profile, by
+Corollary~\ref{cor:symmetric-waves}. Conversely, if the profile
+\eqref{eq:elliptic-enumeration-profile} is even, the odd part of
+\eqref{eq:main} is \(\sum_{j\text{ odd}}a_jD^jV=0\); the functions
+\(D^jV\) have distinct pole orders, so \(a_j=0\) for odd \(j\).
+On the subspace \(u_j=0\), \(j\) odd, the residual of Step~1 is even,
+and there remain the equations and unknowns of even weight in
+\eqref{eq:elliptic-weights}:
 \[
- (P,v)\longmapsto\bigl(P-2P(0),\,v+2P(0)\bigr)
+ \begin{array}{c|c}
+ \text{variables}&2,4,\ldots,p-2,p\\
+ \text{equations}&p+2,p+4,\ldots,2p-2,2p.
+ \end{array}
 \]
-preserves the equation and the lattice.
-At the nodal fiber it exchanges the two roots in
-\eqref{eq:nodal-matching}.
-On special nonsingular lattices those choices may coalesce.
+The omitted leading forms vanish identically on the subspace, so the
+remaining ones have only the trivial common zero, by Step~3.
+Weighted B\'ezout gives
+\[
+ \frac{(p+2)(p+4)\cdots(2p-2)\,(2p)}{2\cdot4\cdots(p-2)\,p}
+ =2\binom{p-1}{p/2-1}=2F_p .
+\]
+At the node, reflection is \(Q\mapsto1-Q\). An even nodal profile is
+\(\beta+v_A\) with \(\iota A=A\), so the nodal fiber is
+\eqref{eq:nodal-matching} with \(A\in\Xp^{\mathrm{sym}}\). If \(\Xp\)
+is reduced, it has \(2F_p\) simple points, by
+Theorem~\ref{thm:symmetric} and Proposition~\ref{cor:endpoints}, and
+Step~5 applies without change.
+\end{proof}
+
+For odd \(p\) there is no fixed-lattice analogue. A purely dissipative
+equation has a profile that is \(-P(0)\) plus a function odd about the
+pole, and its matching system has one equation more than it has
+unknowns. Such elliptic pairs are therefore not expected on a generic
+lattice. At \(p=3\) they occur exactly when \(g_2=0\), as
+\eqref{eq:ks-elliptic-scheme} shows for \(B=0\).

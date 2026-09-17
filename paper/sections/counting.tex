@@ -1,23 +1,18 @@
-\section{Enumeration at fixed scale}\label{sec:counting}
+\section{The count of rational-exponential pairs}\label{sec:counting}
 
-In this section \(P\) ranges over \emph{all} monic polynomials of
-degree \(p\), including mixed operators of even degree, and we count
-the pairs \((P,v)\) in which \(v\) is a one-pole solution of
-\eqref{eq:main} of a given kind: rational in an exponential at a fixed
-rate here, elliptic on a fixed lattice in
-Section~\ref{sec:elliptic-counting}.
-Nothing in the enumeration requires \(p\) to be odd or \(P\) to be an
-even polynomial. Those hypotheses were needed to show that the
-one-pole solutions are all the meromorphic solutions; the matching
+In this section and the next, \(P\) ranges over \emph{all} monic
+polynomials of degree \(p\), mixed operators included, and we count the
+pairs \((P,v)\) of Section~\ref{sec:setting}.
+Nothing in the count requires the hypotheses of
+Theorem~\ref{thm:complete}. Those hypotheses were needed to show that
+the one-pole solutions are all the meromorphic solutions; the matching
 equations and their solution counts make sense without them.
-The counts are for the full monic family and change for a restricted
-family such as the even polynomials \(P\); Section~\ref{sec:kawahara}
-gives an example.
+The pairs that belong to the purely dispersive and purely dissipative
+subfamilies are counted in Section~\ref{sec:reflection}.
 
-For the rational-exponential kind, fix the rate to one, the pole
-to \(i\pi\) modulo \(2\pi i\ZZ\), and the value at \(e^z=0\) to
-zero. Reflection is not identified: distinct normalized pairs related by
-\(z\mapsto-z\) are counted separately.
+Recall the normalization: the rate is one, the pole is at \(i\pi\)
+modulo \(2\pi i\ZZ\), and \(v\to0\) as \(e^z\to0\). A wave and its
+mirror image are counted separately.
 The functions \(Q,DQ,\ldots,D^{p-1}Q\) span the degree-\(p\)
 polynomials in \(Q\) with zero constant term, since
 \[
@@ -48,7 +43,9 @@ their solutions with multiplicity by B\'ezout's theorem, using a
 weighted degree adapted to the equations
 (Theorem~\ref{thm:length}). When \(2p-1\) is prime, reduction modulo
 \(2p-1\) identifies the solutions one by one
-(Theorem~\ref{thm:prime}).
+(Theorem~\ref{thm:prime}). The reflection \(z\mapsto-z\) then singles
+out the pairs of the two pure subfamilies
+(Theorem~\ref{thm:symmetric}).
 
 \subsection{Discrete convolution and the matching equations}
 
@@ -467,66 +464,4 @@ Indeed \(A(0)=0\) forces \(0\) to be a root of the reduced polynomial
 of \(\FF_\ell\) containing \(0\) number \(\binom{2p-2}{p-2}=S_p\), and
 those avoiding \(0\) number \(\binom{2p-2}{p-1}=N_p-S_p\).
 
-\input{sections/elliptic_counting}
-
 \input{sections/symmetry}
-
-\subsection{Further orders}\label{sec:further}
-
-The prime-index argument excluded solutions at infinity by reducing
-the continuous convolution modulo \(\ell\). The same argument proves
-\eqref{eq:length} whenever \(2p-1=\ell^e\) is an odd prime power.
-For \(\deg A=(\ell^e-1)/2\), the normalized continuous convolution
-satisfies
-\[
- \ell^eH_A(\rho)\equiv u\rho^{\ell^e}\pmod\ell,\qquad u\ne0.
-\]
-Every bilinear coefficient other than the leading one has
-denominator valuation at most \(e-1\), whereas the leading
-coefficient has valuation \(-e\).
-This follows either from the factorial formula or from
-\[
- \frac{i!j!}{(i+j+1)!}
-   =\sum_{r=0}^{j}\frac{(-1)^r\binom jr}{i+r+1}.
-\]
-This argument controls only the leading system. It gives the length,
-but no simple-root lifting statement for the discrete matching system.
-
-More generally, the exact arithmetic certificates supplied with the
-paper establish \((\mathrm R_d)\) for every \(d\le72\), hence
-\begin{equation}\label{eq:coverage}
- \len\Xp=\binom{2p-1}{p-1},\qquad
- \len\mathcal E_p(g_2,g_3)=2\binom{2p-2}{p-2}
- \qquad(2\le p\le73).
-\end{equation}
-In the same range, Theorem~\ref{thm:symmetric} and
-Corollary~\ref{cor:elliptic-symmetric} give
-\(\len\Xp^{\mathrm{sym}}=F_p\) and, for even \(p\),
-\(\len\mathcal E_p^{\mathrm{sym}}(g_2,g_3)=2F_p\).
-Together with the ancillary proof, they also cover infinite families
-of higher orders.
-The certificate covers all complex coefficient vectors in these
-degrees. The ancillary proof and the full certificate are described
-in Appendix~\ref{app:verification}.
-Equation \eqref{eq:coverage} is a statement about lengths only.
-At composite indices we establish simplicity here for \(p=5\) only,
-where \(2p-1=9\) is the first composite index: a separate exact
-calculation proves that all 126 rational-exponential points are
-simple; the input and its exact output are supplied in the ancillary
-material. Theorem~\ref{thm:elliptic-count} then gives 112 distinct
-elliptic pairs on a generic fixed lattice at that order.
-Inside the symmetric families a direct exact computation is much
-smaller: it shows that \(\Xp^{\mathrm{sym}}\) is reduced for every
-\(p\le8\), which includes the composite indices \(9\) and \(15\).
-
-\begin{corollary}[An order-seven consequence]\label{cor:p7}
-Among all monic operators of order seven, there are exactly
-1716 normalized rational-exponential pairs at unit rate, all simple.
-On every fixed nonsingular lattice the elliptic matching scheme
-has length 1584, and on a generic such lattice its 1584 points
-are distinct and simple.
-\end{corollary}
-
-This follows from \(2p-1=13\). As throughout this section, the
-operators vary: the corollary counts pairs, not the waves of a single
-seventh-order equation.

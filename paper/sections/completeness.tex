@@ -1,9 +1,10 @@
-\section{Pole structure and completeness}\label{sec:completeness}
+\section{The classification theorem}\label{sec:completeness}
 
-This section proves Theorem~\ref{thm:complete} below: for odd \(p\),
-and for even polynomials \(P\), every nonconstant meromorphic solution
+This section proves Theorem~\ref{thm:complete} below: for every
+evolution equation of even order (\(p\) odd), and for every purely
+dispersive equation (\(P\) even), a nonconstant meromorphic solution
 of \eqref{eq:main} is rational, rational in an exponential, or
-elliptic, and its poles form a single orbit under its periods.
+elliptic, and has one pole per period.
 The proof has three steps. We first compute the Laurent expansion at
 a pole and show that for odd \(p\) it is unique. For even \(P\) it is
 not: one coefficient is left free, and we show that the energy, a
@@ -11,15 +12,12 @@ first integral of \eqref{eq:main}, fixes it, so that Eremenko's
 theorem applies on each energy level. Finally we show that any two
 poles of one solution differ by a period.
 
-Throughout, a meromorphic function is single-valued and meromorphic
-on the whole complex plane. Let \(\Wclass\) consist of rational
-functions of \(z\), rational functions of \(e^{\kappa z}\) with
-\(\kappa\ne0\), and elliptic functions.
-The period group of a nonconstant meromorphic function is its
-\emph{full} group of periods: trivial for a rational function,
-infinite cyclic for a rational function of \(e^{\kappa z}\), where
-we choose \(\kappa\) so that \(2\pi i/\kappa\) generates it, and the
-period lattice for an elliptic function.
+Let \(\Wclass\) consist of rational functions of \(z\), rational
+functions of \(e^{\kappa z}\) with \(\kappa\ne0\), and elliptic
+functions. Period groups are full period groups, as in
+Section~\ref{sec:setting}; for a rational function of
+\(e^{\kappa z}\) we choose \(\kappa\) so that \(2\pi i/\kappa\)
+generates the group.
 For the general analytic background, see \citet{Eremenko1982}.
 
 The theorem collects the analytic input to the enumeration.
@@ -31,12 +29,15 @@ for every even polynomial \(P\). We give the proofs in full because
 Sections~\ref{sec:systems} and~\ref{sec:counting} use the Laurent
 recurrence and the energy dependence in explicit form.
 
-\begin{theorem}[Completeness in the covered operator classes]
+\begin{theorem}[Classification]
 \label{thm:complete}
-Assume either that \(p\) is odd or that \(P\) is an even polynomial.
+Assume either that \(p\) is odd or that \(P\) is an even polynomial;
+that is, the evolution equation has even order or is purely
+dispersive.
 Every nonconstant meromorphic solution of \eqref{eq:main} belongs to
 \(\Wclass\). Every pole has order \(p\), and the pole set is one coset
-of the full period group. Consequently there is one pole in the
+of the full period group: the solution has one pole per period.
+Consequently there is one pole in the
 rational case, one pole modulo the primitive period in the simply
 periodic case, and one pole on the full elliptic period torus.
 
@@ -48,7 +49,7 @@ fixing the conserved energy. The only entire solutions are
 
 An even polynomial is one in which every odd power of \(\rho\) has
 coefficient zero, so that \(P(D)\) contains only even derivatives.
-The hypothesis does not cover an arbitrary operator of even degree,
+The hypothesis does not cover the mixed equations of odd order,
 and it cannot: Section~\ref{sec:open} gives a mixed second-order
 operator with a meromorphic solution outside \(\Wclass\).
 
@@ -95,14 +96,6 @@ is negative with absolute value less than \(R_p\).
 For \(p\le n\le2p-1\) it is zero, and for \(n\ge2p\) it is positive.
 Hence \(I_p(n)\ne0\) for every positive integer \(n\), and there is
 exactly one formal Laurent expansion at the marked pole.
-
-To compare directly with \citet{YuanLiQi2014}, put \(w=-v/2\).
-Then \(w^{(p)}+\sum_{j<p}a_jw^{(j)}=w^2\).
-Their pole order is \(p\), their number of principal parts is one,
-and each lower linear monomial has weighted pole order
-\(p+j<2p\). Their degree and dominant-term hypotheses therefore hold.
-We nevertheless apply Eremenko's theorem directly, since the same
-theorem will be applied to an energy level in the even case.
 
 Theorem~2 of \citet{Eremenko2006} states that an autonomous polynomial
 differential equation with finitely many possible formal pole
@@ -157,7 +150,12 @@ satisfies
  D\mathcal H_P=v'E_P(v).
 \end{equation}
 In particular \(\mathcal H_P\), the energy, is constant on each
-solution.
+solution. It is the energy in the usual sense: an even operator
+\(P(D)\) is formally self-adjoint, \eqref{eq:main} is then the
+Euler--Lagrange equation of an autonomous Lagrangian, and
+\(\mathcal H_P\) is the conserved quantity that belongs to translation
+in \(z\). The purely dispersive equations are also exactly those for
+which \eqref{eq:main} is invariant under \(z\mapsto-z\).
 The case with no intermediate derivatives is the first integral
 used by \citet{EremenkoLiaoNg2009}.
 The familiar Kawahara first integral is the case \(m=2\)
@@ -243,6 +241,37 @@ An entire elliptic function is constant by compactness.
 The constants solve \(a_0v+v^2/2=0\), which gives \(v=0\) and
 \(v=-2a_0\).
 This completes the proof of Theorem~\ref{thm:complete}.
+
+The same uniqueness shows that, in the two pure subfamilies of
+Section~\ref{sec:setting}, every wave inherits the reflection symmetry
+of its equation.
+
+\begin{corollary}[Waves are symmetric about their poles]
+\label{cor:symmetric-waves}
+Let \(v\) be a nonconstant meromorphic solution of \eqref{eq:main} and
+let \(z_0\) be one of its poles.
+\begin{enumerate}
+\item[\textup{(i)}] If \(P\) is even, then
+\(v(z_0+\zeta)=v(z_0-\zeta)\).
+\item[\textup{(ii)}] If \(p\) is odd and \(P-P(0)\) is odd, then
+\(v(z_0+\zeta)+P(0)=-\bigl(v(z_0-\zeta)+P(0)\bigr)\).
+\end{enumerate}
+Consequently a solution that is rational in an exponential is a pulse
+in case~\textup{(i)}. In case~\textup{(ii)} its two limits add up to
+\(-2P(0)\), so it is a front unless \(P(0)=0\).
+\end{corollary}
+
+\begin{proof}
+In case~(i) the function \(v(z_0-\zeta)\) solves the same equation,
+has a pole at \(\zeta=0\), and has the same energy as \(v\), because
+every term of \eqref{eq:energyterms} and \eqref{eq:energy} contains an
+even total number of derivatives. Fixed-energy uniqueness gives~(i).
+In case~(ii) the function \(-v(z_0-\zeta)-2P(0)\) solves the same
+equation, by Section~\ref{sec:setting}, and has a pole at
+\(\zeta=0\). For odd \(p\) the Laurent expansion at a pole is unique,
+which gives~(ii). The statements about the limits follow by letting
+\(\zeta\) tend to the two ends.
+\end{proof}
 
 The finite systems of the next section are derived from the one-pole
 structure alone. The analytic facts of this section are used only to

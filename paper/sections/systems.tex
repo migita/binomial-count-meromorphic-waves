@@ -2,12 +2,12 @@
 
 Theorem~\ref{thm:complete} says that, in the covered cases, a
 nonconstant meromorphic solution is one of three kinds and has one
-pole modulo its periods. Each kind is a finite-dimensional family of
+pole per period. Each kind is a finite-dimensional family of
 functions: a polynomial in \(1/z\), a polynomial in a fixed simply
 periodic function with one pole, or a constant plus a linear
-combination of \(\wp\) and its derivatives. Substituting the general member of each family
-into \eqref{eq:main} therefore gives finitely many polynomial
-equations in its coefficients. This section writes down the three
+combination of \(\wp\) and its derivatives. Substituting the general
+member of each family into \eqref{eq:main} therefore gives finitely
+many polynomial equations in its coefficients. This section writes down the three
 systems, fixes their normalizations, and proves that they are exactly
 equivalent to the one-pole solutions (Theorem~\ref{thm:systems}).
 They are instances of the principal-part construction of
@@ -150,82 +150,14 @@ Weierstrass realization, and the normal form \(F(X)+YG(X)\) is unique.
 The exhaustion statement is Theorem~\ref{thm:complete}.
 \end{proof}
 
-\subsection{Eliminating the profile coefficients}
+\subsection{Fixed operators}
 
 The systems above treat the operator and the profile coefficients as
-unknowns together, which is the form the enumeration in
-Section~\ref{sec:counting} requires. For a fixed operator they can be
-reduced further, because the Laurent recurrence already determines
-the principal part of any solution. Compute
-\[
- r_k=c_{p-k}\quad(1\le k\le p),\qquad s=c_p
-\]
-from \eqref{eq:recurrence}.
-These coefficients occur before the even-order resonance and are
-determined by \(P\) at either parity.
-In the simply periodic algebra define
-\[
- S_k(T;q)=\frac{(-1)^{k-1}}{(k-1)!}
- \left[\left(\frac q4-T^2\right)\partial_T\right]^{k-1}T.
-\]
-It has principal part \(z^{-k}\).
-Its regular Laurent constant is
-\[
- d_k(q)=
- \begin{cases}
- 0,&k\text{ odd},\\
- -B_kq^{k/2}/k!,&k\text{ even},
- \end{cases}
-\]
-where \(B_k\) denotes a Bernoulli number.
-Thus the unique candidate with the required principal part and
-constant is
-\begin{equation}\label{eq:genuszero-candidate}
- V_0(T;P,q)=s+\sum_{k=1}^{p}r_k\bigl(S_k(T;q)-d_k(q)\bigr).
-\end{equation}
-Substituting it into \eqref{eq:main} leaves polynomial equations in
-the single unknown \(q\).
-
-For the elliptic candidate, first require \(r_1=0\), since an
-elliptic function with one pole has no residue there, and put
-\begin{equation}\label{eq:elliptic-candidate}
- \widetilde V_E=
- s+\sum_{k=2}^{p}r_k
- \left(\frac{(-1)^{k-2}}{(k-1)!}\mathscr D^{\,k-2}X
-       -e_k(g_2,g_3)\right),
-\end{equation}
-where \(e_k\) is the regular Laurent constant of the corresponding
-derivative of \(\wp\).
-It is a polynomial in \(g_2,g_3\), computed from
-\eqref{eq:weierstrass}.
-The remaining equations involve only \(g_2,g_3\), with
-\(\Delta\ne0\).
-This is the coefficient-comparison construction used in
-\citet{DeminaKudryashov2011,DeminaKudryashov2014}.
-
-For even \(P\) the equation \(E_P(v)=0\) does not see the energy: a
-candidate may solve it on any energy level. To classify a fixed
-level, compute \(h\) from \eqref{eq:energyh} for the prescribed
-energy and append
-\begin{equation}\label{eq:selecth}
- [z^{2p}]V_0(T_q;P,q)=h
- \quad\text{or}\quad
- [z^{2p}]\widetilde V_E(\wp,\wp';P,g_2,g_3)=h.
-\end{equation}
-Both are polynomial equations obtained from finite Laurent expansions.
-With this equation included, the reduced systems classify a fixed
-energy level: at fixed \(P\) of odd degree, or fixed \((P,h)\) in the
-even case, there is at most one nonconstant solution with its pole at
-zero.
-
-When all prescribed data are exact algebraic numbers, that is, the
-coefficients of \(P\) and, in the even case, the energy, these are
-finitely many polynomial equations in one or two unknowns.
-Polynomial gcds in the one-variable case and elimination in the
-multivariable case decide whether a solution exists.
-A nonvanishing condition such as \(\Delta\ne0\) is imposed by
-adjoining \(u\Delta-1=0\). Elimination with case distinctions
-describes instead the operators, or the marked data \((P,h)\), that
-admit each kind of solution, as a finite union of systems of
-polynomial equations and nonvanishing conditions
-\citep{CoxLittleOShea2005}.
+unknowns together, which is the form that the count requires. For a
+fixed operator they reduce further. The Laurent recurrence
+\eqref{eq:recurrence} determines the principal part of any solution
+from \(P\), and the remaining unknowns are the rate \(q\) or the
+invariants \(g_2,g_3\). This is the coefficient-comparison construction
+of \citet{DeminaKudryashov2011,DeminaKudryashov2014}; for even \(P\) one
+appends the value of the free coefficient \(h\) prescribed by the
+energy through \eqref{eq:energyh}. We do not need this reduction below.

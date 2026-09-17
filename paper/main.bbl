@@ -1,4 +1,4 @@
-\begin{thebibliography}{46}
+\begin{thebibliography}{45}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -277,14 +277,6 @@ Nikolay~A. Kudryashov.
 \newblock \emph{Applied Mathematics and Computation}, 219\penalty0
   (17):\penalty0 9245--9253, 2013.
 \newblock \doi{10.1016/j.amc.2013.03.032}.
-
-\bibitem[Kudryashov and Sinelshchikov(2012)]{KudryashovSinelshchikov2012}
-Nikolay~A. Kudryashov and Dmitry~I. Sinelshchikov.
-\newblock Elliptic solutions for a family of fifth order nonlinear evolution
-  equations.
-\newblock \emph{Applied Mathematics and Computation}, 218\penalty0
-  (12):\penalty0 6991--6997, 2012.
-\newblock \doi{10.1016/j.amc.2011.12.058}.
 
 \bibitem[Kudryashov et~al.(2011)Kudryashov, Sinelshchikov, and
   Demina]{KudryashovSinelshchikovDemina2011}

@@ -1,0 +1,127 @@
+\section{Equations, waves and what is counted}\label{sec:setting}
+
+This section fixes the normalizations and the vocabulary used in the
+rest of the paper. It contains no new result.
+
+\subsection{From the evolution equation to the profile equation}
+
+Let \(u=w(\xi)\), \(\xi=x-ct\), be a travelling wave of
+\begin{equation}\label{eq:pde}
+ u_t+uu_x+\sum_{j=1}^{p}b_j\partial_x^{j+1}u=0,\qquad b_p\ne0 .
+\end{equation}
+One integration gives
+\begin{equation}\label{eq:integrated}
+ \sum_{j=1}^{p}b_jw^{(j)}-cw+\frac12w^2+K=0
+\end{equation}
+with a constant \(K\). Let \(w_\ast\) be a constant solution of
+\eqref{eq:integrated}, that is, a root of \(w^2/2-cw+K\), and let
+\(\lambda\ne0\). The substitution
+\begin{equation}\label{eq:scaling}
+ w(\xi)=w_\ast+b_p\lambda^p\,v(\lambda\xi)
+\end{equation}
+turns \eqref{eq:integrated} into the profile equation \eqref{eq:main}
+with
+\begin{equation}\label{eq:coefficients}
+ a_j=\frac{b_j}{b_p}\lambda^{j-p}\quad(1\le j\le p-1),\qquad
+ a_0=\frac{w_\ast-c}{b_p\lambda^p}.
+\end{equation}
+Thus \(a_1,\ldots,a_{p-1}\) record the equation, up to the scale
+\(\lambda\), and \(a_0\) records the speed of the wave relative to the
+background \(w_\ast\). The scale is free at this stage. It will be
+fixed by the period of the wave.
+
+The constant solutions of \eqref{eq:main} are \(v=0\) and \(v=-2a_0\);
+they are the two roots \(w_\ast\). Choosing the other root replaces the
+pair \((P,v)\) by
+\begin{equation}\label{eq:shift}
+ \bigl(P-2P(0),\ v+2P(0)\bigr),
+\end{equation}
+which again satisfies \eqref{eq:main}, as a direct substitution shows.
+The two pairs describe the same wave of the same evolution equation.
+
+\subsection{Dispersive, dissipative and mixed equations}
+
+In \eqref{eq:pde} a derivative of odd order is a dispersive term, and a
+derivative of even order is a dissipative term: for real coefficients
+the first changes the phase of a Fourier mode and the second its
+amplitude. We use the following names.
+\begin{itemize}
+\item The equation is \emph{purely dispersive} if it contains only
+odd-order derivatives, that is, \(b_j=0\) for odd \(j\). Then \(p\) is
+even, \(P\) is an even polynomial, and the equation is invariant under
+\((x,t)\mapsto(-x,-t)\). Examples are the KdV equation (\(p=2\)), the
+Kawahara equation (\(p=4\)) and the seventh-order KdV equation
+(\(p=6\)).
+\item The equation is \emph{purely dissipative} if its linear part
+contains only even-order derivatives, that is, \(b_j=0\) for even
+\(j\). Then \(p\) is odd, \(P-P(0)\) is an odd polynomial, and the
+equation is invariant under \((x,u)\mapsto(-x,-u)\). Examples are the
+Kuramoto--Sivashinsky equation without dispersion (\(p=3\)) and the
+Nikolaevskiy equation (\(p=5\)); see \citet{SimbawaMatthewsCox2010}.
+\item All other equations are \emph{mixed}. Examples are the
+KdV--Burgers equation and the Kuramoto--Sivashinsky equation with
+dispersion.
+\end{itemize}
+The two pure subfamilies are described by one condition. We call a
+monic polynomial \(P\) of degree \(p\) \emph{reflection-symmetric} if
+\(P-P(0)\) has the parity of \(\rho^p\):
+\begin{equation}\label{eq:symmetric-class}
+ P(-\rho)=P(\rho)\quad(p\text{ even}),\qquad
+ P(\rho)+P(-\rho)=2P(0)\quad(p\text{ odd}).
+\end{equation}
+In the travelling-wave variable both symmetries are the reflection
+\(z\mapsto-z\). If \(P\) is even and \(v(z)\) solves \eqref{eq:main},
+so does \(v(-z)\). If \(p\) is odd and \(P-P(0)\) is odd, so does
+\(-v(-z)-2P(0)\); this is the reflection combined with the change of
+background \eqref{eq:shift}.
+
+\subsection{Waves, poles, pulses and fronts}
+
+Throughout, a meromorphic function is single-valued and meromorphic on
+the whole complex plane. Three kinds of meromorphic travelling waves
+occur in this paper: rational in \(z\), rational in an exponential
+\(e^{\kappa z}\), and elliptic. For the equations covered by
+Theorem~\ref{thm:complete} there are no others; for the remaining
+equations these are the waves that we count. The period group of such a
+wave is its \emph{full}
+group of periods: trivial in the first case, infinite cyclic in the
+second, a lattice in the third. We say that the wave has \emph{one pole
+per period} if its poles form a single coset of this group. There is
+then one pole in the rational case, one pole modulo the primitive
+period in the second case, and one pole in each period parallelogram in
+the elliptic case.
+
+A wave that is rational in \(e^{\kappa z}\) and has one pole per period
+has finite limits as \(e^{\kappa z}\to0\) and \(\infty\)
+(Section~\ref{sec:systems}). Both limits are constant solutions. The
+wave is a \emph{pulse} if the two limits coincide and a \emph{front}
+otherwise. For a real rate and a real profile these are the solitary
+waves and the kinks of the evolution equation, and they are smooth and
+bounded on the real axis when the pole lies off it. In
+\eqref{eq:scaling} we take \(w_\ast\) to be the limit as
+\(e^{\kappa z}\to0\). Then \(v\to0\) at that end, and the other limit
+is \(0\) for a pulse and \(-2a_0\) for a front.
+
+\subsection{What is counted}
+
+We count pairs \((P,v)\): a monic polynomial \(P\) of degree \(p\) and
+a solution \(v\) of \eqref{eq:main} of a given kind, with its periods
+fixed.
+\begin{itemize}
+\item A \emph{rational-exponential pair} has \(v\) rational in
+\(e^z\), with one pole modulo \(2\pi i\ZZ\), placed at \(i\pi\), and
+\(v\to0\) as \(e^z\to0\).
+\item An \emph{elliptic pair} on a lattice \(\Lambda\) has \(v\)
+elliptic with period lattice \(\Lambda\), including its scale, and its
+only pole modulo \(\Lambda\) at zero.
+\end{itemize}
+Fixing the period or the period lattice removes the scale \(\lambda\)
+in \eqref{eq:scaling}, and placing the pole removes translations.
+The operator \(P\) varies over \emph{all} monic polynomials of degree
+\(p\), and all counts are over \(\CC\). A wave and its mirror image are
+counted as two pairs when they are distinct; the pairs that coincide
+with their mirror image are the subject of
+Section~\ref{sec:reflection}. In the elliptic case both pairs
+\eqref{eq:shift} are counted; in the rational-exponential case the
+condition \(v\to0\) selects one of them. Section~\ref{sec:fixed}
+translates the counts back to a single evolution equation.

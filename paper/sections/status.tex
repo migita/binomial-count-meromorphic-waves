@@ -1,0 +1,81 @@
+\section{Which orders are settled}\label{sec:further}
+
+The formulas count pairs with multiplicity, and in that form they
+follow from the rigidity condition \((\mathrm R_{p-1})\). When the
+rational-exponential matching scheme \(\Xp\) is reduced, its pairs are
+distinct, and the elliptic pairs are distinct on a generic lattice. On
+a special lattice several elliptic pairs can merge, while the count
+with multiplicity stays the same; Section~\ref{sec:ks} shows this at
+order three. Table~\ref{tab:status} records what is known.
+
+\begin{table}[htbp]
+\centering
+\caption{Status of the counts \(N_p\), \(M_p\), \(F_p\) and \(2F_p\).
+For elliptic pairs, distinctness is asserted only on a generic
+lattice.}
+\label{tab:status}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Orders&Counts with multiplicity&Pairs distinct\\
+\midrule
+\(2p-1\) prime&proved&proved\\
+\(2p-1\) a prime power&proved&open, except \(p=5\)\\
+\(2\le p\le73\)&exact certificate&open in general\\
+all \(p\)&conjectured&conjectured\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The prime-index argument excluded solutions at infinity by reducing
+the continuous convolution modulo \(\ell\). The same argument proves
+\eqref{eq:length} whenever \(2p-1=\ell^e\) is an odd prime power.
+For \(\deg A=(\ell^e-1)/2\), the normalized continuous convolution
+satisfies
+\[
+ \ell^eH_A(\rho)\equiv u\rho^{\ell^e}\pmod\ell,\qquad u\ne0.
+\]
+Every bilinear coefficient other than the leading one has
+denominator valuation at most \(e-1\), whereas the leading
+coefficient has valuation \(-e\).
+This follows either from the factorial formula or from
+\[
+ \frac{i!j!}{(i+j+1)!}
+   =\sum_{r=0}^{j}\frac{(-1)^r\binom jr}{i+r+1}.
+\]
+This argument controls only the leading system. It gives the length,
+but no simple-root lifting statement for the discrete matching system.
+
+More generally, the exact arithmetic certificates supplied with the
+paper establish \((\mathrm R_d)\) for every \(d\le72\), hence
+\begin{equation}\label{eq:coverage}
+ \len\Xp=\binom{2p-1}{p-1},\qquad
+ \len\mathcal E_p(g_2,g_3)=2\binom{2p-2}{p-2}
+ \qquad(2\le p\le73).
+\end{equation}
+In the same range, Theorem~\ref{thm:symmetric} and
+Corollary~\ref{cor:elliptic-symmetric} give
+\(\len\Xp^{\mathrm{sym}}=F_p\) and, for even \(p\),
+\(\len\mathcal E_p^{\mathrm{sym}}(g_2,g_3)=2F_p\).
+Together with the ancillary proof, the certificates also cover infinite
+families of higher orders.
+They cover all complex coefficient vectors in these
+degrees. The ancillary proof and the full certificate are described
+in Appendix~\ref{app:verification}.
+
+Equation \eqref{eq:coverage} is a statement about lengths only.
+At composite indices we establish simplicity here for \(p=5\) only,
+where \(2p-1=9\) is the first composite index: a separate exact
+calculation proves that all 126 rational-exponential points are
+simple; the input and its exact output are supplied in the ancillary
+material. Theorem~\ref{thm:elliptic-count} then gives 112 distinct
+elliptic pairs on a generic fixed lattice at that order.
+Inside the two pure subfamilies a direct exact computation is much
+smaller: it shows that \(\Xp^{\mathrm{sym}}\) is reduced for every
+\(p\le8\), which includes the composite indices \(9\) and \(15\).
+
+Order seven illustrates the prime-index case, since \(2p-1=13\).
+Among all monic operators of order seven there are exactly 1716
+rational-exponential pairs, all simple; twenty of them belong to purely
+dissipative equations, and these are fronts. On every fixed nonsingular
+lattice the elliptic matching scheme has length 1584, and on a generic
+lattice its 1584 points are distinct and simple.
