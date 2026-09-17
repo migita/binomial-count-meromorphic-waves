@@ -38,14 +38,15 @@ monic operator varies over its full coefficient family:
 
 Neither count requires the hypotheses of the classification.
 Continuous-convolution rigidity gives both counts with multiplicities through
-p=73. When 2p-1 is prime, all rational-exponential pairs are simple, and the
+p=73 by the certificate in this package, and through p=573 by the finite-field
+computations in the repository directory certificates/rigidity_572/. When 2p-1 is prime, all rational-exponential pairs are simple, and the
 elliptic pairs are simple on a nonempty open set of lattices. Exact computations
 give simplicity at the composite indices p=5 (126 points, Groebner basis over Q,
 in this package), p=8 (6435 points, finite field and Hensel lifting) and p=11
 (352716 points, archived 19-adic certificate); the last two are in the
 repository directory certificates/. With the prime-index theorem, all pairs are
 distinct for every 2 <= p <= 12, and the first open case is p=13. General
-simplicity is not asserted throughout the degree-73 range.
+simplicity is not asserted throughout this range.
 
 **The two pure subfamilies.** The reflection z -> -z acts on the pairs. Its
 fixed points are the pairs of the purely dispersive equations (p even) and of

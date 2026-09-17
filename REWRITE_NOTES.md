@@ -72,6 +72,14 @@ records replayed; NOT rerun in full). The paper spends one sentence on p = 11, i
 subfamilies: finite-field certificates for p <= 14 (`paper/anc/symmetry_checks/modular/`); purely dissipative equations have no
 elliptic pairs on a generic lattice for p = 3, 5, 7 (`elliptic_dissipative.py`).
 
+Rigidity range (17 Sep, evening): the reviewing session validated finite-field records for (R_d), d <= 572
+(`certificates/rigidity_572/`: 572-row degree table, 1836 stratum records, replay driver; no computed bases stored). The
+paper spends ONE sentence on it, in Section 7 after the paragraph on the integer certificates. The numbers in the abstract,
+introduction, Table 2, the restatement after Theorem 5.8 and Open questions now read p <= 573 for counts WITH MULTIPLICITY;
+the abstract says "exact computations" instead of "exact computer certificates". Equation (7.1) and Appendix A keep d <= 72,
+the range of the replayable integer certificates in `paper/anc/rigidity/`. Ranges of distinctness (p <= 12; pure
+subfamilies p <= 14) are unchanged. The introduction's list of composite orders with all pairs distinct now reads p = 5, 8, 11.
+
 The introduction now has Table 1, the named equations with p <= 6 and their counts (author's suggestion); four references were
 added for it (Benney 1966, Lin 1974, Kawahara–Toh 1988, Nikolaevskii 1989; bibliographic data checked against Crossref, not
 against the papers). The by-order table of the examples section is gone.

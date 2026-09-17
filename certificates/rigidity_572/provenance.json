@@ -1,0 +1,45 @@
+{
+  "source": "Independent second-referee computations, 17 September 2026",
+  "source_directory": "fable_rigidity_20260917/scripts_r3_theoremA_second_referee",
+  "sources": {
+    "r3gen.py": {
+      "sha256": "212bd9931e25120624f4c829a6d5ed699897a76cfd1b184edd6dbcacb934933b",
+      "bytes": 6362
+    },
+    "r3check.py": {
+      "sha256": "af4d6a60087643d56ddd951858ff3d3da5aa5d96212d93070e22187ab50493bb",
+      "bytes": 6583
+    },
+    "r3cover.py": {
+      "sha256": "9ac3e2cc8e110b27d2c2cb1a7a4d4861d21675578a15ef599295aee763a937d2",
+      "bytes": 5974
+    },
+    "results/strata.jsonl": {
+      "sha256": "f9f7fda9c42cfbb974d13a3802b2fa950f94a9d84dc640ae40f4a0bd2171472c",
+      "bytes": 1745296
+    },
+    "results/cover_1_572_g16_e1.txt": {
+      "sha256": "b2b58637753d25d0562294f5a074e95f65ae135fec76fc7fffd0f5aba24f5f7f",
+      "bytes": 32771
+    },
+    "results/cover_452_452_g18.txt": {
+      "sha256": "b19ea28a0fd67982267bf8ddc18d9c2e9502a2a8eee94a101dccc423e503fd12",
+      "bytes": 58
+    }
+  },
+  "selection": "Use the e=1 covering table; d=4 uses the prime-power-index theorem (3^2); d=452 uses (887,1,18). No chain criterion is used.",
+  "degrees": 572,
+  "positive_gap_pairs": 383,
+  "strata": 1836,
+  "maximum_gap": 18,
+  "historical_engine": "msolve, -g 1 -l 2 -t 1 (exact sparse linear algebra, leading ideal only)",
+  "historical_scope": "All selected strata have a pure power of every variable in the computed leading ideal and the full weighted Hilbert function equal to the Gaussian binomial.",
+  "fresh_full_groebner_replay": false,
+  "referee_reports": [
+    "fable_rigidity_20260917/r3_theoremA_second_referee.md, Section 4",
+    "fable_rigidity_20260917/verify_fresh_number_theorist.md, Claim 9",
+    "fable_rigidity_20260917/verify_arithmetic_global.md, Section 12"
+  ],
+  "omitted": "Computed Groebner bases, solver work directories, unrelated research files, and solver binaries.",
+  "fresh_replay_engine": "msolve 0.10.1"
+}

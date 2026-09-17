@@ -1,4 +1,4 @@
-# Certificates of distinctness at composite indices
+# Computational certificates
 
 The paper proves that all normalized rational-exponential pairs are distinct (the matching scheme `X_p` is reduced)
 whenever `2p-1` is prime. At the composite indices below `2p-1 = 25` it relies on exact computations:
@@ -56,3 +56,12 @@ The producer scripts inside the archive hard-code working paths; see the README 
 
 The finite-field certificates for the purely dispersive and purely dissipative subfamilies (`p <= 14`) are small and are part of
 the arXiv package: `paper/anc/symmetry_checks/modular/`.
+
+## `rigidity_572/` — counts with multiplicity through order 573
+
+[rigidity_572/README.md](rigidity_572/README.md) documents the 572-row degree table and the 1,836 selected finite-field
+stratum records establishing continuous-convolution rigidity through degree 572, hence the counting formulas with
+multiplicity for every `2 <= p <= 573`; this extends the length results, while distinctness has the separate scope above.
+
+The small package contains exact generators, a coverage/record validator, and an msolve replay driver that removes its
+temporary solver output; computed Gröbner bases and research scratch directories are not stored.

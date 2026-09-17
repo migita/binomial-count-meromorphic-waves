@@ -14,9 +14,11 @@ formalisation of two of its theorems.
   rigidity certificate through degree 72 with its replay script, and the
   exact checks for the purely dispersive and purely dissipative subfamilies.
   `MANIFEST.sha256` lists the package files; `main.pdf` is the compiled paper.
-- `certificates/`: the exact computations that make all pairs distinct at the composite
-  indices 15 (`p = 8`, finite field and Hensel lifting) and 21 (`p = 11`, archived 19-adic
-  certificate with its validation record); see `certificates/README.md`.
+- `certificates/`: compact finite-field records extending rigidity through degree 572
+  (counts with multiplicity through `p = 573`), and the computations that make all pairs
+  distinct at the composite indices 15 (`p = 8`, finite field and Hensel lifting) and 21
+  (`p = 11`, archived 19-adic certificate with its validation record);
+  see `certificates/README.md`.
 - `lean/`: a Lean 4 project pinned to Mathlib v4.33.1. It proves
 
   - continuous-convolution rigidity `(R_d)` when `2d+1` is prime

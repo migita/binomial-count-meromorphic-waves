@@ -1,0 +1,45 @@
+{
+  "coverage": {
+    "degrees": 572,
+    "degree_zero": "trivial",
+    "maximum_degree": 572,
+    "maximum_ode_order": 573,
+    "positive_gap_pairs": 383,
+    "strata": 1836,
+    "maximum_gap": 18,
+    "gap_histogram": {
+      "0": 189,
+      "2": 147,
+      "4": 102,
+      "6": 54,
+      "8": 39,
+      "10": 17,
+      "12": 12,
+      "14": 5,
+      "16": 6,
+      "18": 1
+    },
+    "actual_degree_weights_checked": 16983,
+    "coverage_and_record_checks_passed": true,
+    "fresh_groebner_replay": false,
+    "claim": "Continuous-convolution rigidity through degree 572; counting formulas WITH MULTIPLICITY through ODE order 573."
+  },
+  "independent_kernel_check": {
+    "independent_method": "SymPy polynomial division over QQ versus the sparse remainder generator",
+    "strata_checked": 90,
+    "maximum_gap": 18,
+    "all_passed": true
+  },
+  "fresh_solver_replays": {
+    "engine": "msolve 0.10.1",
+    "exact_linear_algebra": 2,
+    "positive_strata": 10,
+    "negative_controls": 1,
+    "all_expected_outcomes_obtained": true,
+    "largest_fresh_quotient_dimension": 48620,
+    "maximum_gap": 18,
+    "source": "fresh_replays.jsonl"
+  },
+  "full_fresh_groebner_replay": false,
+  "interpretation": "All coverage and archived-result checks passed; every gap-system family was independently reconstructed over QQ; the selected fresh solver replays passed. The complete historical solver table is preserved, not claimed to have been rerun in this packaging step."
+}
