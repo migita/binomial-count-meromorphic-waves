@@ -272,21 +272,27 @@ a generic fixed lattice. A full family has the counts \(N_p\) and
 \(M_p\), and it contains the pure subfamily of the same \(p\): the
 three pairs of KdV--Burgers include the KdV soliton. A pure subfamily
 has \(F_p\) rational-exponential pairs, and \(2F_p\) elliptic pairs or
-none. All numbers in this table are counts of distinct pairs.}
+none. All numbers in this table are counts of distinct pairs. The last
+column says whether the classification applies to the whole family.
+If it does, the pairs counted here are all its nonconstant meromorphic
+travelling waves, apart from a rational wave when all lower
+coefficients vanish. For KdV--Burgers other meromorphic waves exist
+(Section~\ref{sec:open}); for Benney--Lin the question is open.}
 \label{tab:named}
-\begin{tabular}{@{}llclrr@{}}
+\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{@{}llclrrl@{}}
 \toprule
-Equation&Linear terms&\(p\)&Family&Rat.-exp.&Elliptic\\
+Equation&Linear terms&\(p\)&Family&Rat.-exp.&Ellipt.&All waves\\
 \midrule
-KdV&\(u_{3x}\)&2&purely dispersive&1&2\\
-KdV--Burgers&\(u_{2x},u_{3x}\)&2&full&3&2\\
-Kuramoto--Sivashinsky (KS)&\(u_{2x},u_{4x}\)&3&purely dissipative&2&0\\
-KS with dispersion&\(u_{2x},u_{3x},u_{4x}\)&3&full&10&8\\
-Kawahara&\(u_{3x},u_{5x}\)&4&purely dispersive&3&6\\
-Benney--Lin&\(u_{2x},\ldots,u_{5x}\)&4&full&35&30\\
-Nikolaevskiy&\(u_{2x},u_{4x},u_{6x}\)&5&purely dissipative&6&0\\
-Nikolaevskiy with dispersion&\(u_{2x},\ldots,u_{6x}\)&5&full&126&112\\
-seventh-order KdV&\(u_{3x},u_{5x},u_{7x}\)&6&purely dispersive&10&20\\
+KdV&\(u_{3x}\)&2&purely dispersive&1&2&yes\\
+KdV--Burgers&\(u_{2x},u_{3x}\)&2&full&3&2&no\\
+Kuramoto--Sivashinsky (KS)&\(u_{2x},u_{4x}\)&3&purely dissipative&2&0&yes\\
+KS with dispersion&\(u_{2x},u_{3x},u_{4x}\)&3&full&10&8&yes\\
+Kawahara&\(u_{3x},u_{5x}\)&4&purely dispersive&3&6&yes\\
+Benney--Lin&\(u_{2x},\ldots,u_{5x}\)&4&full&35&30&open\\
+Nikolaevskiy&\(u_{2x},u_{4x},u_{6x}\)&5&purely dissipative&6&0&yes\\
+Nikolaevskiy with dispersion&\(u_{2x},\ldots,u_{6x}\)&5&full&126&112&yes\\
+seventh-order KdV&\(u_{3x},u_{5x},u_{7x}\)&6&purely dispersive&10&20&yes\\
 \bottomrule
 \end{tabular}
 \end{table}
