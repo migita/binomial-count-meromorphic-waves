@@ -40,12 +40,15 @@ of elliptic pairs. The note also proves rigidity when \(2p-1\) is a
 prime power and records the computations that establish it for
 \(p\le573\), and distinctness of all pairs for \(p\le12\). The text is
 that of the first complete version of the paper, where these results
-were part of the main line.
+were part of the main line. The last section keeps two algebraic
+arguments of an earlier version which the paper now presents in other
+terms: the general lemma on reduction modulo a prime, and a proof by
+flatness that the number of elliptic pairs is conserved.
 \end{abstract}
 
 \section{Notation}
 
-References of the form ``Theorem~P\,5.4'' are to the paper. We use its
+References of the form ``Theorem~P\,3.4'' are to the paper. We use its
 notation throughout. The profile equation is
 \(P(D)v+v^2/2=0\) with \(P\) monic of degree \(p\)
 (equation \eqref{P-eq:main} of the paper). A rational-exponential pair
@@ -75,6 +78,7 @@ Proposition~P\,\ref{P-prop:reflection}. For a fixed lattice,
 Section~P\,\ref{P-sec:elliptic-counting}.
 
 \section{Weighted degree and the count with multiplicities}
+\label{sec:weighted}
 
 B\'ezout's theorem bounds the sum of the multiplicities of the
 isolated solutions of \(d\) polynomial equations in \(d\) unknowns
@@ -255,13 +259,15 @@ Table~P\,\ref{P-tab:named} lists the equations to which they belong.
 Thus \(\Xp^{\mathrm{sym}}\) consists of the rational-exponential pairs
 of the purely dispersive equations when \(p\) is even, and of the
 purely dissipative equations when \(p\) is odd.
-\item[\textup{(ii)}] If \((\mathrm R_{p-1})\) holds, then
+\item[\textup{(ii)}] For every \(p\) the isolated points of
+\(\Xp^{\mathrm{sym}}\), counted with multiplicity, number at most
+\(F_p\). If \((\mathrm R_{p-1})\) holds, then
 \(\len\Xp^{\mathrm{sym}}=F_p\).
 \item[\textup{(iii)}] If, in addition, \(\Xp\) is reduced, then
 \(\Xp^{\mathrm{sym}}\) consists of \(F_p\) distinct pairs, each a simple
 solution of the matching equations of its subfamily. If \(2p-1\) is
 prime, they are the points whose label in (P\,\ref{P-eq:prime-labels})
-satisfies \(S=-S\).
+satisfies \(L=-L\).
 \item[\textup{(iv)}] For even \(p\), every pair of
 \(\Xp^{\mathrm{sym}}\) is a pulse. For odd \(p\), every pair of
 \(\Xp^{\mathrm{sym}}\) is a front if \(\Xp\) is reduced, and every pair
@@ -272,7 +278,8 @@ with real coefficients is a front without any hypothesis.
 In plain terms, the pairs that coincide with their mirror image are
 exactly the pairs of the purely dispersive equations, for even \(p\),
 or of the purely dissipative equations, for odd \(p\). Counted with
-multiplicity there are \(F_p\) of them whenever rigidity holds, in
+multiplicity, the isolated ones number at most \(F_p\) at every order,
+and there are exactly \(F_p\) of them whenever rigidity holds, in
 particular for \(p\le573\). They are \(F_p\) distinct pairs whenever all
 \(N_p\) pairs for that \(p\) are distinct, in particular when \(2p-1\)
 is prime. The rational-exponential waves of a purely dispersive
@@ -324,14 +331,19 @@ forms is therefore a polynomial \(A\) with \(A\mid H_A\), and
 Theorem~\ref{thm:length}, with \(\alpha_{2i}=y_i^{2i}\), gives
 \[
  \len\Xp^{\mathrm{sym}}
- =\prod_{i=1}^{m}\frac{2(d-i+1)}{2i}=\binom dm .
+ =\prod_{i=1}^{m}\frac{2(d-i+1)}{2i}=\binom dm ,
 \]
+and \(\binom dm=F_p\). Without \((\mathrm R_d)\), the same substitution
+and B\'ezout's inequality for isolated solutions, used as in the first
+part of the proof of Theorem~\ref{thm:length}, bound the sum of the
+multiplicities of the isolated points of \(\Xp^{\mathrm{sym}}\) by the
+same quotient. This holds for every \(p\).
 
 \emph{(iii).} A closed subscheme of a finite reduced scheme is reduced,
 as in the proof of Proposition~\ref{cor:endpoints}, and a reduced point
 of a square system is a simple solution of it. The map
 (P\,\ref{P-eq:iota}) negates the roots of \(\overline A\), so it acts on the
-labels by \(S\mapsto-S\), and the labelling is a bijection.
+labels by \(L\mapsto-L\), and the labelling is a bijection.
 
 \emph{(iv).} For even \(p\) the polynomial \(A\) is odd, so \(A(0)=0\).
 Let \(p\) be odd, and suppose that a point of \(\Xp^{\mathrm{sym}}\) is
@@ -612,7 +624,7 @@ Both statements, every \(p\)&conjectured\\
 The prime-index argument excluded solutions at infinity by reducing
 the continuous convolution modulo \(\ell\). The same argument proves
 \eqref{eq:length} whenever \(2p-1=\ell^e\) is an odd prime power
-(Appendix~P\,\ref{P-app:verification}). It gives the count with
+(Section~\ref{sec:prime-powers}). It gives the count with
 multiplicity, but it does not show that the pairs are distinct.
 
 More generally, the exact arithmetic certificates supplied with the
@@ -648,25 +660,8 @@ the computation is much smaller, and it shows that the \(F_p\) pairs
 are distinct for every \(p\le14\), which includes the composite indices
 \(9\), \(15\), \(21\), \(25\) and \(27\).
 
-\section{Reduction to characteristic \(\ell\), and prime powers}
+\section{Rigidity at a prime-power index}\label{sec:prime-powers}
 
-The lemma transfers the absence of solutions at infinity from
-characteristic \(\ell\) to characteristic zero.
-Let homogeneous polynomials \(F_1,\ldots,F_m\), with coefficients
-in \(\ZZ_{(\ell)}\), have no nonzero common zero over
-\(\overline{\FF}_\ell\).
-Then they have no nonzero common zero over \(\CC\).
-Indeed a complex projective zero yields a zero over
-\(\overline{\QQ}\) after fixing one nonzero coordinate.
-Choose a place above \(\ell\), extend it if necessary, and scale
-all coordinates by the inverse of a coordinate of smallest valuation.
-The coordinates are integral and one is a unit.
-Their reductions give a nonzero common zero over
-\(\overline{\FF}_\ell\), contradicting the hypothesis.
-The argument needs the algebraic closure of the residue field;
-a search only over \(\FF_\ell\) would not suffice.
-
-\paragraph{Prime powers.}
 Let \(2p-1=\ell^e\) be an odd prime power. For
 \(\deg A=(\ell^e-1)/2\), the normalized continuous convolution
 satisfies
@@ -681,16 +676,159 @@ This follows either from the factorial formula or from
  \frac{i!j!}{(i+j+1)!}
    =\sum_{r=0}^{j}\frac{(-1)^r\binom jr}{i+r+1}.
 \]
-The lemma above then gives \((\mathrm R_{p-1})\), as in Step~3 of the
-proof of Theorem~P\,\ref{P-thm:prime}. This argument controls only the
-leading system, so it gives no simple-root lifting statement for the
-discrete matching system.
+Lemma~\ref{lem:reduction}(a) below, applied to the coefficients of
+\(\remA(\ell^eH_A)\), then gives \((\mathrm R_{p-1})\), in the same way
+as in Step~3 of the proof of Theorem~P\,\ref{P-thm:prime}. This
+argument controls only the leading system, so it gives no simple-root
+lifting statement for the discrete matching system.
 
 
 The computations referred to above are described in
 Appendix~P\,\ref{P-app:verification} of the paper and in the repository
 \url{https://github.com/migita/binomial-count-meromorphic-waves},
 directories \texttt{certificates/} and \texttt{paper/anc/}.
+
+
+\section{Two algebraic arguments from an earlier version}
+\label{sec:earlier-version}
+
+The paper now proves Step~3 of Theorem~P\,\ref{P-thm:prime} by
+rescaling with a root of \(A\), and the conservation of the number of
+elliptic pairs by a deformation argument
+(Lemma~P\,\ref{P-lem:conservation}). An earlier version used the two
+algebraic arguments of this section instead. The first of them is also
+what Section~\ref{sec:prime-powers} uses.
+
+\subsection{Reduction modulo \texorpdfstring{\(\ell\)}{l}}
+
+Part~(a) of the lemma transfers the absence of solutions at infinity
+from characteristic \(\ell\) to characteristic zero; part~(b) says that
+the solutions themselves can be reduced modulo \(\ell\).
+Let \(\ZZ_{(\ell)}\) be the ring of rational numbers whose denominator
+is prime to \(\ell\). For a polynomial \(G\) in
+\(\alpha_1,\ldots,\alpha_d\), write \(G^{\mathrm{top}}\) for its part of
+highest weight.
+
+\begin{lemma}[Reduction modulo \(\ell\)]\label{lem:reduction}
+Let \(G_1,\ldots,G_m\in\ZZ_{(\ell)}[\alpha_1,\ldots,\alpha_d]\), and
+suppose that the reductions modulo \(\ell\) of
+\(G_1^{\mathrm{top}},\ldots,G_m^{\mathrm{top}}\) have no common zero
+over \(\overline{\FF}_\ell\) other than the origin. Then:
+\begin{enumerate}
+\item[\textup{(a)}] \(G_1^{\mathrm{top}},\ldots,G_m^{\mathrm{top}}\)
+have no common zero over \(\CC\) other than the origin;
+\item[\textup{(b)}] every common zero of \(G_1,\ldots,G_m\) with
+coordinates in an algebraic closure \(K\) of \(\QQ_\ell\) is integral:
+its coordinates lie in the valuation ring of \(K\).
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Let \(v\) be the valuation of \(K\) with \(v(\ell)=1\), let
+\(\mathcal O\) be its valuation ring, and recall that the residue field
+of \(\mathcal O\) is \(\overline{\FF}_\ell\) and that, \(K\) being
+algebraically closed, every rational number is the valuation of some
+element of \(K\).
+
+For (b), let \(\alpha\in K^d\) be a common zero of the \(G_i\), put
+\(t=\min_j v(\alpha_j)/j\), and suppose that \(t<0\). Choose
+\(\lambda\in K\) with \(v(\lambda)=t\), and put
+\(\beta_j=\alpha_j/\lambda^j\). Then every \(\beta_j\) lies in
+\(\mathcal O\), and at least one of them is a unit. Decompose
+\(G_i=\sum_{w\le W_i}G_i^{(w)}\) into its parts of weight \(w\), so that
+\(G_i^{(W_i)}=G_i^{\mathrm{top}}\). A part of weight \(w\) satisfies
+\(G_i^{(w)}(\alpha)=\lambda^wG_i^{(w)}(\beta)\). Dividing the equation
+\(G_i(\alpha)=0\) by \(\lambda^{W_i}\) gives
+\[
+ G_i^{\mathrm{top}}(\beta)
+ =-\sum_{w<W_i}\lambda^{w-W_i}\,G_i^{(w)}(\beta).
+\]
+Each term on the right has positive valuation, because
+\(v(\lambda^{w-W_i})=(w-W_i)t>0\) and \(G_i^{(w)}(\beta)\in\mathcal O\).
+Reducing modulo the maximal ideal of \(\mathcal O\), we find that the
+reduction of \(\beta\), which is not the origin, is a common zero of the
+reduced polynomials \(G_i^{\mathrm{top}}\). This contradicts the
+hypothesis. Hence \(t\ge0\), which is (b).
+
+For (a), suppose that the \(G_i^{\mathrm{top}}\) have a common complex
+zero other than the origin. They are weighted-homogeneous with rational
+coefficients, so after fixing one nonzero coordinate to be \(1\) the
+weak Nullstellensatz gives such a zero \(\alpha\) with coordinates in
+\(\overline{\QQ}\subset K\). Define \(t\), \(\lambda\) and \(\beta\) as
+before, now for either sign of \(t\). Then
+\(G_i^{\mathrm{top}}(\beta)=\lambda^{-W_i}G_i^{\mathrm{top}}(\alpha)=0\),
+and the reduction of \(\beta\) is again a forbidden common zero.
+\end{proof}
+
+The argument needs the algebraic closure of the residue field; a search
+for zeros over \(\FF_\ell\) alone would not suffice.
+
+In that version, Step~3 of the proof of
+Theorem~P\,\ref{P-thm:prime} applied the lemma to \(G_r=\ell R_r\),
+\(0\le r<d\), with \(\ell=2p-1\) prime. By
+Section~\ref{sec:weighted}, \(G_r^{\mathrm{top}}\) is the coefficient
+of \(\rho^r\) in \(\remA(\ell H_A)\), and
+\(\ell H_A(\rho)\equiv(-1)^d\rho^\ell\pmod\ell\); this is the case
+\(e=1\) of the congruence in Section~\ref{sec:prime-powers}. So the
+reduced polynomials \(G_r^{\mathrm{top}}\) vanish together exactly when
+\(\overline A\mid\rho^\ell\), that is, when \(\overline A=\rho^d\),
+which is the origin \(\alpha_1=\cdots=\alpha_d=0\). The hypothesis of
+the lemma holds. Part~(a) of the lemma says that \(\remA H_A=0\) only
+for \(A=\rho^d\), which is \((\mathrm R_d)\). Part~(b) says that every
+solution of the matching equations with coordinates in \(K\) is
+integral.
+
+\subsection{Conservation of number by flatness}
+
+Lemma~P\,\ref{P-lem:conservation} of the paper concerns \(n\) polynomial
+equations in \(n\) unknowns and in parameters \(t\), weighted-homogeneous
+for positive weights of the unknowns and of the parameters, whose
+leading system, the one at \(t=0\), has only the zero solution. Its
+parts (i) and~(ii) say that every system of the family has finitely
+many solutions, which stay bounded while \(t\) stays bounded, and that
+their number, counted with multiplicity, does not depend on \(t\). The
+paper proves this by a deformation argument. What follows is a second,
+algebraic proof. It is Step~4 of the elliptic count in that
+version, and it is written for the family used there: the residual
+equations in the proof of Theorem~\ref{thm:elliptic-count}, to which
+the step numbers below refer, with \(t=(g_2,g_3)\). The general case is
+the same, with \(\CC[t]\) in place of \(\CC[g_2,g_3]\) and the number
+of parameters in place of two.
+
+Let \(E_1,\ldots,E_{p-1}\) be the residual equations of Step~1. They
+are polynomials in the \(p-1\) profile unknowns and in \(g_2,g_3\),
+weighted-homogeneous for the weights of Step~2, and
+\[
+ \mathcal A=\CC[g_2,g_3][u_0,\ldots,u_{p-3},b]/(E_1,\ldots,E_{p-1})
+\]
+is the coordinate ring of the family of all the systems
+\(\mathcal E_p(g_2,g_3)\). By Step~3 the cusp system has the origin as
+its only solution, so \(\mathcal A/(g_2,g_3)\mathcal A\) is a
+finite-dimensional vector space. The graded form of Nakayama's lemma
+then shows that \(\mathcal A\) is a finitely generated module over
+\(\CC[g_2,g_3]\): homogeneous elements whose classes span the cusp ring
+generate it. In particular every fiber is finite, and every unknown
+satisfies a monic equation with coefficients in \(\CC[g_2,g_3]\), so
+the solutions stay bounded while \((g_2,g_3)\) stays bounded. This
+proves~(i) and makes precise the statement that solutions do not
+escape to infinity on any lattice.
+
+The family is also flat. It is defined by \(p-1\) equations in \(p+1\)
+variables, so each of its components has dimension at least two, and it
+is finite over the plane, so its dimension is exactly two. Hence
+\(E_1,\ldots,E_{p-1}\) is a regular sequence and \(\mathcal A\) is
+Cohen--Macaulay. A Cohen--Macaulay algebra that is finite over a
+regular ring of the same dimension is flat over it
+\citep[Theorem~23.1]{Matsumura1986}, and a finite flat module over
+\(\CC[g_2,g_3]\) is locally free. Consequently the number of solutions
+of \(\mathcal E_p(g_2,g_3)\), counted with multiplicity, is the same at
+every point of the \((g_2,g_3)\)-plane, the singular cubics included.
+At the cusp itself all of this multiplicity sits at the single solution
+where every unknown vanishes. This proves~(ii).
+
+The paper finds the common number at the node, in its Step~5. In this
+note it is the B\'ezout number of Step~4 in the proof of
+Theorem~\ref{thm:elliptic-count}.
 
 {\small\raggedright
 \bibliographystyle{plainnat}

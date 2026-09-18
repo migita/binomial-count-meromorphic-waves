@@ -1,30 +1,37 @@
-\section{Other orders}\label{sec:further}
+\section{Other orders and open questions}\label{sec:further}
 
 The proofs of Sections~\ref{sec:counting}
 and~\ref{sec:elliptic-counting} use the prime \(\ell=2p-1\) twice: to
 show that solutions cannot escape to infinity, which is rigidity, and
 to show that every pair is simple. This section records what is known
-when \(2p-1\) is not prime. The proofs use a weighted form of
-B\'ezout's theorem instead of the labels; they are given in the
-companion note \texttt{anc/general\_orders.pdf}, which is part of the
-source package and contains the general-order versions of
-Proposition~\ref{cor:endpoints}, Theorem~\ref{thm:symmetric},
-Theorem~\ref{thm:elliptic-count} and
-Corollary~\ref{cor:elliptic-symmetric}.
+when \(2p-1\) is not prime. The proofs use the weighted form of
+B\'ezout's theorem (Proposition~\ref{prop:bezout}) instead of the
+labels. They are given in the companion note
+\texttt{anc/general\_orders.pdf}, which is part of the source package.
+The note contains the proof of Proposition~\ref{prop:bezout}, the
+general-order versions of the results of Sections~\ref{sec:labels},
+\ref{sec:elliptic-counting} and~\ref{sec:reflection}, and the proof of
+rigidity when \(2p-1\) is a prime power. It also contains the general
+lemma on reduction modulo \(\ell\) behind Step~3 of the proof of
+Theorem~\ref{thm:prime}, and a second, algebraic proof of parts~(i)
+and~(ii) of Lemma~\ref{lem:conservation}.
 
 \begin{proposition}[Every order]\label{prop:general}
 Let \(p\ge2\).
 \begin{enumerate}
 \item[\textup{(i)}] The isolated solutions of the matching equations,
-counted with multiplicity, number at most \(N_p\), and those with
-\(\iota A=A\) at most \(F_p\).
+counted with multiplicity, number at most \(N_p\)
+(Proposition~\ref{prop:bezout}), and those with \(\iota A=A\), as
+solutions of the matching equations of the pure subfamily, at most
+\(F_p\) (Remark~\ref{rem:Fp-bound}).
 \item[\textup{(ii)}] If rigidity \((\mathrm R_{p-1})\) holds, all the
 systems below have finitely many solutions, and counted with
-multiplicity there are exactly \(N_p\) rational-exponential pairs,
-\(S_p\) solutions of the pulse equations \eqref{eq:pulse-equations},
-\(F_p\) solutions of the matching equations of the pure subfamily,
-\(M_p\) elliptic pairs on every nonsingular lattice and, for even
-\(p\), \(2F_p\) elliptic pairs with an even operator.
+multiplicity there are exactly \(N_p\) rational-exponential pairs
+(Proposition~\ref{prop:bezout}), \(S_p\) solutions of the pulse
+equations \eqref{eq:pulse-equations}, \(F_p\) solutions of the matching
+equations of the pure subfamily, \(M_p\) elliptic pairs on every
+lattice and, for even \(p\), \(2F_p\) elliptic pairs with an even
+operator.
 \item[\textup{(iii)}] If, in addition, every rational-exponential pair
 is simple, then all the conclusions of Theorem~\ref{thm:prime}(a),
 Proposition~\ref{cor:endpoints}, Theorem~\ref{thm:symmetric},
@@ -34,21 +41,17 @@ the labelling.
 \end{enumerate}
 \end{proposition}
 
-The weights behind (i) are those of Section~\ref{sec:prime}: the
-equations \(R_0,\ldots,R_{d-1}\) have weights \(2d+1,\ldots,d+2\) in
-unknowns of weights \(1,\ldots,d\), and the quotient of the two products
-is \(\binom{2d+1}{d}\).
-
-Two hypotheses thus remain at a general order, and this is what is
-known about them.
+Two hypotheses thus remain when \(2p-1\) is not prime, first at
+\(p=5\) (Section~\ref{sec:p5}). This is what is known about them.
 \begin{itemize}
-\item \emph{Rigidity.} \((\mathrm R_d)\) is proved when \(2d+1\) is a
-prime or a prime power. Exact integer certificates in the source
-package establish it for every \(d\le72\), and finite-field Gr\"obner
-computations, checked by independent pipelines, for every \(d\le572\)
-(repository, directory \texttt{certificates/rigidity\_572/}). Hence the
-counts with multiplicity of Proposition~\ref{prop:general}(ii) hold for
-every \(2\le p\le573\).
+\item \emph{Rigidity.} Rigidity \((\mathrm R_{p-1})\) is proved when
+\(2p-1\) is a prime or a prime power. Exact integer certificates in the
+source package establish it for every \(p\le73\), that is, for every
+degree \(d=p-1\le72\), and finite-field Gr\"obner computations, checked
+by independent pipelines, for every \(p\le573\) (repository, directory
+\texttt{certificates/rigidity\_572/}). Hence the counts with
+multiplicity of Proposition~\ref{prop:general}(ii) hold for every
+\(2\le p\le573\).
 \item \emph{Simplicity.} At the composite indices below \(25\), exact
 computations show that all pairs are simple: at \(p=5\) by a Gr\"obner
 basis over \(\QQ\), at \(p=8\) over a finite field with Hensel lifting,
@@ -66,6 +69,47 @@ the pure subfamily of that order; and a generic lattice carries exactly
 equations of Table~\ref{tab:named}.
 \end{corollary}
 
-The first order at which distinctness is not known is \(p=13\). We
-conjecture that rigidity and simplicity hold in every order
-(Conjecture~\ref{conj:count}).
+At \(p=5\), \(8\) and \(11\) this is Proposition~\ref{prop:general}(iii)
+with the two items above; the other orders up to twelve have a prime
+index. The first order at which distinctness is not known is \(p=13\).
+
+\paragraph{Open questions.}\label{sec:open}
+The first question is rigidity \eqref{eq:rigidity} in every degree;
+Lemma~\ref{lem:laplace} says what it means for rational waves. It is
+proved in the cases listed above, which include infinite arithmetic
+families of higher orders. By Proposition~\ref{prop:general}, it would
+establish both enumeration formulas, as counts with multiplicity, at
+every order.
+
+The second question is whether every point of \(\Xp\) is simple. The
+elliptic simplicity assertion is generic in the lattice and is derived
+from this one in Theorem~\ref{thm:elliptic-count}. At a solution
+\(S_A=AC_A\), the tangent map of the matching equations is
+\begin{equation}\label{eq:tangent}
+ J_A(h)=\remA\bigl(2(A\star h)-C_Ah\bigr),\qquad \deg h<d=p-1.
+\end{equation}
+The question is whether this map always has zero kernel. The
+prime-index argument proves this after reduction modulo \(\ell\), where
+the map becomes multiplication by a polynomial coprime to
+\(\overline A\); a uniform replacement is missing at composite indices.
+One might expect simplicity to follow from the uniqueness of the
+Laurent expansion in Theorem~\ref{thm:complete}. It does not: Laurent
+uniqueness concerns a fixed operator, whereas \eqref{eq:tangent} allows
+the operator to vary with the profile.
+
+\begin{conjecture}\label{conj:count}
+Rigidity \eqref{eq:rigidity} holds in every degree, and the matching
+Jacobian \eqref{eq:tangent} is invertible at every point of \(\Xp\).
+Consequently there are exactly \(\binom{2p-1}{p-1}\)
+rational-exponential pairs, all distinct, for every \(p\ge2\).
+\end{conjecture}
+
+The conjecture would also imply \(M_p\) simple elliptic pairs on a
+generic fixed lattice at every order, \(F_p\) distinct pairs in the two
+pure subfamilies, and that the rational-exponential waves of every
+purely dissipative equation are fronts (Theorem~\ref{thm:symmetric}).
+Simplicity on every lattice is false already at order two
+\eqref{eq:kdvb-elliptic}; \eqref{eq:ks-collisions} describes the full
+exceptional set at order three. Whether a mixed equation of even order
+\(p\ge4\) can have meromorphic waves of none of the three kinds is a
+separate open question (Remark~\ref{rem:fisher}).

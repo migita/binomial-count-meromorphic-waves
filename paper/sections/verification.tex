@@ -1,99 +1,84 @@
 \section{Exact verification and ancillary material}\label{app:verification}
 
-This appendix describes the computer checks that accompany the paper,
-and the companion note.
-
-The companion note \texttt{anc/general\_orders.pdf} contains what is
-known at the orders for which \(2p-1\) is not prime: the weighted
-B\'ezout count behind Proposition~\ref{prop:general}, the general-order
-versions of the results of Sections~\ref{sec:labels},
-\ref{sec:reflection} and~\ref{sec:elliptic-counting}, and the proof of
-rigidity when \(2p-1\) is a prime power.
-
-The ancillary material contains five kinds of checks.
-
-\begin{enumerate}
+This appendix describes the computer checks that accompany the paper.
+The scripts use exact rational or finite-field arithmetic;
+instructions, dependency versions and checksums are included with the
+source package. The prime-index theorem does not depend on the computer
+calculations. The ancillary material contains five kinds of checks.
+\begin{enumerate}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
 \item \texttt{verify\_manuscript.py} reconstructs the discrete and
 continuous convolutions, the low-order Laurent coefficients, and the
-Weierstrass differential algebra. It also checks the leading-term
-comparison used in Proposition~\ref{prop:injective}.
-It checks the displayed
-order-two, order-three and order-four formulas by exact
-substitution, including the correspondence with the KS tables
-of \citet{KudryashovZargaryan1996,ConteMusette2009},
-the KS collision multiplicities, the
-Kawahara coefficient restriction and its literature normalization,
-the nodal correspondence, and the Fisher identity.
-These finite substitutions check the displayed formulas; the uniform
-proofs are the arguments in the text.
-\item \texttt{p5\_count.sing} is a self-contained rational
-\textsc{Singular} calculation for the full order-five matching ideal.
-Its quotient dimension is 126.
-Adjoining the matching Jacobian determinant gives the unit ideal,
-so all 126 points are simple.
-The input is reconstructed from the original polynomial sum by the
-Python checker; the saved transcript states the two exact outputs.
+Weierstrass differential algebra. It checks the leading-term comparison
+used in Proposition~\ref{prop:injective}, and the displayed order-two,
+order-three and order-four formulas by exact substitution, including
+the correspondence of Table~\ref{tab:ks} with the tables of
+\citet{KudryashovZargaryan1996,ConteMusette2009}, the multiplicities
+\eqref{eq:ks-collisions}, the Kawahara coefficient restriction and its
+literature normalization, the nodal correspondence, and the Fisher
+identity. These finite substitutions check the displayed formulas; the
+uniform proofs are the arguments in the text.
+\item \texttt{p5\_count.sing} is a self-contained \textsc{Singular}
+calculation over \(\QQ\) for the full matching equations at \(p=5\).
+Its quotient dimension, which is the count with multiplicity, is
+\(126\). Adjoining the Jacobian determinant gives the unit ideal: the
+determinant vanishes at no solution, so all \(126\) solutions are
+simple.
 \item At \(p=8\) the same two outputs, \(6435\) and the unit ideal, are
-obtained over the finite field \(\FF_{32003}\). Every point modulo
+obtained over the finite field \(\FF_{32003}\). Every solution modulo
 \(32003\) is therefore simple and lifts uniquely by Hensel's lemma, as
 in Step~4 of the proof of Theorem~\ref{thm:prime}, and the lifts are
-all the points because the count with multiplicity is \(6435\), by
+all the solutions because the count with multiplicity is \(6435\), by
 Proposition~\ref{prop:general}(ii). At \(p=11\) each of the
-\(352716\) points is certified over the \(19\)-adic numbers, by
+\(352716\) solutions is certified over the \(19\)-adic numbers, by
 Hensel's lemma at the simple points of the reduction modulo \(19\) and
 by exact Newton-polygon and Newton--Kantorovich certificates at the
-singular ones; the archived certificate, with its description and the
-record of its validation, is in the repository, directory
-\texttt{certificates/}.
-\item \texttt{rigidity/} supplies the proof and exact certificate
-for rigidity \((\mathrm R_d)\), \(d\le72\).
-For \(2d+1=\ell^e+g\), \(g\in\{0,2,4,6\}\), the proof reduces the
-normalized continuous convolution to a residual system of degree
-at most \(g\).
-The certificate retains every residual degree, with integer
-ideal-membership identities and certified prime factors.
-The replay reconstructs the inputs, multiplies out every identity,
-and checks all 72 arithmetic choices.
-It does not infer characteristic-zero nonexistence from a list
-of residue-field points.
+singular ones. The archived certificate and the record of its
+validation are in the repository, directory \texttt{certificates/}.
+\item \texttt{rigidity/} supplies the proof and exact certificate for
+rigidity \((\mathrm R_d)\), \(d=p-1\le72\). For \(2d+1=\ell^e+g\),
+\(g\in\{0,2,4,6\}\), the proof reduces the normalized continuous
+convolution to a residual system of degree at most \(g\); the case
+\(g=0\), a prime power, is also proved in the companion note
+(Section~\ref{sec:further}). The certificate retains every residual
+degree, with integer ideal-membership identities and certified prime
+factors; the replay reconstructs the inputs, multiplies out every
+identity and checks all 72 arithmetic choices. It does not infer
+characteristic-zero nonexistence from a list of residue-field points.
 \item \texttt{symmetry\_checks/} contains the exact checks for the two
 pure subfamilies and for single equations: the identities of
 Proposition~\ref{prop:reflection} with symbolic coefficients for
 \(d\le5\); the labels of Table~\ref{tab:ks} and of the \(21\) real
 pairs at \(p=4\), with the statements of
 Proposition~\ref{cor:endpoints} and Theorem~\ref{thm:symmetric}(ii)
-about them; the lengths \(F_p\) for \(p\le8\), and finite-field
-certificates, of the same kind as at \(p=8\), that the \(F_p\) pairs
-are distinct for every \(p\le14\); the lengths \(2F_p\) of
-Corollary~\ref{cor:elliptic-symmetric} for \(p\le6\) on a sample
-lattice; the six pairs \eqref{eq:p5-symmetric} and the ten pairs
+about them; the counts with multiplicity \(F_p\) for \(p\le8\), and
+finite-field certificates, of the same kind as at \(p=8\), that the
+\(F_p\) pairs are distinct for every \(p\le14\); on a sample lattice,
+the counts with multiplicity \(2F_p\) of
+Corollary~\ref{cor:elliptic-symmetric} for \(p\le6\), and the absence
+of elliptic pairs of purely dissipative equations for \(p=3,5,7\)
+(\texttt{elliptic\_dissipative.py}, Section~\ref{sec:reflection}); the
+six pairs \eqref{eq:p5-symmetric} and the ten pairs
 \eqref{eq:p6-eliminant}, with the sextic factor in full; and the
-scaling \eqref{eq:fixed-wave} by substitution in the evolution
-equation.
+scaling \eqref{eq:fixed-wave} by substitution in the evolution equation.
 \end{enumerate}
 
 A Lean~4 formalization accompanies the paper at
 \url{https://github.com/migita/binomial-count-meromorphic-waves},
 directory \texttt{lean/}, with Lean and Mathlib pinned to
-version~4.33.1. It proves \((\mathrm R_d)\) for \(2d+1\) prime
+version~4.33.1. It proves rigidity \((\mathrm R_d)\) for \(2d+1\) prime
 (\texttt{rigidity\_prime\_index}) and the count and simplicity
-statements of Theorem~\ref{thm:prime}, both for the matching system
+statements of Theorem~\ref{thm:prime}, both for the matching equations
 \eqref{eq:remainder} (\texttt{primeIndexCountAndSimplicity}) and for
 the normalized pairs \((P,v)\) as solutions of \eqref{eq:main} in the
 field of rational functions of \(e^{z}\)
 (\texttt{primeIndexRationalExponentialCountAndSimplicity}), together
 with the correspondence between the two formulations for every
 \(p\ge2\). The discrete convolution is defined there by the
-Bernoulli-polynomial power sums, and the remainder equations and their
-Jacobian are those of Section~\ref{sec:counting}. The proof route is
-outlined in Remark~\ref{rem:lean} and documented in the repository. The files
+Bernoulli-polynomial power sums; the remainder equations and their
+Jacobian are those of Section~\ref{sec:counting}, and the proof route
+is that of Remark~\ref{rem:lean}. The files
 \texttt{EnumerationCheck.lean} and \texttt{Check.lean} verify that the
 proofs have exactly the stated propositions as their types and that the
 theorems depend only on the axioms \texttt{propext},
 \texttt{Classical.choice} and \texttt{Quot.sound}; the project
 contains no \texttt{sorry}, added axiom or \texttt{native\_decide}.
-
-The scripts use exact rational or finite-field arithmetic.
-Instructions, dependency versions and checksums are included with the
-source package. The prime-index theorem does not depend on the
-computer calculations.

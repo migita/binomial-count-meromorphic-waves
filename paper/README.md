@@ -16,7 +16,7 @@ disclosure section at the end of the paper names all AI systems used and
 their roles. This package has not been submitted to arXiv.
 
 A Lean 4 formalization of the prime-index rigidity and enumeration
-theorems (Remark 5.5 and Appendix A of the paper) is available at
+theorems (Remark 3.5 and Appendix A of the paper) is available at
 https://github.com/migita/binomial-count-meromorphic-waves in the
 directory lean/.
 

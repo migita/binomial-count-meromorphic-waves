@@ -1,39 +1,30 @@
 \section{Examples}\label{sec:examples}
 
-The examples have one purpose: to show the counts of
-Table~\ref{tab:named} at work, and to connect them with the classical
-lists. Orders two and three are
-small enough for the full family to be treated by hand
-(Sections~\ref{sec:kdvb} and~\ref{sec:ks}); the second of them also
-shows what multiplicity means for elliptic pairs. At higher orders we
-list the pairs of the two pure subfamilies
-(Sections~\ref{sec:kawahara} and~\ref{sec:p5}).
-The normalizations are those of Section~\ref{sec:setting}.
+The examples show the counts of Table~\ref{tab:named} at work and
+connect them with the classical lists. Order three was begun in
+Section~\ref{sec:ks-rational}; the normalizations are those of
+Section~\ref{sec:setting}.
 
 \subsection{Order two: KdV--Burgers}\label{sec:kdvb}
 
 The integrated travelling-wave equation for
-\[
- u_t+uu_x+\nu u_{xx}+\delta u_{xxx}=0,\qquad \delta\ne0,
-\]
-has order \(p=2\).
+\(u_t+uu_x+\nu u_{xx}+\delta u_{xxx}=0\), \(\delta\ne0\), has order
+\(p=2\); the coefficient \(\nu\) may have either sign.
 Its exact front solutions have been studied in several equivalent
-forms \citep{JeffreyXu1989,VliegHalford1991,Kudryashov2009Errors}.
-The long-wave reductions in
-\citet{KudryashovSinelshchikovChernyavsky2008}
-also contain this balance of dissipation and dispersion.
-
-Here \(A(\rho)=\rho+a\) has a single coefficient, and the matching
-system is one equation in one unknown. Direct polynomial division
-gives
+forms
+\citep{Kudryashov1988,JeffreyXu1989,VliegHalford1991,Kudryashov2009Errors,Kudryashov2009KdVB}.
+The equation arises, for instance, for waves in a liquid with gas
+bubbles \citep{KudryashovSinelshchikovFourthOrder2010} and in a
+viscoelastic tube \citep{KudryashovSinelshchikovChernyavsky2008}.
+For \(A(\rho)=\rho+a\) the matching system is the single equation of
+the Introduction. Polynomial division gives
 \begin{equation}\label{eq:kdvb-matching}
- \operatorname{rem}_A S_A=-\frac{a(a-1)(a+1)}6,
- \qquad
- P_A=\rho^2+5a\rho+a^2-6a-1,
- \qquad
+ \remA S_A=-\frac{a(a-1)(a+1)}6,\qquad
+ P_A=\rho^2+5a\rho+a^2-6a-1,\qquad
  v_A=12\bigl((a+1)Q-Q^2\bigr).
 \end{equation}
-Thus there are exactly \(N_2=3\) simple pairs:
+Thus there are exactly \(N_2=3\) simple pairs, as
+Theorem~\ref{thm:prime} states for \(2p-1=3\):
 \begin{equation}\label{eq:kdvb-pairs}
  \begin{array}{c|c|c}
  a&P_A(\rho)&v_A\\ \hline
@@ -42,176 +33,70 @@ Thus there are exactly \(N_2=3\) simple pairs:
  1&(\rho-1)(\rho+6)&12Q(2-Q).
  \end{array}
 \end{equation}
-The pulse \(a=0\) is the KdV soliton. It is the single pair of the
-purely dispersive subfamily, \(F_2=1\). The two fronts belong to mixed
+The pulse \(a=0\) is the KdV soliton, the single pair of the purely
+dispersive subfamily, \(F_2=1\). The two fronts belong to mixed
 equations, and the reflection \(\iota\) exchanges them: for a given
 equation with \(\nu\ne0\) they are one and the same front, read in the
-two directions (Proposition~\ref{prop:fixed}). At unit rate they are
-two different pairs, and the count \(N_2=3\) includes both.
+two directions (Proposition~\ref{prop:fixed}), and \(N_2=3\) counts
+both readings.
 In the original variables, \eqref{eq:scaling} and
 \eqref{eq:coefficients} read
 \[
- u(x,t)=u_\ast+\delta\kappa^2
-            v_A\bigl(\kappa(x-ct)\bigr),\qquad
+ u(x,t)=w_\ast+\delta\kappa^2v_A\bigl(\kappa(x-ct)\bigr),\qquad
  \nu=\delta\kappa(5a),\qquad
- u_\ast-c=\delta\kappa^2(a^2-6a-1).
+ w_\ast-c=\delta\kappa^2(a^2-6a-1).
 \]
 In particular, a nonzero \(\nu\) fixes the front rate to
 \(\kappa=\nu/(5a\delta)\), \(a=\pm1\), in agreement with the
 classical parameter restriction.
-
-For a fixed lattice the elliptic candidate is \(V=-12X+b\).
-Its residual is
-\[
- -12a_1Y-12(a_0+b)X+6g_2+a_0b+\frac12b^2.
-\]
-Consequently the complete elliptic system is
-\begin{equation}\label{eq:kdvb-elliptic}
- a_1=0,\qquad
- v=-12\wp-a_0,\qquad a_0^2=12g_2.
-\end{equation}
-There is no one-pole elliptic member with nonzero Burgers coefficient:
-both elliptic pairs belong to the KdV equation, in agreement with
-\(M_2=2F_2=2\). They are the two backgrounds \eqref{eq:shift} of one
-cnoidal wave. For \(g_2\ne0\) they are distinct and simple.
-For \(g_2=0\), \(g_3\ne0\), they coincide, and the lattice carries one
-pair of multiplicity two.
-
-Since \(2p-1=3\) is prime, the counts at order two are unconditional.
+The elliptic pairs at this order are \eqref{eq:kdvb-elliptic}: the two
+backgrounds of one cnoidal wave, both for the KdV equation.
 The classification of Theorem~\ref{thm:complete} applies to the KdV
-subfamily \(a_1=0\). For the mixed operators, the Fisher example in
-Section~\ref{sec:open} explains why the same conclusion cannot be
-expected.
+subfamily \(a_1=0\); for the mixed operators the same conclusion
+cannot be expected (Remark~\ref{rem:fisher}).
 
-\subsection{Order three: Kuramoto--Sivashinsky}\label{sec:ks}
+\subsection{Order three: elliptic pairs, and the lattices on which they
+merge}\label{sec:ks}
 
-Let \(p=3\), \(s_3=60\), and \(A(\rho)=\rho^2+a\rho+b\).
-The profile and monic operator are
-\begin{align}
- \frac{v_A}{60}
-   &=2Q^3-(a+3)Q^2+(a+b+1)Q, \label{eq:ksprofile}\\
- P_A(\rho)
-   &=\rho^3+4a\rho^2+(a^2+19b)\rho
-            -a^3+7ab-5a-30b. \label{eq:ksoperator}
-\end{align}
-The remainder of \(S_A\) is \((E_1\rho+E_0)/30\), where
-\begin{equation}\label{eq:ksmatching}
- E_0=ab(a^2-7b+5),\qquad
- E_1=a^4-8a^2b+11b^2+10b-1.
-\end{equation}
-The system \(E_0=E_1=0\) is solved by cases on the factors of
-\(E_0\).
-If \(b=0\), then \(a^4=1\).
-If \(a=0\), then \((b+1)(11b-1)=0\).
-In the remaining case \(a^2=7b-5\), and the second equation becomes
-\(4(b-2)(b-3)=0\).
-This exhausts the system and gives Table~\ref{tab:ks}.
-The Jacobian determinant is nonzero at every point, so all
-\(N_3=10\) pairs are simple, as Theorem~\ref{thm:prime} predicts for
-\(2p-1=5\).
-
-\begin{table}[htbp]
-\centering
-\caption{All ten rational-exponential pairs at order three.
-The label is the set of roots of \(A\) modulo \(5\)
-(Theorem~\ref{thm:prime}); for the two complex pairs it depends on the
-choice of \(i\) modulo \(5\). The determinant is taken in the order
-\((E_0,E_1)\) against \((a,b)\). The last column describes \(v_A\) on
-the real axis, at unit rate.}
-\label{tab:ks}
-\begin{tabular}{@{}cclcl@{}}
-\toprule
-\(a\)&\(b\)&Labels&
-\(\det\partial(E_0,E_1)/\partial(a,b)\)&Real profiles\\
-\midrule
-\(\pm1\)&\(0\)&\(\{0,4\}\), \(\{0,1\}\)&\(-24\)&Pulses\\
-\(\pm i\)&\(0\)&\(\{0,2\}\), \(\{0,3\}\)&\(-16\)&Not real\\
-\(0\)&\(-1\)&\(\{1,4\}\)&\(144\)&Front\\
-\(0\)&\(1/11\)&\(\{2,3\}\)&\(576/121\)&Front\\
-\(\pm3\)&\(2\)&\(\{3,4\}\), \(\{1,2\}\)&\(-144\)&Fronts\\
-\(\pm4\)&\(3\)&\(\{2,4\}\), \(\{1,3\}\)&\(384\)&Fronts\\
-\bottomrule
-\end{tabular}
-\end{table}
-
-The ten labels are the ten two-element subsets of
-\(\{0,1,2,3,4\}\). The four pulses are the pairs whose label contains
-\(0\), and the mirror image \((a,b)\mapsto(-a,b)\) replaces a label
-\(S\) by \(-S\), as Proposition~\ref{cor:endpoints} and
-Theorem~\ref{thm:symmetric} assert.
-There are ten complex pairs, eight with real coefficients.
-All eight are smooth and bounded on the real axis:
-two pulses and six fronts.
-For example,
-\[
- A=(\rho-1)(\rho-2),\qquad
- v_A=120Q^3,\qquad
- P_A=(\rho-3)(\rho-4)(\rho-5).
-\]
-These are the classical solutions in hyperbolic functions
-\citep{KuramotoTsuzuki1976,Kudryashov1988,Kudryashov1990}.
-The complete parameter list is tabulated by
-\citet[Table~1]{KudryashovZargaryan1996} and
-\citet[Table~1]{ConteMusette2009}.
-Their tables contain six parameter cases because they identify the
-two signs of the dispersion coefficient. These six cases are the orbits
-of the reflection \(\iota\), which is \((a,b)\mapsto(-a,b)\) here:
-four orbits of two pairs, and the two fixed pairs with \(a=0\).
-Exhaustion of this classical list follows from
-\citet{Eremenko2006}.
-
-The two pairs with \(a=0\) are the \(F_3=2\) pairs of the purely
-dissipative subfamily, the Kuramoto--Sivashinsky equation without
-dispersion. Both are fronts, as Theorem~\ref{thm:symmetric} requires;
-the pulses \((\pm1,0)\) need dispersion.
-By Corollary~\ref{cor:solvable}, an equation with
-\(P=D^3+BD^2+\mu D+a_0\) has a wave of this kind exactly when
-\(B^2=\sigma\mu\) for one of the four values \eqref{eq:ks-sigma}.
-The pairs \((\pm1,0)\) and \((\pm i,0)\) belong to the same
-equations, with \(\sigma=16\); their rates differ by a factor \(i\), so
-for a real equation the second wave is periodic in \(x\), and its real
-form has poles on the real axis.
-
-\paragraph{Elliptic pairs, and the lattices on which they merge.}
 An elliptic solution must have zero residue at its pole. For
 \(P=D^3+BD^2+\mu D+a_0\) the Laurent residue is
-\(60\mu/19-15B^2/76\), so \(B^2=16\mu\). With this restriction the
+\(60\mu/19-15B^2/76\), so \(B^2=16\mu\); this is the curve
+\(\sigma^2=16\) of \eqref{eq:ks-sigma}. With this restriction the
 entire elliptic matching scheme is
 \begin{equation}\label{eq:ks-elliptic-scheme}
- \begin{split}
- P&=D^3+B D^2+\frac{B^2}{16}D+a_0,\\
- v&=-60\wp'-15B\wp-\frac{B^3}{64}-a_0,\\
- B^4&=3072g_2,\qquad
+ \begin{gathered}
+ P=D^3+B D^2+\frac{B^2}{16}D+a_0,\qquad
+ v=-60\wp'-15B\wp-\frac{B^3}{64}-a_0,\\
+ B^4=3072g_2,\qquad
  a_0^2=\frac{13B^6}{2048}-2160g_3.
- \end{split}
+ \end{gathered}
 \end{equation}
 Read with the operator fixed, this is the classical solution of
-\citet{Kudryashov1990}: \(w=v+a_0\) solves the usual integrated equation
-\(w'''+Bw''+\mu w'+w^2/2+K=0\) with \(K=-a_0^2/2\). Necessity of the
-restriction \(B^2=16\mu\) is proved by \citet{Hone2005}, and the
-classification of all meromorphic KS solutions is completed by
-\citet{Eremenko2006}. For the count we read \eqref{eq:ks-elliptic-scheme}
-the other way: fix \(g_2,g_3\) and solve for \(B\) and \(a_0\).
+\citet{Kudryashov1990}, see also \citet{Kudryashov1991}: \(w=v+a_0\)
+solves the usual integrated equation
+\(w'''+Bw''+\mu w'+w^2/2+K=0\) with \(K=-a_0^2/2\). For a given
+equation with \(B^2=16\mu\), the value of \(g_2\) is fixed by \(B\) and
+\(g_3\) is free, so the equation has a one-parameter family of elliptic
+waves. Necessity of the restriction \(B^2=16\mu\) is proved by
+\citet{Hone2005}, and the classification of all meromorphic KS
+solutions is completed by \citet{Eremenko2006}. For the count we read
+\eqref{eq:ks-elliptic-scheme} the other way: fix \(g_2,g_3\) and solve
+for \(B\) and \(a_0\).
 
-For a typical lattice, the equation for \(B\) has four solutions, and
+On a generic lattice, the equation for \(B\) has four solutions, and
 the equation for \(a_0\) then gives two choices for each of them: the
 two backgrounds \(\pm a_0\) of \eqref{eq:shift}. These are the
 \(M_3=8\) pairs. When the lattice changes, some of the pairs can meet.
 The multiplicity of the resulting point records how many nearby pairs
 have come together, so the count with multiplicity can remain eight
 even when fewer than eight distinct pairs remain.
-
 Pairs meet exactly where the Jacobian of the last two equations of
 \eqref{eq:ks-elliptic-scheme} vanishes, and that Jacobian is a nonzero
-constant times \(B^3a_0\). Let
-\[
- j(\Lambda)=\frac{1728g_2^3}{g_2^3-27g_3^2}.
-\]
-If \(B=0\), then \(g_2=0\), hence \(j=0\).
-If \(a_0=0\) and the lattice is nonsingular, elimination gives
-\[
- 675g_3^2=169g_2^3,\qquad j=-300.
-\]
+constant times \(B^3a_0\). In terms of the invariant \(j(\Lambda)\) of
+Section~\ref{sec:elliptic-counting}:
+if \(B=0\), then \(g_2=0\), hence \(j=0\);
+if \(a_0=0\) on a lattice, elimination of \(B\) gives
+\(675g_3^2=169g_2^3\), that is, \(j=-300\).
 These conditions are sufficient as well. Thus:
 \begin{equation}\label{eq:ks-collisions}
  \begin{array}{c|c|c}
@@ -222,26 +107,23 @@ These conditions are sufficient as well. Thus:
  \end{array}
 \end{equation}
 The two exceptional cases show the two ways in which pairs can meet.
-
 At \(j=-300\), the four values of \(B\) remain distinct. For two of
 them, the two choices of \(a_0\) meet at zero: the two backgrounds of
-one wave coincide. Each produces one pair of multiplicity two, while
-the other four pairs remain distinct. There are six distinct pairs,
-with total multiplicity \(2+2+1+1+1+1=8\). For instance,
+one wave coincide, in one pair of multiplicity two. For instance,
 \(g_2=1/12\), \(g_3=13/1080\) gives the double points
 \((B,a_0)=(\pm4,0)\).
-
 At \(j=0\), all four values of \(B\) meet at \(B=0\). The two roots of
 \(a_0^2=-2160g_3\) remain distinct, since \(g_3\ne0\), so there are two
-pairs, each of multiplicity four. Both have the operator \(D^3+a_0\), which is purely
-dissipative, and the total is again \(4+4=8\).
+pairs, each of multiplicity four. Both have the operator \(D^3+a_0\),
+which is purely dissipative.
 
-The count stays eight for an exact reason. The coefficients eliminated
+The count stays eight for an exact reason. The unknowns eliminated
 on the way to \eqref{eq:ks-elliptic-scheme} are determined linearly,
 with nonzero rational pivots, so its last two equations carry the full
-matching system, multiplicities included. The first has four roots
+matching system, multiplicities included; the first has four roots
 \(B\) and, for each of them, the second has two roots \(a_0\), counted
-with multiplicity. This gives eight solutions on every lattice. This is the form in which
+with multiplicity, which gives eight solutions on every lattice.
+This is the form in which
 Theorem~\ref{thm:elliptic-count} holds on an arbitrary lattice, and
 \eqref{eq:ks-collisions} is the exceptional set of that theorem at
 order three.
@@ -254,35 +136,34 @@ For the Kawahara equation
 \citep{Kawahara1972,DeminaKudryashovKawahara2010},
 the integrated, shifted and monic travelling-wave operator is
 \begin{equation}\label{eq:kawahara-P}
- P=D^4+bD^2+a_0.
+ P=D^4+a_2D^2+a_0.
 \end{equation}
 The classification for this equation, using its first
-integral, is already established by
+integral \eqref{eq:energy}, is already established by
 \citet{DeminaKudryashovKawahara2010}; see also
 \citet{YeEtAl2022}.
-Their first integral is the order-four instance of \eqref{eq:energy}.
-
 By Theorem~\ref{thm:symmetric}, the pairs with an even operator are
-those with \(\iota A=A\), that is, \(A=\rho^3+c\rho\). All of them are
-pulses: the profile is even about its pole, \(v(Q)=v(1-Q)\).
+those with \(\iota A=A\), that is, \(A=\rho^3+\alpha_2\rho\). All of
+them are pulses: the profile is even about its pole, \(v(Q)=v(1-Q)\).
 The quotient and remainder are
 \begin{equation}\label{eq:kawahara-exponential}
  \begin{split}
- P_A&=\rho^4+13c\rho^2+\frac{31c^2-70c+7}{3},\\
- v_A&=280(1+c)Q(1-Q)-1680Q^2(1-Q)^2,\\
- \operatorname{rem}_A S_A
-   &=-\frac{\rho}{420}(c+1)(31c^2-31c+10).
+ P_A&=\rho^4+13\alpha_2\rho^2+\frac{31\alpha_2^2-70\alpha_2+7}{3},\\
+ v_A&=280(1+\alpha_2)Q(1-Q)-1680Q^2(1-Q)^2,\\
+ \remA S_A
+   &=-\frac{\rho}{420}(\alpha_2+1)(31\alpha_2^2-31\alpha_2+10).
  \end{split}
 \end{equation}
-The three distinct roots are
-\[
- c=-1,\qquad c=\frac12\pm\frac{3i}{2\sqrt{31}}.
-\]
-They give \(F_4=\binom31=3\) simple pairs. These are the three simply
-periodic parameter choices of
+The three distinct roots, \(\alpha_2=-1\) and
+\(\alpha_2=1/2\pm3i/(2\sqrt{31})\), give \(F_4=\binom31=3\) simple
+pairs.
+The cubic already appears in \citet[Eq.~(47)]{Kudryashov1989}, with
+\(y=-1/\alpha_2\), where one real and two complex conjugate roots are
+noted. The three values are the simply periodic parameter choices of
 \citet[Section~3]{DeminaKudryashovKawahara2010}, in the present
-normalization: the parameter in their Eq.~(31) equals \(1/c\) here.
-At \(c=-1\),
+normalization: the parameter in their Eq.~(31) equals \(1/\alpha_2\)
+here.
+At \(\alpha_2=-1\),
 \begin{equation}\label{eq:kawahara-soliton}
  v=-105\operatorname{sech}^4(z/2),\qquad
  P=(D^2-4)(D^2-9).
@@ -290,35 +171,38 @@ At \(c=-1\),
 This is the familiar solitary wave of the Kawahara equation;
 the other two pairs are complex at unit real rate.
 The unrestricted order-four count is \(N_4=35\). Of these pairs,
-\(21\) have real coefficients, and all \(21\) are rational: five pulses
-and sixteen fronts, which are eleven wave shapes up to reflection. They
-are the one-pole waves of the mixed fifth-order equations, such as the
-Benney--Lin equation, and the repository dictionary lists them.
+\(21\) have real coefficients, and all \(21\) have rational
+coefficients: five pulses and sixteen fronts, which are eleven wave
+shapes up to reflection. They are the one-pole waves of the mixed
+fifth-order equations, such as the Benney--Lin equation and the
+equation of \citet{KudryashovSinelshchikov2011} for a viscoelastic
+tube, and the repository dictionary lists them; solitary waves of this
+family are found in \citet{KudryashovDemina2009}.
 
 All elliptic members of \eqref{eq:kawahara-P} have the form
-\begin{equation}\label{eq:kawahara-elliptic}
- v=-1680\wp^2-\frac{280b}{13}\wp
-       +168g_2+\frac{31b^2}{507}-a_0.
-\end{equation}
-Substitution gives exactly two conditions:
+\eqref{eq:kawahara-elliptic} below, and substitution gives exactly the
+two conditions \eqref{eq:kawahara-cubic}
+and~\eqref{eq:kawahara-background}:
 \begin{align}
- F(b;g_2,g_3)&:=31b^3-42588b g_2-4745520g_3=0,
+ v&=-1680\wp^2-\frac{280a_2}{13}\wp
+       +168g_2+\frac{31a_2^2}{507}-a_0,
+       \label{eq:kawahara-elliptic}\\
+ 0&=31a_2^3-42588a_2g_2-4745520g_3,
        \label{eq:kawahara-cubic}\\
- a_0^2&=23184g_2^2+\frac{7980}{169}b^2g_2
-                       +\frac{101520}{13}b g_3.
+ a_0^2&=23184g_2^2+\frac{7980}{169}a_2^2g_2
+                       +\frac{101520}{13}a_2g_3.
        \label{eq:kawahara-background}
 \end{align}
 These are the Weierstrass profiles and parameter relations obtained
 from Laurent series by
 \citet[Section~3]{DeminaKudryashovKawahara2010},
-expressed in the normalization \eqref{eq:main}.
-In their notation, \(b=-\beta\), \(a_0^2=C_0^2+12C_1\);
-the profile change is \(v=-6(w-w_\ast)\), where \(w_\ast\)
-is a constant equilibrium and \(a_0=C_0-6w_\ast\).
-The first equation is cubic in \(b\), and the second is monic
+expressed in the normalization \eqref{eq:main}: in their notation
+\(a_2=-\beta\), \(a_0^2=C_0^2+12C_1\) and \(v=-6(w-w_\ast)\), where
+their \(w_\ast\) is a constant equilibrium and \(a_0=C_0-6w_\ast\).
+The first condition is cubic in \(a_2\), and the second is monic
 quadratic in \(a_0\), so there are \(3\times2=6\) solutions, counted
-with multiplicity, on every fixed lattice: three values of \(b\), each
-with its two backgrounds. This is the number \(2F_4\) of
+with multiplicity, on every fixed lattice: three values of \(a_2\),
+each with its two backgrounds. This is the number \(2F_4\) of
 Corollary~\ref{cor:elliptic-symmetric}.
 At \((g_2,g_3)=(1,0)\), the cubic has three distinct roots and
 the right side of \eqref{eq:kawahara-background} is nonzero at
@@ -333,16 +217,18 @@ fifth-order evolution equation are given by
 The seventh-order KdV equation has the operator
 \(P=D^6+a_4D^4+a_2D^2+a_0\); its meromorphic travelling waves are
 studied by \citet{Dang2023Even}.
-Here \(A=\rho^5+c_1\rho^3+c_2\rho\) and \(s_6=5544\). The remainder of
-\(S_A\) has two coefficients, at \(\rho^3\) and at \(\rho\), which are
-polynomials in \(c_1,c_2\) of weights eight and ten; the ancillary
-script prints them. Eliminating \(c_2\), which is determined by \(c_1\)
-at every solution, gives
+Here \(A=\rho^5+\alpha_2\rho^3+\alpha_4\rho\) and \(s_6=5544\). The
+remainder of \(S_A\) has two coefficients, at \(\rho^3\) and at
+\(\rho\), which are polynomials in \(\alpha_2,\alpha_4\) of weights
+eight and ten; the ancillary script prints them. Eliminating
+\(\alpha_4\), which is determined by \(\alpha_2\) at every solution,
+gives
 \begin{equation}\label{eq:p6-eliminant}
- (c_1+5)(c_1+10)(49c_1^2-5c_1+10)\,g_6(c_1)=0,
+ (\alpha_2+5)(\alpha_2+10)(49\alpha_2^2-5\alpha_2+10)\,
+ \varphi_6(\alpha_2)=0,
 \end{equation}
-where \(g_6\) is an irreducible sextic without real roots, also printed
-by the script. The ten roots are distinct, in
+where \(\varphi_6\) is an irreducible sextic without real roots, also
+printed by the script. The ten roots are distinct, in
 agreement with \(F_6=\binom52=10\). Two pairs are real:
 \begin{equation}\label{eq:p6-real}
  \begin{array}{c|c|c}
@@ -353,34 +239,39 @@ agreement with \(F_6=\binom52=10\). Two pairs are real:
    &10395\operatorname{sech}^4(z/2)\bigl(1+\operatorname{sech}^2(z/2)\bigr).
  \end{array}
 \end{equation}
-All ten pairs are pulses. An exact computation on a sample lattice
-gives \(2F_6=20\) for the elliptic pairs of this family.
+All ten pairs are pulses. The two real pairs are the solitary waves of
+\citet{RyabovSinelshchikovKochanov2011}. An exact computation on a
+sample lattice gives \(2F_6=20\) for the elliptic pairs of this family.
 
 \subsection{Purely dissipative equations of order five}\label{sec:p5}
 
 At \(p=5\) the purely dissipative operators are
-\(P=D^5+a_3D^3+a_1D+a_0\), and \(A=\rho^4+c_1\rho^2+c_2\).
+\(P=D^5+a_3D^3+a_1D+a_0\), and \(A=\rho^4+\alpha_2\rho^2+\alpha_4\).
 All \(126\) pairs at \(p=5\) are simple
 (Section~\ref{sec:further}), so there are exactly \(F_5=6\) distinct
 pairs here.
-They are
+They are the three pairs in the first line of
 \begin{equation}\label{eq:p5-symmetric}
+ \begin{gathered}
  A=(\rho^2-1)(\rho^2-4),\qquad
  A=(\rho^2-1)(\rho^2-9),\qquad
- A=(\rho^2-1)\Bigl(\rho^2+\frac15\Bigr),
+ A=(\rho^2-1)\Bigl(\rho^2+\frac15\Bigr),\\
+ 1105\alpha_2^3-2969\alpha_2^2+5570\alpha_2-4000=0,\qquad
+ \alpha_4=\frac{5\alpha_2^3+21\alpha_2-10}{79\alpha_2+210},
+ \end{gathered}
 \end{equation}
-and the three pairs with
-\[
- 1105c_1^3-2969c_1^2+5570c_1-4000=0,\qquad
- c_2=\frac{5c_1^3+21c_1-10}{79c_1+210}.
-\]
-The cubic has one real root. All six pairs are fronts, as
-Theorem~\ref{thm:symmetric} requires, and the four with real
-coefficients are, after the scales are restored, the solutions~(1.4)
-of \citet{KudryashovMigita2007}. For instance,
-\(A=(\rho^2-1)(\rho^2-4)\) gives
-\[
- v_A=5040\,Q^3\bigl(10-15Q+6Q^2\bigr),\qquad
- P_A=\rho^5-55\rho^3+1254\rho-2520 ,
-\]
-a front from \(0\) to \(5040=-2P_A(0)\).
+and the three pairs given by the second line.
+The cubic has one real root. All six pairs are fronts:
+\(A(0)=\alpha_4\ne0\) at each of them. For the four real ones this is
+Theorem~\ref{thm:symmetric}(iii); for all six it follows from
+Proposition~\ref{prop:general}(iii), since all \(126\) pairs at
+\(p=5\) are simple (Appendix~\ref{app:verification}).
+The six pairs are the six solitary waves of
+\citet{KudryashovDemina2007}; in their notation \(w=1/(4a_3)\). The
+four with real coefficients are, after the scales are restored, the
+solutions~(1.4) of \citet{KudryashovMigita2007}; see also
+\citet{RyabovSinelshchikovKochanov2011}. For instance,
+\(A=(\rho^2-1)(\rho^2-4)\) gives the operator
+\(P_A=\rho^5-55\rho^3+1254\rho-2520\) and the profile
+\(v_A=5040\,Q^3(10-15Q+6Q^2)\), a front from \(0\) to
+\(5040=-2P_A(0)\).

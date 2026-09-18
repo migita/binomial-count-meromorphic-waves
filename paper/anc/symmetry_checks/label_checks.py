@@ -1,12 +1,12 @@
-"""Exact checks of the statements that are read off the labels (Section 5 of the paper), at the prime indices 5 (p = 3) and 7 (p = 4).
+"""Exact checks of the statements that are read off the labels (Sections 3.4 and 6 of the paper), at the prime indices 5 (p = 3) and 7 (p = 4).
 
 For every rational-exponential pair with rational coefficients (all ten... eight real ones at p = 3, all 21 real ones at p = 4), and for the
 two complex pairs at p = 3 under both choices of i modulo 5:
-  * the label S = roots of A modulo l; the labels are distinct l-integral reductions and, at p = 3, exhaust the two-element subsets of F_5;
-  * A(0) = 0 (pulse) if and only if 0 is in S                              (Proposition 5.6);
-  * the label of the mirror image iota A is -S, and iota A = A iff S = -S  (Theorem 5.8(ii));
-  * P_A(0) != 0 at every pulse                                            (Proposition 5.6).
-For symbolic coefficients at p = 3, 4, 5: on the fixed subspace of iota, dR_r/dalpha_j = 0 unless j = r + 1 (mod 2) (Theorem 5.8(ii)),
+  * the label L = roots of A modulo l; the labels are distinct l-integral reductions and, at p = 3, exhaust the two-element subsets of F_5;
+  * A(0) = 0 (pulse) if and only if 0 is in L                              (Proposition 3.6);
+  * the label of the mirror image iota A is -L, and iota A = A iff L = -L  (Theorem 6.2(ii));
+  * P_A(0) != 0 at every pulse                                            (Proposition 3.6).
+For symbolic coefficients at p = 3, 4, 5: on the fixed subspace of iota, dR_r/dalpha_j = 0 unless j = r + 1 (mod 2) (Theorem 6.2(ii)),
 and R_0 = -A(0)(A(0) + C_A(0)) (equation for the constant remainder).  SymPy only."""
 import itertools, sympy as sp
 rho, m_, j_ = sp.symbols('rho m j_')

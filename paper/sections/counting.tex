@@ -1,55 +1,30 @@
 \section{The count of rational-exponential pairs}\label{sec:counting}
 
-In this section and the next, \(P\) ranges over \emph{all} monic
-polynomials of degree \(p\), mixed operators included, and we count the
-pairs \((P,v)\) of Section~\ref{sec:setting}.
-Nothing in the count requires the hypotheses of
-Theorem~\ref{thm:complete}. Those hypotheses were needed to show that
-the one-pole solutions are all the meromorphic solutions; the matching
-equations and their solution counts make sense without them.
-The pairs that belong to the purely dispersive and purely dissipative
-subfamilies are counted in Section~\ref{sec:reflection}.
+We count the pairs \((P,v)\) of Section~\ref{sec:setting} for all monic
+\(P\) of degree \(p\). Whether an equation can have meromorphic waves
+other than these is a separate question; Section~\ref{sec:completeness}
+answers it, and nothing in this section or the next depends on the
+answer.
 
-Recall the normalization: the rate is one, the pole is at \(i\pi\)
-modulo \(2\pi i\ZZ\), and \(v\to0\) as \(e^z\to0\). A wave and its
-mirror image are counted separately when they differ.
+By Section~\ref{sec:systems}, a normalized profile is a polynomial of
+degree \(p\) in \(Q=1/(1+e^{-z})\), without constant term because
+\(v\to0\) as \(e^z\to0\).
 The functions \(Q,DQ,\ldots,D^{p-1}Q\) span the degree-\(p\)
 polynomials in \(Q\) with zero constant term, since
-\[
- D^jQ=(-1)^j j!Q^{j+1}+\text{lower powers of }Q.
-\]
+\(D^jQ=(-1)^j j!Q^{j+1}\) plus lower powers of \(Q\).
 The leading pole coefficient \eqref{eq:leadingpole} therefore gives
 the unique form
 \begin{equation}\label{eq:normalized-A}
  v_A=s_pA(D)Q,\qquad
- A(\rho)=\rho^d+\alpha_1\rho^{d-1}+\cdots+\alpha_d,\qquad d=p-1.
+ A(\rho)=\rho^d+\alpha_1\rho^{d-1}+\cdots+\alpha_d,\qquad d=p-1,
 \end{equation}
-The scale \(s_p\) was defined in \eqref{eq:elliptic-system}.
+with the scale \(s_p\) of \eqref{eq:leadingpole}.
 This representation is the standard singular-part operator form:
 \(Q=1/2+D\log\cosh(z/2)\), so \eqref{eq:normalized-A} is a
 constant plus a linear differential operator applied to
-\(\log\cosh(z/2)\).
-Such forms, including the KS case, are discussed by
+\(\log\cosh(z/2)\); such forms, including the KS case, are discussed by
 \citet{ConteMusette2003}.
-We use the coefficients \(\alpha_1,\ldots,\alpha_d\) of that operator
-as the coordinates for the enumeration.
-
-The argument runs as follows. The profile \(v_A\) solves
-\eqref{eq:main} for some monic \(P\) exactly when \(A\) divides a
-polynomial built from \(A\) by a discrete convolution
-(Proposition~\ref{prop:divisibility}). The remainder of that division
-gives \(d\) polynomial equations in the \(d\) coordinates. When
-\(\ell=2p-1\) is prime, these equations become transparent modulo
-\(\ell\): they say that \(A\) divides \(\rho^\ell-\rho\). The monic
-divisors of degree \(d\) of that polynomial are the products
-\(\prod_{s\in S}(\rho-s)\) over the \(d\)-element subsets \(S\) of
-\(\FF_\ell\), and there are \(\binom{\ell}{d}\) of them. We show that
-every solution has coefficients that can be reduced modulo \(\ell\), so
-that it reduces to one of these divisors, and that every divisor lifts
-to exactly one solution (Theorem~\ref{thm:prime}). The subset \(S\) is
-the label of the pair. Section~\ref{sec:labels} then reads pulses,
-fronts and mirror images off the labels, and this gives the count in
-the two pure subfamilies (Theorem~\ref{thm:symmetric}).
+We use \(\alpha_1,\ldots,\alpha_d\) as the unknowns of the count.
 
 \subsection{Discrete convolution and the matching equations}
 
@@ -60,24 +35,18 @@ continuation of
 \]
 The continuation exists by the power-sum formulas: for fixed
 \(F,G\) the right side is a polynomial in \(n\).
-Write
-\[
- S_A=A\star A.
-\]
+Write \(S_A=A\star A\).
 For monic \(A\) of degree \(d\),
 \begin{equation}\label{eq:Sleading}
  \deg S_A=2d+1,\qquad
- [\rho^{2d+1}]S_A=\beta_d:=\frac{(d!)^2}{(2d+1)!}.
+ [\rho^{2d+1}]S_A=\frac{(d!)^2}{(2d+1)!}=\frac{2}{s_p}.
 \end{equation}
 The leading coefficient is the beta integral
 \(\int_0^1t^d(1-t)^d\dd t\).
 
 \begin{proposition}[Polynomial divisibility]\label{prop:divisibility}
 The profile \eqref{eq:normalized-A} solves \eqref{eq:main} for some
-monic \(P\) if and only if
-\begin{equation}\label{eq:discrete-divisibility}
- A\mid S_A.
-\end{equation}
+monic \(P\) if and only if \(A\) divides \(S_A\).
 The operator is unique and is
 \begin{equation}\label{eq:operator-A}
  P_A=\frac{s_pS_A}{2A}.
@@ -95,53 +64,13 @@ Squaring gives the rational-function identity
 \begin{equation}\label{eq:discrete-square}
  (A(D)Q)^2=-S_A(D)Q.
 \end{equation}
-The map \(B\mapsto B(D)Q\) is injective: its vanishing would give
-\(B(n)=0\) for every positive integer \(n\).
+The map \(F\mapsto F(D)Q\) is injective: its vanishing would give
+\(F(n)=0\) for every positive integer \(n\).
 Consequently \eqref{eq:main} is equivalent to
 \(2P_AA=s_pS_A\), which has a polynomial solution \(P_A\) exactly
 when \(A\) divides \(S_A\).
-Equation \eqref{eq:Sleading} and \(s_p=2/\beta_d\) show that \(P_A\)
+Equation \eqref{eq:Sleading} shows that \(P_A\)
 is monic of degree \(p\).
-\end{proof}
-
-Every \(P_A\) has a root among \(1,\ldots,p\). Let \(m\) be the least
-positive integer with \(A(m)\ne0\); then \(m\le p\), because \(A\) has
-degree \(p-1\). As \(e^z\to0\) the profile begins with
-\(s_p(-1)^{m-1}A(m)e^{mz}\) and its square with \(e^{2mz}\), so the
-coefficient of \(e^{mz}\) in \eqref{eq:main} gives \(P_A(m)=0\).
-
-
-The operator determines the profile. This holds for every \(p\),
-without the hypotheses of Theorem~\ref{thm:complete}, because
-it only uses the leading coefficient of a convolution.
-
-\begin{proposition}[One profile per operator]\label{prop:injective}
-Let \(A,B\) be monic polynomials of degree \(p-1\) satisfying
-\(A\mid S_A\) and \(B\mid S_B\). If \(P_A=P_B\), then \(A=B\).
-Consequently a monic operator of degree \(p\) admits at most one
-normalized rational-exponential one-pole profile.
-Any count of distinct pairs with this normalization is therefore
-also a count of distinct operators.
-\end{proposition}
-
-\begin{proof}
-Suppose \(P_A=P_B=P\), and put \(h=A-B\).
-If \(h\ne0\), its degree \(e\) is less than \(d=p-1\); write
-\(f\ne0\) for its leading coefficient.
-By \eqref{eq:operator-A} and the bilinearity and symmetry of the convolution,
-\[
- S_A-S_B=h\star(A+B)=\frac{2}{s_p}Ph.
-\]
-The power-sum calculation in \eqref{eq:Sleading} gives the leading
-coefficient \(2f\int_0^1t^e(1-t)^d\dd t\) on the left.
-Since \(P\) is monic, the right side has leading coefficient
-\((2/s_p)f=\beta_df\). Cancelling \(f\) would therefore give
-\[
- 2\int_0^1t^e(1-t)^d\dd t
-   =\int_0^1t^d(1-t)^d\dd t.
-\]
-This is impossible: \(e<d\) implies \(t^e>t^d\) for \(0<t<1\), so
-the left side exceeds twice the right side. Thus \(h=0\).
 \end{proof}
 
 Divide \(S_A\) by the monic polynomial \(A\):
@@ -152,29 +81,41 @@ Divide \(S_A\) by the monic polynomial \(A\):
 The matching equations are \(R_0=\cdots=R_{d-1}=0\): \(d\) polynomial
 equations in the \(d\) unknowns \(\alpha_1,\ldots,\alpha_d\).
 Their solutions are in bijection with the normalized pairs
-\((P_A,v_A)\).
-We write \(\Xp\) for the solution set together with the equations
-that define it.
+\((P_A,v_A)\). For \(p=2\) and \(A=\rho+a\) there is the single
+equation \(R_0=-a(a-1)(a+1)/6=0\) of the Introduction.
+We write \(\Xp\) for the set of solutions of the matching equations.
+The multiplicity of a point of \(\Xp\) always means its multiplicity as
+a solution of these equations, in the following sense.
 
-Two notions from algebra are used to count. A solution is
-\emph{simple} if the Jacobian matrix of \((R_0,\ldots,R_{d-1})\) with
-respect to \((\alpha_1,\ldots,\alpha_d)\) is invertible there.
-Every isolated solution has a \emph{multiplicity}. For a square system
-such as this one it may be pictured as the number of simple solutions
-into which the point splits under a generic small perturbation of the
-equations; formally it is the dimension over \(\CC\) of the local
-quotient algebra of the equations at that point. It equals one exactly
-for simple solutions.
-A \emph{count with multiplicity} is the sum of the multiplicities of
-the solutions. It equals the number of distinct pairs exactly when
-every solution is simple.
+\paragraph{Simple solutions and multiplicity.}
+The solutions of a system of \(d\) polynomial equations in \(d\)
+unknowns are counted in the way the roots of a polynomial are counted.
+A solution is \emph{simple} if the Jacobian matrix of
+\((R_0,\ldots,R_{d-1})\) with respect to
+\((\alpha_1,\ldots,\alpha_d)\) is invertible there; this generalizes a
+simple root, \(f(a)=0\), \(f'(a)\ne0\). Every isolated solution, that
+is, one that is not a limit of other solutions, has a
+\emph{multiplicity}, a positive integer that generalizes the
+multiplicity of a root: it is the number of solutions near it of the
+perturbed system \(R_r=\varepsilon_r\), for generic small
+\(\varepsilon\in\CC^d\), in the way in which the double root of
+\(x^2=0\) becomes the two roots of \(x^2=\varepsilon\). It is one
+exactly when the solution is simple. Computer algebra obtains it as a
+dimension. The multiplicity of a solution is the dimension over \(\CC\)
+of the space of convergent power series at that point modulo the
+combinations \(\sum_rh_rR_r\) with power series \(h_r\); and when a
+system has finitely many solutions, the sum of their multiplicities is
+the dimension of the space of polynomials modulo the combinations
+\(\sum_rh_rR_r\) with polynomials \(h_r\)
+\citep[Sections~4.3 and~5.2]{ArnoldGuseinZadeVarchenko1985},
+\citep[Chapter~4, \S2]{CoxLittleOShea2005}.
+A \emph{count with multiplicity} is this sum. It equals the number of
+distinct pairs exactly when every solution is simple.
+Section~\ref{sec:ks} shows multiplicities at work.
 
-\subsection{The prime-index theorem}\label{sec:prime}
-
-Two tools are needed: a grading of the matching equations, and a lemma
-on reduction modulo a prime.
-
-\paragraph{Weights and the continuous convolution.}
+\paragraph{How many solutions can there be?}
+Before counting, we ask how many solutions such a system can have at
+most. The answer is already \(N_p\).
 Give \(\alpha_j\) weight \(j\) and \(\rho\) weight one, so that \(A\) is
 weighted-homogeneous of weight \(d\). This grading reflects how the
 coefficients scale: replacing the roots of \(A\) by \(\lambda\) times
@@ -182,9 +123,9 @@ themselves multiplies \(\alpha_j\) by \(\lambda^j\). The polynomial
 \(S_A\) has weight at most \(2d+1\), and its part of weight exactly
 \(2d+1\) is the \emph{continuous} convolution
 \begin{equation}\label{eq:continuous}
- H_A(\rho)=\int_0^\rho A(t)A(\rho-t)\dd t
- =\sum_{i,j=0}^{d}\frac{i!j!}{(i+j+1)!}a_ia_j\rho^{i+j+1},
- \qquad A(\rho)=\sum_i a_i\rho^i .
+ H_A(\rho)=\int_0^\rho A(t)A(\rho-t)\dd t,
+ \qquad
+ \int_0^\rho t^i(\rho-t)^j\dd t=\frac{i!\,j!}{(i+j+1)!}\,\rho^{i+j+1}.
 \end{equation}
 Indeed these are precisely the highest weighted terms of the power sums
 that define \(S_A\). Monic division preserves the highest weighted
@@ -206,71 +147,83 @@ infinity only along solutions of that problem. We denote by
  A\text{ monic},\quad\deg A=d,\quad A\mid H_A
  \quad\Longrightarrow\quad A(\rho)=\rho^d.
 \end{equation}
-We call \((\mathrm R_d)\) \emph{rigidity}. The solution
-\(A=\rho^d\) corresponds to the rational wave
-\(v=c_\ast z^{-p}\) of the operator \(P=D^p\), and rigidity says that
-\eqref{eq:main} has no other rational one-pole solution that vanishes
-at infinity (Section~\ref{sec:elliptic-counting}, Step~3).
+We call \((\mathrm R_d)\) \emph{rigidity}.
 
-\paragraph{Reduction modulo \(\ell\).}
-Let \(\ZZ_{(\ell)}\) be the ring of rational numbers whose denominator
-is prime to \(\ell\). For a polynomial \(G\) in
-\(\alpha_1,\ldots,\alpha_d\), write \(G^{\mathrm{top}}\) for its part of
-highest weight.
+\begin{proposition}[Weighted B\'ezout bound]\label{prop:bezout}
+Let \(p\ge2\) and \(d=p-1\). The matching equations are \(d\) equations
+of weighted degrees at most \(2d+1,2d,\ldots,d+2\) in \(d\) unknowns of
+weights \(1,2,\ldots,d\). Their isolated solutions, counted with
+multiplicity, number at most
+\[
+ \frac{(d+2)(d+3)\cdots(2d+1)}{d!}=\binom{2d+1}{d}
+ =\binom{2p-1}{p-1}=N_p .
+\]
+If rigidity \((\mathrm R_d)\) holds, that is, if the parts of weight
+\(2d+1-r\) of the \(R_r\), which by \eqref{eq:weights} are the
+coefficients of \(\remA H_A\), have no common zero other than the
+origin, then the matching equations have finitely many solutions, and
+counted with multiplicity there are exactly \(N_p\) of them. They are
+then \(N_p\) distinct solutions exactly when all of them are simple.
+\end{proposition}
 
-\begin{lemma}[Reduction modulo \(\ell\)]\label{lem:reduction}
-Let \(G_1,\ldots,G_m\in\ZZ_{(\ell)}[\alpha_1,\ldots,\alpha_d]\), and
-suppose that the reductions modulo \(\ell\) of
-\(G_1^{\mathrm{top}},\ldots,G_m^{\mathrm{top}}\) have no common zero
-over \(\overline{\FF}_\ell\) other than the origin. Then:
-\begin{enumerate}
-\item[\textup{(a)}] \(G_1^{\mathrm{top}},\ldots,G_m^{\mathrm{top}}\)
-have no common zero over \(\CC\) other than the origin;
-\item[\textup{(b)}] every common zero of \(G_1,\ldots,G_m\) with
-coordinates in an algebraic closure \(K\) of \(\QQ_\ell\) is integral:
-its coordinates lie in the valuation ring of \(K\).
-\end{enumerate}
+For \(p=2\) the bound is \(3/1=3\), and for \(p=3\) it is
+\((4\cdot5)/(1\cdot2)=10\). The proposition is B\'ezout's theorem in
+weighted form (the substitution \(\alpha_j=y_j^j\) turns weights into
+ordinary degrees and counts every solution \(d!\) times). It is proved
+as Theorem~2.1 of the companion note, from B\'ezout's inequality for
+isolated solutions \citep[Chapter~VIII]{Mondal2021} and B\'ezout's
+theorem \citep{CoxLittleOShea2005}.
+The proof of Theorem~\ref{thm:prime} does not use this proposition: at
+a prime index the solutions are found through their labels, and
+rigidity comes out as a by-product. The proposition says what the
+number \(N_p\) is, and it is what remains at the other orders
+(Section~\ref{sec:further}).
+
+For waves, rigidity is a statement about rational solutions. The
+dictionary is the Laplace transform, restricted to polynomials.
+
+\begin{lemma}[Laplace correspondence]\label{lem:laplace}
+Let \(F\mapsto F^\sharp\) be the linear map on polynomials with
+\((\rho^k)^\sharp=k!\,z^{-k-1}\). Then \(D(F^\sharp)=(-\rho F)^\sharp\),
+and \(F^\sharp G^\sharp=(F\ast G)^\sharp\) for the continuous convolution
+\((F\ast G)(\rho)=\int_0^\rho F(t)G(\rho-t)\dd t\); in particular
+\((A^\sharp)^2=(H_A)^\sharp\).
+Let \(P\) be monic of degree \(p\), and let \(V\) be a nonconstant
+rational solution of \eqref{eq:main} whose only pole is at \(z=0\).
+Then \(V\) vanishes at infinity, \(P(0)=0\), and
+\[
+ V=(-1)^{p-1}s_pA^\sharp,\qquad A\mid H_A,\qquad
+ P(\rho)=(-1)^p\,\frac{s_p}{2}\,\frac{H_A}{A}(-\rho),
+\]
+with \(A\) monic of degree \(p-1\). Conversely, every monic \(A\) of
+degree \(p-1\) that divides \(H_A\) gives such a solution. The residue
+of \(V\) at zero is \((-1)^{p-1}s_pA(0)\).
 \end{lemma}
 
 \begin{proof}
-Let \(v\) be the valuation of \(K\) with \(v(\ell)=1\), let
-\(\mathcal O\) be its valuation ring, and recall that the residue field
-of \(\mathcal O\) is \(\overline{\FF}_\ell\) and that, \(K\) being
-algebraically closed, every rational number is the valuation of some
-element of \(K\).
-
-For (b), let \(\alpha\in K^d\) be a common zero of the \(G_i\), put
-\(t=\min_j v(\alpha_j)/j\), and suppose that \(t<0\). Choose
-\(\lambda\in K\) with \(v(\lambda)=t\), and put
-\(\beta_j=\alpha_j/\lambda^j\). Then every \(\beta_j\) lies in
-\(\mathcal O\), and at least one of them is a unit. Decompose
-\(G_i=\sum_{w\le W_i}G_i^{(w)}\) into its parts of weight \(w\), so that
-\(G_i^{(W_i)}=G_i^{\mathrm{top}}\). A part of weight \(w\) satisfies
-\(G_i^{(w)}(\alpha)=\lambda^wG_i^{(w)}(\beta)\). Dividing the equation
-\(G_i(\alpha)=0\) by \(\lambda^{W_i}\) gives
-\[
- G_i^{\mathrm{top}}(\beta)
- =-\sum_{w<W_i}\lambda^{w-W_i}\,G_i^{(w)}(\beta).
-\]
-Each term on the right has positive valuation, because
-\(v(\lambda^{w-W_i})=(w-W_i)t>0\) and \(G_i^{(w)}(\beta)\in\mathcal O\).
-Reducing modulo the maximal ideal of \(\mathcal O\), we find that the
-reduction of \(\beta\), which is not the origin, is a common zero of the
-reduced polynomials \(G_i^{\mathrm{top}}\). This contradicts the
-hypothesis. Hence \(t\ge0\), which is (b).
-
-For (a), suppose that the \(G_i^{\mathrm{top}}\) have a common complex
-zero other than the origin. They are weighted-homogeneous with rational
-coefficients, so after fixing one nonzero coordinate to be \(1\) the
-weak Nullstellensatz gives such a zero \(\alpha\) with coordinates in
-\(\overline{\QQ}\subset K\). Define \(t\), \(\lambda\) and \(\beta\) as
-before, now for either sign of \(t\). Then
-\(G_i^{\mathrm{top}}(\beta)=\lambda^{-W_i}G_i^{\mathrm{top}}(\alpha)=0\),
-and the reduction of \(\beta\) is again a forbidden common zero.
+Both rules are checked on monomials; the second is the integral in
+\eqref{eq:continuous}. By \eqref{eq:rational-system}, \(V=b+f\) with a
+constant \(b\) and with \(f\to0\) at infinity. The constant part of
+\eqref{eq:main} is \(b\,(P(0)+b/2)=0\), and the slowest decaying term of
+\(f\) enters the rest of the equation with the factor \(P(0)+b\), which
+must vanish. Hence \(b=P(0)=0\). By \eqref{eq:leadingpole} the pole has
+order \(p\) and leading coefficient \(c_\ast=(-1)^{p-1}(p-1)!\,s_p\), so
+\(V=cA^\sharp\) with \(c=(-1)^{p-1}s_p\) and \(A\) monic of degree
+\(p-1\). By the two rules, \eqref{eq:main} for \(V\) reads
+\(\bigl(cP(-\rho)A+c^2H_A/2\bigr)^\sharp=0\), and the map \(\sharp\) is
+injective. This gives the divisibility and the formula for \(P\). It
+also gives the converse; the polynomial \(P\) defined by the formula is
+monic of degree \(p\), because \(H_A\) has the leading coefficient
+\eqref{eq:Sleading} of \(S_A\). The residue is the coefficient
+\(cA(0)\) of \(z^{-1}\).
 \end{proof}
 
-The argument needs the algebraic closure of the residue field; a search
-for zeros over \(\FF_\ell\) alone would not suffice.
+For \(A=\rho^{p-1}\) the lemma gives \(V=c_\ast z^{-p}\) and \(P=D^p\).
+Rigidity \((\mathrm R_{p-1})\) is therefore the statement that, for
+every monic \(P\) of degree \(p\), equation \eqref{eq:main} has no other
+nonconstant rational solution with a single pole.
+
+\subsection{The prime-index theorem}\label{sec:prime}
 
 \begin{theorem}[Prime-index enumeration]\label{thm:prime}
 Let \(\ell=2p-1\) be prime, and put \(d=p-1\).
@@ -280,25 +233,241 @@ Let \(\ell=2p-1\) be prime, and put \(d=p-1\).
 simple. Thus there are exactly \(N_p\) rational-exponential pairs, and
 they are distinct.
 \item[\textup{(b)}] The coefficients of every solution are algebraic
-numbers that are integral at \(\ell\). After a choice of an
-\(\ell\)-adic embedding of the algebraic numbers, reduction modulo
-\(\ell\) is a bijection between the solutions and the \(d\)-element
-subsets \(S\subset\FF_\ell\):
+numbers, and they are \(\ell\)-integral: they have no \(\ell\) in a
+denominator and can be reduced modulo \(\ell\), in the way in which
+\(1/11\) becomes \(1\) and \(i\) becomes \(2\) or \(3\) modulo \(5\).
+Once a consistent way of reducing algebraic numbers is fixed
+(Section~\ref{sec:prime-proof}), reduction modulo \(\ell\) is a
+bijection between the solutions and the \(d\)-element subsets \(L\) of
+the field \(\FF_\ell\) of integers modulo \(\ell\):
 \begin{equation}\label{eq:prime-labels}
- \overline A(\rho)=\prod_{s\in S}(\rho-s).
+ \overline A(\rho)=\prod_{s\in L}(\rho-s).
 \end{equation}
 \item[\textup{(c)}] Rigidity \((\mathrm R_d)\) holds.
 \end{enumerate}
 \end{theorem}
 
-We call \(S\) the \emph{label} of the pair.
+We call \(L\) the \emph{label} of the pair. It depends on the way of
+reducing algebraic numbers, an embedding that is fixed in the proof,
+only in the way in which \(i\) is \(2\) or \(3\) modulo \(5\): another
+embedding gives a solution the label that the first one gives to a
+conjugate solution. Whether a label contains \(0\), and the labels of
+solutions with rational coefficients, do not depend on it.
+The labels describe reductions of algebraic
+coefficients; they are not assertions that the complex roots of
+\(A\), or the characteristic roots of \(P_A\), are integers.
 
-\begin{proof}
-We work over \(\ZZ_{(\ell)}\). The proof has four steps: a congruence
-for \(S_A\) modulo \(\ell\); the solution of the reduced equations over
-\(\FF_\ell\); integrality, which shows that every solution reduces to
-one of them; and lifting, which shows that each of them comes from
-exactly one solution.
+\paragraph{Example: order three.}\label{sec:ks-rational}
+Let \(p=3\), \(s_3=60\), and \(A(\rho)=\rho^2+a\rho+b\), so that
+\((a,b)=(\alpha_1,\alpha_2)\).
+The profile and monic operator are
+\begin{align}
+ \frac{v_A}{60}
+   &=2Q^3-(a+3)Q^2+(a+b+1)Q, \label{eq:ksprofile}\\
+ P_A(\rho)
+   &=\rho^3+4a\rho^2+(a^2+19b)\rho
+            -a^3+7ab-5a-30b. \label{eq:ksoperator}
+\end{align}
+The remainder of \(S_A\) is
+\((\widehat R_1\rho+\widehat R_0)/30\), where
+\begin{equation}\label{eq:ksmatching}
+ \widehat R_0=30R_0=ab(a^2-7b+5),\qquad
+ \widehat R_1=30R_1=a^4-8a^2b+11b^2+10b-1.
+\end{equation}
+The system \(\widehat R_0=\widehat R_1=0\) is solved by cases on the
+factors of \(\widehat R_0\).
+If \(b=0\), then \(a^4=1\).
+If \(a=0\), then \((b+1)(11b-1)=0\).
+In the remaining case \(a^2=7b-5\), and the second equation becomes
+\(4(b-2)(b-3)=0\).
+This exhausts the system and gives Table~\ref{tab:ks}.
+The Jacobian determinant is nonzero at every point, so all
+\(N_3=10\) pairs are simple, as Theorem~\ref{thm:prime}(a) states for
+\(2p-1=5\).
+
+\begin{table}[htbp]
+\centering
+\caption{All ten rational-exponential pairs at order three.
+The label is the set of roots of \(A\) modulo \(5\)
+(Theorem~\ref{thm:prime}); for the two complex pairs it depends on the
+choice of \(i\) modulo \(5\). The column \(|\sigma|\) refers to the
+equation of the Introduction, \((b_1,b_2,b_3)=(1,\sigma,1)\): by
+\eqref{eq:coefficients}, the coefficients \(B=4a\) of \(\rho^2\) and
+\(\mu=a^2+19b\) of \(\rho\) in \eqref{eq:ksoperator} are
+\(B=\sigma/\kappa\) and \(\mu=1/\kappa^2\), so
+\(\sigma^2=B^2/\mu=16a^2/(a^2+19b)\), which does not change when \(x\)
+is rescaled. In the rows \((\pm i,0)\) and \((0,-1)\), \(\mu\) is
+negative, and the rescaling to that equation has an imaginary rate.
+The determinant is
+\(\det\partial(\widehat R_0,\widehat R_1)/\partial(a,b)\). The last
+column describes \(v_A\) on the real axis, at unit rate.}
+\label{tab:ks}
+\begin{tabular}{@{}cclccl@{}}
+\toprule
+\(a\)&\(b\)&Labels&\(|\sigma|\)&Determinant&Real profiles\\
+\midrule
+\(\pm1\)&\(0\)&\(\{0,4\}\), \(\{0,1\}\)&\(4\)&\(-24\)&Pulses\\
+\(\pm i\)&\(0\)&\(\{0,2\}\), \(\{0,3\}\)&\(4\)&\(-16\)&Not real\\
+\(0\)&\(-1\)&\(\{1,4\}\)&\(0\)&\(144\)&Front\\
+\(0\)&\(1/11\)&\(\{2,3\}\)&\(0\)&\(576/121\)&Front\\
+\(\pm3\)&\(2\)&\(\{3,4\}\), \(\{1,2\}\)&\(12/\sqrt{47}\)&\(-144\)&Fronts\\
+\(\pm4\)&\(3\)&\(\{2,4\}\), \(\{1,3\}\)&\(16/\sqrt{73}\)&\(384\)&Fronts\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The ten labels are the ten two-element subsets of
+\(\{0,1,2,3,4\}\); for instance \(\rho^2+1/11\) reduces to
+\(\rho^2+1=(\rho-2)(\rho-3)\). By \eqref{eq:ksprofile},
+\(v_A/60\to b\) as \(z\to+\infty\), so a pair is a pulse exactly when
+\(b=0\). The four pulses are the pairs whose label contains \(0\);
+Proposition~\ref{cor:endpoints} below shows that this is so at every
+prime index. The map \((a,b)\mapsto(-a,b)\) is the mirror image of the
+Introduction, and it replaces a label \(L\) by \(-L\)
+(Section~\ref{sec:reflection}).
+There are ten complex pairs, eight with real coefficients.
+All eight are smooth and bounded on the real axis:
+two pulses and six fronts.
+For example, \(A=(\rho-1)(\rho-2)\) gives \(v_A=120Q^3\) and
+\(P_A=(\rho-3)(\rho-4)(\rho-5)\).
+These are the classical solutions in hyperbolic functions
+\citep{KuramotoTsuzuki1976,Kudryashov1988,Kudryashov1989,Kudryashov1990,Kudryashov1991}.
+The complete parameter list is tabulated by
+\citet[Table~1]{KudryashovZargaryan1996} and
+\citet[Table~1]{ConteMusette2009}.
+Their tables contain six parameter cases because they identify the
+two signs of the dispersion coefficient: the four mirror pairs
+\((\pm a,b)\) and the two pairs with \(a=0\).
+Exhaustion of this classical list follows from
+\citet{Eremenko2006}; \citet{Demina2020} classifies all irreducible
+algebraic invariants of the same profile equation.
+Later rederivations by ansatz methods coincide with these waves
+\citep{KudryashovSoukharev2009}.
+The pairs \((\pm1,0)\) and \((\pm i,0)\) belong to the same
+equations, those with \(\sigma^2=16\): by \eqref{eq:coefficients} the
+rate is \(\kappa=\pm1\) for the first two and \(\kappa=\pm i\) for the
+others (Section~\ref{sec:fixed}). Their rates differ by a factor
+\(i\), so for a real equation the second wave is periodic in \(x\), and
+its real form has poles on the real axis.
+
+\subsection{Proof of the prime-index theorem}\label{sec:prime-proof}
+
+The idea was described in the Introduction. The proof adds two things:
+every solution can be reduced modulo \(\ell\), by a dominant balance
+(Step~3); and every label comes from exactly one solution, by Newton's
+method in the form of Hensel's lemma (Step~4). A reader who accepts the
+theorem can go to
+Section~\ref{sec:labels}: the rest of the paper uses only its
+statement, and the proof of Proposition~\ref{cor:endpoints} uses
+\eqref{eq:prime-collapse} and fact \textup{(V)} below once more.
+
+\paragraph{Reduction modulo \(\ell\) of algebraic numbers.}
+A rational number can be reduced modulo \(\ell\) if \(\ell\) does not
+divide its denominator; these numbers form a ring, denoted
+\(\ZZ_{(\ell)}\). The solutions of the matching equations will turn out
+to be algebraic numbers, and an algebraic number is reduced through a
+polynomial equation that it satisfies: \(i\) becomes \(2\) or \(3\)
+modulo \(5\), because \(x^2+1\equiv(x-2)(x-3)\) modulo \(5\). The
+\(\ell\)-adic valuation makes these choices for all algebraic numbers at
+once, so that reduction respects sums and products, and it tells when a
+number can be reduced at all. Four standard facts suffice. A useful
+guide is the
+analogy with a small parameter: think of \(\ell\) as \(\varepsilon\), of
+the valuation as the order of a quantity in \(\varepsilon\), and of
+reduction modulo \(\ell\) as setting \(\varepsilon=0\).
+
+\emph{\textup{(V)} Valuation and reduction.}
+For a nonzero rational number \(x=\ell^mx'\), with the numerator and
+the denominator of \(x'\) prime to \(\ell\), the \(\ell\)-adic
+valuation is \(\operatorname{ord}(x)=m\); put
+\(\operatorname{ord}(0)=\infty\). Then
+\begin{equation}\label{eq:valuation-rules}
+ \operatorname{ord}(xy)=\operatorname{ord}(x)+\operatorname{ord}(y),
+ \qquad
+ \operatorname{ord}(x+y)\ge
+   \min\{\operatorname{ord}(x),\operatorname{ord}(y)\},
+\end{equation}
+and \(\ZZ_{(\ell)}\) consists of the rational numbers with
+\(\operatorname{ord}(x)\ge0\).
+Let \(K\) be an algebraic closure of the field \(\QQ_\ell\) of
+\(\ell\)-adic numbers. Then \(K\) is algebraically
+closed, it contains \(\QQ\), and it carries a function
+\(\operatorname{ord}\colon K\to\QQ\cup\{\infty\}\) that extends the one
+above, satisfies \eqref{eq:valuation-rules}, and is infinite only at
+\(0\) \citep[Chapter~III]{Koblitz1984},
+\citep[Chapter~II, Theorem~(4.8)]{Neukirch1999}. The field
+\(\overline\QQ\subset\CC\) of all algebraic numbers can be embedded in
+\(K\). The embedding is not unique: two embeddings differ by an
+automorphism of \(\overline\QQ\). We fix one embedding, and from now on
+we regard algebraic numbers as elements of \(K\).
+An element \(x\in K\) is \emph{\(\ell\)-integral} if
+\(\operatorname{ord}(x)\ge0\). The \(\ell\)-integral elements form a
+ring \(\mathcal O\). Those with \(\operatorname{ord}(x)>0\) form a
+subset \(\mathfrak m\) that is closed under addition and under
+multiplication by elements of \(\mathcal O\), and an element with
+\(\operatorname{ord}(x)=0\) has its inverse in \(\mathcal O\). Hence
+\(\Bbbk=\mathcal O/\mathfrak m\) is a field. It contains \(\FF_\ell\),
+because \(\ZZ_{(\ell)}\cap\mathfrak m=\ell\ZZ_{(\ell)}\). The map
+\(x\mapsto\overline x\) from \(\mathcal O\) to \(\Bbbk\) is
+\emph{reduction modulo \(\ell\)}. It respects sums and products, it is
+the usual reduction on \(\ZZ_{(\ell)}\), and \(\overline x=0\) exactly
+when \(\operatorname{ord}(x)>0\).
+Polynomials are reduced coefficient by coefficient. Division by a monic
+polynomial uses only additions and multiplications of coefficients.
+Hence it stays within any ring that contains the coefficients, for us
+\(\ZZ_{(\ell)}[\alpha_1,\ldots,\alpha_d]\) or \(\mathcal O\), and it
+commutes with the substitution of values for the \(\alpha_j\) and with
+reduction modulo \(\ell\): the reductions of the quotient and of the
+remainder are the quotient and the remainder of the reduced
+polynomials.
+A monic polynomial whose roots
+are \(\ell\)-integral has \(\ell\)-integral coefficients.
+
+\emph{\textup{(H)} Hensel's lemma.}
+Let \(G=(G_1,\ldots,G_d)\) be polynomials in \(d\) unknowns with
+coefficients in \(\ZZ_{(\ell)}\), and let \(\overline a\in\FF_\ell^d\)
+be a solution of the reduced system at which the Jacobian determinant
+of the reduced system is not zero. Then there is exactly one
+\(a\in\mathcal O^d\) with \(G(a)=0\) and with reduction
+\(\overline a\). This is Newton's method: started from any integer
+vector that reduces to \(\overline a\), the iteration
+\(a\mapsto a-DG(a)^{-1}G(a)\) converges \(\ell\)-adically. It is the
+counterpart of a familiar fact: a simple root at \(\varepsilon=0\)
+continues in exactly one way to a power series in \(\varepsilon\).
+Existence is the multivariable Hensel lemma of \citet{ConradHensel}
+over \(\QQ_\ell\). For uniqueness,
+two such solutions have their coordinates in a finite extension of
+\(\QQ_\ell\) inside \(K\), which is complete
+\citep[Chapter~II, Theorem~(4.8)]{Neukirch1999}, and the same lemma
+applies there.
+
+\emph{\textup{(N)} Algebraic solutions.}
+A system of polynomial equations with rational coefficients that has a
+solution in \(\CC^d\) has a solution in \(\overline\QQ^d\). This is
+the weak Nullstellensatz \citep[Chapter~4, \S1]{CoxLittleOSheaIVA}.
+
+\emph{\textup{(T)} Finite systems.}
+If a system of \(d\) polynomial equations in \(d\) unknowns with
+rational coefficients has only finitely many solutions in \(K^d\), then
+all of them lie in \(\overline\QQ^d\), and the system has the same
+solutions in \(\CC^d\), with the Jacobian determinant nonzero at the
+same ones. Indeed, finiteness over an algebraically closed field means
+that for each \(i\) some nonzero polynomial in \(x_i\) alone is a
+combination of the equations \citep[Chapter~5, \S3]{CoxLittleOSheaIVA}.
+To find such a combination, with given bounds on the degrees, is a
+system of linear equations with rational coefficients. Since it has a
+solution over \(K\) in which the polynomial in \(x_i\) is not zero, it
+has such a solution over \(\QQ\). That polynomial confines the \(i\)th
+coordinate of every solution, in any field that contains \(\QQ\), to
+finitely many algebraic numbers.
+
+\begin{proof}[Proof of Theorem~\ref{thm:prime}]
+The proof has four steps: a congruence for \(S_A\) modulo \(\ell\); the
+solution of the reduced equations; integrality, which shows that every
+solution can be reduced, and then reduces to one of them; and lifting,
+which shows that each of them comes from exactly one solution.
+Solutions are first taken in \(K^d\), with \(K\) as in \textup{(V)};
+the last step returns to \(\CC\).
 
 \emph{Step 1: the congruence.}
 Induction using \((D-n)Q^n=-nQ^{n+1}\) gives
@@ -306,13 +475,13 @@ Induction using \((D-n)Q^n=-nQ^{n+1}\) gives
  Q^n=\frac{(-1)^{n-1}}{(n-1)!}
         \prod_{j=1}^{n-1}(D-j)Q.
 \]
-Write \((A(D)Q)^2=\sum_{n=2}^{2p}b_nQ^n\).
-Each \(b_n\) is an integer polynomial in the coefficients of \(A\),
-and \(b_{2p}=(d!)^2\).
+Write \((A(D)Q)^2=\sum_{n=2}^{2p}\gamma_nQ^n\).
+Each \(\gamma_n\) is an integer polynomial in the coefficients of \(A\),
+and \(\gamma_{2p}=(d!)^2\).
 By \eqref{eq:discrete-square},
 \[
  S_A(\rho)=
- \sum_{n=2}^{2p}\frac{(-1)^nb_n}{(n-1)!}
+ \sum_{n=2}^{2p}\frac{(-1)^n\gamma_n}{(n-1)!}
        \prod_{j=1}^{n-1}(\rho-j).
 \]
 Only the last denominator, \((2p-1)!=\ell!\), contains \(\ell\).
@@ -323,121 +492,135 @@ Consequently \(\ell S_A\) has coefficients in
  \frac{(d!)^2}{(\ell-1)!}\prod_{j=1}^{\ell}(\rho-j)
  \equiv(-1)^d(\rho^\ell-\rho)\pmod\ell.
 \end{equation}
-The scalar follows by pairing \(j\) with \(\ell-j\) in
-\((\ell-1)!\), and the product is \(\rho^\ell-\rho\) because it runs
-over all residues modulo \(\ell\). The right side does not depend on
-\(A\): this is what makes the prime index special.
+The scalar follows by pairing \(j\) with \(\ell-j\) in \((\ell-1)!\).
+The product is \(\rho^\ell-\rho\) because, by Fermat's little theorem,
+every residue \(s\) modulo \(\ell\) satisfies \(s^\ell=s\). The right
+side does not depend on \(A\): this is what makes the prime index
+special. Taking the parts of weight \(\ell=2d+1\) on both sides gives
+the corresponding congruence for the continuous convolution,
+\begin{equation}\label{eq:prime-continuous}
+ \ell H_A(\rho)\equiv(-1)^d\rho^\ell\pmod\ell .
+\end{equation}
+Both congruences are between polynomials in \(\rho\) and
+\(\alpha_1,\ldots,\alpha_d\) with coefficients in \(\ZZ_{(\ell)}\).
+They may therefore be evaluated at any \(\ell\)-integral values of the
+\(\alpha_j\) and of \(\rho\), and then reduced.
 
 \emph{Step 2: the reduced equations.}
-Monic division preserves integrality, so the scaled remainder equations
-\(\ell R_r=0\) have coefficients in \(\ZZ_{(\ell)}\), and by
-\eqref{eq:prime-collapse} they reduce exactly to
-\(\overline A\mid\rho^\ell-\rho\).
-Since \(\rho^\ell-\rho=\prod_{s\in\FF_\ell}(\rho-s)\), its monic
-divisors of degree \(d\) are the \(\binom{\ell}{d}\) polynomials
-\eqref{eq:prime-labels}; all of them are defined over \(\FF_\ell\), and
-they exhaust the solutions over its algebraic closure.
+By \textup{(V)} the scaled remainders \(\ell R_r\) have coefficients in
+\(\ZZ_{(\ell)}\), and by \eqref{eq:prime-collapse} their reductions are
+the coefficients of the remainder of \((-1)^d(\rho^\ell-\rho)\) on
+division by \(\overline A\). The reduced equations therefore say that
+\(\overline A\) divides \(\rho^\ell-\rho\). Now
+\(\rho^\ell-\rho=\prod_{s\in\FF_\ell}(\rho-s)\), and polynomials over a
+field factor uniquely. Over any field that contains \(\FF_\ell\), in
+particular over \(\Bbbk\), the monic divisors of degree \(d\) are
+therefore the \(\binom{\ell}{d}\) polynomials \eqref{eq:prime-labels},
+and their coefficients lie in \(\FF_\ell\).
 Each of them is a simple solution of the reduced equations.
-Write \(\rho^\ell-\rho=\overline A C\).
+Write \(\rho^\ell-\rho=\overline A\,\overline C\).
 For a variation \(h\) with \(\deg h<d\), the derivative of the
-remainder map is, up to the nonzero scalar \((-1)^d\),
+remainder is, up to the nonzero scalar \((-1)^d\),
 \begin{equation}\label{eq:prime-jacobian}
- h\longmapsto-\operatorname{rem}_{\overline A}(Ch),
+ h\longmapsto-\operatorname{rem}_{\overline A}(\overline Ch),
 \end{equation}
-because the dividend \eqref{eq:prime-collapse} does not vary with
-\(A\). Since \(\rho^\ell-\rho\) is squarefree, \(\overline A\) and \(C\)
-are coprime, so multiplication by \(C\) is invertible modulo
-\(\overline A\), and the map \eqref{eq:prime-jacobian} is invertible.
+because the dividend in \eqref{eq:prime-collapse} does not vary with
+\(A\). Since \(\rho^\ell-\rho\) has no repeated factor, \(\overline A\)
+and \(\overline C\) have no common factor. If \(\overline A\) divides
+\(\overline Ch\), it therefore divides \(h\), and then \(h=0\) because
+\(\deg h<d\). The linear map \eqref{eq:prime-jacobian} is thus
+injective, hence invertible.
 
 \emph{Step 3: integrality and rigidity.}
-We apply Lemma~\ref{lem:reduction} to \(G_r=\ell R_r\),
-\(0\le r<d\). By \eqref{eq:weights}, \(G_r^{\mathrm{top}}\) is the
-coefficient of \(\rho^r\) in \(\remA(\ell H_A)\). Taking the part of
-weight \(\ell\) in \eqref{eq:prime-collapse} gives
-\begin{equation}\label{eq:prime-continuous}
- \ell H_A(\rho)\equiv(-1)^d\rho^\ell\pmod\ell,
-\end{equation}
-so the reduced polynomials \(G_r^{\mathrm{top}}\) vanish together
-exactly when \(\overline A\mid\rho^\ell\), that is, when
-\(\overline A=\rho^d\), which is the origin
-\(\alpha_1=\cdots=\alpha_d=0\). The hypothesis of the lemma holds.
-Part~(a) of the lemma says that \(\remA H_A=0\) only for \(A=\rho^d\),
-which is \((\mathrm R_d)\). Part~(b) says that every solution of the
-matching equations with coordinates in \(K\) is integral. Such a
-solution therefore has a reduction modulo \(\ell\), and by Step~2 the
-reduction is one of the polynomials \eqref{eq:prime-labels}.
+A solution could have \(\ell\) in a denominator, and then it could not
+be reduced. We show that this does not happen. The argument is a
+dominant balance, with \(\ell\) in the role of the small parameter: a
+solution that is large is rescaled to size one, and the leading-order
+problem, which is the continuous one, then leads to a contradiction.
+For \(\lambda\ne0\) and a monic polynomial \(A\) of degree \(d\), put
+\(A_\lambda(\rho)=\lambda^{-d}A(\lambda\rho)\). This is the monic
+polynomial whose roots are those of \(A\) divided by \(\lambda\), and
+its coefficients are \(\alpha'_j=\alpha_j/\lambda^j\). A polynomial
+\(T\) in \(\alpha_1,\ldots,\alpha_d\) and \(\rho\) that is
+weighted-homogeneous of weight \(w\) satisfies
+\(T(\alpha;\lambda\rho)=\lambda^{w}T(\alpha';\rho)\).
+
+Let \(A\) be a solution of the matching equations with coefficients in
+\(K\), and suppose that some root of \(A\) is not \(\ell\)-integral.
+Let \(\lambda\) be a root of least valuation, so that
+\(\theta=\operatorname{ord}(\lambda)<0\), and put \(B=A_\lambda\). The
+roots of \(B\) are \(\ell\)-integral, hence so are its coefficients
+\(\alpha'_j\), by \textup{(V)}. Decompose
+\(\ell S_A=\sum_{w\le\ell}T^{(w)}\) into its parts of weight \(w\). They
+have coefficients in \(\ZZ_{(\ell)}\) by Step~1, and
+\(T^{(\ell)}=\ell H_A\). Since \(A\) divides \(S_A\) and
+\(A(\lambda)=0\), we have \(S_A(\lambda)=0\). Dividing this equation by
+\(\lambda^{\ell}\) gives
+\[
+ \ell H_B(1)=-\sum_{w<\ell}\lambda^{w-\ell}\,T^{(w)}(\alpha';1).
+\]
+Each term on the right has positive valuation, because
+\(\operatorname{ord}(\lambda^{w-\ell})=(w-\ell)\theta>0\) and
+\(T^{(w)}(\alpha';1)\) is \(\ell\)-integral. So the right side reduces
+to zero. The left side reduces to \((-1)^d\ne0\), by
+\eqref{eq:prime-continuous} evaluated at \(\alpha=\alpha'\) and
+\(\rho=1\). This is a contradiction. Hence every root of \(A\) is
+\(\ell\)-integral, and so is every coefficient. The solution can be
+reduced, and by Step~2 its reduction is one of the polynomials
+\eqref{eq:prime-labels}.
+
+Rigidity is proved in the same way. Suppose that \(A\ne\rho^d\) is monic
+of degree \(d\), with complex coefficients, and divides \(H_A\). Since
+\(H_{A_\lambda}(\rho)=\lambda^{-\ell}H_A(\lambda\rho)\), every
+\(A_\lambda\) has the same property, so we may assume that one of the
+coefficients \(\alpha_j\) equals \(1\). By \textup{(N)}, applied to the
+equations \(\remA H_A=0\) together with this normalization, we may
+assume that the coefficients of \(A\) lie in \(\overline\QQ\subset K\).
+Let \(\lambda\) be a root of \(A\) of least valuation; it is not zero,
+because \(A\ne\rho^d\). Put \(B=A_\lambda\). As before, \(B\) has
+\(\ell\)-integral coefficients. Since \(A\) divides \(H_A\) and
+\(A(\lambda)=0\), we have
+\(0=\ell H_A(\lambda)=\lambda^{\ell}\,\ell H_B(1)\). But
+\(\ell H_B(1)\) reduces to \((-1)^d\ne0\), by
+\eqref{eq:prime-continuous}. This contradiction proves~(c).
 
 \emph{Step 4: lifting.}
-Let \(L\subset K\) be a finite extension of \(\QQ_\ell\), with ring of
-integers \(\mathcal O_L\). The system \((\ell R_r)_{0\le r<d}\) has
-coefficients in \(\ZZ_{(\ell)}\subset\ZZ_\ell\), and by Step~2 its
-Jacobian determinant is a unit at each of the \(\binom{\ell}{d}\)
-reduced solutions. The multivariable Hensel lemma
-\citep{ConradHensel}, whose proof by Newton iteration applies in any
-complete discrete valuation ring, then gives exactly one solution in
-\(\mathcal O_L^d\) above each reduced solution, and this solution
-already lies in \(\ZZ_\ell^d\). Every solution in \(K^d\) has its
-coordinates in some such \(L\), and lies in \(\mathcal O_L^d\) by
-Step~3. Hence reduction modulo \(\ell\) is a bijection between the
-solutions in \(K^d\) and the reduced solutions: there are exactly
-\(\binom{\ell}{d}\) of them, and the Jacobian determinant is nonzero at
-each.
-
-The matching equations have rational coefficients, and we have shown
-that they have finitely many solutions over the algebraically closed
-field \(K\). Their solutions over any algebraically closed field of
-characteristic zero are then the same finite set of points with
-coordinates in \(\overline{\QQ}\). In particular they have exactly
-\(\binom{\ell}{d}\) solutions over \(\CC\), all simple. This proves (a)
-and (b); part~(c) was proved in Step~3.
+The system \((\ell R_r)_{0\le r<d}\) has coefficients in
+\(\ZZ_{(\ell)}\), and by Step~2 each of the \(\binom{\ell}{d}\) reduced
+solutions lies in \(\FF_\ell^d\) and is simple. By Hensel's lemma
+\textup{(H)}, each of them is the reduction of exactly one solution in
+\(\mathcal O^d\). By Step~3 every solution in \(K^d\) lies in
+\(\mathcal O^d\), and its reduction is one of the reduced solutions.
+Hence reduction modulo \(\ell\) is a bijection between the solutions in
+\(K^d\) and the reduced solutions. There are exactly
+\(\binom{\ell}{d}\) solutions in \(K^d\), and the Jacobian determinant
+is nonzero at each of them, because its reduction is nonzero. By
+\textup{(T)}, the matching equations have the same \(\binom{\ell}{d}\)
+solutions over \(\CC\), with coordinates in \(\overline\QQ\), all
+simple. This proves (a) and (b); part~(c) was proved in Step~3.
 \end{proof}
 
 \begin{remark}[Formal verification]\label{rem:lean}
 Parts (a) and (c) of Theorem~\ref{thm:prime} have been verified in
 Lean~4 against the Mathlib library, both for the matching equations and
-for the pairs \((P,v)\) themselves;
-Appendix~\ref{app:verification} describes the files and the scope of
-the verification. The formal proof follows the route above:
-the congruence, integrality of every complex solution, injectivity of
-the reduction, and Hensel lifting of every label. For rigidity it
-normalizes the roots of \(A\) instead of its coefficients, which avoids
-the auxiliary element \(\lambda\).
+for the pairs \((P,v)\) themselves
+(Appendix~\ref{app:verification}). The formal proof follows the route
+above, and like the proof above it normalizes the roots of \(A\).
 \end{remark}
 
-The labels \eqref{eq:prime-labels} describe reductions of algebraic
-coefficients; they are not assertions that the complex roots of
-\(A\), or the characteristic roots of \(P_A\), are integers.
-For example, \(A=\rho^2+1/11\) at \(p=3\) reduces to
-\((\rho-2)(\rho-3)\) modulo five, so its label is \(\{2,3\}\).
+\subsection{Reading the labels: pulses and fronts}\label{sec:labels}
 
-\subsection{Reading the labels: pulses, fronts and mirror images}
-\label{sec:labels}
-
-The endpoints of \(v_A\) are its limits as \(z\to\mp\infty\), namely
+As \(z\to+\infty\) we have \(Q\to1\) and \(D^jQ\to0\) for \(j\ge1\), so
+\(F(D)Q\to F(0)\) for every polynomial \(F\).
+The endpoints of \(v_A\), its limits as \(z\to\mp\infty\), are therefore
 \(0\) and \(s_pA(0)\). Pairs with \(A(0)=0\) have equal endpoints and
 are pulses; the others are fronts. The pulses are needed separately,
 because the elliptic pairs of Section~\ref{sec:elliptic-counting}
 degenerate onto them.
 
-\begin{proposition}[Pulses and fronts]\label{cor:endpoints}
-Let \(\ell=2p-1\) be prime. A pair is a pulse if and only if its label
-contains \(0\). Consequently exactly
-\[
- S_p:=\binom{2p-2}{p-2}
-\]
-of the \(N_p\) pairs are pulses, and the remaining
-\(\binom{2p-2}{p-1}\) are fronts. Every pulse is a simple solution of
-the pulse equations \eqref{eq:pulse-equations} below, and
-\(P_A(0)\ne0\) at every pulse. These are counts over \(\CC\).
-\end{proposition}
-
-\begin{proof}
-If \(A(0)=0\), then \(\overline A(0)=0\), so \(0\) belongs to the
-label. For the converse we show that every label containing \(0\) is
-the label of a pulse; since a label determines its pair, this pulse is
-the pair with that label.
-
-Polynomial summation gives \(S_A(0)=-A(0)^2\), so the
+Letting \(z\to+\infty\) in \eqref{eq:discrete-square} gives
+\(S_A(0)=-A(0)^2\). Since \(S_A(0)=A(0)C_A(0)+R_0\) by
+\eqref{eq:remainder}, the
 constant remainder satisfies the polynomial identity
 \begin{equation}\label{eq:constant-remainder}
  R_0=-A(0)\bigl(A(0)+C_A(0)\bigr).
@@ -449,27 +632,52 @@ holds identically, and the pulses are the solutions of the
  R_1=\cdots=R_{d-1}=0\qquad\text{in the unknowns }
  \alpha_1,\ldots,\alpha_{d-1},\quad\alpha_d=0 .
 \end{equation}
-We write \(\mathcal Z_p\) for this system together with its solution
-set. Let \(S\) be a label containing
-\(0\), and \(\overline A\) the corresponding divisor of
-\(\rho^\ell-\rho\). By \eqref{eq:constant-remainder}, at the reduced
-solution \(\overline A\) the row of the Jacobian matrix that belongs to
-\(R_0\) has a single nonzero entry, \(\pm C(0)\) in the column of
-\(\alpha_d\); here \(C=(\rho^\ell-\rho)/\overline A\), and \(C(0)\ne0\)
-because \(\rho^\ell-\rho\) is squarefree. The full Jacobian is
-invertible by Step~2 of the proof of Theorem~\ref{thm:prime}, so the
-minor obtained by deleting that row and that column is invertible as
-well. This minor is the Jacobian of the pulse equations. Hensel's lemma
-therefore lifts \(\overline A\) to a solution of the pulse equations
-over \(\ZZ_\ell\). Completed by \(\alpha_d=0\), it is a solution of the
-full matching system above \(\overline A\), hence, by the uniqueness in
-Step~4, the solution with label \(S\). That solution is thus a pulse,
-and the Jacobian determinant of the pulse equations is a unit there.
+We write \(\mathcal Z_p\) for the set of their solutions; the
+multiplicity of a point of \(\mathcal Z_p\) is its multiplicity as a
+solution of the pulse equations.
 
-The number of \(d\)-element subsets of \(\FF_\ell\) containing \(0\) is
-\(\binom{\ell-1}{d-1}=S_p\). Finally \(\ell C_A\) reduces to
-\((-1)^dC\), so \(C_A(0)\ne0\) at every pulse, and
-\(P_A(0)=s_pC_A(0)/2\ne0\).
+\begin{proposition}[Pulses and fronts]\label{cor:endpoints}
+Let \(\ell=2p-1\) be prime. A pair is a pulse if and only if its label
+contains \(0\). Consequently exactly \(S_p:=\binom{2p-2}{p-2}\)
+of the \(N_p\) pairs are pulses, and the remaining
+\(\binom{2p-2}{p-1}\) are fronts. Every pulse is a simple solution of
+the pulse equations \eqref{eq:pulse-equations}, and
+\(P_A(0)\ne0\) at every pulse (these two facts are used in
+Section~\ref{sec:elliptic-counting}). These are counts over \(\CC\).
+\end{proposition}
+
+In Table~\ref{tab:ks} the pulses are the four pairs with \(b=0\), and
+their labels are the four that contain \(0\).
+
+\begin{proof}
+Let \(A\) be a solution with label \(L\). If \(A(0)=0\), then
+\(\overline A(0)=0\), so \(0\in L\). Conversely, let \(0\in L\).
+At the solution \(A\) we have \(\ell S_A=A\cdot\ell C_A\). By
+\textup{(V)} and \eqref{eq:prime-collapse}, \(\ell C_A\) is
+\(\ell\)-integral and reduces to \((-1)^d\overline C\), where
+\(\overline C=(\rho^\ell-\rho)/\overline A\). Since \(\rho\) divides
+\(\overline A\) and \(\rho^\ell-\rho\) has no repeated factor,
+\(\overline C(0)\ne0\). The number \(\ell A(0)\) reduces to zero. Hence
+\(\ell\bigl(A(0)+C_A(0)\bigr)\) reduces to
+\((-1)^d\overline C(0)\ne0\). So \(A(0)+C_A(0)\ne0\), and \(R_0=0\)
+gives \(A(0)=0\), by \eqref{eq:constant-remainder}: the pair is a pulse.
+The number of \(d\)-element subsets of
+\(\FF_\ell\) that contain \(0\) is \(\binom{\ell-1}{d-1}=S_p\).
+
+At a pulse, \eqref{eq:constant-remainder} shows that the row of the
+Jacobian matrix of the matching equations that belongs to \(R_0\) has
+a single entry that can be different from zero, namely \(-C_A(0)\) in
+the column of \(\alpha_d\). The Jacobian matrix is invertible, by
+Theorem~\ref{thm:prime}(a). Hence \(C_A(0)\ne0\), so that
+\(P_A(0)=s_pC_A(0)/2\ne0\), and the minor obtained by deleting that row
+and that column is invertible. This minor is the Jacobian matrix of
+the pulse equations. (For \(d=1\) there are no pulse equations,
+and only \(C_A(0)\ne0\) is asserted.)
 \end{proof}
 
-\input{sections/symmetry}
+\paragraph{Mirror images.}
+Reading \(v_A\) in the opposite direction, and restoring the
+normalization, gives again a pair, with \(A(\rho)\) replaced by
+\((-1)^dA(-\rho)\) (Section~\ref{sec:reflection}). The roots of
+\(\overline A\) change sign, so the label \(L\) becomes \(-L\). In
+Table~\ref{tab:ks} this is \((a,b)\mapsto(-a,b)\).

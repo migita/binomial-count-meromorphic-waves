@@ -1,9 +1,9 @@
 \section{Equations, waves and what is counted}\label{sec:setting}
 
-This section fixes the normalizations and the vocabulary used in the
-rest of the paper. The normalizations are what makes a finite count
-possible, and they are also what connects the count with a given
-evolution equation.
+This section fixes the normalizations and the vocabulary, and records
+the form of the waves that are counted. The normalizations are what
+makes a finite count possible, and they are also what connects the count
+with a given evolution equation (Section~\ref{sec:fixed}).
 
 \subsection{From the evolution equation to the profile equation}
 
@@ -17,20 +17,22 @@ One integration gives
 \end{equation}
 with a constant \(K\). Let \(w_\ast\) be a constant solution of
 \eqref{eq:integrated}, that is, a root of \(w^2/2-cw+K\), and let
-\(\lambda\ne0\). The substitution
+\(\kappa\ne0\). The substitution
 \begin{equation}\label{eq:scaling}
- w(\xi)=w_\ast+b_p\lambda^p\,v(\lambda\xi)
+ w(\xi)=w_\ast+b_p\kappa^p\,v(\kappa\xi)
 \end{equation}
 turns \eqref{eq:integrated} into the profile equation \eqref{eq:main}
 with
 \begin{equation}\label{eq:coefficients}
- a_j=\frac{b_j}{b_p}\lambda^{j-p}\quad(1\le j\le p-1),\qquad
- a_0=\frac{w_\ast-c}{b_p\lambda^p}.
+ a_j=\frac{b_j}{b_p}\kappa^{j-p}\quad(1\le j\le p-1),\qquad
+ a_0=\frac{w_\ast-c}{b_p\kappa^p}.
 \end{equation}
 Thus \(a_1,\ldots,a_{p-1}\) record the equation, up to the scale
-\(\lambda\), and \(a_0\) records the speed of the wave relative to the
-background \(w_\ast\). The scale is free at this stage. It will be
-fixed by the period of the wave.
+\(\kappa\), and \(a_0\) records the speed of the wave relative to the
+background \(w_\ast\). The scale is free at this stage. It will be fixed
+by the period of the wave: if \(v\) is rational in \(e^{z}\), then \(w\)
+is rational in \(e^{\kappa\xi}\), so that \(\kappa\) is the rate of the
+wave.
 
 The constant solutions of \eqref{eq:main} are \(v=0\) and \(v=-2a_0\).
 They correspond to the two possible choices of the background
@@ -39,66 +41,105 @@ They correspond to the two possible choices of the background
  \bigl(P-2P(0),\ v+2P(0)\bigr),
 \end{equation}
 which again satisfies \eqref{eq:main}, as a direct substitution shows.
-After the original background is restored, the two pairs describe the
-same wave of the same evolution equation. They coincide exactly when
-\(a_0=0\).
+In the evolution equation the change of background is a Galilean shift
+\(u\mapsto u+k\), \(x\mapsto x-kt\); it changes the speed relative to
+the background, hence the sign of \(a_0\). The two pairs describe the
+same solution \(u(x,t)\) of the same evolution equation. They coincide
+exactly when \(a_0=0\). For example, the KdV soliton gives the pair
+\(P=\rho^2-1\), \(v=3\operatorname{sech}^2(z/2)\). Measured from the
+other background it is \(P=\rho^2+1\) and \(v-2\), which does not tend
+to zero and is therefore not a rational-exponential pair.
 
 \subsection{Dispersive, dissipative and mixed equations}
 
-In \eqref{eq:pde} a derivative of odd order is a dispersive term, and a
-derivative of even order is a dissipative term: for real coefficients
-the first changes the phase of a Fourier mode and the second its
-amplitude. We use the following names.
-\begin{itemize}
-\item The equation is \emph{purely dispersive} if it contains only
-odd-order derivatives, that is, \(b_j=0\) for odd \(j\). Then \(p\) is
-even, \(P\) is an even polynomial, and the equation is invariant under
-\((x,t)\mapsto(-x,-t)\). Examples are the KdV equation (\(p=2\)), the
-Kawahara equation (\(p=4\)) and the seventh-order KdV equation
-(\(p=6\)).
-\item The equation is \emph{purely dissipative} if its linear part
-contains only even-order derivatives, that is, \(b_j=0\) for even
-\(j\). Then \(p\) is odd, \(P-P(0)\) is an odd polynomial, and the
-equation is invariant under \((x,u)\mapsto(-x,-u)\). Examples are the
-Kuramoto--Sivashinsky equation without dispersion (\(p=3\)) and the
-Nikolaevskiy equation (\(p=5\)); see \citet{SimbawaMatthewsCox2010}.
-\item All other equations are \emph{mixed}. Examples are the
-KdV--Burgers equation and the Kuramoto--Sivashinsky equation with
-dispersion.
-\end{itemize}
-The two pure subfamilies are described by one condition. We call a
-monic polynomial \(P\) of degree \(p\) \emph{reflection-symmetric} if
+In \eqref{eq:pde} the term \(b_j\partial_x^{j+1}u\) is dispersive for
+even \(j\) and dissipative for odd \(j\): for real coefficients it
+changes the phase, respectively the amplitude, of a Fourier mode (with
+the signs of \eqref{eq:pde}, a positive coefficient of \(u_{xx}\) is
+gain). The equation is \emph{purely dispersive} if \(b_j=0\) for odd
+\(j\). Then \(p\) is even, \(P\) is an even polynomial, and the equation
+is invariant under \((x,t)\mapsto(-x,-t)\). The equation is \emph{purely
+dissipative} if \(b_j=0\) for even \(j\). Then \(p\) is odd, \(P-P(0)\)
+is an odd polynomial, and the equation is invariant under
+\((x,u)\mapsto(-x,-u)\); the Nikolaevskiy equation (\(p=5\)) is an
+example, see \citet{SimbawaMatthewsCox2010}. All other equations are
+\emph{mixed}.
+
+The two pure subfamilies are described by one condition. We call a monic
+polynomial \(P\) of degree \(p\) \emph{reflection-symmetric} if
 \(P-P(0)\) has the parity of \(\rho^p\):
 \begin{equation}\label{eq:symmetric-class}
  P(-\rho)=P(\rho)\quad(p\text{ even}),\qquad
  P(\rho)+P(-\rho)=2P(0)\quad(p\text{ odd}).
 \end{equation}
 In the travelling-wave variable both symmetries are the reflection
-\(z\mapsto-z\). If \(P\) is even and \(v(z)\) solves \eqref{eq:main},
-so does \(v(-z)\). If \(p\) is odd and \(P-P(0)\) is odd, so does
+\(z\mapsto-z\). If \(P\) is even and \(v(z)\) solves \eqref{eq:main}, so
+does \(v(-z)\). If \(p\) is odd and \(P-P(0)\) is odd, so does
 \(-v(-z)-2P(0)\); this is the reflection combined with the change of
 background \eqref{eq:shift}.
 
-\subsection{Waves, poles, pulses and fronts}
+\subsection{Poles, and the form of one-pole waves}\label{sec:systems}
 
+To count waves we need to know what they look like. Three facts suffice:
+a pole has order \(p\) and a fixed leading coefficient; a wave rational
+in \(e^z\) with one pole per period is a polynomial of degree \(p\) in
+the logistic function \(Q\); an elliptic wave with one pole per period
+is a combination of \(\wp\) and its derivatives.
+
+\paragraph{Poles.}
 Throughout, a meromorphic function is single-valued and meromorphic on
-the whole complex plane. Three kinds of meromorphic travelling waves
-occur in this paper: rational in \(z\), rational in an exponential
-\(e^{\kappa z}\), and elliptic. For the equations covered by
-Theorem~\ref{thm:complete} there are no others; for the remaining
-equations these are the waves that we count. The period group of such a
-wave is its \emph{full}
-group of periods: trivial in the first case, infinite cyclic in the
-second, a lattice in the third. We say that the wave has \emph{one pole
-per period} if its poles form a single coset of this group. There is
-then one pole in the rational case, one pole modulo the primitive
-period in the second case, and one pole in each period parallelogram in
-the elliptic case.
+the whole complex plane. The order of a pole of a solution of
+\eqref{eq:main} is forced by dominant balance. A pole of order \(r\)
+makes \(P(D)v\) of order \(r+p\) and \(v^2\) of order \(2r\); the two
+can cancel only if \(r=p\). Comparing the leading coefficients gives, at
+a pole \(z_0\),
+\begin{equation}\label{eq:leadingpole}
+ v(z)=\frac{c_\ast}{(z-z_0)^{p}}+O\bigl((z-z_0)^{1-p}\bigr),\qquad
+ c_\ast=(-1)^{p-1}(p-1)!\,s_p,\qquad s_p=\frac{2(2p-1)!}{((p-1)!)^2}.
+\end{equation}
+This holds for every \(P\). The constant \(s_p\) is the scale of the
+normal forms of Sections~\ref{sec:counting}
+and~\ref{sec:elliptic-counting}; its first values are \(s_2=12\),
+\(s_3=60\), \(s_4=280\), \(s_6=5544\), so that
+\(c_\ast=-12,\,120,\,-1680\) for \(p=2,3,4\).
 
-A wave that is rational in \(e^{\kappa z}\) and has one pole per period
-has finite limits as \(e^{\kappa z}\to0\) and \(\infty\)
-(Section~\ref{sec:systems}). Both limits are constant solutions. The
-wave is a \emph{pulse} if the two limits coincide and a \emph{front}
+\paragraph{Three kinds of wave.}
+The meromorphic travelling waves in this paper are of three kinds:
+rational in \(z\), rational in an exponential \(e^{\kappa z}\), and
+elliptic. For evolution equations of even order and for purely
+dispersive ones there are no others (Theorem~\ref{thm:complete}); for
+the remaining equations these are the waves that we count. The period
+group of such a wave is its \emph{full} group of periods: trivial in the
+first case, generated by one period in the second, a lattice in the
+third. In the second case \(\kappa\) is chosen so that \(2\pi i/\kappa\)
+generates the period group. The wave has \emph{one pole per period} if
+all its poles are translates of a single pole by the periods. A rational
+wave then has a single pole, and an elliptic wave has one pole in each
+period parallelogram.
+
+\paragraph{Waves rational in an exponential.}
+Let \(v=R(t)\), \(t=e^{\kappa z}\), be such a wave with one pole per
+period. The rational function \(R\) has finite limits at both \(t=0\)
+and \(t=\infty\). Indeed, \(P(D)=P(\kappa t\partial_t)\) multiplies each
+monomial \(t^m\) by a constant, whereas squaring doubles an extreme
+exponent: if \(R\) had a pole at either end, \(R^2\) would contain an
+extreme Laurent monomial that \(P(\kappa t\partial_t)R\) cannot cancel.
+Both limits are constant solutions of \eqref{eq:main}. After a
+translation, the only pole of \(R\) in \(0<|t|<\infty\) is at \(t=-1\),
+of order \(p\). For \(\kappa=1\) such a function is a polynomial of
+degree \(p\) in the logistic function
+\[
+ Q=\frac1{1+e^{-z}}=\frac{1+\tanh(z/2)}2,\qquad DQ=Q(1-Q),
+\]
+which has a simple pole with residue one at \(z=i\pi\) and the limits
+\(0\) and \(1\). By \eqref{eq:leadingpole} the coefficient of \(Q^p\) is
+\(c_\ast\); the KdV soliton above is \(12Q(1-Q)\). Polynomial logistic
+representations and their use in constructing travelling waves are
+developed by \citet{Kudryashov2012,Kudryashov2013,Kudryashov2015}, and
+applied to equations of the family up to \(p=6\) by
+\citet{RyabovSinelshchikovKochanov2011}.
+
+The wave is a \emph{pulse} if its two limits coincide and a \emph{front}
 otherwise. For a real rate and a real profile these are the solitary
 waves and the kinks of the evolution equation, and they are smooth and
 bounded on the real axis when the pole lies off it. In
@@ -106,26 +147,46 @@ bounded on the real axis when the pole lies off it. In
 \(e^{\kappa z}\to0\). Then \(v\to0\) at that end, and the other limit
 is \(0\) for a pulse and \(-2a_0\) for a front.
 
+\paragraph{Elliptic and rational waves.}
+An elliptic wave whose only pole modulo its periods is at zero is a
+constant plus a linear combination of \(\wp,\wp',\ldots,\wp^{(p-2)}\),
+in which \(\wp^{(p-2)}\) has the coefficient \(-s_p\)
+(Section~\ref{sec:elliptic-counting}). Rational waves are not counted,
+but they govern what happens at infinity in both counts. A rational
+solution has no nonconstant polynomial part at infinity: such a part
+would have its degree doubled by \(v^2\), while the linear differential
+expression cannot reach that degree. A rational wave whose only pole is
+at zero is therefore
+\begin{equation}\label{eq:rational-system}
+ v(z)=c_\ast z^{-p}+\bigl(\text{a polynomial of degree at most }p-1
+ \text{ in }z^{-1}\bigr).
+\end{equation}
+The simplest one is \(v=c_\ast z^{-p}\), for \(P=D^p\); it is given for
+every order by \citet{Kudryashov2004}.
+
+Conversely, a function of one of these three forms that satisfies
+\eqref{eq:main} is a nonconstant wave with one pole per period, because
+\(c_\ast\ne0\). Substitution turns \eqref{eq:main} into finitely many
+polynomial equations in the coefficients of the form and of \(P\),
+without any genericity assumption. These equations are instances of the
+principal-part construction of
+\citet{DeminaKudryashov2011,DeminaKudryashovElliptic2011}; for a fixed
+operator the same construction reduces to the coefficient comparison of
+\citet{DeminaKudryashov2014}, which we do not need.
+
 \subsection{What is counted}
 
-We count pairs \((P,v)\): a monic polynomial \(P\) of degree \(p\) and
-a solution \(v\) of \eqref{eq:main} of a given kind, with its periods
-fixed.
-\begin{itemize}
-\item A \emph{rational-exponential pair} has \(v\) rational in
-\(e^z\), with one pole modulo \(2\pi i\ZZ\), placed at \(i\pi\), and
-\(v\to0\) as \(e^z\to0\).
-\item An \emph{elliptic pair} on a lattice \(\Lambda\) has \(v\)
-elliptic with period lattice \(\Lambda\), including its scale, and its
-only pole modulo \(\Lambda\) at zero.
-\end{itemize}
-Fixing the period or the period lattice removes the scale \(\lambda\)
-in \eqref{eq:scaling}, and placing the pole removes translations.
-The operator \(P\) varies over \emph{all} monic polynomials of degree
-\(p\), and all counts are over \(\CC\). A wave and its mirror image are
-counted as two pairs when they are distinct; the pairs that coincide
-with their mirror image are the subject of
-Section~\ref{sec:reflection}. In the elliptic case both pairs
-\eqref{eq:shift} are counted; in the rational-exponential case the
-condition \(v\to0\) selects one of them. Section~\ref{sec:fixed}
-translates the counts back to a single evolution equation.
+We count pairs \((P,v)\) of a monic polynomial \(P\) of degree \(p\) and
+a solution \(v\) of \eqref{eq:main}. In a \emph{rational-exponential
+pair}, \(v\) is rational in \(e^z\), its poles are the points of
+\(i\pi+2\pi i\ZZ\), and \(v\to0\) as \(e^z\to0\). In an \emph{elliptic
+pair} on a lattice \(\Lambda\), \(v\) is elliptic with period lattice
+\(\Lambda\), including its scale, and its poles are the points of
+\(\Lambda\). Fixing the periods removes the scale \(\kappa\) in
+\eqref{eq:scaling}, and placing the pole removes translations. The
+operator \(P\) varies over \emph{all} monic polynomials of degree \(p\),
+and all counts are over \(\CC\). In both cases a wave and its mirror
+image are counted as two pairs when they are distinct
+(Section~\ref{sec:reflection}). Both pairs \eqref{eq:shift} of an
+elliptic wave are counted; for a rational-exponential wave the condition
+\(v\to0\) selects one of them.
