@@ -1,5 +1,71 @@
 # Rewrite notes (branch `rewrite-hierarchies`, 17 Sep 2026)
 
+## Branch `simplify-prime-spine` (18 Sep 2026, later): count-first rewrite for nlin.SI readers, 37 pages
+
+Asked by the author: simplify, get the flow of thought right for an nlin.SI author/reader (not an algebraic geometer), make
+the paper smaller without compromising exposition, cite Kudryashov, Demina, Sinelshchikov and Chernyavsky liberally. Baseline
+982cc7f (40 pp); this state 37 pp, of which the references grew by about one page (76 entries instead of 52). The author
+accepted 37 pages and asked for this state to be pushed.
+
+**STATUS: NOT YET VERIFIED against the previous version.** The two re-presented proofs were checked line by line by two
+adversarial referee agents BEFORE they were written into the paper (no gap found; their wording fixes are applied), and every
+editor diffed the formal statements, labels, citation keys and numbers of its file against the previous text. A statement-by-
+statement verification of the final text and a cold read of the new version have not been run.
+
+What changed.
+- **Order.** 1 Introduction · 2 Equations, waves and what is counted (absorbs the old Section 4: pole order and `c_*`, `s_p`, the
+  form of one-pole waves) · 3 Count of rational-exponential pairs · 4 Count of elliptic pairs · 5 Are these all the meromorphic
+  waves? (classification; Fisher told once, Remark 5.2) · 6 Mirror images and the two pure subfamilies (now with the even-operator
+  elliptic corollary and the odd-`p` paragraph) · 7 Single equation (now with "one profile per operator" and the root remark) ·
+  8 Examples · 9 Other orders and open questions (old 7 + 10) · A. `sections/systems.tex` and `sections/open.tex` are gone. The
+  main theorem is on p. 11 (was p. 19). No proof contains a forward reference (dependency map in the workspace).
+- **Section 3.** Theorem 3.4 is stated before any machinery and followed at once by order three done by hand with Table 2
+  (moved from the examples; new column |sigma|). New Proposition 3.2 (weighted Bezout bound): `N_p` is the Bezout number of the
+  weights; it is a FRAME, the proof of the theorem does not use it; safe "if rigidity" form only. New Lemma 3.3 (Laplace
+  correspondence), stated without the restriction `A(0)=0`, so that Step 3 of Theorem 4.1 and Corollary 7.3 cite it. The proof has
+  its own subsection: a toolbox of four facts (V) valuation and reduction, (H) Hensel = Newton's method from a simple root,
+  (N) weak Nullstellensatz, (T) finite systems, with the analogy `l` <-> epsilon; Step 3 (integrality and rigidity) is a dominant
+  balance: rescale by a root of `A` of least valuation, then `l H_B(1)` reduces to `(-1)^d` but must reduce to 0. This is
+  literally the Lean route. The general Lemma "Reduction modulo l" left the main text (verbatim in the companion note).
+  Proposition 3.6 (pulses) has a shorter proof without a second Hensel lifting.
+- **Section 4.** New Lemma 4.2 (conservation of number: weighted-homogeneous system whose leading system has only the zero
+  solution => finitely many solutions, constant count with multiplicity, non-simple locus algebraic). Main text: statement, the
+  idea ("no escape to infinity"), a proof sketch (weight induction + Cayley-Hamilton, Rouche in several variables, elimination);
+  full proof and the previous flat-family argument are in the companion note (its final section). Theorem 4.1(b) now says: all
+  lattices except those with finitely many values of `j(Lambda)` (scaling argument inside the proof). The smallest case `p = 2`
+  follows the theorem. `M_p` is noted to be the Bezout number of the weight table.
+- **Notation.** Label of a pair: `L` (was `S`; companion note patched). `kappa` is the rate everywhere (eq. (2.3)-(2.4),
+  Proposition 7.1); `lambda` only for the rescaling `A_lambda`. `ord` for the valuation. `s_p`, `c_*` defined together in 2.3;
+  `R_p`, `beta_d`, `h`, `Lambda_p`, `eta_p`, `\Wclass`, `E_P(v)`, `T_q` and the differential-algebra frame are gone. Section 7
+  uses bold `b`, `a(A)` and "curve". **Correction:** in the old Sections 8-9 the letter sigma denoted `B^2/mu`, which is the SQUARE
+  of the sigma of the Introduction; the text now has `B^2 = sigma^2 mu`, `|sigma| in {0, 4, 12/sqrt 47, 16/sqrt 73}`.
+- **Literature.** 19 new entries by Kudryashov, Demina, Sinelshchikov, Chernyavsky (all checked against Crossref or
+  Math-Net.Ru; report with the reading notes in the workspace, `design/literature-KDSC.md`) and 5 mathematical references
+  (Koblitz, Neukirch, Cox-Little-O'Shea IVA, Arnold-Gusein-Zade-Varchenko, Milnor). Precedents now credited: Kudryashov 1989
+  (Mat. Model. 1:6) has all four sigma values in one list and the Kawahara cubic; Kudryashov-Demina 2007 has the six waves at
+  `p = 5`; Ryabov-Sinelshchikov-Kochanov 2011 has the two real seventh-order KdV waves; Kudryashov 2004 has `c_* z^{-p}` for every
+  order. Equation numbers are quoted only from Kudryashov 1989 (read in the journal scan).
+- **Introduction.** Same hook, question, answer, Table 1 and "Every wave has a label"; vocabulary (purely dispersive /
+  dissipative / mixed, pure subfamilies) before Table 1; four-row display of `N_p, S_p, M_p, F_p` with meanings; four result
+  bullets; a guard against reading Table 1 as counts for one literal equation; "A single equation" and "When these are all the
+  meromorphic waves" before the labels; the Bezout sentence in "Other orders"; one Lean sentence. Abstract, title, keywords
+  untouched. Disclosure: one sentence added to the Claude Code item.
+
+For the author to check or decide.
+1. New or reworded statements: Proposition 3.2, Lemma 3.3, Lemma 4.2 with its sketch, Theorem 4.1(b) (finitely many `j`), the
+   sentence "outside N the two backgrounds are distinct because a solution with `a_0 = 0` is never simple", Remark 6.3 (at most
+   `F_p` at every order; the companion note's Theorem 4.1(ii) has the matching unconditional sentence), Remark 7.4 (`p = 3`),
+   Introduction: "always with sigma = +-4" for the eight elliptic pairs at `p = 3`, and the guard sentences on one-ratio families.
+2. `KudryashovChernyavskii2006`: the abstract speaks of "the nonlinear fourth-order evolutionary equation"; the text does not
+   call it Kuramoto-Sivashinsky. Confirm or sharpen.
+3. Appendix A is 1.0 page; every remaining sentence is a number, a method or a file location (single carriers).
+4. Not taken from Paper II (branch `paper2-modulo-a-prime`), by the author's decision: the "linear modulo l" explanation, the
+   reciprocity remark, the Hasse-invariant form of Theorem 4.1(b).
+5. On adoption: as before (copy `paper/` back with a `history/` backup; rebuild tarball and `validation.json`).
+
+Working files of this rewrite (not in the repository): `~/projects/KS-260829/fable_nlin_rewrite_20260918/` — the eight
+diagnosis reports, the blueprint and its amendments, the two proof checks, the literature report, the claims ledger, sympy checks.
+
 ## Branch `simplify-prime-spine` (18 Sep 2026): the prime-index theorem as the spine
 
 Asked by the author: simplify the paper massively, keep the focus on readability, above all in the introduction; do not cut
