@@ -1,17 +1,14 @@
 \section{What the count means for a single equation}\label{sec:fixed}
 
-The count lets the operator vary. We now read it for one evolution
-equation \eqref{eq:pde} with fixed complex coefficients. The equation is
-invariant under translations and under Galilean shifts.
+We read the count for one equation \eqref{eq:pde} with fixed complex
+coefficients. It is invariant under translations and Galilean shifts.
 
 \begin{proposition}[The waves of a fixed equation]\label{prop:fixed}
 Let \(\kappa\ne0\). Up to a translation and a Galilean shift, the
 travelling waves of \eqref{eq:pde} that are rational in
-\(e^{\kappa(x-ct)}\), with one pole modulo
-\((2\pi i/\kappa)\ZZ\), are
+\(e^{\kappa(x-ct)}\), with one pole modulo \((2\pi i/\kappa)\ZZ\), are
 \begin{equation}\label{eq:fixed-wave}
- u=b_p\kappa^p\,v_A\bigl(\kappa(x-ct)\bigr),\qquad
- c=-b_p\kappa^pP_A(0),
+ u=b_p\kappa^p\,v_A\bigl(\kappa(x-ct)\bigr),\qquad c=-b_p\kappa^pP_A(0),
 \end{equation}
 where \(A\) ranges over the points of \(\Xp\) that satisfy
 \begin{equation}\label{eq:fixed-conditions}
@@ -23,103 +20,80 @@ wave, read in the two directions (Section~\ref{sec:reflection}).
 
 \begin{proof}
 Such a wave has a finite limit as \(e^{\kappa(x-ct)}\to0\)
-(Section~\ref{sec:systems}), and a Galilean shift makes this limit
-zero. Then \(w_\ast=0\) in \eqref{eq:scaling}, and
-\eqref{eq:coefficients} becomes \eqref{eq:fixed-conditions} together
-with the formula for \(c\). After a translation \(v\) has the
-normalization of Section~\ref{sec:setting}, so \(v=v_A\) and \(P=P_A\)
-by Proposition~\ref{prop:divisibility}. The last assertion follows from
-\eqref{eq:reflection-pair}: the two waves differ by the constant
-\(b_p\kappa^ps_pA(0)\), which is a Galilean shift.
+(Section~\ref{sec:systems}), and a Galilean shift makes it zero. Then
+\(w_\ast=0\) in \eqref{eq:scaling}, and \eqref{eq:coefficients} becomes
+\eqref{eq:fixed-conditions} and the formula for \(c\). After a
+translation \(v\) has the normalization of Section~\ref{sec:setting}, so
+\(v=v_A\) and \(P=P_A\) by Proposition~\ref{prop:divisibility}. The last
+assertion follows from \eqref{eq:reflection-pair}: the two waves differ
+by the constant \(b_p\kappa^ps_pA(0)\), which is a Galilean shift.
 \end{proof}
 
 Given a pair, \eqref{eq:fixed-conditions} are \(p-1\) conditions on the
-\(p-1\) coefficient ratios \(b_j/b_p\) and the one unknown \(\kappa\):
-a pair imposes \(p-2\) conditions on the equation and fixes the rate.
-A pair with real coefficients gives a real wave of a real equation,
-smooth on the real axis, exactly when \(\kappa\) is real.
-Let \(\mathbf a(A)=([\rho^{p-1}]P_A,\ldots,[\rho^{1}]P_A)\) be the
-vector of lower coefficients of \(P_A\), and let
-\(\mathbf b=(b_{p-1}/b_p,\ldots,b_1/b_p)\) be the coefficient vector of
-the equation. Condition \eqref{eq:fixed-conditions} says that
-\(\mathbf b\) is obtained from \(\mathbf a(A)\) by multiplying its
-\(k\)th entry by \(\kappa^k\), for some \(\kappa\ne0\). As \(\kappa\)
-varies these vectors trace a curve, denoted
-\(\CC^\ast\mathbf a(A)\), and rescaling \(x\) moves an equation along
-it. This is the reason for fixing the rate: without it every pair would
-be a one-parameter family. Each of the \(N_p\) pairs marks one curve,
-and several pairs may mark the same curve.
+\(p-1\) ratios \(b_j/b_p\) and the one unknown \(\kappa\): a pair
+imposes \(p-2\) conditions on the equation and fixes the rate. A pair
+with real coefficients gives a real wave of a real equation, smooth on
+the real axis, exactly when \(\kappa\) is real. Let
+\(\mathbf b=(b_{p-1}/b_p,\ldots,b_1/b_p)\) and
+\(\mathbf a(A)=([\rho^{p-1}]P_A,\ldots,[\rho^{1}]P_A)\) be the
+coefficient vectors of the equation and of \(P_A\). By
+\eqref{eq:fixed-conditions}, \(\mathbf b\) is \(\mathbf a(A)\) with its
+\(k\)th entry multiplied by \(\kappa^k\). As \(\kappa\) varies these
+vectors trace a curve \(\CC^\ast\mathbf a(A)\), and rescaling \(x\)
+moves an equation along it. Several pairs may give the same curve.
 
 \begin{corollary}[Solvable equations]\label{cor:solvable}
-Assume that the matching equations have finitely many solutions.
-This holds when \(2p-1\) is prime, and whenever rigidity holds
+Assume that the matching equations have finitely many solutions. This
+holds when \(2p-1\) is prime, and whenever rigidity holds
 (Proposition~\ref{prop:bezout}), hence for every \(p\le573\)
 (Section~\ref{sec:further}).
 \begin{enumerate}
-\item[\textup{(i)}] Equation \eqref{eq:pde} has a travelling
-wave that is rational in an exponential, with one pole per period, if
-and only if \(\mathbf b\) lies on one of the curves
-\(\CC^\ast\mathbf a(A)\), \(A\in\Xp\). There are at most
-\((N_p+F_p)/2\) such curves.
+\item[\textup{(i)}] Equation \eqref{eq:pde} has a travelling wave that
+is rational in an exponential, with one pole per period, if and only if
+\(\mathbf b\) lies on one of the curves \(\CC^\ast\mathbf a(A)\),
+\(A\in\Xp\). There are at most \((N_p+F_p)/2\) such curves.
 \item[\textup{(ii)}] If \(\mathbf b\ne0\), there are finitely many such
 waves up to translations and Galilean shifts.
 \item[\textup{(iii)}] If \(p\ge3\), the curves form a set of dimension
-at most one in \(\CC^{p-1}\). A generic equation
-\eqref{eq:pde} has no such wave.
+at most one in \(\CC^{p-1}\), and a generic equation has no such wave.
 \end{enumerate}
 \end{corollary}
 
 \begin{proof}
 Part~(i) restates Proposition~\ref{prop:fixed}. For the bound,
 \(\mathbf a(\iota A)=(-1)\cdot\mathbf a(A)\) by
-\eqref{eq:reflection-pair}, so \(A\) and its mirror image \(\iota A\)
-give the same curve. The number of classes \(\{A,\iota A\}\) is half
-the number of points plus half the number of fixed points. The
-solutions are finite in number, hence isolated, so these two numbers
-are at most \(N_p\) and \(F_p\) (Proposition~\ref{prop:bezout},
-Remark~\ref{rem:Fp-bound}). For~(ii), if \(\mathbf b\ne0\) and
-\(\mathbf b\in\CC^\ast\mathbf a(A)\), some coordinate \([\rho^j]P_A\)
-is nonzero, and \eqref{eq:fixed-conditions} leaves at most \(p-j\)
-values of \(\kappa\). Part~(iii) is a dimension count.
+\eqref{eq:reflection-pair}, so \(A\) and \(\iota A\) give the same
+curve. The number of classes \(\{A,\iota A\}\) is half the number of
+points plus half the number of fixed points. The solutions are finite in
+number, hence isolated, so these two numbers are at most \(N_p\) and
+\(F_p\) (Proposition~\ref{prop:bezout}, Remark~\ref{rem:Fp-bound}).
+For~(ii), if \(\mathbf b\ne0\) and \(\mathbf b\in\CC^\ast\mathbf a(A)\),
+some \([\rho^j]P_A\) is nonzero, and \eqref{eq:fixed-conditions} leaves
+at most \(p-j\) values of \(\kappa\). Part~(iii) is a dimension count.
 \end{proof}
 
-When \(\mathbf b=0\) the equation is invariant under the scaling itself,
-and its waves come in one-parameter families of rates. At order two
-there are two curves, and both carry waves: \(\mathbf b=0\) is the KdV
-equation, with its solitons of all rates, and \(\mathbf b\ne0\) consists
-of the equations with a nonzero Burgers coefficient, each with one
-family of fronts, at the rate fixed by that coefficient
-(Section~\ref{sec:kdvb}).
+When \(\mathbf b=0\) the equation is scale-invariant, and each of its
+waves occurs at every rate. At order two there are two curves, and both
+carry waves: \(\mathbf b=0\) is KdV, with its solitons, and each
+equation with \(\mathbf b\ne0\) has one front, its rate fixed by the
+Burgers coefficient (Section~\ref{sec:kdvb}).
 
-At \(p=3\), write \(P=D^3+BD^2+\mu D+a_0\) and use \((B,\mu)\) as the
-coordinates on \(\CC^2\). Rescaling multiplies \(B\) by \(\kappa\) and
+At \(p=3\), write \(P=D^3+BD^2+\mu D+a_0\), so that
+\(\mathbf b=(B,\mu)\). Rescaling multiplies \(B\) by \(\kappa\) and
 \(\mu\) by \(\kappa^2\), so the curves are \(B^2=\sigma^2\mu\) with the
-origin removed.
-For the ten pairs \(A=\rho^2+a\rho+b\) of Table~\ref{tab:ks},
-\eqref{eq:ksoperator} gives \(B=4a\) and \(\mu=a^2+19b\), hence the
-four classical values
+origin removed, where \(\sigma\) is the dispersion coefficient of the
+Introduction. By the caption of Table~\ref{tab:ks}, the ten pairs give
 \begin{equation}\label{eq:ks-sigma}
- \sigma^2=\frac{16a^2}{a^2+19b}\in
- \{0,\ 16,\ 144/47,\ 256/73\},
- \qquad\text{that is,}\qquad
+ \sigma^2=\frac{16a^2}{a^2+19b}\in\{0,\ 16,\ 144/47,\ 256/73\},\qquad
  |\sigma|\in\{0,\ 4,\ 12/\sqrt{47},\ 16/\sqrt{73}\},
 \end{equation}
-which are those of \citet[Eq.~(39)]{Kudryashov1989}. In the
-normalization of the Introduction, with \(b_1=b_3=1\) and
-\(b_2=\sigma\), condition \eqref{eq:fixed-conditions} reads
-\(\kappa^2=1/(a^2+19b)\) and \(\sigma=4a\kappa\).
-Here the bound \((N_3+F_3)/2=6\) is not attained, because the two
-pairs with \(a=0\) share \(\sigma=0\), and \((\pm1,0)\) and
-\((\pm i,0)\) share \(\sigma^2=16\).
-For coefficients off these curves, approximate solutions close to the
-exact ones are constructed by \citet{KudryashovKochanov2012}.
+the four values of \citet[Eq.~(39)]{Kudryashov1989}. The bound
+\((N_3+F_3)/2=6\) is not attained: the two pairs with \(a=0\) share
+\(\sigma=0\), and \((\pm1,0)\) and \((\pm i,0)\) share \(\sigma^2=16\).
+For coefficients off these curves, \citet{KudryashovKochanov2012}
+construct approximate solutions close to the exact ones.
 
-For odd \(p\) the classification turns
-Corollary~\ref{cor:solvable} into a statement about all meromorphic
-travelling waves.
-
-\begin{corollary}[Generic equations with \(p\) odd]
-\label{cor:generic}
+\begin{corollary}[Generic equations with \(p\) odd]\label{cor:generic}
 Let \(p\ge5\) be odd and assume rigidity \((\mathrm R_{p-1})\), which
 holds when \(2p-1\) is prime and for every \(p\le573\). The coefficient
 vectors \(\mathbf b\in\CC^{p-1}\) for which \eqref{eq:pde} has a
@@ -129,70 +103,59 @@ dimension at most two. In particular a generic equation has none.
 
 \begin{proof}
 By Theorem~\ref{thm:complete}, such a wave is rational, rational in an
-exponential, or elliptic, with one pole per period. Take
-\(\kappa=1\) in \eqref{eq:scaling}, so that
-\([\rho^j]P=b_j/b_p\) for \(1\le j\le p-1\).
-The rational-exponential waves give a set of dimension at most one, by
-Corollary~\ref{cor:solvable}. A rational wave is, after a translation,
-of the form \eqref{eq:rational-system}. By Lemma~\ref{lem:laplace} it
-comes from a monic \(A\) of degree \(p-1\) that divides \(H_A\). By
-rigidity, \(A=\rho^{p-1}\), hence \(P=D^p\) and \(\mathbf b=0\).
+exponential, or elliptic, with one pole per period. Take \(\kappa=1\) in
+\eqref{eq:scaling}, so that \([\rho^j]P=b_j/b_p\) for \(1\le j\le p-1\).
+The rational-exponential waves give a set of dimension at most one
+(Corollary~\ref{cor:solvable}). A rational wave is, after a translation,
+of the form \eqref{eq:rational-system}; by Lemma~\ref{lem:laplace} it
+comes from a monic \(A\) of degree \(p-1\) that divides \(H_A\), and
+rigidity gives \(A=\rho^{p-1}\), hence \(P=D^p\) and \(\mathbf b=0\).
 For the elliptic waves, Steps~1--3 of the proof of
-Theorem~\ref{thm:elliptic-count} use only rigidity, and with them
-Lemma~\ref{lem:conservation}(i) shows that every system
-\(\mathcal E_p(g_2,g_3)\) has finitely many solutions. The solutions
-for all \((g_2,g_3)\) together therefore form an algebraic set of
-dimension at most two, and so does the closure of its image under
-\(P\mapsto\mathbf b\).
+Theorem~\ref{thm:elliptic-count} use only rigidity, so by
+Lemma~\ref{lem:conservation}(i) every system \(\mathcal E_p(g_2,g_3)\)
+has finitely many solutions. The solutions for all \((g_2,g_3)\)
+together thus form an algebraic set of dimension at most two, and so
+does the closure of its image under \(P\mapsto\mathbf b\).
 \end{proof}
 
-At \(p=3\) the argument gives the exact answer: the set of these
-\(\mathbf b=(B,\mu)\) is the union of the four curves
-\(B^2=\sigma^2\mu\) of \eqref{eq:ks-sigma}. Indeed the elliptic waves
-require \(B^2=16\mu\) (Section~\ref{sec:ks}), which is one of the four
-curves, and the point \(\mathbf b=0\) of the rational wave lies on all
-of them.
+\begin{remark}[Order three]\label{rem:ks-curves}
+At \(p=3\) the argument gives the exact answer: these
+\(\mathbf b=(B,\mu)\) form the union of the four curves
+\(B^2=\sigma^2\mu\) of \eqref{eq:ks-sigma}. The elliptic waves require
+\(B^2=16\mu\) (Section~\ref{sec:ks}), which is one of the four, and the
+point \(\mathbf b=0\) of the rational wave lies on all of them.
+\end{remark}
 
 The same dimension count applies to the one-pole waves of every order
-\(p\ge3\) for which rigidity holds: a generic equation has no
-travelling wave that is rational, rational in an exponential, or
-elliptic with one pole per period. For even \(p\), however,
-Theorem~\ref{thm:complete} excludes other meromorphic waves only when
-the equation is purely dispersive.
+\(p\ge3\) for which rigidity holds: a generic equation has no travelling
+wave that is rational, rational in an exponential, or elliptic with one
+pole per period. For even \(p\), however, Theorem~\ref{thm:complete}
+excludes other meromorphic waves only for purely dispersive equations.
 
-Can one equation have two different waves of this kind at the same
-rate and speed? It cannot, and this holds for every \(P\), including
-the mixed equations of odd order, to which Theorem~\ref{thm:complete}
-does not apply: the argument only uses the leading coefficient of a
-convolution.
+Can one equation have two different waves of this kind at the same rate
+and speed? It cannot, even for the mixed equations of odd order, to
+which Theorem~\ref{thm:complete} does not apply.
 
 \begin{proposition}[One profile per operator]\label{prop:injective}
 Let \(A_1,A_2\) be monic polynomials of degree \(p-1\) satisfying
 \(A_1\mid S_{A_1}\) and \(A_2\mid S_{A_2}\). If \(P_{A_1}=P_{A_2}\),
-then \(A_1=A_2\).
-Consequently a monic operator of degree \(p\) admits at most one
-normalized rational-exponential one-pole profile.
-Any count of distinct pairs with this normalization is therefore
-also a count of distinct operators.
+then \(A_1=A_2\). Consequently a monic operator of degree \(p\) admits
+at most one normalized rational-exponential one-pole profile, and any
+count of distinct normalized pairs is also a count of distinct operators.
 \end{proposition}
 
 \begin{proof}
-Suppose \(P_{A_1}=P_{A_2}=P\), and put \(h=A_1-A_2\).
-If \(h\ne0\), its degree \(n\) is less than \(p-1\); write
-\(f\ne0\) for its leading coefficient.
-By \eqref{eq:operator-A} and the bilinearity and symmetry of the
-convolution, \(S_{A_1}-S_{A_2}=h\star(A_1+A_2)=(2/s_p)Ph\).
-The power-sum calculation in \eqref{eq:Sleading} gives the leading
-coefficient \(2f\int_0^1t^n(1-t)^{p-1}\dd t\) on the left.
-Since \(P\) is monic, the right side has leading coefficient
-\((2/s_p)f\), and \(2/s_p\) is the beta integral of
-\eqref{eq:Sleading}. Cancelling \(f\) would therefore give
-\[
- 2\int_0^1t^n(1-t)^{p-1}\dd t
-   =\int_0^1t^{p-1}(1-t)^{p-1}\dd t.
-\]
-This is impossible: \(n<p-1\) implies \(t^n>t^{p-1}\) for \(0<t<1\), so
-the left side exceeds twice the right side. Thus \(h=0\).
+Suppose \(P_{A_1}=P_{A_2}=P\) and \(h=A_1-A_2\ne0\). The degree \(n\) of
+\(h\) is less than \(p-1\); write \(f\) for its leading coefficient. By
+\eqref{eq:operator-A} and the bilinearity and symmetry of the
+convolution, \(S_{A_1}-S_{A_2}=h\star(A_1+A_2)=(2/s_p)Ph\). The
+power-sum calculation in \eqref{eq:Sleading} gives the leading
+coefficient \(2f\int_0^1t^n(1-t)^{p-1}\dd t\) on the left. Since \(P\)
+is monic, the right side has the leading coefficient \((2/s_p)f\), and
+\(2/s_p\) is the beta integral \(\int_0^1t^{p-1}(1-t)^{p-1}\dd t\) of
+\eqref{eq:Sleading}. This is impossible: \(n<p-1\) implies
+\(t^n>t^{p-1}\) for \(0<t<1\), so the first integral exceeds the second,
+and the left coefficient is more than twice the right one.
 \end{proof}
 
 Every \(P_A\) has a root among \(1,\ldots,p\). Let \(m\) be the least
@@ -200,55 +163,44 @@ positive integer with \(A(m)\ne0\); then \(m\le p\), because \(A\) has
 degree \(p-1\). As \(e^z\to0\) the profile begins with
 \(s_p(-1)^{m-1}A(m)e^{mz}\) and its square with \(e^{2mz}\), so the
 coefficient of \(e^{mz}\) in \eqref{eq:main} gives \(P_A(m)=0\).
-In physical terms, the wave leaves its background like \(e^{mz}\), so
-\(m\) is a spatial eigenvalue of the linearization about the
-background, that is, a root of \(P\); and \(m\) is one of
-\(1,\ldots,p\).
+Physically, the wave leaves its background like \(e^{mz}\), so \(m\) is
+a spatial eigenvalue of the linearization there, a root of \(P\).
 
 \paragraph{Other equations with the same profile equation.}
 The reduction of Section~\ref{sec:setting} uses only the travelling-wave
-variable. The counts therefore apply to any equation
+variable, so the counts apply to any equation
 \(\mathcal L u+\mathcal M(u^2)=0\) with constant-coefficient operators,
-mixed derivatives and several space variables included, whose
-plane-wave reduction integrates to \eqref{eq:main}; the coefficients of
-\(P\) then depend on the speed and the direction of the wave.
-An example in three space variables is the equation of
-\citet{KudryashovSinelshchikovThreeDim2012} for waves in a liquid with
-gas bubbles, whose travelling-wave reduction is that of KdV--Burgers.
-The repository lists such equations by profile operator, with their
-reductions (directory \texttt{tools/wave\_dictionary/}).
+mixed derivatives and several space variables included, whose plane-wave
+reduction integrates to \eqref{eq:main}; the coefficients of \(P\) then
+depend on the speed and the direction of the wave. An example in three
+space variables is the equation of
+\citet{KudryashovSinelshchikovThreeDim2012} for a liquid with gas
+bubbles, whose reduction is that of KdV--Burgers. The repository lists
+such equations by profile operator (\texttt{tools/wave\_dictionary/}).
 
 \paragraph{Ansatz methods.}
-Many exact travelling waves in the literature are produced by
-substituting a finite expansion: the tanh and sech methods, the
-exp-function and \((G'/G)\)-expansion methods, the simplest-equation
-method with a Riccati equation \citep{Kudryashov2005Simplest}, and the
-Jacobi and Weierstrass elliptic-function expansions
-\citep{Kudryashov2009Errors}. In their standard form, with one phase
-\(kx-\omega t\) and constant coefficients, the first group produces
-functions that are rational in one exponential and the second group
-elliptic functions of one argument; rational functions of \(z\) arise
-as limits. With respect to its primitive period, an output with one
-pole per period is, up to the symmetries of
-Proposition~\ref{prop:fixed}, one of the waves \eqref{eq:fixed-wave},
-one of the elliptic waves of Section~\ref{sec:elliptic-counting}, or
-the rational wave; for the equations of Theorem~\ref{thm:complete}
-every nonconstant output has one pole per period. The counts therefore
-serve as a checklist: at a covered order, once the rate or the period
-lattice is fixed, a tanh-type or elliptic ansatz with one pole per
-period can return at most \(N_p\), respectively \(M_p\), normalized
-solutions, independently of the expansion method.
-This agrees with the critical comparisons of these methods
-\citep{KudryashovLoguinova2009,Kudryashov2009Errors,KudryashovSoukharev2009}:
-the ``new'' waves they returned for the KdV--Burgers and
-Kuramoto--Sivashinsky equations coincide with the known ones
-\citep{Kudryashov2009KdVB,KudryashovSoukharev2009}, and an ansatz whose
-pole order is lower than \(p\) returns no wave at all
-\citep{Kudryashov2010Kawahara}.
-For the conformable derivative \(T_\alpha f(t)=t^{1-\alpha}f'(t)\),
-\(t>0\), \(0<\alpha\le1\) \citep{KhalilEtAl2014}, the change
-\(\tau=t^\alpha/\alpha\) gives \(T_\alpha=\dd/\dd\tau\), and similarly
-for a spatial conformable derivative, so whenever the transformed
-equation has the profile equation \eqref{eq:main} its waves fall under
-the same counts; this does not apply to the Caputo or
-Riemann--Liouville derivatives.
+In standard form (one phase \(kx-\omega t\), constant coefficients) the
+tanh, sech, exp-function and \((G'/G)\)-expansion methods and the
+simplest-equation method with a Riccati equation
+\citep{Kudryashov2005Simplest} return functions rational in one
+exponential, and the Jacobi and Weierstrass expansions
+\citep{Kudryashov2009Errors} elliptic functions of one argument, with
+rational functions as limits. An output with one pole per period (for
+the equations of Theorem~\ref{thm:complete}, every nonconstant output)
+is, up to the symmetries of Proposition~\ref{prop:fixed}, a wave
+\eqref{eq:fixed-wave}, an elliptic wave of
+Section~\ref{sec:elliptic-counting} or the rational wave. So the counts
+are a checklist: at a covered order, once the rate or the period lattice
+is fixed, a tanh-type or elliptic ansatz with one pole per period can
+return at most \(N_p\), respectively \(M_p\), normalized solutions,
+whatever the method. The critical comparisons
+\citep{KudryashovLoguinova2009,Kudryashov2009Errors,KudryashovSoukharev2009}
+agree: the ``new'' KdV--Burgers and Kuramoto--Sivashinsky waves coincide
+with the known ones \citep{Kudryashov2009KdVB,KudryashovSoukharev2009},
+and an ansatz of pole order lower than \(p\) returns no wave
+\citep{Kudryashov2010Kawahara}. The conformable derivative
+\(T_\alpha f(t)=t^{1-\alpha}f'(t)\), \(t>0\), \(0<\alpha\le1\)
+\citep{KhalilEtAl2014}, is \(\mathrm d/\mathrm d\tau\) for
+\(\tau=t^\alpha/\alpha\), and similarly in space, so a transformed
+equation with profile equation \eqref{eq:main} obeys the same counts;
+this does not apply to the Caputo or Riemann--Liouville derivatives.

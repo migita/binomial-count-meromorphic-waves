@@ -72,89 +72,80 @@ elliptic functions; polynomial convolution; algebraic multiplicity.
 \section{Introduction}\label{sec:intro}
 
 Exact travelling waves of nonlinear evolution equations are usually
-found one equation at a time, and usually only for special values of
-the coefficients. The Kuramoto--Sivashinsky equation with dispersion,
+found one equation at a time, and usually only for special values of the
+coefficients. The Kuramoto--Sivashinsky equation with dispersion,
 \(u_t+uu_x+u_{xx}+\sigma u_{xxx}+u_{xxxx}=0\), is a classical example.
-It has nonconstant travelling waves that are polynomials in a
-hyperbolic tangent for exactly four values of the dispersion
-coefficient, up to its sign: \(\sigma=0\), \(4\), \(12/\sqrt{47}\) and
-\(16/\sqrt{73}\). Kuramoto and Tsuzuki found the wave of the
-dispersionless equation \citep{KuramotoTsuzuki1976}, Kudryashov the
-others
-\citep{Kudryashov1988,Kudryashov1989,Kudryashov1990,Kudryashov1991},
-and Eremenko proved that, together with Kudryashov's elliptic solution
-and a single rational one, they exhaust the nonconstant meromorphic
-travelling waves \citep{Eremenko2006}.
-The classical tables list six cases at these four values
-\citep{KudryashovZargaryan1996,ConteMusette2009}: two at \(\sigma=0\),
-two at \(\sigma=\pm4\), and one at each of the other two values. The
-four values already appear together in
+It has nonconstant travelling waves that are polynomials in a hyperbolic
+tangent for exactly four values of the dispersion coefficient, up to its
+sign: \(\sigma=0\), \(4\), \(12/\sqrt{47}\) and \(16/\sqrt{73}\).
+Kuramoto and Tsuzuki found the wave of the dispersionless equation
+\citep{KuramotoTsuzuki1976}, Kudryashov the others
+\citep{Kudryashov1988,Kudryashov1989,Kudryashov1990,Kudryashov1991}, and
+Eremenko proved that, together with Kudryashov's elliptic solution and a
+single rational one, they exhaust the nonconstant meromorphic travelling
+waves \citep{Eremenko2006}. The classical tables list six cases at these
+four values \citep{KudryashovZargaryan1996,ConteMusette2009}: two at
+\(\sigma=0\), two at \(\sigma=\pm4\), and one at each of the other two
+values. The four values already appear together in
 \citet[Eq.~(39)]{Kudryashov1989}. The tables do not distinguish a wave
-from its mirror image, which solves the equation with the opposite
-sign of \(\sigma\). If the two are counted
-separately, the two cases with \(\sigma=0\) are their own mirror images
-and the other four are not, so the list has \(2+2\cdot4=10\) members.
-This paper shows that ten is \(\binom52\): the classical list is the
-case \(p=3\) of a binomial enumeration, proved for infinitely many
-\(p\) and conjectured for all.
+from its mirror image, which solves the equation with the opposite sign
+of \(\sigma\). If the two are counted separately, the two cases with
+\(\sigma=0\) are their own mirror images and the other four are not, so
+the list has \(2+2\cdot4=10\) members. This paper shows that ten is
+\(\binom52\): the classical list is the case \(p=3\) of a binomial
+enumeration, proved for infinitely many \(p\) and conjectured for all.
 
 We consider the evolution equations
 \[
  u_t+uu_x+\sum_{j=1}^{p}b_j\partial_x^{j+1}u=0,\qquad b_p\ne0,
 \]
 which contain the KdV--Burgers (\(p=2\)), Kuramoto--Sivashinsky
-(\(p=3\)), Kawahara and Benney--Lin (\(p=4\)) and Nikolaevskiy
-(\(p=5\)) equations; Table~\ref{tab:named} lists the named members with
-\(p\le6\). Kudryashov studied this family as a whole and found exact
-waves of its KdV--Burgers, Kuramoto--Sivashinsky and Kawahara members
-\citep{Kudryashov1989}.
-A travelling wave \(u=w(x-ct)\) satisfies, after one integration,
-\(\sum_jb_jw^{(j)}-cw+w^2/2+K=0\). Shifting \(w\) by a constant
-solution and normalizing the leading coefficient gives
+(\(p=3\)), Kawahara and Benney--Lin (\(p=4\)) and Nikolaevskiy (\(p=5\))
+equations; Table~\ref{tab:named} lists the named members with \(p\le6\).
+Kudryashov studied this family as a whole and found exact waves of its
+KdV--Burgers, Kuramoto--Sivashinsky and Kawahara members
+\citep{Kudryashov1989}. A travelling wave \(u=w(x-ct)\) satisfies, after
+one integration, \(\sum_jb_jw^{(j)}-cw+w^2/2+K=0\). Shifting \(w\) by a
+constant solution and normalizing the leading coefficient gives
 \begin{equation}\label{eq:main}
  P(D)v+\frac12v^2=0,\qquad
  P(\rho)=\rho^p+\sum_{j=0}^{p-1}a_j\rho^j,\qquad p\ge2,
 \end{equation}
 with \(D=\mathrm d/\mathrm dz\) and complex coefficients. The
-coefficients \(a_1,\ldots,a_{p-1}\) are those of the evolution
-equation, up to a rescaling of \(x\), and the speed, the integration
-constant and the background are absorbed into \(a_0\)
-(Section~\ref{sec:setting}).
+coefficients \(a_1,\ldots,a_{p-1}\) are those of the evolution equation,
+up to a rescaling of \(x\), and the speed, the integration constant and
+the background are absorbed into \(a_0\) (Section~\ref{sec:setting}).
 Throughout, \(p\) is the order of the profile equation \eqref{eq:main},
 which is one less than the order of the evolution equation:
-Kuramoto--Sivashinsky is a fourth-order equation and has \(p=3\),
-Kawahara has \(p=4\), and the seventh-order KdV equation has \(p=6\).
+Kuramoto--Sivashinsky is a fourth-order equation and has \(p=3\).
 Phrases such as ``order three'' or ``in every order'' always refer to
 \(p\).
 
-In the evolution equation, derivatives of odd order are dispersive
-terms and derivatives of even order are dissipative terms (in this sign
-convention a positive coefficient of \(u_{xx}\) is gain, so dissipative
-includes gain). We call an equation \emph{purely dispersive} if it
-contains only odd-order derivatives, as the KdV and Kawahara equations
-do; then \(p\) is even and \(P\) is an even polynomial. We call it
-\emph{purely dissipative} if its linear part contains only even-order
-derivatives, as for the Kuramoto--Sivashinsky equation without
-dispersion; then \(p\) is odd and \(P-P(0)\) is an odd polynomial. All
-other equations, such as KdV--Burgers, are \emph{mixed}. The first two
-classes are \emph{the two pure subfamilies}; each order \(p\) has one
-of them, according to its parity.
+In the evolution equation, derivatives of odd order are dispersive and
+those of even order dissipative (in this sign convention a positive
+coefficient of \(u_{xx}\) is gain, so dissipative includes gain). An
+equation is \emph{purely dispersive} if it contains only odd-order
+derivatives, as KdV and Kawahara do; then \(p\) is even and \(P\) is an
+even polynomial. It is \emph{purely dissipative} if its linear part
+contains only even-order derivatives, as for Kuramoto--Sivashinsky
+without dispersion; then \(p\) is odd and \(P-P(0)\) is odd. These are
+\emph{the two pure subfamilies}, one for each parity of \(p\). All other
+equations, such as KdV--Burgers, are \emph{mixed}.
 
 \paragraph{The waves.}
 A travelling wave is \emph{meromorphic} if its profile is a
 single-valued meromorphic function of the complex variable \(z\). The
-familiar exact solutions are of this kind: a polynomial in
-\(\tanh\) or \(\operatorname{sech}\) is a rational function of an
-exponential \(e^{\kappa z}\), a cnoidal wave is an elliptic function,
-and rational functions of \(z\) also occur. These are the three kinds
-of wave in this paper. We consider those with \emph{one pole per
-period}: all the poles of the profile are translates of a single pole
-by its periods. For a wave of \(\tanh\) type the period in question is
-the imaginary period \(2\pi i/\kappa\) of \(e^{\kappa z}\), and the
-rate \(\kappa\) measures the width of the wave. Such a wave tends to a
-constant at each end (Section~\ref{sec:systems}); it is a \emph{pulse}
-if it returns to the same constant, and a \emph{front} if it connects
-two different constants.
+familiar exact solutions are of this kind: a polynomial in \(\tanh\) or
+\(\operatorname{sech}\) is a rational function of an exponential
+\(e^{\kappa z}\), a cnoidal wave is an elliptic function, and rational
+functions of \(z\) also occur. These are the three kinds of wave in this
+paper. We consider those with \emph{one pole per period}: all the poles
+of the profile are translates of a single pole by its periods. For a
+wave of \(\tanh\) type the period is the imaginary period
+\(2\pi i/\kappa\) of \(e^{\kappa z}\), and the rate \(\kappa\) measures
+the width of the wave. Such a wave tends to a constant at each end
+(Section~\ref{sec:systems}); it is a \emph{pulse} if it returns to the
+same constant, and a \emph{front} if it connects two different ones.
 
 For every equation of even order, and for every purely dispersive
 equation, these are all the meromorphic travelling waves that exist
@@ -166,12 +157,12 @@ equations are the rows marked \(\dagger\) in Table~\ref{tab:named}.
 \paragraph{The question.}
 For \(p\ge3\) such waves are exceptional: an equation of the family has
 one only if its coefficients satisfy algebraic relations, as the four
-values of \(\sigma\) illustrate. This suggests the right question. We
-do not ask how many waves a given equation has, but how many pairs of
-an equation and a wave there are in the whole family.
+values of \(\sigma\) illustrate. This suggests the right question. We do
+not ask how many waves a given equation has, but how many pairs of an
+equation and a wave there are in the whole family.
 
-To make this question finite, two continuous freedoms must be removed.
-A translate of a wave is again a wave, so we place the pole at a fixed
+To make this question finite, two continuous freedoms must be removed. A
+translate of a wave is again a wave, so we place the pole at a fixed
 point. Rescaling \(x\) changes the width of a wave and the coefficients
 of its equation together, so we fix the width: for a wave that is
 rational in an exponential we prescribe the rate \(\kappa=1\), and for
@@ -179,11 +170,11 @@ an elliptic wave we prescribe both of its periods, that is, its period
 lattice. The coefficients of the equation remain free. We therefore
 count pairs \((P,v)\), where \(P\) ranges over all monic polynomials of
 degree \(p\) and \(v\) solves \eqref{eq:main}:
-\begin{itemize}\setlength{\itemsep}{0pt}
-\item a \emph{rational-exponential pair} has \(v\) rational in
-\(e^z\), with one pole modulo \(2\pi i\ZZ\), placed at \(i\pi\), so
-that the profile is smooth on the real axis, and \(v\to0\) as
-\(e^z\to0\), that is, as \(z\to-\infty\) along the real axis;
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}
+\item a \emph{rational-exponential pair} has \(v\) rational in \(e^z\),
+with one pole modulo \(2\pi i\ZZ\), placed at \(i\pi\), so that the
+profile is smooth on the real axis, and \(v\to0\) as \(e^z\to0\), that
+is, as \(z\to-\infty\) along the real axis;
 \item an \emph{elliptic pair} has \(v\) elliptic on a given lattice,
 with its only pole at zero.
 \end{itemize}
@@ -198,21 +189,18 @@ One more convention explains a factor two below. The profile equation
 has two constant solutions, and a wave can be measured from either of
 them. The change is a Galilean shift: it changes the speed relative to
 the background, and with it \(P\), but not the wave
-(Section~\ref{sec:setting}).
-A rational-exponential wave is measured from its limit as \(e^z\to0\).
-An elliptic wave has no such limit, and both choices are counted, so
-every elliptic wave appears in two pairs.
+(Section~\ref{sec:setting}). A rational-exponential wave is measured
+from its limit as \(e^z\to0\). An elliptic wave has no such limit, and
+both choices are counted, so every elliptic wave appears in two pairs.
 
 \paragraph{The answer.}
 Four numbers appear:
 \[
  \begin{aligned}
- N_p&=\binom{2p-1}{p-1}
-     &&\text{rational-exponential pairs},\\
+ N_p&=\binom{2p-1}{p-1}&&\text{rational-exponential pairs},\\
  S_p&=\binom{2p-2}{p-2}
      &&\text{the pulses among them; the other \(N_p-S_p\) are fronts},\\
- M_p&=2S_p
-     &&\text{elliptic pairs on a generic lattice},\\
+ M_p&=2S_p&&\text{elliptic pairs on a generic lattice},\\
  F_p&=\binom{p-1}{\lfloor(p-1)/2\rfloor}
      &&\text{rational-exponential pairs of the pure subfamily of order
        \(p\)}.
@@ -220,44 +208,40 @@ Four numbers appear:
 \]
 We call \(2p-1\) the \emph{index} of the order \(p\). Our main result
 establishes these numbers whenever the index is a prime number:
-\begin{itemize}\setlength{\itemsep}{0pt}
-\item there are exactly \(N_p\) rational-exponential pairs, and they
-are all distinct (Theorem~\ref{thm:prime});
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}
+\item there are exactly \(N_p\) rational-exponential pairs, and they are
+all distinct (Theorem~\ref{thm:prime});
 \item exactly \(S_p\) of them are pulses, and the others are fronts
 (Proposition~\ref{cor:endpoints});
-\item a generic lattice carries exactly \(M_p=2S_p\) elliptic pairs,
-and they are all distinct (Theorem~\ref{thm:elliptic-count}); generic
-means every lattice except those with finitely many values of the
-invariant \(j(\Lambda)\), which at \(p=3\) are \(j=0\) and \(-300\);
+\item a generic lattice carries exactly \(M_p=2S_p\) elliptic pairs, and
+they are all distinct (Theorem~\ref{thm:elliptic-count}); generic means
+every lattice except those with finitely many values of the invariant
+\(j(\Lambda)\), which at \(p=3\) are \(j=0\) and \(-300\);
 \item exactly \(F_p\) of the rational-exponential pairs belong to the
-pure subfamily of order \(p\), and they are the pairs that coincide
-with their mirror image. Those of a purely dispersive equation are
-pulses, and those of a purely dissipative one are fronts. For even
-\(p\), \(2F_p\) of the elliptic pairs belong to purely dispersive
-equations (Theorem~\ref{thm:symmetric},
-Corollary~\ref{cor:elliptic-symmetric}).
+pure subfamily of order \(p\), and they are the pairs that coincide with
+their mirror image. Those of a purely dispersive equation are pulses,
+and those of a purely dissipative one are fronts. For even \(p\),
+\(2F_p\) of the elliptic pairs belong to purely dispersive equations
+(Theorem~\ref{thm:symmetric}, Corollary~\ref{cor:elliptic-symmetric}).
 \end{itemize}
 The index is prime for \(p=2,3,4,6,7,9,10,12,\ldots\). At the three
 remaining orders up to twelve, \(p=5\), \(8\) and \(11\), the same
 statements are established by exact computer calculations
-(Corollary~\ref{cor:twelve} and
-Proposition~\ref{prop:general}(iii)). We call the orders with a prime
-index, together with all \(p\le12\), the \emph{covered} orders; they
-include every named equation of Table~\ref{tab:named}. We conjecture
-the same statements in every order (Conjecture~\ref{conj:count}). At a
-prime index the first statement has also been verified formally, in
-Lean (Remark~\ref{rem:lean}).
+(Corollary~\ref{cor:twelve}, Proposition~\ref{prop:general}(iii) and
+Appendix~\ref{app:verification}). We call the orders with a prime index,
+together with all \(p\le12\), the \emph{covered} orders; they include
+every named equation of Table~\ref{tab:named}. We conjecture the same
+statements in every order (Conjecture~\ref{conj:count}). At a prime
+index the first statement has also been verified formally, in Lean
+(Remark~\ref{rem:lean}).
 
 \begin{table}[htbp]
 \centering
-\caption{The named equations of the family with \(p\le6\); here
-\(u_{kx}=\partial_x^ku\). Each name stands for a family with free
-coefficients, and the numbers count distinct pairs across that family:
-rational-exponential pairs at unit rate, and elliptic pairs on a
-generic given lattice, where every elliptic wave appears twice. Except
-in the two rows marked \(\dagger\), these pairs are all the nonconstant
-meromorphic travelling waves of the equations, apart from a rational
-wave when all lower coefficients vanish.}
+\caption{The named equations with \(p\le6\); \(u_{kx}=\partial_x^ku\).
+Each name stands for a family with free coefficients; the numbers count
+distinct pairs across it, at unit rate and on a generic lattice. Except in
+the \(\dagger\) rows, these are all the nonconstant meromorphic travelling
+waves, apart from a rational wave when all lower coefficients vanish.}
 \label{tab:named}
 \vspace{4pt}
 \begin{tabular}{@{}llcrr@{}}
@@ -277,134 +261,108 @@ seventh-order KdV&\(u_{3x},u_{5x},u_{7x}\)&6&\(F_6=10\)&\(2F_6=20\)\\
 \end{tabular}
 \end{table}
 
-The named equations of Table~\ref{tab:named} are the Benney--Lin
-equation \citep{Benney1966,Lin1974}, the Kuramoto--Sivashinsky equation
-with
-dispersion, also called the generalized Kuramoto--Sivashinsky, Benney
-or KdV--KS equation \citep{KawaharaToh1988}, the Nikolaevskiy equation
-\citep{Nikolaevskii1989} and its dispersive version
-\citep{KudryashovMigita2007,SimbawaMatthewsCox2010}, the long-wave
-equations for a liquid with gas bubbles
+The names and some physical sources: Benney--Lin
+\citep{Benney1966,Lin1974}; Kuramoto--Sivashinsky with dispersion, also
+called the generalized Kuramoto--Sivashinsky, Benney or KdV--KS equation
+\citep{KawaharaToh1988}; Nikolaevskiy \citep{Nikolaevskii1989}, with
+dispersion \citep{KudryashovMigita2007,SimbawaMatthewsCox2010}; long
+waves in a liquid with gas bubbles
 \citep{KudryashovSinelshchikov2010,KudryashovSinelshchikovFourthOrder2010}
-and for flow in a viscoelastic tube
+and in a viscoelastic tube
 \citep{KudryashovChernyavskii2006,KudryashovSinelshchikovChernyavsky2008},
 where the mixed fifth-order equation of the Benney--Lin row was also
 derived \citep{KudryashovSinelshchikov2011} and studied numerically
-\citep{KudryashovRyabovSinelshchikov2011}, and the equations already
-mentioned. The rows with \(N_p\) and \(M_p\) are full families, and a
-full family contains the pure subfamily of the same \(p\). The small
-entries are familiar. The three pairs of KdV--Burgers are the KdV
-soliton and the KdV--Burgers front, read in its two directions. The
-two elliptic pairs of KdV are the cnoidal wave on its two backgrounds.
-The eight elliptic pairs at \(p=3\) are Kudryashov's elliptic
-solution: on a given lattice it occurs four times, always with
-\(\sigma=\pm4\), and each time on two backgrounds
+\citep{KudryashovRyabovSinelshchikov2011}. The rows with \(N_p\) and
+\(M_p\) are full families, and a full family contains the pure subfamily
+of the same \(p\). The small entries are familiar. The three pairs of
+KdV--Burgers are the KdV soliton and the KdV--Burgers front, read in its
+two directions. The two elliptic pairs of KdV are the cnoidal wave on
+its two backgrounds. The eight elliptic pairs at \(p=3\) are
+Kudryashov's elliptic solution: on a given lattice it occurs four times,
+always with \(\sigma=\pm4\), and each time on two backgrounds
 (Section~\ref{sec:ks}). The two entries \(0\) say that these purely
 dissipative equations have no elliptic pair on a generic lattice
 (Section~\ref{sec:reflection}); at \(p=3\) they have one only when
 \(g_2=0\). The six pairs of the purely dissipative family with \(p=5\)
-are the six solitary waves of \citet{KudryashovDemina2007}, four of
-them real \citep{KudryashovMigita2007} (Section~\ref{sec:p5}).
+are the six solitary waves of \citet{KudryashovDemina2007}, four of them
+real \citep{KudryashovMigita2007} (Section~\ref{sec:p5}).
 
-Some remarks make precise what the numbers mean.
-The counts are over \(\CC\) and range over all monic \(P\). Many of the
-pairs have real coefficients and give smooth bounded waves of real
-equations: eight of the ten at \(p=3\) (Table~\ref{tab:ks}), and \(21\)
-of the \(35\) at \(p=4\) (Section~\ref{sec:kawahara}). A pair with
-non-real coefficients at unit rate can still belong to a real equation,
-at an imaginary rate; the wave is then periodic in \(x\) and has poles
-on the real axis (Section~\ref{sec:ks-rational}).
-The word \emph{distinct} carries content: a solution of a polynomial
-system can be multiple, like a multiple root of a polynomial, and on
-special lattices elliptic pairs do merge in this way
-(Section~\ref{sec:ks}).
-Rational waves are not counted: at the covered orders the only one
-with a single pole is \(v=c_\ast z^{-p}\), for \(P=D^p\)
-\citep{Kudryashov2004}; the constant \(c_\ast\) is given in
-\eqref{eq:leadingpole}.
-Finally, the waves of low order are classical. The general enumeration
-has no precedent that we know of. Its special cases at \(p=3\), in the
-Kawahara family \citep{Kudryashov1989,DeminaKudryashovKawahara2010} and
-in the purely dissipative family with \(p=5\)
-\citep{KudryashovDemina2007} are in the literature, as
-Sections~\ref{sec:ks-rational} and~\ref{sec:examples} make explicit;
-what is new is that the lists are complete, and how long they are. We
-do not discuss stability, and we treat only the quadratic nonlinearity
-\(uu_x\).
+The counts are over \(\CC\), but many pairs have real coefficients and
+give smooth bounded waves of real equations: eight of the ten at \(p=3\)
+and \(21\) of the \(35\) at \(p=4\) (Table~\ref{tab:ks},
+Section~\ref{sec:kawahara}). A pair with non-real coefficients at unit
+rate can still belong to a real equation, at an imaginary rate; the wave
+is then periodic in \(x\) and has poles on the real axis
+(Section~\ref{sec:ks-rational}). \emph{Distinct} carries content: like a
+root of a polynomial, a solution of a polynomial system can be multiple,
+and on special lattices elliptic pairs do merge in this way
+(Section~\ref{sec:ks}). Rational waves are not counted: at the covered
+orders the only one with a single pole is \(v=c_\ast z^{-p}\), for
+\(P=D^p\) \citep{Kudryashov2004}, with \(c_\ast\) as in
+\eqref{eq:leadingpole}. The general enumeration has no precedent that we
+know of. Its special cases at \(p=3\), in the Kawahara family
+\citep{Kudryashov1989,DeminaKudryashovKawahara2010} and in the
+Nikolaevskiy family \citep{KudryashovDemina2007} are in the literature
+(Sections~\ref{sec:ks-rational}, \ref{sec:examples}); what is new is
+that the lists are complete, and how long they are. We do not discuss
+stability, and treat only the quadratic nonlinearity \(uu_x\).
 
 \paragraph{A single equation.}
 The numbers in Table~\ref{tab:named} are totals over all coefficient
-values of a family. An individual equation has such a wave only if its
-coefficient ratios lie on special curves (Section~\ref{sec:fixed}).
-The reason is that rescaling \(x\) moves an equation along a curve in
-the space of coefficient ratios, and each pair marks one curve.
-In a family with a single coefficient ratio (KdV--Burgers, Kawahara,
-Kuramoto--Sivashinsky without dispersion) a rescaling carries every
-equation with a nonzero ratio to every other one. Each of these
-equations then has all the waves whose ratio is not zero: the
-KdV--Burgers front, and all \(F_4=3\) and \(F_3=2\) wave shapes of the
-other two families. The rescaling may be complex: in the last two
-families a real one cannot change the sign of the ratio.
-An equation without lower-order terms, such as KdV, is invariant under
-rescaling and has each of its waves at every rate.
-
-Whenever \(2p-1\) is prime, and for every \(p\le573\), the equations
-with a one-pole rational-exponential wave are those on finitely many
-curves, at most one for each pair and its mirror image
+values of a family. Rescaling \(x\) moves an equation along a curve in
+the space of coefficient ratios, and each pair marks one curve
+(Section~\ref{sec:fixed}). The equations with a one-pole
+rational-exponential wave are those on these curves; whenever \(2p-1\)
+is prime, and for every \(p\le573\), the curves are finite in number
 (Corollary~\ref{cor:solvable}). This is the precise sense in which the
-waves are exceptional for \(p\ge3\). At \(p=3\) the curves are
-\(b_2^2=\sigma^2b_1b_3\) with the four values of \(\sigma\).
-For equations of even order the classification gives more: a generic
-such equation has no nonconstant meromorphic travelling wave at all,
-at the same orders (Corollary~\ref{cor:generic}, and the remark after
-it for \(p=3\)); generic means outside a proper algebraic subset of the
-coefficients. It may well have travelling waves; but none of them is
-meromorphic.
-Section~\ref{sec:fixed} also records two consequences for the way exact
-travelling waves are found in practice. The counts apply to the many
-other equations, with mixed derivatives or in several space variables,
-that have the same profile equation. And they are a checklist for the
-output of the expansion methods in powers of \(\tanh\) or of a Jacobi
-function: always for the equations of Theorem~\ref{thm:complete}, and
+waves are exceptional for \(p\ge3\); at \(p=3\) the curves are
+\(b_2^2=\sigma^2b_1b_3\) with the four values of \(\sigma\). In a family
+with a single ratio (KdV--Burgers, Kawahara, Kuramoto--Sivashinsky
+without dispersion) a possibly complex rescaling carries each equation
+with a nonzero ratio to any other, so each has the KdV--Burgers front,
+respectively all \(F_4=3\) or \(F_3=2\) wave shapes of its family. An
+equation without lower-order terms, such as KdV, has each of its waves
+at every rate.
+
+For equations of even order the classification gives more: at the same
+orders a generic such equation (outside a proper algebraic subset of the
+coefficients) has no nonconstant meromorphic travelling wave at all
+(Corollary~\ref{cor:generic}; Remark~\ref{rem:ks-curves} for \(p=3\)).
+It may well have travelling waves; but none of them is meromorphic. The
+counts also apply to the many other equations, with mixed derivatives or
+in several space variables, that have the same profile equation. They
+are a checklist for the output of expansions in powers of \(\tanh\) or a
+Jacobi function: always for the equations of Theorem~\ref{thm:complete},
 otherwise for outputs with one pole per period.
 
 \paragraph{When these are all the meromorphic waves.}
-For every equation of even order (\(p\) odd) and for every purely
-dispersive equation, the one-pole waves of the three kinds are all the
-nonconstant meromorphic travelling waves there are
-(Theorem~\ref{thm:complete}). The proof rests on Eremenko's theorem
-\citep{Eremenko2006}: an autonomous algebraic differential equation
-has only these three kinds of meromorphic solutions if it has a single
-monomial of top degree, here \(v^2/2\), and finitely many Laurent
-expansions at a pole. For odd \(p\) the Laurent expansion at a pole is
-unique. For a purely dispersive equation one Laurent coefficient is
-free, a resonance; but the equation conserves an energy, and fixing the
-energy fixes that coefficient.
-For a given operator \(P\), which records the equation and the speed,
-there is therefore at most one such profile up to translation when
-\(p\) is odd, and at most one on each energy level when the equation is
-purely dispersive. A by-product is that every wave of a pure subfamily
-is symmetric about its poles, or antisymmetric up to a constant
-(Corollary~\ref{cor:symmetric-waves}).
-The theorem is a uniform version of results that exist in pieces: the
-case of odd \(p\) is contained in \citet[Theorem~1]{YuanLiQi2014}, and
-the energy device is that of \citet[Lemmas~3--4]{EremenkoLiaoNg2009};
-Section~\ref{sec:completeness} gives the detailed attributions. The
-polynomial systems for the three kinds of wave are instances of the
-principal-part construction of
-\citet{DeminaKudryashov2011,DeminaKudryashovElliptic2011}.
-The mixed equations of odd order are not included, and cannot be: the
-profile equation of KdV--Burgers is also that of the Fisher equation,
-and at the speed of Ablowitz and Zeppetella it has meromorphic
-solutions of none of the three kinds (Remark~\ref{rem:fisher}).
+Theorem~\ref{thm:complete} is the classification stated above, for
+equations of even order and purely dispersive ones. The proof rests on
+Eremenko's theorem \citep{Eremenko2006}, which requires finitely many
+Laurent expansions at a pole. For odd \(p\) the expansion is unique. For
+a purely dispersive equation one Laurent coefficient is free, a
+resonance; but the equation conserves an energy, and fixing the energy
+fixes that coefficient. By the same uniqueness, every wave of a pure
+subfamily is symmetric about its poles, or antisymmetric up to a
+constant (Corollary~\ref{cor:symmetric-waves}). The theorem is a uniform
+version of results that exist in pieces
+(Section~\ref{sec:completeness}): odd \(p\) is contained in
+\citet[Theorem~1]{YuanLiQi2014}, and the energy device is that of
+\citet[Lemmas~3--4]{EremenkoLiaoNg2009}. The polynomial systems for the
+waves are instances of the principal-part construction of
+\citet{DeminaKudryashov2011,DeminaKudryashovElliptic2011}. Mixed
+equations of odd order cannot be included: the profile equation of
+KdV--Burgers is also that of the Fisher equation, and at the speed of
+Ablowitz and Zeppetella it has meromorphic solutions of none of these
+kinds (Remark~\ref{rem:fisher}).
 
 \paragraph{Every wave has a label.}
 Here is where the binomial coefficient \(N_p\) comes from. Put
-\(Q=1/(1+e^{-z})=(1+\tanh(z/2))/2\). Every rational-exponential pair
-has a profile of the form \(v_A=s_pA(D)Q\), where
+\(Q=1/(1+e^{-z})=(1+\tanh(z/2))/2\). Every rational-exponential pair has
+a profile of the form \(v_A=s_pA(D)Q\), where
 \(s_p=2(2p-1)!/((p-1)!)^2\) is a fixed scale (\(s_2=12\), \(s_3=60\))
-and \(A\) is a monic polynomial of degree \(p-1\); this is a
-polynomial in \(\tanh(z/2)\) written in a convenient basis. For
+and \(A\) is a monic polynomial of degree \(p-1\); this is a polynomial
+in \(\tanh(z/2)\) written in a convenient basis. For
 \(\operatorname{Re}z<0\) we have \(Q=e^z-e^{2z}+e^{3z}-\cdots\), and
 \(D\) multiplies \(e^{nz}\) by \(n\). Hence the coefficient of
 \(e^{nz}\) is \(\pm s_pA(n)\) in \(v_A\) and \(\pm s_pP(n)A(n)\) in
@@ -424,80 +382,71 @@ The smallest case shows what happens. For \(p=2\) and \(A=\rho+a\),
  S_A(\rho)=(\rho-1)\Bigl(\frac{\rho(\rho+1)}6+a\rho+a^2\Bigr),
 \]
 which is divisible by \(\rho+a\) exactly when \(a(a-1)(a+1)=0\). The
-solution \(a=0\) is the KdV soliton, and \(a=\pm1\) are the
-KdV--Burgers front read in its two directions. Now reduce modulo
-\(3=2p-1\). Whatever the value of \(a\),
+solution \(a=0\) is the KdV soliton, and \(a=\pm1\) are the KdV--Burgers
+front read in its two directions. Now reduce modulo \(3=2p-1\). Whatever
+the value of \(a\),
 \[
  3S_A(\rho)\equiv-(\rho^3-\rho)=-\rho(\rho-1)(\rho+1)\pmod3,
 \]
 so modulo \(3\) the divisor \(A\) must be one of the three factors
 \(\rho\), \(\rho-1\), \(\rho+1\). Each of them comes from exactly one
-solution, and the root of \(A\) modulo \(3\) serves as a label: \(\{0\}\)
-for the soliton, \(\{2\}\) for the front \(a=1\), that is, the root
-\(-1\equiv2\), and \(\{1\}\) for the front \(a=-1\).
+solution, and the root of \(A\) modulo \(3\) serves as a label:
+\(\{0\}\) for the soliton, \(\{2\}\) for the front \(a=1\), that is, the
+root \(-1\equiv2\), and \(\{1\}\) for the front \(a=-1\).
 
-The same happens whenever \(\ell=2p-1\) is prime. The polynomial
-\(S_A\) is a combination of the binomial coefficients
-\(\binom{\rho-1}{k}\), and only the last of them, with \(k=\ell\), has
-\(\ell\) in its denominator. For this reason \(\ell S_A\) reduces
-modulo \(\ell\) to \(\pm(\rho^\ell-\rho)\), whatever \(A\) is, and the
-condition becomes that \(A\) divides \(\rho^\ell-\rho\) modulo \(\ell\).
-Now \(\rho^\ell-\rho\) is the product of \(\rho-s\) over all residues
-\(s\) modulo \(\ell\). Its monic divisors of degree \(p-1\) are
-therefore given by the \((p-1)\)-element subsets \(L\) of the integers
-modulo \(\ell\), and there are \(\binom{\ell}{p-1}=N_p\) of them. We
-prove that every pair can be reduced modulo \(\ell\), although its
-coefficients are in general algebraic numbers and not integers, and
-that every divisor comes from exactly one pair. An algebraic number is
-reduced through an equation that it satisfies: \(i\) is \(2\) or \(3\)
-modulo \(5\), because \(2^2\equiv3^2\equiv-1\). For instance
-\(A=\rho^2+1/11\), the Kuramoto--Tsuzuki wave, reduces to
-\(\rho^2+1=(\rho-2)(\rho-3)\) modulo \(5\), and has the label
-\(\{2,3\}\).
+The same happens whenever \(\ell=2p-1\) is prime. The polynomial \(S_A\)
+is a combination of the binomial coefficients \(\binom{\rho-1}{k}\), and
+only the last of them, with \(k=\ell\), has \(\ell\) in its denominator.
+For this reason \(\ell S_A\) reduces modulo \(\ell\) to
+\(\pm(\rho^\ell-\rho)\), whatever \(A\) is, and the condition becomes
+that \(A\) divides \(\rho^\ell-\rho\) modulo \(\ell\). Now
+\(\rho^\ell-\rho\) is the product of \(\rho-s\) over all residues \(s\)
+modulo \(\ell\). Its monic divisors of degree \(p-1\) are therefore
+given by the \((p-1)\)-element subsets \(L\) of the integers modulo
+\(\ell\), and there are \(\binom{\ell}{p-1}=N_p\) of them. We prove that
+every pair can be reduced modulo \(\ell\), although its coefficients are
+in general algebraic numbers and not integers, and that every divisor
+comes from exactly one pair. An algebraic number is reduced through an
+equation that it satisfies: \(i\) is \(2\) or \(3\) modulo \(5\),
+because \(2^2\equiv3^2\equiv-1\). For instance \(A=\rho^2+1/11\), the
+Kuramoto--Tsuzuki wave, reduces to \(\rho^2+1=(\rho-2)(\rho-3)\) modulo
+\(5\), and has the label \(\{2,3\}\).
 
-So each pair has a label \(L\), and the labels carry information.
-The pair is a pulse exactly when \(L\) contains \(0\). At \(p=3\) the
-ten classical waves correspond to the ten two-element subsets of
+So each pair has a label \(L\), and the labels carry information. The
+pair is a pulse exactly when \(L\) contains \(0\). At \(p=3\) the ten
+classical waves correspond to the ten two-element subsets of
 \(\{0,1,2,3,4\}\) (Table~\ref{tab:ks}), and the four pulses are the
 subsets that contain \(0\). The mirror image of the pair with label
 \(L\) has label \(-L\). The pairs with \(L=-L\) coincide with their
 mirror image, and they are exactly the pairs of the two pure
 subfamilies. There are \(F_p\) such subsets.
 
-The elliptic count comes from the pulses. When one period of the
-lattice tends to infinity, an elliptic pair becomes a pulse, measured
-from one of its two constant backgrounds. We show that every pulse, on
-either background, arises in this way exactly once, and this gives
+The elliptic count comes from the pulses. When one period of the lattice
+tends to infinity, an elliptic pair becomes a pulse, measured from one
+of its two constant backgrounds. We show that every pulse, on either
+background, arises in this way exactly once, and this gives
 \(M_p=2S_p\).
 
 \paragraph{Other orders.}
 The number \(N_p\) is also the largest number of isolated solutions,
 counted with multiplicity, that matching equations of this shape can
-have (Proposition~\ref{prop:bezout}). It is attained if no solution
-lies at infinity, which is rigidity, and the solutions are distinct if
-all of them are simple. These are the two facts that are not yet proved
-at every order. In terms of waves, rigidity says that the rational
-wave \(c_\ast z^{-p}\) above is the only one with a single pole
-(Lemma~\ref{lem:laplace}). It is proved when \(2p-1\) is a prime or a
-prime power, and established by exact computations for \(p\le573\).
-Simplicity is proved when \(2p-1\) is prime and, by exact computations,
-at \(p=5\), \(8\) and \(11\). Section~\ref{sec:further} states what
-follows from each of them; the proofs are in a companion note in the
-source package.
+have (Proposition~\ref{prop:bezout}). It is attained if no solution lies
+at infinity, which is rigidity, and the solutions are distinct if all of
+them are simple. These are the two facts that are not yet proved at
+every order. For waves, rigidity says that \(c_\ast z^{-p}\) is the only
+rational wave with a single pole (Lemma~\ref{lem:laplace}). It is proved
+when \(2p-1\) is a prime or a prime power and established by exact
+computations for \(p\le573\); simplicity is known only at the covered
+orders (Section~\ref{sec:further} and a companion note).
 
 \paragraph{Organization.}
-Section~\ref{sec:setting} contains the normalizations and the form of
-the waves. The counts come first (Sections~\ref{sec:counting}
-and~\ref{sec:elliptic-counting}), because they do not use the
-classification. Their proofs, in Section~\ref{sec:prime-proof} and in
-Section~\ref{sec:elliptic-counting}, can be skipped; every later
-section uses only the statements. Then come the classification
-(Section~\ref{sec:completeness}), the two pure subfamilies
-(Section~\ref{sec:reflection}), a single equation
-(Section~\ref{sec:fixed}), the examples (Section~\ref{sec:examples}),
-and the other orders with the open questions
-(Section~\ref{sec:further}). Appendix~\ref{app:verification} describes
-the exact verification and the ancillary material.
+The counts come first (Sections~\ref{sec:counting},
+\ref{sec:elliptic-counting}): they do not use the classification
+(Section~\ref{sec:completeness}). Their proofs
+(Sections~\ref{sec:prime-proof}, \ref{sec:elliptic-counting}) can be
+skipped: later sections use only the statements, apart from two proofs
+in Sections~\ref{sec:reflection} and~\ref{sec:fixed} that follow the
+steps of the proof of Theorem~\ref{thm:elliptic-count}.
 
 \input{sections/setting}
 \input{sections/counting}
@@ -560,7 +509,7 @@ Theorem~\ref{thm:elliptic-count} through a conservation-of-number
 lemma, the flat-family argument having moved to the companion note.
 \end{itemize}
 
-{\small\raggedright
+{\footnotesize\raggedright
 \setlength{\bibsep}{3pt}
 \interlinepenalty=10000
 \bibliographystyle{plainnat}

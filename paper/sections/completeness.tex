@@ -1,26 +1,20 @@
 \section{Are these all the meromorphic waves? The classification theorem}
 \label{sec:completeness}
 
-Sections~\ref{sec:counting} and~\ref{sec:elliptic-counting} counted the
-one-pole waves that are rational in an exponential or elliptic, for
-every operator \(P\). They did not ask whether an equation can have
-other meromorphic travelling waves. For two classes of equations it
-cannot (Theorem~\ref{thm:complete}). The proof is a local analysis at a
-pole of the kind used in the Painlev\'e test, Laurent series and
-resonances, combined with Eremenko's theorem. A by-product,
-Corollary~\ref{cor:symmetric-waves}, is what identifies the two pure
-subfamilies in Section~\ref{sec:reflection}.
+The counts did not ask whether an equation can have other meromorphic
+travelling waves. For two classes of equations it cannot. The proof is a
+local analysis of Painlev\'e type, combined with Eremenko's theorem. A
+by-product, Corollary~\ref{cor:symmetric-waves}, identifies the two pure
+subfamilies (Section~\ref{sec:reflection}).
 
-\begin{theorem}[Classification]
-\label{thm:complete}
+\begin{theorem}[Classification]\label{thm:complete}
 Assume either that \(p\) is odd or that \(P\) is an even polynomial;
 that is, the evolution equation has even order or is purely dispersive.
 Every nonconstant meromorphic solution of \eqref{eq:main} is of one of
 the three kinds of Section~\ref{sec:systems}: rational in \(z\),
 rational in \(e^{\kappa z}\) for some \(\kappa\ne0\), or elliptic. Every
-pole has order \(p\), and the poles are the translates of one pole by
-the full group of periods: the solution has one pole per period, in the
-sense of Section~\ref{sec:systems}.
+pole has order \(p\), and the solution has one pole per period: its
+poles are the translates of one pole by the full group of periods.
 
 For fixed \(P\) of odd degree, there is at most one nonconstant solution
 with its pole at zero. For even \(P\), the same statement holds after
@@ -30,203 +24,166 @@ energy. The only entire solutions are \(v=0\) and \(v=-2a_0\).
 
 \begin{remark}[The hypothesis cannot be dropped: the Fisher family]
 \label{rem:fisher}
-For even \(p\) the theorem requires a purely dispersive equation, and
-this cannot simply be dropped. The known example comes from the Fisher
-equation. Its travelling waves of nonzero speed satisfy \eqref{eq:main}
-with \(p=2\) and a mixed operator, which is also the profile equation of
-KdV--Burgers. At the special speed of \citet{AblowitzZeppetella1979} it
-has a one-parameter family of solutions, given in
+The travelling waves of nonzero speed of the Fisher equation satisfy
+\eqref{eq:main} with \(p=2\) and a mixed operator, the profile equation
+of KdV--Burgers. At the special speed of \citet{AblowitzZeppetella1979}
+it has a one-parameter family of solutions, given in
 \citet{Kudryashov2010}, \citet[Lemma~4.4]{ConteNgWu2015} and
 \citet{McCueElHachemSimpson2021}, and for the KdV--Burgers equation
 itself in \citet{Kudryashov2009KdVB}; see also
 \citet{KudryashovFisher2005}. In our normalization it is
 \[
  v(z)=-12\kappa^2e^{2\kappa z}\wp(e^{\kappa z}-1;0,g_3),\qquad
- P(D)=D^2-5\kappa D+6\kappa^2,\qquad\kappa\ne0.
+ P(D)=D^2-5\kappa D+6\kappa^2,\qquad\kappa\ne0,
 \]
-Substitution follows from \((D^2-5\kappa D+6\kappa^2)[t^2U(t)]
-=\kappa^2t^4U''(t)\), \(t=e^{\kappa z}\). For \(g_3=0\) and \(\kappa=1\)
-this is the front in the first row of \eqref{eq:kdvb-pairs}: the
-familiar Ablowitz--Zeppetella front is a rational-exponential
-degeneration of the family. For generic \(g_3\ne0\) the solution is
-globally meromorphic and is of none of the three kinds. Further examples
-of meromorphic solutions of none of the three kinds are discussed by
-\citet[Remark~1.11]{NgWu2019}. Thus a classification for mixed operators
-with \(p\) even must allow a larger class of functions. For mixed
-operators of even degree \(p\ge4\) we do not know whether meromorphic
-solutions of other kinds occur. Methods for constructing elliptic and
-rational-exponential solutions without the finiteness property are
-developed by \citet{Demina2022}.
+as \((D^2-5\kappa D+6\kappa^2)[t^2U(t)]=\kappa^2t^4U''(t)\),
+\(t=e^{\kappa z}\), shows. For \(g_3=0\) it degenerates to the
+rational-exponential Ablowitz--Zeppetella front, for \(\kappa=1\) the
+front in the first row of \eqref{eq:kdvb-pairs}. For generic \(g_3\ne0\)
+it is globally meromorphic and of none of the three kinds; further such
+examples are discussed by \citet[Remark~1.11]{NgWu2019}. For mixed
+operators of even degree \(p\ge4\) we do not know whether solutions of
+other kinds occur.
 \end{remark}
 
 \paragraph{Earlier work.}
 Theorem~\ref{thm:complete} is a uniform version of results that exist in
-pieces; for the general analytic background, see \citet{Eremenko1982}.
-The case of odd \(p\) is contained in \citet[Theorem~1]{YuanLiQi2014},
-with related results for odd \(p\) in
+pieces; for the analytic background see \citet{Eremenko1982}. Odd \(p\)
+is contained in \citet[Theorem~1]{YuanLiQi2014}, with related results in
 \citet{HuangZhangChenYuan2014,YuanWuChenHuang2014} and a fifth-order
-instance in \citet{Dang2023Odd}. For even \(P\), fixing the value of a
-first integral to remove the freedom at the resonance is the device of
-\citet[Lemmas~3--4]{EremenkoLiaoNg2009} for \(P=D^p+a_0\), stated as a
-general step by \citet[Section~3.2]{ConteNgWu2018} and
-\citet[Section~5]{ConteMusetteNgWu2025} and applied to the Kawahara
+instance in \citet{Dang2023Odd}. For even \(P\), fixing a first integral
+to remove the freedom at the resonance is the device of
+\citet[Lemmas~3--4]{EremenkoLiaoNg2009} for \(P=D^p+a_0\). It is stated
+as a general step by \citet[Section~3.2]{ConteNgWu2018} and
+\citet[Section~5]{ConteMusetteNgWu2025}, and applied to the Kawahara
 equation \citep{DeminaKudryashovKawahara2010,YeEtAl2022}, the
 generalized Bretherton equation
 \citep{DeminaKudryashov2011,KudryashovSinelshchikovDemina2011} and the
 seventh-order KdV equation \citep{Dang2023Even}; the familiar Kawahara
-first integral is the case \(m=2\), that is \(p=4\), of
-\eqref{eq:energy} below. Theorem~\ref{thm:complete} extends it uniformly
-to every even \(P\), intermediate derivatives included. Equations with
-two dominant monomials, or without the finiteness property (finitely
-many Laurent expansions at a pole), are treated by other methods in
-\citet{Demina2019,Demina2022}.
+first integral is the case \(m=2\) of \eqref{eq:energy}.
+Theorem~\ref{thm:complete} extends the device to every even \(P\),
+intermediate derivatives included, with the explicit coefficient
+\eqref{eq:energyh}. Equations with two dominant monomials, or without
+the finiteness property (finitely many Laurent expansions at a pole),
+are treated by other methods in \citet{Demina2019,Demina2022}.
 
 \subsection{The Laurent series at a pole}
 
-We now prove Theorem~\ref{thm:complete}. Write the expansion at a pole
-at zero as
+At a pole, placed at zero, write
 \begin{equation}\label{eq:laurent}
- v(z)=\sum_{n\ge0}c_nz^{n-p}.
+ v(z)=\sum_{n\ge0}c_nz^{n-p},\qquad c_0=c_\ast,\qquad c_n=0\ \ (n<0);
 \end{equation}
-The pole order \(p\) and the leading coefficient \(c_0=c_\ast\) were
-found in \eqref{eq:leadingpole}, for every \(P\). For the remaining
-coefficients, set
-\begin{equation}\label{eq:indicial}
- I_p(n)=\prod_{j=p}^{2p-1}(n-j)+c_\ast.
-\end{equation}
-The product is the factor produced by \(D^p\) acting on \(z^{n-p}\), and
-\(c_\ast\) is the factor produced by the cross term of \(c_nz^{n-p}\)
-with the leading pole in \(v^2/2\). By \eqref{eq:leadingpole},
-\(c_\ast\) has the sign \((-1)^{p-1}\), and
-\(|c_\ast|=2p(p+1)\cdots(2p-1)\) is twice the absolute value of the
-product at \(n=0\). With \(c_n=0\) for \(n<0\), comparison of the
-coefficients of \(z^{n-2p}\) in \eqref{eq:main} gives
-\begin{equation}\label{eq:recurrence}
- I_p(n)c_n=
- -\sum_{j=0}^{p-1}a_j\prod_{i=1}^{j}(n-2p+i)\,c_{n-p+j}
- -\frac12\sum_{k=1}^{n-1}c_kc_{n-k},\qquad n\ge1.
-\end{equation}
-The right side contains only coefficients \(c_k\) with \(k<n\), so
-\eqref{eq:recurrence} determines \(c_n\) whenever \(I_p(n)\ne0\). The
-positive integer zeros of \(I_p\) are the \emph{resonances} (Fuchs
-indices) of the recurrence: at a resonance \(n\) the recurrence leaves
-\(c_n\) undetermined if its right side vanishes, and has no solution
-otherwise.
+the pole order and \(c_0\) are those of \eqref{eq:leadingpole}, for
+every \(P\). Comparing the coefficients of \(z^{n-2p}\) in
+\eqref{eq:main} gives, for \(n\ge1\),
+\begin{align}
+ I_p(n)\,c_n&=-\sum_{j=0}^{p-1}a_j\prod_{i=1}^{j}(n-2p+i)\,c_{n-p+j}
+ -\frac12\sum_{k=1}^{n-1}c_kc_{n-k},\label{eq:recurrence}\\
+ I_p(n)&=\prod_{j=p}^{2p-1}(n-j)+c_\ast.\label{eq:indicial}
+\end{align}
+The product in \(I_p\) comes from \(D^p\) acting on \(z^{n-p}\), and
+\(c_\ast\) from the cross term of \(c_nz^{n-p}\) with the leading pole
+in \(v^2/2\). The right side of \eqref{eq:recurrence} contains only
+\(c_k\) with \(k<n\), so it determines \(c_n\) whenever \(I_p(n)\ne0\).
+The positive integer zeros of \(I_p\) are the \emph{resonances} (Fuchs
+indices): there \(c_n\) is left undetermined if the right side vanishes,
+and no expansion exists otherwise. By \eqref{eq:leadingpole}, \(c_\ast\)
+has the sign \((-1)^{p-1}\), and \(|c_\ast|=2p(p+1)\cdots(2p-1)\) is
+twice the absolute value of the product at \(n=0\).
 
-If \(p\) is odd, then \(c_\ast>0\), and there is no positive integer
-resonance. For integers \(1\le n<p\), the product in \eqref{eq:indicial}
-is negative with absolute value less than \(c_\ast/2\). For
-\(p\le n\le2p-1\) it is zero, and for \(n\ge2p\) it is positive. Hence
-\(I_p(n)\ne0\) for every positive integer \(n\), and there is exactly
-one formal Laurent expansion at the pole.
-
-Theorem~2 of \citet{Eremenko2006} states that an autonomous polynomial
-differential equation with finitely many possible formal pole expansions
-and a single monomial of highest total degree has all its meromorphic
-solutions among the three kinds. In \eqref{eq:main} the only monomial of
-degree two is \(v^2/2\), and for odd \(p\) we have just seen that there
-is exactly one formal pole expansion. Both hypotheses hold at every odd
-order, for all coefficients \(a_j\).
+Let \(p\) be odd, so that \(c_\ast>0\). The product in
+\eqref{eq:indicial} is negative with absolute value less than
+\(c_\ast/2\) for \(1\le n<p\), zero for \(p\le n\le2p-1\), and positive
+for \(n\ge2p\). Hence \(I_p(n)\ne0\) for every integer \(n\ge1\): there
+is no resonance, and exactly one formal Laurent expansion. Theorem~2 of
+\citet{Eremenko2006} states that an autonomous polynomial differential
+equation with finitely many formal pole expansions and a single monomial
+of highest total degree has all its meromorphic solutions among the
+three kinds. In \eqref{eq:main} the only monomial of degree two is
+\(v^2/2\), so for odd \(p\) both hypotheses hold, for all \(a_j\).
 
 \subsection{The energy argument for a purely dispersive equation}
 
 Let \(p=2m\) and \(P(D)=D^{2m}+\sum_{j=0}^{m-1}a_{2j}D^{2j}\). Now
-\(c_\ast<0\), and there is exactly one positive integer resonance.
-Indeed the product in \eqref{eq:indicial} is at most \(|c_\ast|/2\) for
-\(0\le n<p\), is zero for \(p\le n\le2p-1\), and is strictly increasing
-for \(n\ge2p\); its value at \(3p\) is \((p+1)(p+2)\cdots(2p)=-c_\ast\).
-The only positive integer zero of \(I_p\) is therefore \(n=3p\), and the
-possible free Laurent coefficient is \(c_{3p}\), the coefficient of
-\(z^{2p}\) in \(v\). If the recurrence is compatible at \(n=3p\), the
-equation has a one-parameter family of formal expansions at the pole,
-and Eremenko's theorem does not apply to \eqref{eq:main} itself. The
-remedy is a first integral whose value determines \(c_{3p}\).
+\(c_\ast<0\). The product in \eqref{eq:indicial} is at most
+\(|c_\ast|/2\) for \(0\le n<p\), zero for \(p\le n\le2p-1\), and
+strictly increasing for \(n\ge2p\), with the value
+\((p+1)(p+2)\cdots(2p)=-c_\ast\) at \(n=3p\). So the only resonance is
+\(n=3p\), and only \(c_{3p}\) can be free. If it is free, there is a
+one-parameter family of formal expansions, and Eremenko's theorem does
+not apply to \eqref{eq:main} itself. The remedy is a first integral
+whose value determines \(c_{3p}\).
 
-For \(j\ge1\), define the quadratic differential expression
+For \(j\ge1\) put
 \begin{equation}\label{eq:energyterms}
  \mathcal B_j(v)=\sum_{i=0}^{j-2}(-1)^iv^{(i+1)}v^{(2j-1-i)}
  +\frac{(-1)^{j-1}}2\bigl(v^{(j)}\bigr)^2,
 \end{equation}
 where the sum is empty when \(j=1\). Termwise differentiation gives
-\(D\mathcal B_j=v'v^{(2j)}\): every even derivative, multiplied by
-\(v'\), is an exact derivative. Since \(P\) contains only even
-derivatives, it follows that
-\begin{equation}\label{eq:energy}
- \mathcal H_P(v)=\mathcal B_m(v)+\sum_{j=1}^{m-1}a_{2j}\mathcal B_j(v)
- +\frac{a_0}{2}v^2+\frac16v^3
-\end{equation}
-satisfies
-\begin{equation}\label{eq:energyidentity}
- D\mathcal H_P(v)=v'\Bigl(P(D)v+\frac12v^2\Bigr).
-\end{equation}
-In particular \(\mathcal H_P\), the energy, is constant on each
-solution. It is the energy in the usual sense: an even operator \(P(D)\)
-is formally self-adjoint, \eqref{eq:main} is then the Euler--Lagrange
-equation of an autonomous Lagrangian, and \(\mathcal H_P\) is the
-conserved quantity that belongs to translation in \(z\).
+\(D\mathcal B_j=v'v^{(2j)}\). Since \(P\) contains only even
+derivatives, the \emph{energy}
+\begin{align}
+ \mathcal H_P(v)&=\mathcal B_m(v)+\sum_{j=1}^{m-1}a_{2j}\mathcal B_j(v)
+ +\frac{a_0}{2}v^2+\frac16v^3\label{eq:energy}\\
+\shortintertext{satisfies}
+ D\mathcal H_P(v)&=v'\Bigl(P(D)v+\frac12v^2\Bigr),\label{eq:energyidentity}
+\end{align}
+and is constant on each solution. It is the energy in the usual sense:
+an even \(P(D)\) is formally self-adjoint, so \eqref{eq:main} is an
+Euler--Lagrange equation, and \(\mathcal H_P\) is the quantity conserved
+by its invariance under translation in \(z\).
 
-The energy identity has two consequences for the Laurent expansion. The
-first is that the resonance is always compatible. Construct
-\eqref{eq:laurent} through \(c_{3p-1}\); the first possible residual of
-\eqref{eq:main} is \(\Omega z^p\), and multiplication by \(v'\) gives
-residue \(-p c_\ast\Omega\). By \eqref{eq:energyidentity} this is the
-residue of a derivative of a Laurent series, and is therefore zero.
-Hence \(\Omega=0\), and \(c_{3p}\) may be chosen arbitrarily.
+The resonance is always compatible: if the series \eqref{eq:laurent}
+through \(c_{3p-1}\) leaves the residual \(\Omega z^p+\cdots\) in
+\eqref{eq:main}, then \(v'\) times it has residue \(-pc_\ast\Omega\); by
+\eqref{eq:energyidentity} it is a derivative, which has no residue. So
+\(\Omega=0\), and \(c_{3p}\) is free.
 
-The second consequence is that the energy determines \(c_{3p}\). On the
-full formal solution the constant energy has the form
+But the energy determines \(c_{3p}\): on the formal solution
 \begin{equation}\label{eq:energyh}
  \mathcal H_P=-p\,c_\ast I_p'(3p)\,c_{3p}
- +(\text{a constant that depends only on }P),
+ +(\text{a constant that depends only on }P).
 \end{equation}
-and the coefficient of \(c_{3p}\) is not zero: the product in
-\eqref{eq:indicial} equals \(-c_\ast\) at \(n=3p\), so that
-\(I_p'(3p)=-c_\ast\sum_{j=p+1}^{2p}1/j>0\). To find the coefficient of
-\(c_{3p}\), give \(z\) the weight \(-1\) and \(D\) the weight \(1\), so
-that \(v\) has weight \(p\). The highest-weight part of
-\eqref{eq:energyidentity} is then the part without the \(a_{2j}\).
-Linearize it about \(c_\ast z^{-p}\), with perturbation \(z^{n-p}\). If
-the corresponding energy term is \(\omega(n)z^{n-3p}\), then
-\((n-3p)\,\omega(n)=-p c_\ast I_p(n)\), and \(n\to3p\) gives the
-coefficient in \eqref{eq:energyh}. Lower derivative terms have different
-powers of \(z\) and cannot contribute to this coefficient. Fixing the
-energy thus fixes \(c_{3p}\), and all subsequent Laurent coefficients
-follow from \eqref{eq:recurrence}. This is the resonance-removal step of
-the works cited above, with an explicit coefficient for the present
-operator family.
+The terms of \eqref{eq:energy} with \(a_{2j}\) contain fewer derivatives
+than \(\mathcal B_m\), so in them \(c_{3p}\) multiplies only positive
+powers of \(z\); it enters the constant term only through
+\(\mathcal B_m(v)+v^3/6\), in the cross terms with the leading pole.
+Linearize \eqref{eq:energyidentity} for \(P=D^p\) about its solution
+\(c_\ast z^{-p}\), with perturbation \(z^{n-p}\): if the energy term is
+\(\omega(n)z^{n-3p}\), then \((n-3p)\,\omega(n)=-pc_\ast I_p(n)\), and
+\(n\to3p\) gives the coefficient in \eqref{eq:energyh}. It is not zero:
+the product in \eqref{eq:indicial} equals \(-c_\ast\) at \(n=3p\), so
+\(I_p'(3p)=-c_\ast\sum_{j=p+1}^{2p}1/j>0\). Thus the energy fixes
+\(c_{3p}\), and \eqref{eq:recurrence} gives the later coefficients.
 
-We can now apply Eremenko's theorem, not to \eqref{eq:main} but to the
-level equation, in which \(P\) and the value of \(\mathcal H_P(v)\) are
-fixed. This equation is autonomous and polynomial, and its unique
-monomial of highest degree is \(v^3/6\). It has exactly one formal pole
-expansion: differentiating it and dividing by the nonzero Laurent series
-\(v'\) returns \eqref{eq:main}, so every expansion belongs to the family
-above, and \eqref{eq:energyh} selects the value of \(c_{3p}\). Every
-meromorphic solution of \eqref{eq:main} lies on one energy level and is
-therefore of one of the three kinds.
+Eremenko's theorem now applies, not to \eqref{eq:main} but to the level
+equation, with \(P\) and the value of \(\mathcal H_P(v)\) fixed. It is
+autonomous and polynomial, with the single monomial \(v^3/6\) of highest
+degree, and has exactly one formal pole expansion: differentiating it
+and dividing by the nonzero series \(v'\) returns \eqref{eq:main}, so
+every expansion belongs to the family above, and \eqref{eq:energyh}
+selects \(c_{3p}\). Every meromorphic solution of \eqref{eq:main} lies
+on one energy level and so is of one of the three kinds.
 
 \subsection{The period group and the entire solutions}
 
-It remains to show that the poles of one solution are the translates of
-one pole by its periods. In either case of the theorem, take two poles
-\(z_1,z_2\) of the same solution. The functions \(v(z+z_1)\) and
-\(v(z+z_2)\) satisfy the same equation and, in the even case, have the
-same energy. Their Laurent series at zero coincide, so the identity
-theorem gives \(v(z+z_1)=v(z+z_2)\). Every difference of poles is a
-period. Conversely, every period translates a pole to a pole. The period
-group is discrete: a sequence of nonzero periods tending to zero would
-force \(v'\equiv0\). The same argument proves the uniqueness statements
-of the theorem: two nonconstant solutions with the same operator, the
-same energy in the even case, and a pole at zero have the same Laurent
-series there.
+In either case of the theorem, let \(z_1,z_2\) be two poles of one
+solution. The functions \(v(z+z_1)\) and \(v(z+z_2)\) satisfy the same
+equation and, in the even case, have the same energy. Their Laurent
+series at zero coincide, so \(v(z+z_1)=v(z+z_2)\) by the identity
+theorem: every difference of poles is a period. Conversely, every period
+translates a pole to a pole, so the solution has one pole per period.
+The period group is discrete, since \(v\) is not constant. The same
+argument proves the uniqueness statements of the theorem: two
+nonconstant solutions with the same operator, the same energy in the
+even case, and a pole at zero have the same Laurent series there.
 
-Finally, an entire solution of one of the three kinds must be constant.
-In the rational case it is a polynomial in \(z\), and in the
-rational-exponential case a Laurent polynomial in \(e^{\kappa z}\). In
-both cases squaring doubles an extreme nonzero exponent, which \(P(D)v\)
-cannot cancel (Section~\ref{sec:systems}). An entire elliptic function
-is constant. The constants solve \(a_0v+v^2/2=0\), which gives \(v=0\)
-and \(v=-2a_0\). This completes the proof of Theorem~\ref{thm:complete}.
+An entire solution of one of the three kinds is an entire elliptic
+function, hence constant, or a polynomial in \(z\), or a Laurent
+polynomial in \(e^{\kappa z}\). The last two are constant as well,
+because squaring doubles an extreme nonzero exponent
+(Section~\ref{sec:systems}). The constant solutions are \(v=0\) and
+\(v=-2a_0\). This proves the theorem.
 
 The same uniqueness shows that, in the two pure subfamilies, every wave
 inherits the reflection symmetry of its equation.
@@ -246,11 +203,10 @@ case~\textup{(i)}. In case~\textup{(ii)} its two limits add up to
 \(-2P(0)\), so it is a front unless \(P(0)=0\).
 \end{corollary}
 
-For example, the KdV soliton \(3\operatorname{sech}^2(z/2)\) is even
-about its pole \(i\pi\), and the Kuramoto--Tsuzuki front, the row
-\((a,b)=(0,1/11)\) of Table~\ref{tab:ks}, has
-\(v+P(0)=\tfrac{15}{11}(11\tau^3-9\tau)\) with \(\tau=\tanh(z/2)\),
-which is odd about \(i\pi\).
+The KdV soliton \(3\operatorname{sech}^2(z/2)\) is even about its pole
+\(i\pi\). For the Kuramoto--Tsuzuki front, the row \((0,1/11)\) of
+Table~\ref{tab:ks}, \(v+P(0)=\tfrac{15}{11}(11\tau^3-9\tau)\) with
+\(\tau=\tanh(z/2)\) is odd about \(i\pi\).
 
 \begin{proof}
 In case~(i) the function \(v(z_0-\zeta)\) solves the same equation, has

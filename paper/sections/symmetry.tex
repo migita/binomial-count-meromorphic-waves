@@ -1,21 +1,12 @@
 \section{Mirror images and the two pure subfamilies}\label{sec:reflection}
 
-The numbers \(N_p\) and \(M_p\) refer to the full monic family. We now
-count the pairs of the two pure subfamilies. These are the pairs that
-coincide with their own mirror image under the reflection
-\(z\mapsto-z\). On the labels the reflection is \(L\mapsto-L\), and the
-number of labels with \(L=-L\) is again a binomial coefficient.
-
-For a monic polynomial \(A\) of degree \(d=p-1\) put
+This section counts the pairs of the two pure subfamilies. They are the
+pairs that coincide with their mirror image \(\iota A\), where for monic
+\(A\) of degree \(d=p-1\)
 \begin{equation}\label{eq:iota}
  (\iota A)(\rho)=(-1)^dA(-\rho),\qquad\text{that is,}\qquad
  \alpha_j\longmapsto(-1)^j\alpha_j .
 \end{equation}
-Proposition~\ref{prop:reflection} shows that \(\iota\) is the reflection
-\(z\mapsto-z\) written in the coordinates \(\alpha_j\). It reads the
-wave \(v_A\) in the opposite direction and then restores the
-normalization: it moves the zero limit back to the end \(e^z\to0\), and
-for odd \(p\) it changes the sign of the profile.
 
 \begin{proposition}[Reflection]\label{prop:reflection}
 For every monic \(A\) of degree \(d\),
@@ -23,79 +14,64 @@ For every monic \(A\) of degree \(d\),
  S_{\iota A}(\rho)=-S_A(-\rho)-2A(0)A(-\rho),\qquad
  R_{\iota A}(\rho)=-R_A(-\rho).
 \end{equation}
-Consequently \(\iota\) maps solutions of the matching equations to
-solutions, and simple solutions to simple solutions.
-At a point of \(\Xp\),
+Hence \(\iota\) maps solutions of the matching equations to solutions,
+and simple solutions to simple ones. At a point of \(\Xp\),
 \begin{equation}\label{eq:reflection-pair}
  v_{\iota A}(z)=(-1)^p\bigl(v_A(-z)-s_pA(0)\bigr),\qquad
  P_{\iota A}(\rho)=(-1)^p\bigl(P_A(-\rho)+s_pA(0)\bigr).
 \end{equation}
 \end{proposition}
 
-The pairs \(A\) and \(\iota A\) are the mirror images that \(N_p\)
-counts separately. By \eqref{eq:reflection-pair} the mirror image
-solves the equation in which the terms of one parity have changed sign.
-For \(p=3\) the involution is \((a,b)\mapsto(-a,b)\) in
-Table~\ref{tab:ks}. For \(p=2\) it exchanges the two fronts \(a=\pm1\)
-of \eqref{eq:kdvb-pairs}, \(12Q(2-Q)\) and \(-12Q^2\): indeed
-\(12(1-Q)(1+Q)-12=-12Q^2\).
+By \eqref{eq:reflection-pair}, \(\iota A\) is indeed the mirror image of
+\(A\): the wave \(v_A\) read in the opposite direction, with the zero
+limit moved back to the end \(e^z\to0\) and, for odd \(p\), the sign
+changed. For \(p=2\), \(\iota\) exchanges the fronts \(12Q(2-Q)\) and
+\(-12Q^2\) of \eqref{eq:kdvb-pairs}: \(12(1-Q)(1+Q)-12=-12Q^2\).
 
 \begin{proof}
-Since \(Q(-z)=1-Q(z)\), and \(D\) changes sign under \(z\mapsto-z\),
-\[
- \bigl(A(D)Q\bigr)(-z)=A(0)-A(-D)Q=A(0)-(-1)^d(\iota A)(D)Q .
-\]
-This is the first formula in \eqref{eq:reflection-pair}.
-Evaluate \eqref{eq:discrete-square} at \(-z\), and use
-\eqref{eq:discrete-square} for \(\iota A\) on the left:
+Since \(Q(-z)=1-Q(z)\) and \(D\) changes sign under \(z\mapsto-z\), we
+have \(\bigl(A(D)Q\bigr)(-z)=A(0)-A(-D)Q=A(0)-(-1)^d(\iota A)(D)Q\),
+which is the first formula in \eqref{eq:reflection-pair}. Evaluating
+\eqref{eq:discrete-square} at \(-z\), and using it for \(\iota A\) on
+the left, gives
 \[
  A(0)^2-2A(0)A(-D)Q-S_{\iota A}(D)Q=-S_A(0)+S_A(-D)Q .
 \]
 The constant terms cancel because \(S_A(0)=-A(0)^2\)
-(Section~\ref{sec:labels}). The remaining terms, and the injectivity of
-\(F\mapsto F(D)Q\), give the first identity in
-\eqref{eq:reflection-S}. Now substitute \(S_A=AC_A+R_A\) at \(-\rho\):
-\[
- S_{\iota A}(\rho)
- =(\iota A)(\rho)\,(-1)^p\bigl(C_A(-\rho)+2A(0)\bigr)-R_A(-\rho).
-\]
-Division by the monic polynomial \(\iota A\) is unique. Hence
-\(R_{\iota A}(\rho)=-R_A(-\rho)\) and
-\(C_{\iota A}(\rho)=(-1)^p\bigl(C_A(-\rho)+2A(0)\bigr)\).
-The first relation reads \(R_r(\iota\alpha)=(-1)^{r+1}R_r(\alpha)\), so
-the invertible linear map \eqref{eq:iota} takes each matching equation
-to plus or minus a matching equation. It therefore maps solutions to
-solutions, and simple solutions to simple solutions. The second relation
-and \eqref{eq:operator-A} give the formula for \(P_{\iota A}\).
+(Section~\ref{sec:labels}), and the injectivity of \(F\mapsto F(D)Q\)
+gives the first identity in \eqref{eq:reflection-S}. Substituting
+\(S_A=AC_A+R_A\) at \(-\rho\), with \(A(-\rho)=(-1)^d(\iota A)(\rho)\),
+turns it into a division of \(S_{\iota A}\) by the monic polynomial
+\(\iota A\), which is unique. So \(R_{\iota A}(\rho)=-R_A(-\rho)\) and
+\(C_{\iota A}(\rho)=(-1)^p\bigl(C_A(-\rho)+2A(0)\bigr)\). The first
+relation reads \(R_r(\iota\alpha)=(-1)^{r+1}R_r(\alpha)\): the
+invertible linear map \eqref{eq:iota} takes each matching equation to
+plus or minus a matching equation, hence the assertion about solutions.
+The second relation and \eqref{eq:operator-A} give \(P_{\iota A}\).
 \end{proof}
 
-A pair is fixed by \(\iota\) when \(\alpha_j=0\) for every odd \(j\).
-We write \(\Xp^{\mathrm{sym}}\) for the set of these pairs, and put
+A pair is fixed by \(\iota\) when \(\alpha_j=0\) for every odd \(j\); we
+write \(\Xp^{\mathrm{sym}}\) for the set of these pairs. On this
+subspace \(\iota A=A\), so \(R_A\) is an odd polynomial by
+\eqref{eq:reflection-S}, and the equations \(R_r=0\) with \(r\) even
+hold identically. The \emph{matching equations of the subfamily} are the
+equations \(R_r=0\), \(r\) odd, in the unknowns \(\alpha_j\), \(j\)
+even; their solutions are the pairs of \(\Xp^{\mathrm{sym}}\). Put
 \begin{equation}\label{eq:Fp}
- F_p=\binom{p-1}{\lfloor (p-1)/2\rfloor}.
+ F_p=\binom{p-1}{\lfloor(p-1)/2\rfloor}=1,2,3,6,10,20\quad(p=2,\ldots,7).
 \end{equation}
-Its first values are \(1,2,3,6,10,20\) for \(p=2,\ldots,7\);
-Table~\ref{tab:named} lists the equations to which they belong.
-On the subspace \(\{\alpha_j=0,\ j\text{ odd}\}\) we have
-\(\iota A=A\), and \eqref{eq:reflection-S} shows that \(R_A\) is an odd
-polynomial. The equations \(R_r=0\) with \(r\) even therefore hold
-identically there, and the \emph{matching equations of the subfamily}
-are the equations \(R_r=0\), \(r\) odd, in the unknowns \(\alpha_j\),
-\(j\) even. Their solutions are the pairs of \(\Xp^{\mathrm{sym}}\).
 
 \begin{theorem}[Count in the two pure subfamilies]\label{thm:symmetric}
 \begin{enumerate}
 \item[\textup{(i)}] For every \(p\), a pair \(A\) coincides with its
 mirror image, \(\iota A=A\), if and only if \(P_A\) is
-reflection-symmetric. Thus the pairs that coincide with their mirror
-image, the pairs of \(\Xp^{\mathrm{sym}}\), are exactly the
-rational-exponential pairs of the purely dispersive equations when
-\(p\) is even, and of the purely dissipative equations when \(p\) is
-odd.
+reflection-symmetric. Thus these pairs are exactly the
+rational-exponential pairs of the purely dispersive equations when \(p\)
+is even, and of the purely dissipative equations when \(p\) is odd.
 \item[\textup{(ii)}] Let \(\ell=2p-1\) be prime. If \(A\) has label
 \(L\), then \(\iota A\) has label \(-L\). Hence \(\iota A=A\) if and
-only if \(L=-L\), and there are exactly \(F_p\) such pairs. Each of
-them is a simple solution of the matching equations of its subfamily.
+only if \(L=-L\), and there are exactly \(F_p\) such pairs. Each of them
+is a simple solution of the matching equations of its subfamily.
 \item[\textup{(iii)}] The rational-exponential pairs of a purely
 dispersive equation are pulses, for every even \(p\). Those of a purely
 dissipative equation are fronts: when \(2p-1\) is prime, and for pairs
@@ -104,78 +80,64 @@ with real coefficients at every odd \(p\).
 \end{theorem}
 
 In Table~\ref{tab:ks} the two pairs with \(a=0\) are the \(F_3=2\) pairs
-of the purely dissipative subfamily, the Kuramoto--Sivashinsky equation
-without dispersion. Their labels \(\{1,4\}\) and \(\{2,3\}\) satisfy
-\(L=-L\). Both are fronts; the pulses \((\pm1,0)\) need dispersion.
-For even \(p\) see the Kawahara family (Section~\ref{sec:kawahara}).
+of the Kuramoto--Sivashinsky equation without dispersion; their labels
+\(\{1,4\}\) and \(\{2,3\}\) satisfy \(L=-L\). Both are fronts; the
+pulses \((\pm1,0)\) need dispersion.
 
 \begin{remark}[Every order]\label{rem:Fp-bound}
-At every order the isolated solutions with \(\iota A=A\) of the
-matching equations of the subfamily, counted with multiplicity, number
-at most \(F_p\) (companion note, Theorem~4.1; the weights of the
-restricted system give the B\'ezout number \(F_p\)).
-Section~\ref{sec:further} records what is known when \(2p-1\) is not
-prime.
+At every order the isolated solutions of the matching equations of the
+subfamily, counted with multiplicity, number at most \(F_p\), the
+B\'ezout number of this system (companion note, Theorem~4.1).
 \end{remark}
 
 \begin{proof}[Proof of Theorem~\ref{thm:symmetric}]
 \emph{(i).} If \(\iota A=A\), then \eqref{eq:reflection-pair} gives
-\(P_A(\rho)=(-1)^p(P_A(-\rho)+s_pA(0))\). For even \(p\) the
-polynomial \(A\) is odd, so \(A(0)=0\) and \(P_A\) is even. For odd
-\(p\) the sum \(P_A(\rho)+P_A(-\rho)\) is the constant \(-s_pA(0)\).
-In both cases \(P_A\) is reflection-symmetric, and
+\(P_A(\rho)=(-1)^p(P_A(-\rho)+s_pA(0))\). For even \(p\), \(A\) is odd,
+so \(A(0)=0\) and \(P_A\) is even. For odd \(p\),
+\(P_A(\rho)+P_A(-\rho)=-s_pA(0)\): \(P_A\) is reflection-symmetric, and
 \begin{equation}\label{eq:symmetric-endpoint}
  s_pA(0)=-2P_A(0)\qquad(p\text{ odd}).
 \end{equation}
 
-Conversely, let \(P=P_A\) be reflection-symmetric, and apply
-Corollary~\ref{cor:symmetric-waves} at the pole \(i\pi\), using the
-period \(2\pi i\). If \(p\) is even, then \(v_A(-z)=v_A(z)\). Letting
-\(z\to-\infty\) gives \(A(0)=0\), and \eqref{eq:reflection-pair}
-becomes \(v_{\iota A}=v_A\). If \(p\) is odd, then
-\(-v_A(-z)=v_A(z)+2P(0)\), and \eqref{eq:reflection-pair} becomes
-\(v_{\iota A}(z)=v_A(z)+2P(0)+s_pA(0)\). Letting \(z\to-\infty\) shows
-that the constant vanishes. In both cases \(v_{\iota A}=v_A\), hence
-\(\iota A=A\) by the uniqueness of the form \eqref{eq:normalized-A}.
+Conversely, let \(P=P_A\) be reflection-symmetric. By
+Corollary~\ref{cor:symmetric-waves} at the pole \(i\pi\), and by the
+period \(2\pi i\), we have \(v_A(-z)=v_A(z)\) if \(p\) is even and
+\(-v_A(-z)=v_A(z)+2P(0)\) if \(p\) is odd. So \eqref{eq:reflection-pair}
+becomes \(v_{\iota A}=v_A+c\) with a constant \(c\), and \(c=0\) because
+both profiles tend to zero as \(z\to-\infty\). Hence \(\iota A=A\) by
+the uniqueness of the form \eqref{eq:normalized-A}.
 
 \emph{(ii).} The map \eqref{eq:iota} negates the roots of
 \(\overline A\), so the label of \(\iota A\) is \(-L\). A label
 determines its pair (Theorem~\ref{thm:prime}), so \(\iota A=A\) exactly
-when \(L=-L\). To count these labels, note that the nonzero residues
-modulo \(\ell=2d+1\) form \(d\) pairs \(\{s,-s\}\). A set \(L=-L\) of
-\(d\) elements consists of \(d/2\) such pairs if \(d\) is even, and of
-\(0\) and \((d-1)/2\) pairs if \(d\) is odd. In both cases there are
-\(\binom{d}{\lfloor d/2\rfloor}=F_p\) sets.
+when \(L=-L\). The nonzero residues modulo \(\ell=2d+1\) form \(d\)
+pairs \(\{s,-s\}\), and a set \(L=-L\) of \(d\) elements consists of
+\(\lfloor d/2\rfloor\) of these pairs, together with \(0\) if \(d\) is
+odd. So there are \(\binom{d}{\lfloor d/2\rfloor}=F_p\) such sets.
 
-Differentiating the relation
-\(R_r(\iota\alpha)=(-1)^{r+1}R_r(\alpha)\) at a fixed point shows that
-\(\partial R_r/\partial\alpha_j=0\) unless \(j\equiv r+1\) modulo two.
-The Jacobian matrix of the full system therefore splits into two square
-blocks. It is invertible, so both blocks are, and one of them is the
-Jacobian of the equations of the subfamily.
+Differentiating \(R_r(\iota\alpha)=(-1)^{r+1}R_r(\alpha)\) at a fixed
+point shows that \(\partial R_r/\partial\alpha_j=0\) unless
+\(j\equiv r+1\) modulo two. So the Jacobian matrix of the full system
+splits into two square blocks. It is invertible, so both blocks are, and
+one of them is the Jacobian of the equations of the subfamily.
 
-\emph{(iii).} For even \(p\) the polynomial \(A\) is odd, so \(A(0)=0\).
-Let \(p\) be odd. If \(2p-1\) is prime, a label with \(L=-L\) has an
-even number \(d\) of elements, so it does not contain \(0\), and the
-pair is a front by Proposition~\ref{cor:endpoints}. For a general odd
-\(p\), suppose that a point of \(\Xp^{\mathrm{sym}}\) with real
-coefficients is a pulse, \(A(0)=0\). Then \(P_A(0)=0\) by
-\eqref{eq:symmetric-endpoint}. Now \(v_A\) is real on the real axis,
-and it tends to zero with all its derivatives at both ends. Integrating
-\eqref{eq:main} along the real axis, and using \(P_A(0)=0\), gives
-\(\int v_A^2\dd z=0\). Hence \(v_A=0\), which is impossible.
+\emph{(iii).} For even \(p\), \(A(0)=0\) as in (i). Let \(p\) be odd. If
+\(2p-1\) is prime, a label with \(L=-L\) has an even number \(d\) of
+elements, so it does not contain \(0\), and the pair is a front by
+Proposition~\ref{cor:endpoints}. For general odd \(p\), let a point of
+\(\Xp^{\mathrm{sym}}\) with real coefficients be a pulse, \(A(0)=0\).
+Then \(P_A(0)=0\) by \eqref{eq:symmetric-endpoint}. Now \(v_A\) is real
+on the real axis and tends to zero with all its derivatives at both
+ends, so integrating \eqref{eq:main} along the real axis, with
+\(P_A(0)=0\), gives \(\int v_A^2\dd z=0\), which is impossible.
 \end{proof}
 
-\paragraph{Elliptic pairs of purely dispersive equations.}
-Elliptic waves occur in both subfamilies; the distinction between pulses
-and fronts does not apply to them. For even \(p\) the count of
-Theorem~\ref{thm:elliptic-count} restricts to the subfamily.
-
-\begin{corollary}\label{cor:elliptic-symmetric}
-Let \(p\) be even, with \(2p-1\) prime. On every lattice,
-the elliptic pairs whose operator is an even polynomial are those with
-\(u_j=0\) for odd \(j\) in \eqref{eq:elliptic-enumeration-profile}, and
-counted with multiplicity there are
+\begin{corollary}[Elliptic pairs of purely dispersive equations]
+\label{cor:elliptic-symmetric}
+Let \(p\) be even, with \(2p-1\) prime. On every lattice, the elliptic
+pairs whose operator is an even polynomial are those with \(u_j=0\) for
+odd \(j\) in \eqref{eq:elliptic-enumeration-profile}, and counted with
+multiplicity there are
 \begin{equation}\label{eq:elliptic-symmetric-length}
  2F_p
 \end{equation}
@@ -183,50 +145,42 @@ of them. On a generic lattice they are distinct.
 \end{corollary}
 
 \begin{proof}
-An even operator has an even profile, by
-Corollary~\ref{cor:symmetric-waves}, and the profile
-\eqref{eq:elliptic-enumeration-profile} is even exactly when \(u_j=0\)
-for odd \(j\). Conversely, if the profile is even, the odd part of
-\eqref{eq:main} is \(\sum_{j\text{ odd}}a_jD^jV=0\); the functions
-\(D^jV\) have distinct pole orders, so \(a_j=0\) for odd \(j\).
-We follow the proof of Theorem~\ref{thm:elliptic-count} on the subspace
-\(u_j=0\), \(j\) odd. There the residual of Step~1 is even, and there
-remain the unknowns and the equations of even weight in the table
-\eqref{eq:elliptic-weights} of Step~2: the weights
-\(2,4,\ldots,p-2,p\) and \(p+2,p+4,\ldots,2p-2,2p\), with \(p/2\) of
-each. The omitted leading forms vanish identically on the subspace, so
-the remaining ones have only the trivial common zero, by Step~3.
-Lemma~\ref{lem:conservation} therefore applies to the restricted system,
-and multiplicities refer to this system. For the nodal parameters
-\eqref{eq:nodal-parameters}, reflection is \(Q\mapsto1-Q\). An even
-nodal profile is \(\beta+v_A\) with \(\iota A=A\), so the computation of
-Step~5 gives the system \eqref{eq:nodal-matching} with
+By Corollary~\ref{cor:symmetric-waves} an even operator has an even
+profile, and \eqref{eq:elliptic-enumeration-profile} is even exactly
+when \(u_j=0\) for odd \(j\). Conversely, for an even profile the odd
+part of \eqref{eq:main} is \(\sum_{j\text{ odd}}a_jD^jV=0\); the
+\(D^jV\) have distinct pole orders, so \(a_j=0\) for odd \(j\). We
+follow the proof of Theorem~\ref{thm:elliptic-count} on the subspace
+\(u_j=0\), \(j\) odd. There the residual of Step~1 is even, so only the
+unknowns and the equations of even weight in \eqref{eq:elliptic-weights}
+remain, \(p/2\) of each. The omitted leading forms vanish identically on
+the subspace, so by Step~3 the others have only the trivial common zero,
+and Lemma~\ref{lem:conservation} applies to the restricted system;
+multiplicities refer to it. For the nodal parameters
+\eqref{eq:nodal-parameters} reflection is \(Q\mapsto1-Q\), and an even
+profile is \(\beta+v_A\) with \(\iota A=A\). The computation of Step~5
+on this subspace gives \eqref{eq:nodal-matching} with
 \(A\in\Xp^{\mathrm{sym}}\): the matching equations of the subfamily, and
 the quadratic for \(\beta\). By Theorem~\ref{thm:symmetric} there are
-\(F_p\) such \(A\), all pulses, each a simple solution of the equations
-of the subfamily, and \(P_A(0)\ne0\) by
-Proposition~\ref{cor:endpoints}. For the nodal parameters the restricted
-system thus has \(2F_p\) solutions, all simple, and the rest of Step~5
-applies to it without change.
+\(F_p\) such \(A\), all pulses, each a simple solution of these
+equations, and \(P_A(0)\ne0\) by Proposition~\ref{cor:endpoints}. So the
+restricted nodal system has \(2F_p\) solutions, all simple, and the rest
+of Step~5 applies without change.
 \end{proof}
 
-For odd \(p\) there is no fixed-lattice analogue. A purely dissipative
-equation has a profile that is \(-P(0)\) plus a function odd about the
-pole (Corollary~\ref{cor:symmetric-waves}), and its matching system has
-one equation more than it has unknowns. An exact computation on a sample
-lattice (the script \texttt{elliptic\_dissipative.py} of the ancillary
-files, Appendix~\ref{app:verification}) shows that for \(p=3,5,7\) it
-has no solution there, and hence none on a generic lattice: rigidity
-holds at these orders (Section~\ref{sec:further}), so
-Lemma~\ref{lem:conservation} applies as in Step~4 of the proof of
-Theorem~\ref{thm:elliptic-count}, and the elimination in the proof of
-part~(iii) of the lemma shows that the parameters at which such
-pairs exist form an algebraic subset of the \((g_2,g_3)\)-plane,
-invariant under rescaling as in the proof of part~(b) of that theorem.
-These are the two entries \(0\) of
-Table~\ref{tab:named}. At \(p=3\) such pairs occur exactly when
-\(g_2=0\): a purely dissipative operator is \(P=D^3+\mu D+a_0\), that
-is, \(B=0\) in \eqref{eq:ks-elliptic-scheme}, which then forces
-\(\mu=0\) and \(g_2=0\). At \(p=5\) elliptic waves of the Nikolaevskiy
-equation on special lattices are given by \citet{Kudryashov2004} and
-\citet{KudryashovDemina2007}.
+For odd \(p\) there is no such count. The profile of a purely
+dissipative equation is \(-P(0)\) plus a function odd about the pole
+(Corollary~\ref{cor:symmetric-waves}), and its matching system has one
+equation more than unknowns. For \(p=3,5,7\) an exact computation
+(\texttt{elliptic\_dissipative.py}, Appendix~\ref{app:verification})
+finds no solution on a sample lattice, hence there is none on a generic
+lattice (the entries \(0\) of Table~\ref{tab:named}): rigidity holds at
+these orders (Section~\ref{sec:further}), so by
+Lemma~\ref{lem:conservation} and the elimination in the proof of its
+part~(iii) the parameters with such pairs form an algebraic subset of
+the \((g_2,g_3)\)-plane, invariant under rescaling as in the proof of
+Theorem~\ref{thm:elliptic-count}(b). At \(p=3\) such pairs occur exactly
+when \(g_2=0\): a purely dissipative operator has \(B=0\) in
+\eqref{eq:ks-elliptic-scheme}, and then \(P=D^3+a_0\) and \(g_2=0\). At
+\(p=5\) elliptic waves of the Nikolaevskiy equation on special lattices
+are given by \citet{Kudryashov2004} and \citet{KudryashovDemina2007}.

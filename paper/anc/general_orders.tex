@@ -43,7 +43,9 @@ that of the first complete version of the paper, where these results
 were part of the main line. The last section keeps two algebraic
 arguments of an earlier version which the paper now presents in other
 terms: the general lemma on reduction modulo a prime, and a proof by
-flatness that the number of elliptic pairs is conserved.
+flatness that the number of elliptic pairs is conserved. It also
+contains the full proof of the conservation-of-number lemma, of which
+the paper gives a sketch.
 \end{abstract}
 
 \section{Notation}
@@ -689,7 +691,8 @@ Appendix~P\,\ref{P-app:verification} of the paper and in the repository
 directories \texttt{certificates/} and \texttt{paper/anc/}.
 
 
-\section{Two algebraic arguments from an earlier version}
+\section{Two algebraic arguments from an earlier version, and the
+proof of the conservation lemma}
 \label{sec:earlier-version}
 
 The paper now proves Step~3 of Theorem~P\,\ref{P-thm:prime} by
@@ -697,7 +700,9 @@ rescaling with a root of \(A\), and the conservation of the number of
 elliptic pairs by a deformation argument
 (Lemma~P\,\ref{P-lem:conservation}). An earlier version used the two
 algebraic arguments of this section instead. The first of them is also
-what Section~\ref{sec:prime-powers} uses.
+what Section~\ref{sec:prime-powers} uses. The paper gives only a sketch
+of the proof of Lemma~P\,\ref{P-lem:conservation};
+Section~\ref{sec:conservation-proof} contains the proof in full.
 
 \subsection{Reduction modulo \texorpdfstring{\(\ell\)}{l}}
 
@@ -778,6 +783,116 @@ for \(A=\rho^d\), which is \((\mathrm R_d)\). Part~(b) says that every
 solution of the matching equations with coordinates in \(K\) is
 integral.
 
+\subsection{Proof of
+\texorpdfstring{Lemma~P\,\ref{P-lem:conservation}}{the conservation lemma}}
+\label{sec:conservation-proof}
+
+Lemma~P\,\ref{P-lem:conservation} concerns polynomials
+\(E_1,\ldots,E_n\) in unknowns \(x=(x_1,\ldots,x_n)\) and parameters
+\(t=(t_1,\ldots,t_m)\), weighted-homogeneous for positive integer
+weights of the \(x_j\) and the \(t_k\), whose leading system
+\(E_i(x;0)=0\), \(1\le i\le n\), has no solution in \(\CC^n\) other than
+\(x=0\); it states that (i) for every \(t\) the system \(E(x;t)=0\) has
+finitely many solutions, which stay bounded while \(t\) stays bounded,
+(ii) their number, counted with multiplicity, is the same for every
+\(t\in\CC^m\), and (iii) the \(t\) for which some solution is not simple
+form an algebraic subset of \(\CC^m\).
+Since the \(t_k\) have positive weight, \(E_i(x;0)\) is the part of
+\(E_i\) of highest weight in the unknowns alone.
+
+\begin{proof}
+Since the leading system has only the zero solution, the polynomials
+in \(x\) modulo the combinations \(\sum_ih_iE_i(x;0)\) form a
+finite-dimensional space \citep[Chapter~5, \S3]{CoxLittleOSheaIVA}. It
+is spanned by finitely many monomials \(m_1=1,m_2,\ldots,m_r\). We
+claim that every polynomial \(f\) in \((x,t)\) can be written
+\begin{equation}\label{eq:finite-module}
+ f=\sum_{i=1}^{r}c_i(t)\,m_i+\sum_{i=1}^{n}h_iE_i
+\end{equation}
+with polynomials \(c_i\) in \(t\) and \(h_i\) in \((x,t)\). It is
+enough to prove this for weighted-homogeneous \(f\), by induction on
+the weight \(w\) of \(f\); a polynomial of weight zero is a constant.
+Write \(f=f(x,0)+\sum_kt_kf_k\) and \(E_i=E_i(x;0)+\sum_kt_ke_{ik}\),
+with weighted-homogeneous \(f_k\) and \(e_{ik}\), and write
+\(f(x,0)=\sum_ic_im_i+\sum_ih_iE_i(x;0)\) with constants \(c_i\) and
+with polynomials \(h_i\) in \(x\). Taking the parts of weight \(w\) on
+both sides, we may assume that \(c_i=0\) unless \(m_i\) has weight
+\(w\), and that every \(h_i\) is weighted-homogeneous, of weight \(w\)
+minus the weight of \(E_i\). Then
+\[
+ f=\sum_ic_im_i+\sum_ih_iE_i
+   +\sum_kt_k\Bigl(f_k-\sum_ih_ie_{ik}\Bigr),
+\]
+and each bracket is weighted-homogeneous of weight less than \(w\),
+because \(t_k\) has positive weight. The induction hypothesis applies
+to the brackets, and this proves \eqref{eq:finite-module}.
+
+Apply \eqref{eq:finite-module} to the products \(x_jm_i\): modulo the
+equations, that is, modulo the combinations \(\sum_ih_iE_i\), we have
+\(x_jm_i=\sum_lM^{(j)}_{il}(t)\,m_l\) with a matrix \(M^{(j)}\) of
+polynomials in \(t\). Put
+\(\chi_j(x_j;t)=\det\bigl(x_j-M^{(j)}(t)\bigr)\). Multiplying the vector
+identity by the adjugate of the matrix \(x_j-M^{(j)}(t)\) shows that
+\(\chi_j\,m_i\) is a combination of the \(E_i\) for every \(i\) (the
+Cayley--Hamilton argument); for \(m_1=1\) this is \(\chi_j\) itself.
+Thus at every solution \(x_j\) is a root of \(\chi_j(\,\cdot\,;t)\), a
+monic polynomial of degree \(r\) whose coefficients are polynomials in
+\(t\). There are therefore at most \(r^n\) solutions, and they stay
+bounded while \(t\) stays bounded, because the roots of a monic
+polynomial are bounded in absolute value by one plus the largest
+absolute value of its coefficients. This proves~(i).
+
+For (ii), let \(t(s)\), \(0\le s\le1\), be the segment between two
+parameter values. By (i) there is a ball \(|x|<\varrho\) that contains
+all solutions of \(E(x;t(s))=0\) for all \(s\). The maps
+\(x\mapsto E(x;t(s))\) then form a continuous family of holomorphic
+maps, each with finitely many zeros in the ball and none on the sphere
+\(|x|=\varrho\). For such a family the number of zeros in the ball,
+counted with multiplicity, does not depend on \(s\): it is the degree
+of the map \(E/|E|\) from that sphere to the unit sphere, which is
+invariant under deformation. This is Rouch\'e's theorem in several
+variables \citep[Appendix~B]{Milnor1968},
+\citep[Sections~5.2 and~5.4]{ArnoldGuseinZadeVarchenko1985}. The
+multiplicity of a zero in this statement is the local degree of the
+map. It equals the number of nearby solutions of a generic small
+perturbation of the system, and the dimension of the local algebra
+\citep[Sections~5.2 and~5.4]{ArnoldGuseinZadeVarchenko1985}, so it is
+the multiplicity of Section~P\,\ref{P-sec:counting}. Any two parameter
+values are joined by a segment, which proves~(ii).
+
+For (iii), the parameters in question are the projection to \(\CC^m\)
+of the algebraic set defined in \(\CC^n\times\CC^m\) by
+\(E_1=\cdots=E_n=0\) and \(\det(\partial E_i/\partial x_j)=0\). The
+monic polynomials \(\chi_j\) are combinations of the \(E_i\). Eliminate
+the unknowns one at a time: at each step the polynomial \(\chi_j\) for
+the unknown being eliminated has leading coefficient \(1\), so by the
+Extension Theorem of elimination theory
+\citep[Chapter~3, \S1]{CoxLittleOSheaIVA} every solution of the
+eliminated equations extends. The projection is therefore the common
+zero set of the polynomials in \(t\) alone that are combinations of the
+\(E_i\) and the Jacobian determinant; finitely many of them suffice, by
+Hilbert's basis theorem.
+\end{proof}
+
+The boundedness in (i) can also be seen directly, by the rescaling
+that the paper describes before the lemma. Let \(w_j\), \(\omega_k\) and
+\(W_i\) be the weights of \(x_j\), \(t_k\) and \(E_i\), and put
+\(N(x)=\max_j|x_j|^{1/w_j}\). Suppose that there were solutions
+\((x^{(\nu)},t^{(\nu)})\) with \(t^{(\nu)}\) bounded and
+\(\lambda_\nu=N(x^{(\nu)})\to\infty\). Put
+\(y^{(\nu)}_j=\lambda_\nu^{-w_j}x^{(\nu)}_j\) and
+\(\tau^{(\nu)}_k=\lambda_\nu^{-\omega_k}t^{(\nu)}_k\). Then
+\(N(y^{(\nu)})=1\), \(\tau^{(\nu)}\to0\), and
+\(E_i(y^{(\nu)};\tau^{(\nu)})
+ =\lambda_\nu^{-W_i}E_i(x^{(\nu)};t^{(\nu)})=0\)
+by weighted homogeneity. The set \(N(y)=1\) is compact, so the
+\(y^{(\nu)}\) have a limit point \(y^\ast\). By continuity it satisfies
+\(N(y^\ast)=1\) and \(E_i(y^\ast;0)=0\), and is thus a nonzero solution
+of the leading system, contrary to the hypothesis. This is the proof of
+Lemma~\ref{lem:reduction}(b) with the ordinary absolute value in place
+of the \(\ell\)-adic one; compare Step~3 in the proof of
+Theorem~P\,\ref{P-thm:prime}.
+
 \subsection{Conservation of number by flatness}
 
 Lemma~P\,\ref{P-lem:conservation} of the paper concerns \(n\) polynomial
@@ -786,9 +901,9 @@ for positive weights of the unknowns and of the parameters, whose
 leading system, the one at \(t=0\), has only the zero solution. Its
 parts (i) and~(ii) say that every system of the family has finitely
 many solutions, which stay bounded while \(t\) stays bounded, and that
-their number, counted with multiplicity, does not depend on \(t\). The
-paper proves this by a deformation argument. What follows is a second,
-algebraic proof. It is Step~4 of the elliptic count in that
+their number, counted with multiplicity, does not depend on \(t\).
+Section~\ref{sec:conservation-proof} proves this by a deformation
+argument. What follows is a second, algebraic proof. It is Step~4 of the elliptic count in that
 version, and it is written for the family used there: the residual
 equations in the proof of Theorem~\ref{thm:elliptic-count}, to which
 the step numbers below refer, with \(t=(g_2,g_3)\). The general case is

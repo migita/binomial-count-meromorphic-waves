@@ -1,63 +1,54 @@
 \section{The count of elliptic pairs}\label{sec:elliptic-counting}
 
-We now count the elliptic pairs of Section~\ref{sec:setting} on a fixed
-lattice \(\Lambda\subset\CC\), and put \(g_i=g_i(\Lambda)\). The pole is
-at zero, and the constant term of the profile is retained.
-Neither reflection nor a lattice automorphism is
-factored out: pairs related in this way are counted separately (so that
-\(M_3=8\) below, and not fewer). Two lattices differ by a rescaling
-exactly when they have the same invariant
-\(j(\Lambda)=1728g_2^3/(g_2^3-27g_3^2)\).
+We count the elliptic pairs of Section~\ref{sec:setting} on a fixed
+lattice \(\Lambda\subset\CC\), with \(g_i=g_i(\Lambda)\). Neither
+reflection nor a lattice automorphism is factored out (so that \(M_3=8\)
+below, and not fewer). Two lattices differ by a rescaling exactly when
+they have the same invariant \(j(\Lambda)=1728g_2^3/(g_2^3-27g_3^2)\).
 
 We write elliptic functions through the Weierstrass relations
 \begin{equation}\label{eq:weierstrass}
- Y^2=4X^3-g_2X-g_3,\qquad
- \mathscr D X=Y,\qquad
+ Y^2=4X^3-g_2X-g_3,\qquad \mathscr D X=Y,\qquad
  \mathscr D Y=6X^2-\frac{g_2}{2}.
 \end{equation}
-For \(g_2^3\ne27g_3^2\), that is, on a lattice, these relations are
-realized by \(X=\wp(z;g_2,g_3)\), \(Y=\wp'(z;g_2,g_3)\) and
-\(\mathscr D=\mathrm d/\mathrm dz\); see \citet[Chapter~23]{DLMF}.
-We use \(X\) and \(Y\) because the formulas below must keep their
-meaning for the degenerate parameters \(g_2^3=27g_3^2\), which belong to
-no lattice. Using \eqref{eq:weierstrass}, every polynomial in \(X\) and
-\(Y\) reduces to a unique normal form \(F(X)+YG(X)\). We say that
-\(X^kY^\epsilon\), \(\epsilon\in\{0,1\}\), has pole order
-\(2k+3\epsilon\); on a lattice this is its pole order at zero.
+On a lattice, that is, for \(g_2^3\ne27g_3^2\), they are realized by
+\(X=\wp(z;g_2,g_3)\), \(Y=\wp'(z;g_2,g_3)\) and
+\(\mathscr D=\mathrm d/\mathrm dz\) \citep[Chapter~23]{DLMF}. We use
+\(X\) and \(Y\) because the formulas must keep their meaning for the
+degenerate parameters \(g_2^3=27g_3^2\), which belong to no lattice.
+By \eqref{eq:weierstrass}, every polynomial in \(X\) and \(Y\) has a
+unique normal form \(F(X)+YG(X)\). We say that \(X^kY^\epsilon\),
+\(\epsilon\in\{0,1\}\), has pole order \(2k+3\epsilon\); on a lattice
+this is its pole order at zero.
 
-The representation of the profile is the classical one. An elliptic
-function with one pole per period has zero residue there.
-The functions \(1,\wp,\wp',\ldots,\wp^{(p-2)}\) have distinct
-principal parts and span the space of elliptic functions whose only
-pole is at zero, of order at most \(p\).
-Subtracting the indicated principal part from a one-pole solution
-leaves an entire elliptic function, hence a constant.
-Since \(D^{p-2}\wp=(-1)^{p}(p-1)!\,z^{-p}+O(1)\), the leading
-coefficient \eqref{eq:leadingpole} shows that every profile has the form
+An elliptic function with one pole per period has zero residue there,
+and \(\wp,\wp',\ldots,\wp^{(p-2)}\) have poles of orders
+\(2,3,\ldots,p\) at zero. Subtracting a suitable combination of them
+from a one-pole solution leaves an entire elliptic function, hence a
+constant. Since \(D^{p-2}\wp=(-1)^{p}(p-1)!\,z^{-p}+O(1)\), the leading
+coefficient \eqref{eq:leadingpole} gives every profile the classical
+form
 \begin{equation}\label{eq:elliptic-enumeration-profile}
- V=-s_p\mathscr D^{p-2}X
-       +\sum_{j=0}^{p-3}u_j\mathscr D^jX+b.
+ V=-s_p\mathscr D^{p-2}X+\sum_{j=0}^{p-3}u_j\mathscr D^jX+b.
 \end{equation}
-Its only pole on \(\CC/\Lambda\) is zero, of order \(p\).
-In particular \(\Lambda\) is its full period lattice.
-The matching equations \(\mathcal E_p(g_2,g_3)\) are obtained by formal
-substitution of \eqref{eq:elliptic-enumeration-profile} in
-\eqref{eq:main}, using only \eqref{eq:weierstrass}: the left side is
-reduced to its normal form, and the coefficients of \(F\) and \(G\) are
-set equal to zero. The unknowns are \(a_0,\ldots,a_{p-1}\),
-\(u_0,\ldots,u_{p-3}\) and \(b\). The equations are polynomials in the
-unknowns and in \(g_2,g_3\), and they are defined for every
+Its only pole modulo \(\Lambda\) is at zero, so \(\Lambda\) is its full
+period lattice. The matching equations \(\mathcal E_p(g_2,g_3)\), in the
+unknowns \(a_0,\ldots,a_{p-1}\), \(u_0,\ldots,u_{p-3}\) and \(b\), are
+obtained by formal substitution of
+\eqref{eq:elliptic-enumeration-profile} in \eqref{eq:main}, using only
+\eqref{eq:weierstrass}: the left side is reduced to its normal form, and
+the coefficients of \(F\) and \(G\) are set to zero. They are
+polynomials in the unknowns and in \(g_2,g_3\), defined for every
 \((g_2,g_3)\in\CC^2\), the degenerate parameters included; on a lattice
-their solutions are the elliptic pairs. The symbol
-\(\mathcal E_p(g_2,g_3)\) also denotes the set of solutions.
-Multiplicity and simplicity are understood as
-in Section~\ref{sec:counting}.
+their solutions are the elliptic pairs. We write
+\(\mathcal E_p(g_2,g_3)\) also for the set of solutions; multiplicity
+and simplicity are as in Section~\ref{sec:counting}.
 
 \begin{theorem}[Fixed-lattice elliptic enumeration]\label{thm:elliptic-count}
 Let \(2p-1\) be prime.
 \begin{enumerate}
-\item[\textup{(a)}] On every lattice the elliptic pairs are
-finite in number, and counted with multiplicity there are
+\item[\textup{(a)}] On every lattice the elliptic pairs are finite in
+number, and counted with multiplicity there are
 \begin{equation}\label{eq:elliptic-length}
  M_p:=2\binom{2p-2}{p-2}=2S_p
 \end{equation}
@@ -73,148 +64,95 @@ is, a lattice whose invariant avoids these values, admits exactly
 
 \paragraph{The smallest case.}
 For \(p=2\) the profile is \(V=-12X+b\), and the left side of
-\eqref{eq:main} reduces to
-\[
- -12a_1Y-12(a_0+b)X+6g_2+a_0b+\frac12b^2.
-\]
-Consequently the complete elliptic system is
+\eqref{eq:main} reduces to \(-12a_1Y-12(a_0+b)X+6g_2+a_0b+\frac12b^2\).
+The complete elliptic system is therefore
 \begin{equation}\label{eq:kdvb-elliptic}
- a_1=0,\qquad
- v=-12\wp-a_0,\qquad a_0^2=12g_2.
+ a_1=0,\qquad v=-12\wp-a_0,\qquad a_0^2=12g_2.
 \end{equation}
-There is no one-pole elliptic member with nonzero Burgers coefficient:
-both elliptic pairs belong to the KdV equation, in agreement with
-\(M_2=2\). They are the two backgrounds \eqref{eq:shift} of one
-cnoidal wave. For \(g_2\ne0\) they are distinct and simple.
-For \(g_2=0\), \(g_3\ne0\), they coincide, and the lattice carries one
-pair of multiplicity two. Here \(\mathcal N\) is the line \(g_2=0\),
-and the finite set of (b) is \(\{0\}\). At order three it is
-\(\{0,-300\}\) (Section~\ref{sec:ks}).
+No one-pole elliptic wave has a nonzero Burgers coefficient: both pairs
+belong to the KdV equation, in agreement with \(M_2=2\), and they are
+the two backgrounds \eqref{eq:shift} of one cnoidal wave. They are
+distinct and simple for \(g_2\ne0\); for \(g_2=0\), \(g_3\ne0\), they
+coincide, and the lattice carries one pair of multiplicity two. Here
+\(\mathcal N\) is the line \(g_2=0\), and the finite set of (b) is
+\(\{0\}\); at order three it is \(\{0,-300\}\) (Section~\ref{sec:ks}).
 
 \paragraph{No escape to infinity.}
-The number \(M_p\) is twice the number \(S_p\) of pulses of
-Proposition~\ref{cor:endpoints}, and the proof shows why.
-When the parameters of a square polynomial system (as many equations as
-unknowns) vary, its solutions may merge or separate. As long as they
+When the parameters of a polynomial system with as many equations as
+unknowns vary, its solutions may merge or separate. As long as they
 remain finite in number, their number, counted with multiplicity, can
-change only if a solution moves off to infinity. A solution that moves
-off to infinity, rescaled to size one, converges to a nonzero solution
-of the leading parts of the equations; this is the rescaling argument
-of Step~3 in the proof of Theorem~\ref{thm:prime}, with the ordinary
-absolute value in place of the \(\ell\)-adic one. Here the leading
-parts are the equations with both periods infinite
-(\(\wp\to z^{-2}\); the cusp \(g_2=g_3=0\)), and by rigidity that
-rational problem has only the trivial solution. So nothing escapes, and
+change only if a solution moves off to infinity. Such a solution,
+rescaled to size one, converges to a nonzero solution of the leading
+parts of the equations, as in Step~3 of the proof of
+Theorem~\ref{thm:prime} with the ordinary absolute value in place of the
+\(\ell\)-adic one. Here the leading parts are the equations with both
+periods infinite (\(\wp\to z^{-2}\); the cusp \(g_2=g_3=0\)), and by
+rigidity they have only the trivial solution. So nothing escapes, and
 the number of pairs, counted with multiplicity, is the same for all
 \((g_2,g_3)\). We find it with one period infinite (\(\wp\) becomes a
 hyperbolic function; the node): there every elliptic pair becomes a
-pulse on one of its two constant backgrounds, and every pulse on either
-background arises in this way exactly once. The pulses are simple, and
-simplicity spreads from the node to a generic lattice.
+pulse on one of its two backgrounds, and every pulse on either
+background arises exactly once, so \(M_p=2S_p\). The pulses are simple,
+and simplicity spreads to a generic lattice.
 
 \begin{lemma}[Conservation of number]\label{lem:conservation}
-Let \(E_1,\ldots,E_n\) be polynomials in unknowns
-\(x=(x_1,\ldots,x_n)\) and parameters \(t=(t_1,\ldots,t_m)\),
-weighted-homogeneous for some positive integer weights of the \(x_j\)
-and the \(t_k\). Suppose that the leading system \(E_i(x;0)=0\),
-\(1\le i\le n\), has no solution in \(\CC^n\) other than \(x=0\). Then:
+Let \(E_1,\ldots,E_n\) be polynomials in unknowns \(x=(x_1,\ldots,x_n)\)
+and parameters \(t=(t_1,\ldots,t_m)\), weighted-homogeneous for some
+positive integer weights of the \(x_j\) and the \(t_k\). Suppose that
+the leading system \(E_i(x;0)=0\), \(1\le i\le n\), has no solution in
+\(\CC^n\) other than \(x=0\). Then:
 \begin{enumerate}
-\item[\textup{(i)}] for every \(t\) the system \(E(x;t)=0\) has
-finitely many solutions, and they stay bounded while \(t\) stays
-bounded;
-\item[\textup{(ii)}] the number of solutions, counted with
-multiplicity, is the same for every \(t\in\CC^m\);
+\item[\textup{(i)}] for every \(t\) the system \(E(x;t)=0\) has finitely
+many solutions, and they stay bounded while \(t\) stays bounded;
+\item[\textup{(ii)}] the number of solutions, counted with multiplicity,
+is the same for every \(t\in\CC^m\);
 \item[\textup{(iii)}] the \(t\) for which some solution is not simple
 form an algebraic subset of \(\CC^m\), that is, the common zero set of
 finitely many polynomials in \(t\).
 \end{enumerate}
 \end{lemma}
 
-The proof of the lemma uses more algebra than the rest of the paper and
-can be skipped; Steps~1--5 below use only its statement.
-
-\begin{proof}
-Since the leading system has only the zero solution, the polynomials
-in \(x\) modulo its equations form a finite-dimensional space
-\citep[Chapter~5, \S3]{CoxLittleOSheaIVA}, spanned by monomials
-\(m_1=1,\ldots,m_r\). Every polynomial \(f\) in \((x,t)\) is then,
-modulo the equations \(E_i\), a combination \(\sum_ic_i(t)m_i\) with
-polynomials \(c_i\) in \(t\). This is proved by induction on the
-weight of \(f\), which may be taken weighted-homogeneous: write
-\(f=f(x,0)+\sum_kt_kf_k\), write \(f(x,0)\) as a combination of the
-\(m_i\) plus \(\sum_ih_iE_i(x;0)\) with weighted-homogeneous \(h_i\),
-and replace each \(E_i(x;0)\) by \(E_i\) minus its terms that contain
-some \(t_k\). What remains is a sum of products of a \(t_k\) with a
-polynomial of lower weight, because \(t_k\) has positive weight.
-In particular \(x_jm_i=\sum_lM^{(j)}_{il}(t)m_l\) modulo the equations.
-Multiplying this vector identity by the adjugate of the matrix
-\(x_j-M^{(j)}(t)\) shows that \(\det\bigl(x_j-M^{(j)}(t)\bigr)\,m_i\) is
-a combination of the \(E_i\) for every \(i\) (the Cayley--Hamilton
-argument); for \(m_1=1\) this is the determinant itself.
-So at every solution \(x_j\) is a root of a
-monic polynomial of degree \(r\) whose coefficients are polynomials in
-\(t\). This proves~(i).
-
-For (ii), join two parameter values by a segment. By (i) some ball
-\(|x|<\varrho\) contains all solutions for all \(t\) on the segment, so
-no solution crosses the sphere \(|x|=\varrho\). The number of zeros of
-a holomorphic map in a ball, counted with multiplicity, when they are
-finite in number and none lies on the bounding sphere, is the degree
-of \(E/|E|\) on that sphere, and it does not change under a
-deformation without zeros on the sphere
+\paragraph{Sketch of proof.}
+(i) Modulo the equations, every polynomial is a combination of finitely
+many monomials in \(x\) with coefficients polynomial in \(t\) (induction
+on the weight, as the \(t_k\) have positive weight). Hence each \(x_j\)
+satisfies a monic polynomial equation with coefficients polynomial in
+\(t\), which gives finiteness and boundedness. (ii) By Rouch\'e's
+theorem in several variables, the number of zeros in a ball, counted
+with multiplicity, is a degree on the bounding sphere and does not
+change under a deformation without zeros on the sphere
 \citep[Appendix~B]{Milnor1968},
-\citep[Sections~5.2 and~5.4]{ArnoldGuseinZadeVarchenko1985}; this is
-Rouch\'e's theorem in several variables.
+\citep[Sections~5.2 and~5.4]{ArnoldGuseinZadeVarchenko1985}. (iii) By
+elimination theory \citep[Chapter~3, \S1]{CoxLittleOSheaIVA}, the monic
+polynomials of (i) make the projection an algebraic set. The details
+are in the companion note, together with a second, algebraic proof of
+(i)--(ii) by flatness.
 
-For (iii), the set in question is the projection to \(\CC^m\) of the
-algebraic set on which \(E_1,\ldots,E_n\) and the Jacobian determinant
-\(\det(\partial E_i/\partial x_j)\) vanish.
-The monic polynomials of (i) are combinations of the \(E_i\). Eliminate
-the unknowns one at a time: at each step the polynomial of (i) for the
-unknown being eliminated has leading coefficient \(1\), so by the
-Extension Theorem of elimination theory
-\citep[Chapter~3, \S1]{CoxLittleOSheaIVA} every solution of the
-eliminated equations extends. The projection is therefore the common
-zero set of the polynomials in \(t\) alone that are combinations of the
-\(E_i\) and the Jacobian determinant.
-\end{proof}
-
-Three operations do not change multiplicities, and the proof of the
-theorem uses them freely: an invertible affine change of the unknowns;
+Three operations preserve, up to isomorphism, the space of power series
+modulo the equations, and hence multiplicities
+(Section~\ref{sec:counting}): an invertible affine change of unknowns;
 invertible linear combinations of the equations with constant
-coefficients; and the elimination of an unknown that one of the
-equations gives as a polynomial in the others. Each of them leaves
-unchanged, up to an isomorphism, the space of power series modulo the
-combinations of the equations, whose dimension is the multiplicity
-(Section~\ref{sec:counting}).
+coefficients; the elimination of an unknown that one equation gives as a
+polynomial in the others.
 
 \begin{proof}[Proof of Theorem~\ref{thm:elliptic-count}]
-\emph{Step 1: eliminating the operator.}
-The coefficient at pole order \(2p\) vanishes by the choice of
-\(s_p\).
-The coefficients at orders \(2p-1,\ldots,p\) determine
-\(a_{p-1},\ldots,a_0\) successively.
-At each step the coefficient of the new \(a_j\) is the nonzero
-rational leading coefficient of \(D^jV\).
-This is a polynomial elimination: each \(a_j\) is obtained as a
-polynomial in the remaining unknowns and in \(g_2,g_3\), and
-multiplicities do not change.
-The residual has pole order at most \(p-1\) and zero residue, since
-no normal form has pole order one. It lies in the span of \(1\) and the
-\(\mathscr D^jX\), \(0\le j\le p-3\).
-Hence \(p-1\) equations \(E_1=\cdots=E_{p-1}=0\) remain in the \(p-1\)
-profile coefficients \(u_j,b\): the coefficients of the residual in this
-basis.
+\emph{Step 1: eliminating the operator.} The coefficient at pole order
+\(2p\) vanishes by the choice of \(s_p\). The coefficients at orders
+\(2p-1,\ldots,p\) determine \(a_{p-1},\ldots,a_0\) successively: at each
+step the coefficient of the new \(a_j\) is the nonzero rational leading
+coefficient of \(D^jV\). Each \(a_j\) is thus a polynomial in the
+remaining unknowns and in \(g_2,g_3\), and the elimination does not
+change multiplicities. The residual has pole order at most \(p-1\) and
+zero residue, since no normal form has pole order one, so it lies in the
+span of \(1\) and the \(\mathscr D^jX\), \(0\le j\le p-3\). Its
+coefficients in this basis are \(p-1\) equations
+\(E_1=\cdots=E_{p-1}=0\) in the \(p-1\) profile unknowns \(u_j,b\).
 
-\emph{Step 2: weights.}
-Give \(D,X,g_2,g_3\) weights \(1,2,4,6\), respectively, and give
-the profile weight \(p\); this is the usual homogeneity of \(\wp\)
-under a rescaling of \(z\).
-Then \(u_j\) has weight \(p-j-2\), and \(b\) has weight \(p\).
-After the triangular elimination, the residual principal-part
-coefficients and the residual constant, that is, the \(E_i\), are
-weighted-homogeneous polynomials in the \(u_j\), \(b\), \(g_2\),
-\(g_3\), of weights
+\emph{Step 2: weights.} Give \(D,X,g_2,g_3\) the weights \(1,2,4,6\) and
+the profile the weight \(p\); this is the usual homogeneity of \(\wp\)
+under a rescaling of \(z\). Then \(u_j\) has weight \(p-j-2\), \(b\) has
+weight \(p\), and the \(E_i\) are weighted-homogeneous polynomials in
+the \(u_j\), \(b\), \(g_2\), \(g_3\), of weights
 \begin{equation}\label{eq:elliptic-weights}
  \begin{array}{c|c}
  \text{variables}&1,2,\ldots,p-2,p\\
@@ -223,153 +161,122 @@ weighted-homogeneous polynomials in the \(u_j\), \(b\), \(g_2\),
 \end{equation}
 The B\'ezout number of this table is
 \((p+1)\cdots(2p-2)(2p)/\bigl((p-2)!\,p\bigr)=2\binom{2p-2}{p-2}=M_p\)
-(at \(p=3\): \(4\cdot6/(1\cdot3)=8\)), in agreement with the count
-below (companion note).
-The normal forms and the eliminations are polynomial in
-\(g_2,g_3\), so these statements extend to the degenerate parameters.
-For fixed \(g_2,g_3\), the highest weighted parts of the equations in
-the profile variables are obtained by setting \(g_2=g_3=0\), since
-\(g_2\) and \(g_3\) carry positive weight.
+(at \(p=3\): \(4\cdot6/(1\cdot3)=8\)), in agreement with the count below
+(companion note). Since \(g_2,g_3\) have positive weight, setting
+\(g_2=g_3=0\) gives the parts of highest weight of the \(E_i\) in the
+profile unknowns.
 
-\emph{Step 3: the cusp.}
-At the cusp \(g_2=g_3=0\) the relations \eqref{eq:weierstrass} are
-satisfied by \(X=z^{-2}\), \(Y=-2z^{-3}\) and
+\emph{Step 3: the cusp.} At the cusp \(g_2=g_3=0\) the relations
+\eqref{eq:weierstrass} are satisfied by \(X=z^{-2}\), \(Y=-2z^{-3}\) and
 \(\mathscr D=\mathrm d/\mathrm dz\), so a solution of the cusp system
 gives a nonconstant rational solution \(V\) of \eqref{eq:main} whose
 only pole is at zero. By Lemma~\ref{lem:laplace}, \(V\) vanishes at
-infinity, so that
-\(b=0\); moreover \(a_0=P(0)=0\), and \(V=(-1)^{p-1}s_pA^\sharp\) for a
-monic \(A\) of degree \(p-1\) that divides \(H_A\).
-By rigidity, which holds by Theorem~\ref{thm:prime}(c), \(A=\rho^{p-1}\).
-Thus \(V=c_\ast z^{-p}\), and all the variables in
+infinity, so that \(b=0\); moreover \(a_0=P(0)=0\), and
+\(V=(-1)^{p-1}s_pA^\sharp\) for a monic \(A\) of degree \(p-1\) that
+divides \(H_A\). By rigidity, which holds by Theorem~\ref{thm:prime}(c),
+\(A=\rho^{p-1}\). Thus \(V=c_\ast z^{-p}\), and all the unknowns in
 \eqref{eq:elliptic-enumeration-profile} vanish, because the functions
-\(D^jz^{-2}\) have different pole orders.
-The leading equations have no nonzero common zero.
+\(D^jz^{-2}\) have different pole orders: the leading equations have no
+nonzero common zero.
 
-\emph{Step 4: conservation of number.}
-The residual equations \(E_1,\ldots,E_{p-1}\) of Step~1
-are polynomials in the \(p-1\) profile unknowns and in \(g_2,g_3\),
-weighted-homogeneous for the weights of Step~2, and by Step~3 their
-leading system, which is the cusp system, has only the zero solution.
-Lemma~\ref{lem:conservation} applies, with \(t=(g_2,g_3)\). By (i),
-every system \(\mathcal E_p(g_2,g_3)\) has finitely many solutions,
-which proves the finiteness in (a). By (ii), their number, counted with
-multiplicity, is the same at every point of
-the \((g_2,g_3)\)-plane, the degenerate parameters included; at the
-cusp all of this multiplicity sits
-at the single solution where every unknown vanishes. By (iii), the
-parameters at which some solution is not simple form an algebraic
-subset \(\mathcal N\) of the plane.
+\emph{Step 4: conservation of number.} By Steps~1--3,
+Lemma~\ref{lem:conservation} applies to \(E_1,\ldots,E_{p-1}\), with the
+profile unknowns as \(x\) and \(t=(g_2,g_3)\); the leading system is the
+cusp system. By (i), every system \(\mathcal E_p(g_2,g_3)\) has finitely
+many solutions, which is the finiteness in (a). By (ii), their number,
+counted with multiplicity, is the same at every point of the
+\((g_2,g_3)\)-plane, the degenerate parameters included. By (iii), the
+parameters at which some solution is not simple form an algebraic subset
+\(\mathcal N\) of the plane.
 
-\emph{Step 5: the node.}
-To find the common number, and to show that \(\mathcal N\) is not the
-whole plane, consider the nodal parameters
-\begin{equation}\label{eq:nodal-parameters}
- g_2=\frac1{12},\qquad g_3=-\frac1{216}.
-\end{equation}
-For these parameters the relations \eqref{eq:weierstrass} are
-satisfied by
-\[
- X=Q^2-Q+\frac1{12},\qquad
- Y=(2Q-1)Q(1-Q),\qquad \mathscr D=D\ \text{ with }\ DQ=Q(1-Q);
-\]
-this is the degenerate \(\wp\)-function with the single period
-\(2\pi i\), with its pole moved to \(z=i\pi\), written in the logistic
-coordinate. A monomial \(X^kY^\epsilon\) becomes a polynomial in
-\(Q\) of degree \(2k+3\epsilon\), which is also its pole order. These
-degrees are all different, so the monomials remain linearly
-independent, and the matching equations for the nodal parameters are
-exactly the conditions for \eqref{eq:main} to hold as an identity
-between polynomials in \(Q\).
+\emph{Step 5: the node.} To find the common number, and to show that
+\(\mathcal N\) is not the whole plane, consider the nodal parameters,
+for which the relations \eqref{eq:weierstrass} are satisfied by
+polynomials in \(Q\):
+\begin{gather}
+ g_2=\frac1{12},\qquad g_3=-\frac1{216};\label{eq:nodal-parameters}\\
+ X=Q^2-Q+\frac1{12},\qquad Y=(2Q-1)Q(1-Q),\qquad
+ \mathscr D=D\ \text{ with }\ DQ=Q(1-Q).\nonumber
+\end{gather}
+This is the degenerate \(\wp\)-function with the single period
+\(2\pi i\), with its pole moved to \(z=i\pi\), in the logistic
+coordinate. A monomial \(X^kY^\epsilon\) becomes a polynomial in \(Q\)
+of degree \(2k+3\epsilon\), which is also its pole order. These degrees
+are all different, so the monomials remain linearly independent, and
+the nodal matching equations are exactly the conditions for
+\eqref{eq:main} to hold as an identity between polynomials in \(Q\).
 Since \(X=\frac1{12}-DQ\) and \(\mathscr D^jX=-D^{j+1}Q\) for
-\(j\ge1\), the profile \eqref{eq:elliptic-enumeration-profile}
-becomes, with \(u_{p-2}=-s_p\),
-\[
- V=\beta+v_A,\qquad
- A(\rho)=-\frac1{s_p}\sum_{j=0}^{p-2}u_j\rho^{j+1},\qquad
- \beta=b+\frac{u_0}{12}.
-\]
-Here \(A\) is monic of degree \(d=p-1\) with \(A(0)=0\), and \(\beta\)
-is the common limit of \(V\) at the two ends. With the coefficients
-\(\alpha_j\) of \(A\) as in \eqref{eq:normalized-A}, the passage from
-\((u_0,\ldots,u_{p-3},b)\) to
-\((\alpha_1,\ldots,\alpha_{d-1},\beta)\) is an invertible affine
-change of unknowns with rational coefficients.
+\(j\ge1\), the profile \eqref{eq:elliptic-enumeration-profile} becomes
+\(V=\beta+v_A\), where
+\(A(\rho)=-s_p^{-1}\sum_{j=0}^{p-2}u_j\rho^{j+1}\) with
+\(u_{p-2}=-s_p\), and \(\beta=b+u_0/12\). Here \(A\) is monic of degree
+\(d=p-1\) with \(A(0)=0\), and \(\beta\) is the common limit of \(V\) at
+the two ends. With the coefficients \(\alpha_j\) of \(A\) as in
+\eqref{eq:normalized-A}, the passage from \((u_0,\ldots,u_{p-3},b)\) to
+\((\alpha_1,\ldots,\alpha_{d-1},\beta)\) is an invertible affine change
+of unknowns with rational coefficients.
 
 In these unknowns the constant term of \(P(D)V+V^2/2\) is
 \(P(0)\beta+\beta^2/2\), and the remaining terms are
 \((P+\beta)(D)v_A+v_A^2/2\). By the proof of
 Proposition~\ref{prop:divisibility} the latter equals
 \((s_p/2)\bigl[2(P+\beta)A-s_pS_A\bigr](D)Q\), and the elimination of
-Step~1 is the division of \(S_A\) by \(A\): it
-gives \(P+\beta=s_pC_A/2\), a polynomial in the unknowns, which we
-still denote by \(P_A\), and it leaves \(-(s_p^2/2)R_A(D)Q\).
-Since \(A(0)=0\), the coefficient \(R_0\) vanishes identically, by
+Step~1 is the division of \(S_A\) by \(A\): it gives
+\(P+\beta=s_pC_A/2\), a polynomial in the unknowns, which we still
+denote by \(P_A\), and it leaves \(-(s_p^2/2)R_A(D)Q\). Since
+\(A(0)=0\), the coefficient \(R_0\) vanishes identically, by
 \eqref{eq:constant-remainder}. With \(P(0)=P_A(0)-\beta\), the nodal
 matching equations are therefore invertible linear combinations, with
 constant coefficients, of
 \begin{equation}\label{eq:nodal-matching}
- R_1=\cdots=R_{d-1}=0,\qquad
- \beta\bigl(\beta-2P_A(0)\bigr)=0,
+ R_1=\cdots=R_{d-1}=0,\qquad \beta\bigl(\beta-2P_A(0)\bigr)=0,
 \end{equation}
-together with \(P=P_A-\beta\). These are the pulse equations
+together with \(P=P_A-\beta\): the pulse equations
 \eqref{eq:pulse-equations} and one quadratic equation for the
-background, and the two systems have the same solutions with the same
+background. The two systems have the same solutions with the same
 multiplicities.
 
 By Proposition~\ref{cor:endpoints} the pulse equations have exactly
-\(S_p\) solutions, all simple, with \(P_A(0)\ne0\) at each of them.
-For each of them the quadratic has the two simple roots \(\beta=0\)
-and \(\beta=2P_A(0)\), and the Jacobian matrix of
-\eqref{eq:nodal-matching} is block triangular. For the nodal
-parameters the system thus has exactly \(2S_p\) solutions, all simple.
-By Step~4 the number of solutions counted with multiplicity is
-\(2S_p=M_p\) for all \((g_2,g_3)\). This proves (a). Moreover the
-nodal parameters do not belong to \(\mathcal N\). So \(\mathcal N\) is
-a proper algebraic subset of the plane, and outside \(\mathcal N\)
-every solution is simple. A nonzero polynomial cannot vanish on a
-nonempty open subset of the plane, so \(\mathcal N\) does not contain
-all the lattices. It contains only those with finitely many values of
-\(j\), as we now show.
+\(S_p\) solutions, all simple, with \(P_A(0)\ne0\) at each of them. For
+each of them the quadratic has the two simple roots \(\beta=0\) and
+\(\beta=2P_A(0)\), and the Jacobian matrix of \eqref{eq:nodal-matching}
+is block triangular. For the nodal parameters the system thus has
+exactly \(2S_p\) solutions, all simple. By Step~4 the number of
+solutions counted with multiplicity is \(2S_p=M_p\) for all
+\((g_2,g_3)\), which proves (a), and the nodal parameters do not belong
+to \(\mathcal N\). So \(\mathcal N\) is a proper algebraic subset of the
+plane, and outside \(\mathcal N\) every solution is simple.
 
-The equations \(E_i\) and their Jacobian determinant are
-weighted-homogeneous, so \(\mathcal N\) is invariant under
-\((g_2,g_3)\mapsto(\lambda^4g_2,\lambda^6g_3)\), \(\lambda\ne0\). On
-lattices this is the rescaling \(\Lambda\mapsto\lambda^{-1}\Lambda\),
-which maps pairs to pairs and simple pairs to simple pairs. If a
-polynomial vanishes on \(\mathcal N\), then so does each of its
-weighted-homogeneous components. Since \(\mathcal N\) is a proper
-algebraic subset, it therefore lies in the zero set of a nonzero
-polynomial that is a monomial in \(g_2,g_3\) times a product
-\(\prod_i(g_2^3-c_ig_3^2)\). On the lattices this zero
-set consists of finitely many values of \(j\): \(j=0\) on \(g_2=0\),
-\(j=1728\) on \(g_3=0\), and \(j=1728c_i/(c_i-27)\) on
-\(g_2^3=c_ig_3^2\). Two lattices with the same \(j\) differ by a
-rescaling, so \(\mathcal N\) contains both or neither. Hence the
-lattices in \(\mathcal N\) are exactly those whose invariant
-\(j(\Lambda)\) lies in a finite set, which depends on \(p\).
-This proves (b).
+The \(E_i\) and their Jacobian determinant are weighted-homogeneous, so
+\(\mathcal N\) is invariant under
+\((g_2,g_3)\mapsto(\lambda^4g_2,\lambda^6g_3)\), \(\lambda\ne0\); on
+lattices this is the rescaling \(\Lambda\mapsto\lambda^{-1}\Lambda\).
+Hence, if a polynomial vanishes on \(\mathcal N\), so does each of its
+weighted-homogeneous components, and the proper algebraic subset
+\(\mathcal N\) lies in the zero set of a nonzero polynomial that is a
+monomial in \(g_2,g_3\) times a product \(\prod_i(g_2^3-c_ig_3^2)\). On
+the lattices this zero set consists of finitely many values of \(j\):
+\(j=0\) on \(g_2=0\), \(j=1728\) on \(g_3=0\), and
+\(j=1728c_i/(c_i-27)\) on \(g_2^3=c_ig_3^2\). Two lattices with the same
+\(j\) differ by a rescaling, so \(\mathcal N\) contains both or neither:
+the lattices in \(\mathcal N\) are exactly those whose invariant lies in
+a finite set. This proves (b).
 \end{proof}
 
 \paragraph{Two backgrounds.}
-The factor two in \(M_p\) retains the two choices of background in
-\eqref{eq:shift}. That transformation preserves the evolution equation
-and the lattice; it changes the operator \(P\) and the speed. For the
-nodal parameters it exchanges the two roots of the quadratic in
-\eqref{eq:nodal-matching}. Outside \(\mathcal N\) the two backgrounds of
-every wave are distinct, because a solution with \(a_0=0\) is never
-simple: Step~1 gives \(a_0+b\) as a polynomial in the \(u_j\) and
-\(g_2,g_3\), and \(b\) enters the residual equations only through the
-constant one, which gives \(a_0^2\) as another such polynomial; so the
-Jacobian determinant contains the factor \(a_0\). On a generic lattice
-the \(M_p\) pairs therefore represent \(M_p/2\) elliptic waves, up to
-translations and Galilean shifts, each counted with both of its
-backgrounds. On special lattices the two backgrounds may
-coalesce, as \eqref{eq:kdvb-elliptic} shows for \(g_2=0\) and
-Section~\ref{sec:ks} shows at order three.
+The factor two in \(M_p\) counts the two backgrounds \eqref{eq:shift};
+changing the background changes \(P\) and the speed, not the wave or the
+lattice. Outside \(\mathcal N\) the two backgrounds of every wave are
+distinct, because a solution with \(a_0=0\) is never simple: Step~1
+gives \(a_0+b\) as a polynomial in the \(u_j\) and \(g_2,g_3\), and the
+residual equations contain \(b\) only through \(a_0^2\), in the constant
+one; so their Jacobian determinant has the factor \(a_0\). On a generic
+lattice the \(M_p\) pairs are therefore \(M_p/2\) elliptic waves, up to
+translations and Galilean shifts, each on both backgrounds; on special
+lattices the two may coalesce, as in \eqref{eq:kdvb-elliptic} for
+\(g_2=0\) and in Section~\ref{sec:ks}.
 
 The elliptic pairs of purely dispersive equations, \(2F_p\) of the
-\(M_p\), are counted in Section~\ref{sec:reflection}
-(Corollary~\ref{cor:elliptic-symmetric}), after the symmetry of their
-profiles has been established; at order two they are both pairs of
-\eqref{eq:kdvb-elliptic}, and \(M_2=2F_2=2\).
+\(M_p\), are counted in Corollary~\ref{cor:elliptic-symmetric}, once the
+symmetry of their profiles is established; at order two they are both
+pairs of \eqref{eq:kdvb-elliptic}, and \(M_2=2F_2=2\).
