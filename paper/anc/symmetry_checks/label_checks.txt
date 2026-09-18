@@ -1,0 +1,9 @@
+p = 3 labels: {'(1, 0)': [0, 4], '(-1, 0)': [0, 1], '(0, -1)': [1, 4], '(0, 1/11)': [2, 3], '(3, 2)': [3, 4], '(-3, 2)': [1, 2], '(4, 3)': [2, 4], '(-4, 3)': [1, 3], '(I, 0, 2)': [0, 3], '(-I, 0, 2)': [0, 2], '(I, 0, 3)': [0, 2], '(-I, 0, 3)': [0, 3]}
+   the ten labels are the ten two-element subsets of F_5: True
+p = 4: number of real pairs checked: 21
+   labels distinct: True ; pulses: 5 fronts: 16
+   label of the front with 3751: [1, 4, 5]
+p = 3: R_0 = -A(0)(A(0)+C_A(0)) and the parity splitting of the Jacobian on the fixed subspace: True
+p = 4: R_0 = -A(0)(A(0)+C_A(0)) and the parity splitting of the Jacobian on the fixed subspace: True
+p = 5: R_0 = -A(0)(A(0)+C_A(0)) and the parity splitting of the Jacobian on the fixed subspace: True
+ALL CHECKS PASSED

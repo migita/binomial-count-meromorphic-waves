@@ -1,5 +1,42 @@
 # Rewrite notes (branch `rewrite-hierarchies`, 17 Sep 2026)
 
+## Branch `simplify-prime-spine` (18 Sep 2026): the prime-index theorem as the spine
+
+Asked by the author: simplify the paper massively, keep the focus on readability, above all in the introduction; do not cut
+explanations for the sake of space. Pushed on this separate branch; `rewrite-hierarchies` is unchanged apart from the tool.
+
+What changed.
+- **Section 5.** The prime-index theorem is proved directly, by the route of the Lean formalization: the congruence
+  `l S_A = +-(rho^l - rho)`; a new Lemma 5.3 (reduction modulo l: (a) no nonzero complex zero of the top-weight parts,
+  (b) every solution over an algebraic closure of Q_l is integral, by weighted rescaling); Hensel lifting with uniqueness. No
+  Bezout, no cover argument, no rigidity hypothesis: rigidity at a prime index is part (c) of the theorem. Pulses, fronts and
+  mirror images are read off the labels: Proposition 5.6 (pulse iff 0 in S; Hensel on the pulse equations; P_A(0) != 0),
+  Theorem 5.8 (iota A = A iff S = -S; F_p; parity splitting of the Jacobian gives simplicity inside the subfamily).
+- **Section 6.** The Bezout count is replaced by a finite flat family over the (g2,g3)-plane (graded Nakayama from the cusp,
+  Cohen-Macaulay complete intersection, Matsumura Thm 23.1); the length is read at the node: pulses x two backgrounds = 2 S_p.
+- **Section 7** is now "Other orders" (one page): Proposition 7.1 (unconditional upper bounds; what rigidity gives; what
+  simplicity adds), the known ranges, Corollary 7.2 (every p <= 12). Table 2 of the previous version is gone.
+- **Companion note** `paper/anc/general_orders.{tex,pdf}`: the general-order text of the previous version, verbatim (weighted
+  Bezout with its proof, the general forms of 5.6, 5.8, 6.1, 6.2, the old Section 7 with its table, the homogeneous-reduction
+  lemma and prime powers). It imports the paper's labels with `xr`, so compile `main.tex` first.
+- **Introduction** rewritten after a cold read by a fresh reader: hook with the four values of sigma; the waves; the question
+  (exceptional => count pairs; "period" explained as width; the factor two explained); the answer (main result as three bullets,
+  "covered orders" defined once, Table 1 with five columns and daggers); four remarks (real waves, distinct, rational waves,
+  what is new); "Every wave has a label" with the e^{nz} derivation and the worked case p = 2; the two pure subfamilies, defined
+  where they are used; when these are all the meromorphic waves; a single equation, with the "no meromorphic wave at all"
+  statement as its own sentence; other orders.
+- **Abstract** shortened by the author's instructions: the count paragraph lost the rescaling sentence and the formula for F_p;
+  the last paragraph is "When 2p-1 is prime, these statements are proved and all pairs are distinct. We conjecture them in every
+  order."
+- Table 2 (order three) has a Labels column; Examples 9.3 notes the 21 real pairs at p = 4; new exact check
+  `anc/symmetry_checks/label_checks.py`; new reference Matsumura 1986.
+- Vocabulary: "length", "reduced", "scheme" no longer occur in the main text.
+
+Review status: the three new arguments (Lemma 5.3 with Steps 3-4, Proposition 5.6, Step 4 of Theorem 6.1) were checked in
+outline by the reviewing session before they were written, and its precision points are incorporated; its review of the written
+text was requested and had not arrived when this was pushed. Length: 40 pages plus the 9-page companion; nothing was cut for
+space, as asked.
+
 Working notes for the author. Not part of the arXiv package; delete before merging.
 `main` and `~/projects/KS-260829/arxiv_meromorphic_waves/` are untouched.
 
