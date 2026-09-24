@@ -1,4 +1,4 @@
-\begin{thebibliography}{75}
+\begin{thebibliography}{76}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -20,6 +20,16 @@ V.~I. Arnold, S.~M. Gusein-Zade, and A.~N. Varchenko.
   \emph{Monographs in Mathematics}.
 \newblock Birkh{\"a}user, Boston, 1985.
 \newblock \doi{10.1007/978-1-4612-5154-5}.
+
+\bibitem[Belova(2023)]{BelovaThesis}
+Maria~V. Belova.
+\newblock Algebraic invariants for ordinary differential equations: theory and
+  applications.
+\newblock Doctoral dissertation, National Research University Higher School of
+  Economics, in Russian, 365 pp., 2023.
+\newblock URL
+  \url{https://www.frccsc.ru/diss-council/00207303/diss/list/belova_mv}.
+\newblock Cover dated 2023; deposited 17 February 2026.
 
 \bibitem[Benney(1966)]{Benney1966}
 D.~J. Benney.
