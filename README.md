@@ -2,6 +2,8 @@
 
 Alexander Migita
 
+Zenodo archive: [10.5281/zenodo.22944239](https://doi.org/10.5281/zenodo.22944239).
+
 This repository holds the arXiv source package of the paper, a Lean 4
 formalisation of two of its theorems, and an exact travelling-wave dictionary.
 
